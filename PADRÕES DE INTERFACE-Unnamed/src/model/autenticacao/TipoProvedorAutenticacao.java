@@ -2,7 +2,7 @@ package model.autenticacao;
 
 public enum TipoProvedorAutenticacao {
 ;
-	private int INTERNO;
+	private int INTERNAMENTE;
 
 	private int EMAIL_SMTP;
 
