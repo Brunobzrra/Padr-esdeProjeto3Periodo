@@ -1,10 +1,12 @@
 package model.projetos;
 
+import java.util.Date;
+
 public class Participacao extends IntegracaoDeProjeto{
 
-	private long dataInicio;
+	private Date dataInicio;
 
-	private long dataTermino;
+	private Date dataTermino;
 
 	private float aporteCusteioMensalReais;
 
@@ -40,19 +42,19 @@ public class Participacao extends IntegracaoDeProjeto{
 	}
 	
 	//getters e setters
-	public long getDataInicio() {
+	public Date getDataInicio() {
 		return dataInicio;
 	}
 
-	public void setDataInicio(long dataInicio) {
+	public void setDataInicio(Date dataInicio) {
 		this.dataInicio = dataInicio;
 	}
 
-	public long getDataTermino() {
+	public Date getDataTermino() {
 		return dataTermino;
 	}
 
-	public void setDataTermino(long dataTermino) {
+	public void setDataTermino(Date dataTermino) {
 		this.dataTermino = dataTermino;
 	}
 	public float getAporteCusteioMensalReais() {
