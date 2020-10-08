@@ -10,6 +10,7 @@ public class Main {
 			DAOXMLEdital xml = new DAOXMLEdital();
 			System.out.println(xml.criar(a));
 			
+			System.out.println("Test Git");
 			
 		
 
