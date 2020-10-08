@@ -1,9 +1,9 @@
 package model.projetos;
 
 public abstract class IntegracaoDeProjeto {
-	
+
 	private boolean ativo;
-	
+
 	private IntegracaoDeProjeto projetoPai;
 
 	public IntegracaoDeProjeto getProjetoPai() {
@@ -20,33 +20,19 @@ public abstract class IntegracaoDeProjeto {
 
 	public abstract void desativar();
 
-	public  float getCustoTotal() {
-		return 0;
-		
-	}
+	public abstract float getCustoTotal() throws Exception;
 
-	public  float getCusteioReaisNaoGastoTotal() {
-		return 0;
-		
-	}
+	public abstract float getCusteioReaisNaoGastoTotal() throws Exception;
+	
+	public abstract void adicionar(IntegracaoDeProjeto integracao) throws Exception;
+	
+	public abstract void remover(IntegracaoDeProjeto integracao) throws Exception;
+	
+	public abstract void mover(IntegracaoDeProjeto integracao) throws Exception;
+	
+	public abstract float getCapitalReaiNaoGastoTotal() throws Exception;
 
 	// metodos que precisão ser não abstratos pois só estarão em algumas as classes
-
-	public void adicionar(IntegracaoDeProjeto integracao) {
-
-	}
-
-	public void remover(IntegracaoDeProjeto integracao) {
-
-	}
-
-	public void mover(IntegracaoDeProjeto integracao) {
-
-	}
-	
-	public float getCapitalReaiNaoGastoTotal() {
-		return 0;
-	}
 
 	public boolean getAtivo() {
 		return ativo;

@@ -40,6 +40,30 @@ public class Participacao extends IntegracaoDeProjeto{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	@Override
+	public float getCapitalReaiNaoGastoTotal() throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Paricipação não adciona!");
+	}
+	
+	@Override
+	public void remover(IntegracaoDeProjeto integracao) throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Paricipação não adciona!");
+	}
+	
+	@Override
+	public void mover(IntegracaoDeProjeto integracao) throws Exception {
+		// TODO Auto-generated method stub
+		//Deixamos assim, pois, achamos que não faz sentido parciáção mover-se
+		throw new Exception("Paricipação não se move!");
+	}
 	
 	//getters e setters
 	public Date getDataInicio() {
@@ -88,10 +112,5 @@ public class Participacao extends IntegracaoDeProjeto{
 	public void setCoordenador(boolean coordenador) {
 		this.coordenador = coordenador;
 	}
-
-
-
-	
-	
 
 }

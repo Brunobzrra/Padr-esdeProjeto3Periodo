@@ -3,8 +3,9 @@ package model.autenticacao;
 import java.util.ArrayList;
 
 import model.projetos.IntegracaoDeProjeto;
+import model.projetos.Participacao;
 
-public class Membro extends IntegracaoDeProjeto{
+public class Membro extends IntegracaoDeProjeto {
 
 	private long matricula;
 
@@ -15,7 +16,7 @@ public class Membro extends IntegracaoDeProjeto{
 	private String email;
 
 	private boolean administrador;
-	
+
 	private ArrayList<IntegracaoDeProjeto> participacoes = new ArrayList<>();
 
 	public long getMatricula() {
@@ -57,26 +58,52 @@ public class Membro extends IntegracaoDeProjeto{
 	@Override
 	public void ativar() {
 		super.setAtivo(true);
-		
+
 	}
 
 	@Override
 	public void desativar() {
 		super.setAtivo(false);
-		
-	}
-	
-	public void adicionar(IntegracaoDeProjeto integracao) {
-		integracao.setProjetoPai(this);
-		participacoes.add(integracao);
+
 	}
 
-	public void remover(IntegracaoDeProjeto integracao) {
+	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
+		if (integracao instanceof Participacao) {
+			integracao.setProjetoPai(this);
+			participacoes.add(integracao);
+		}
+		throw new Exception("Membro não pode ter esse tipo de objeto!");
+	}
+
+	public void remover(IntegracaoDeProjeto integracao) throws Exception {
 		integracao.setProjetoPai(null);
 		participacoes.remove(integracao);
-		
+
 	}
 
+	@Override
+	public float getCustoTotal() throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Membro não este recurso!");
+	}
 
+	@Override
+	public float getCusteioReaisNaoGastoTotal() throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Membro não este recurso!");
+	}
+
+	@Override
+	public void mover(IntegracaoDeProjeto integracao) throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Membro não este recurso!");
+
+	}
+
+	@Override
+	public float getCapitalReaiNaoGastoTotal() throws Exception {
+		// TODO Auto-generated method stub
+		throw new Exception("Membro não este recurso!");
+	}
 
 }

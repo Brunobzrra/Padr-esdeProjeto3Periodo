@@ -16,57 +16,75 @@ public class Projeto extends IntegracaoDeProjeto {
 
 	private float gastoExecutadoCapitalReais;
 
-	public void adicionar(IntegracaoDeProjeto integracao) {
-		integracao.setProjetoPai(this);
-		itens.add(integracao);
+	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
+		if (integracao instanceof Edital) {
+			integracao.setProjetoPai(this);
+			itens.add(integracao);
+			return;
+		}
+		throw new Exception("Projeto não pode adcionar coisas desse tipo!");
 	}
 
-	public void remover(IntegracaoDeProjeto integracao) {
+	public void remover(IntegracaoDeProjeto integracao) throws Exception {
 		integracao.setProjetoPai(null);
 		itens.remove(integracao);
 	}
 
-	public void mover(IntegracaoDeProjeto integracao) {
+	public void mover(IntegracaoDeProjeto integracao) throws Exception {
 		integracao.setProjetoPai(integracao);
-		integracao.adicionar(this);
+		try {
+			integracao.adicionar(this);
+		} catch (Exception e) {
+			e.getMessage();
+		}
 	}
 
 	// metodos obrigatorios
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		EscolheUmNomeMelhor.ativar(itens, this);
+		IniciativaCientifica.ativar(itens, this);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		EscolheUmNomeMelhor.destivar(itens, this);
+		IniciativaCientifica.desativar(itens, this);
 	}
 
 	@Override
-	public float getCustoTotal() {
+	public float getCustoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		aporteCusteioReais = 0;
 
 		for (IntegracaoDeProjeto integracaoDeProjeto : itens) {
-			aporteCusteioReais += integracaoDeProjeto.getCustoTotal();
+			try {
+				aporteCusteioReais += integracaoDeProjeto.getCustoTotal();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.getMessage();
+			}
 		}
 		return aporteCusteioReais;
 	}
 
 	@Override
-	public float getCusteioReaisNaoGastoTotal() {
+	public float getCusteioReaisNaoGastoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		gastoExecutadoCusteioReais = 0;
 
 		for (IntegracaoDeProjeto integracaoDeProjeto : itens) {
-			gastoExecutadoCusteioReais += integracaoDeProjeto.getCustoTotal();
+			try {
+				gastoExecutadoCusteioReais += integracaoDeProjeto.getCustoTotal();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.getMessage();
+			}
 		}
 		return getCustoTotal() - gastoExecutadoCusteioReais;
 	}
 
-	public float getCapitalReaiNaoGastoTotal() {
+	public float getCapitalReaiNaoGastoTotal() throws Exception {
 		gastoExecutadoCusteioReais = getCustoTotal();
 		return aporteCapitalReais - gastoExecutadoCapitalReais;
 	}
