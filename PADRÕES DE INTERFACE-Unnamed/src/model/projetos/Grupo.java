@@ -1,12 +1,13 @@
 package model.projetos;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Grupo extends IntegracaoDeProjeto{
 
 	private String nome;
 
-	private long dataCriacao;
+	private Date dataCriacao;
 
 	private String linkCNPq;
 
@@ -65,11 +66,11 @@ public class Grupo extends IntegracaoDeProjeto{
 		this.nome = nome;
 	}
 
-	public long getDataCriacao() {
+	public Date getDataCriacao() {
 		return dataCriacao;
 	}
 
-	public void setDataCriacao(long dataCriacao) {
+	public void setDataCriacao(Date dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
 
