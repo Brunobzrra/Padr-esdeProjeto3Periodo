@@ -76,8 +76,6 @@ public class DAOXMLProjetoParticipacao {
 			}
 		}
 		return new HashMap<Long,Projeto>();
-		
-		
 	}
 
 }
