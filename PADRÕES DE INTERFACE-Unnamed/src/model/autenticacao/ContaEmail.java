@@ -10,6 +10,7 @@ public abstract class ContaEmail {
 	public void setImplementacaoContaBridge(ContaBridge conta) {
 		this.conta = conta;
 	}
+	
 
 	public ContaBridge getConta() {
 		return conta;
