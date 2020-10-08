@@ -21,23 +21,23 @@ public class DAOXMLGrupo {
 	private final File arquivoColecao = new File("XMLGrupo.xml");
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
-	private long id;
+	private long id = 0;
 	public boolean criar(Grupo grupo) {
-		this.carregarXML();
-		id = persistidos.size()+1;
+		this.persistidos = this.carregarXML();
+		id += 1;
 		this.persistidos.put(id, grupo);
 		this.salvarXML(persistidos);
 		return true;
 	}
 
 	public void remover(long id) {
-		this.carregarXML();
+		this.persistidos = this.carregarXML();
 		persistidos.remove(id);
 		this.salvarXML(persistidos);
 	}
 
 	public boolean atualizar(long id, Grupo grupo) {
-		this.carregarXML();
+		this.persistidos = this.carregarXML();
 		persistidos.replace(id, grupo);
 		this.salvarXML(persistidos);
 		return true;
@@ -65,17 +65,17 @@ public class DAOXMLGrupo {
 		}
 	}
 
-	private void carregarXML() {
+	private HashMap<Long,Grupo> carregarXML() {
 		
 		if (arquivoColecao.exists()) {
 			try {
 				FileInputStream r = new FileInputStream(arquivoColecao);
-				this.persistidos =  (HashMap<Long,Grupo>) xstream.fromXML(r);
+				return (HashMap<Long,Grupo>) xstream.fromXML(r);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 		}
-		this.persistidos = new HashMap<Long,Grupo>();
+		return new HashMap<Long,Grupo>();
 	}
 
 }

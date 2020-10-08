@@ -18,27 +18,27 @@ import model.autenticacao.Membro;
 public class DAOXMLMembroConta {
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
-	private long id;
+	private long id = 0;
 	private HashMap<Long,Membro> persistidos;
 
 	private final File arquivoColecao = new File("XMLMembroConta.xml");
 
 	public boolean criar(Membro membro) {
-		this.carregarXML();
-		id = persistidos.size()+1;
+		this.persistidos = this.carregarXML();
+		id += 1;
 		this.persistidos.put(id, membro);
 		this.salvarXML(persistidos);
 		return true;
 	}
 	
 	public void remover(long id) {
-		this.carregarXML();
+		this.persistidos = this.carregarXML();
 		persistidos.remove(id);
 		this.salvarXML(persistidos);
 	}
 
 	public boolean atualizar(long id, Membro membro) {
-		this.carregarXML();
+		this.persistidos = this.carregarXML();
 		persistidos.replace(id, membro);
 		this.salvarXML(persistidos);
 		return true;
@@ -66,17 +66,17 @@ public class DAOXMLMembroConta {
 		}
 	}
 
-	private void carregarXML() {
+	private HashMap<Long,Membro> carregarXML() {
 		
 		if (arquivoColecao.exists()) {
 			try {
 				FileInputStream r = new FileInputStream(arquivoColecao);
-				this.persistidos =  (HashMap<Long,Membro>) xstream.fromXML(r);
+				return (HashMap<Long,Membro>) xstream.fromXML(r);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 		}
-		this.persistidos = new HashMap<Long,Membro>();
+		return new HashMap<Long,Membro>();
 	}
 
 }

@@ -21,25 +21,25 @@ public class DAOXMLEdital {
 	private final File arquivoColecao = new File("XMLEdital.xml");
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
-	private long id;
+	private long id = 0;
 	
 	public boolean criar(Edital edital) {
-		    this.carregarXML();
-			id = persistidos.size()+1;
+		    this.persistidos = this.carregarXML();
+			id += 1;
 			this.persistidos.put(id, edital);
 			this.salvarXML(persistidos);
 			return true;
 	}
 
 	public void remover(long id) {
-		this.carregarXML();
+		this.persistidos = this.carregarXML();
 		persistidos.remove(id);
 		this.salvarXML(persistidos);
 		
 	}
 
 	public boolean atualizar(long id, Edital edital) {
-		this.carregarXML();
+		this.persistidos = this.carregarXML();
 		persistidos.replace(id, edital);
 		this.salvarXML(persistidos);
 		return true;
@@ -66,16 +66,16 @@ public class DAOXMLEdital {
 		}
 	}
 
-	private void carregarXML() {
+	private HashMap<Long,Edital> carregarXML() {
 		if (arquivoColecao.exists()) {
 			try {
 				FileInputStream r = new FileInputStream(arquivoColecao);
-				this.persistidos =  (HashMap<Long,Edital>) xstream.fromXML(r);
+				return (HashMap<Long,Edital>) xstream.fromXML(r);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 		}
-		this.persistidos = new HashMap<Long,Edital>();
+		return new HashMap<Long,Edital>();
 	}
 	
 }
