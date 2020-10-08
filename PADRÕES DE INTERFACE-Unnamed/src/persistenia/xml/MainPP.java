@@ -2,7 +2,7 @@ package persistenia.xml;
 
 import model.projetos.Edital;
 
-public class Main {
+public class MainPP {
 
 	public static void main(String[] args) {
 			System.out.println("Test Antonio é corno!!!");
