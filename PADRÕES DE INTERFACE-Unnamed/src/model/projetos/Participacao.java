@@ -27,13 +27,13 @@ public class Participacao extends IntegracaoDeProjeto{
 		setAtivo(false);
 	}
 
-	@Override
+
 	public float getCustoTotal() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	
 	public float getCusteioReaisNaoGastoTotal() {
 		// TODO Auto-generated method stub
 		return 0;

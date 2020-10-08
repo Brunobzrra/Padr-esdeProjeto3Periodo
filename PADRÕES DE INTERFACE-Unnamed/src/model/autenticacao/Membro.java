@@ -1,5 +1,7 @@
 package model.autenticacao;
 
+import java.util.ArrayList;
+
 import model.projetos.IntegracaoDeProjeto;
 
 public class Membro extends IntegracaoDeProjeto{
@@ -13,6 +15,8 @@ public class Membro extends IntegracaoDeProjeto{
 	private String email;
 
 	private boolean administrador;
+	
+	private ArrayList<IntegracaoDeProjeto> participacoes = new ArrayList<>();
 
 	public long getMatricula() {
 		return matricula;
@@ -61,17 +65,18 @@ public class Membro extends IntegracaoDeProjeto{
 		super.setAtivo(false);
 		
 	}
-
-	@Override
-	public float getCustoTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	public void adicionar(IntegracaoDeProjeto integracao) {
+		integracao.setProjetoPai(this);
+		participacoes.add(integracao);
 	}
 
-	@Override
-	public float getCusteioReaisNaoGastoTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void remover(IntegracaoDeProjeto integracao) {
+		integracao.setProjetoPai(null);
+		participacoes.remove(integracao);
+		
 	}
+
+
 
 }

@@ -20,9 +20,15 @@ public abstract class IntegracaoDeProjeto {
 
 	public abstract void desativar();
 
-	public abstract float getCustoTotal();
+	public  float getCustoTotal() {
+		return 0;
+		
+	}
 
-	public abstract float getCusteioReaisNaoGastoTotal();
+	public  float getCusteioReaisNaoGastoTotal() {
+		return 0;
+		
+	}
 
 	// metodos que precisão ser não abstratos pois só estarão em algumas as classes
 
