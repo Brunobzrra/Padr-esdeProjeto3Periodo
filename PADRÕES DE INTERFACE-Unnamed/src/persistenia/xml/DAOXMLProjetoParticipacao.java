@@ -19,7 +19,9 @@ public class DAOXMLProjetoParticipacao {
 	private HashMap<Long,Projeto> persistidos;
 
 	private final File arquivoColecao = new File("XMLProjetoParticipacao.xml");
+	
 	private long id = 0;
+	
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 
 	public boolean criar(Projeto projeto) {
