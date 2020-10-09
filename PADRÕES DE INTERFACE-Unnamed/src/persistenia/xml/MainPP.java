@@ -12,6 +12,7 @@ public class MainPP {
 			xml.remover(1);
 			xml.criar(edital);
 			xml.atualizar(2, new Edital());
+
 	}
 
 }

@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Set;
 
 import com.thoughtworks.xstream.XStream;
@@ -13,15 +15,14 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.Membro;
 
-
-
 public class DAOXMLMembroConta {
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 	private long id = 0;
-	private HashMap<Long,Membro> persistidos;
+	private HashMap<Long, Membro> persistidos;
 
 	private final File arquivoColecao = new File("XMLMembroConta.xml");
+	private Set<Membro> membrosRecuperados;
 
 	public boolean criar(Membro membro) {
 		this.persistidos = this.carregarXML();
@@ -30,7 +31,7 @@ public class DAOXMLMembroConta {
 		this.salvarXML(persistidos);
 		return true;
 	}
-	
+
 	public void remover(long id) {
 		this.persistidos = this.carregarXML();
 		persistidos.remove(id);
@@ -44,6 +45,8 @@ public class DAOXMLMembroConta {
 		return true;
 	}
 
+	// vai retornar o Set de membro
+
 	public Set<Membro> consultarAnd(String atributos, String respectivosValoresAtributos) {
 		return null;
 	}
@@ -52,8 +55,8 @@ public class DAOXMLMembroConta {
 		return null;
 	}
 
-	private void salvarXML(HashMap<Long,Membro> persistidos) {
-		
+	private void salvarXML(HashMap<Long, Membro> persistidos) {
+
 		String xml = xstream.toXML(persistidos);
 
 		try {
@@ -66,17 +69,17 @@ public class DAOXMLMembroConta {
 		}
 	}
 
-	private HashMap<Long,Membro> carregarXML() {
-		
+	private HashMap<Long, Membro> carregarXML() {
+
 		if (arquivoColecao.exists()) {
 			try {
 				FileInputStream r = new FileInputStream(arquivoColecao);
-				return (HashMap<Long,Membro>) xstream.fromXML(r);
+				return (HashMap<Long, Membro>) xstream.fromXML(r);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 		}
-		return new HashMap<Long,Membro>();
+		return new HashMap<Long, Membro>();
 	}
 
 }

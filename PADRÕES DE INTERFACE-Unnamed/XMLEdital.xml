@@ -3,8 +3,6 @@
     <long>2</long>
     <model.projetos.Edital>
       <ativo>false</ativo>
-      <dataInicio>0</dataInicio>
-      <dataTermino>0</dataTermino>
       <itens/>
     </model.projetos.Edital>
   </entry>
@@ -12,8 +10,6 @@
     <long>3</long>
     <model.projetos.Edital>
       <ativo>false</ativo>
-      <dataInicio>0</dataInicio>
-      <dataTermino>0</dataTermino>
       <itens/>
     </model.projetos.Edital>
   </entry>

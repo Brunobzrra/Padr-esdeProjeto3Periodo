@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import model.projetos.IntegracaoDeProjeto;
 import model.projetos.Participacao;
+import persistenia.xml.DAOXMLMembroConta;
 
 public class Membro extends IntegracaoDeProjeto {
 
@@ -12,12 +13,29 @@ public class Membro extends IntegracaoDeProjeto {
 	private String nome;
 
 	private boolean ativo;
-
+	
 	private String email;
+	
+	private ContaEmail conta;
 
 	private boolean administrador;
 
 	private ArrayList<IntegracaoDeProjeto> participacoes = new ArrayList<>();
+
+	// creio que seja +- assim, não sei se a composição dessa classe é pela conta email.
+	public Membro(String email, TipoProvedorAutenticacao tipo, String senhaEmail) {
+		
+		int pos = email.indexOf("@");
+		String dominioEmail = email.substring(pos, email.length());
+		if (dominioEmail.equals("@academico.ifpb.edu.br")) {
+			conta = new ContaEmailIFPB();
+		}else
+			conta = new ContaEmailLivre();
+		if (tipo.name().equals("INTERNAMENTE")) {
+			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
+		}else
+			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailSMTP());
+	}
 
 	public long getMatricula() {
 		return matricula;
@@ -104,6 +122,14 @@ public class Membro extends IntegracaoDeProjeto {
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
+	}
+
+	public ContaEmail getConta() {
+		return conta;
+	}
+
+	public void setConta(ContaEmail conta) {
+		this.conta = conta;
 	}
 
 }
