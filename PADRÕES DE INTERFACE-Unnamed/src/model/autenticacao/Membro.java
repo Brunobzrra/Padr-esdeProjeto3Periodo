@@ -15,6 +15,8 @@ public class Membro extends IntegracaoDeProjeto {
 	
 	private String email;
 	
+	private String senha;
+	
 	private ContaEmail conta;
 
 	private boolean administrador;
@@ -22,14 +24,13 @@ public class Membro extends IntegracaoDeProjeto {
 	private ArrayList<IntegracaoDeProjeto> participacoes = new ArrayList<>();
 
 	// creio que seja +- assim, não sei se a composição dessa classe é pela conta email.
-	public Membro(String email, TipoProvedorAutenticacao tipo, String senhaEmail) {
+	public Membro(long matricula, String nome, String email, String senha, TipoProvedorAutenticacao tipo, String senhaEmail) {
 		
-		int pos = email.indexOf("@");
-		String dominioEmail = email.substring(pos, email.length());
-		if (dominioEmail.equals("@academico.ifpb.edu.br")) {
-			conta = new ContaEmailIFPB();
-		}else
-			conta = new ContaEmailLivre();
+		this.matricula = matricula;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+	
 		if (tipo.name().equals("INTERNAMENTE")) {
 			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
 		}else
