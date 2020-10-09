@@ -71,7 +71,7 @@ public class Projeto extends IntegracaoDeProjeto {
 
 		for (IntegracaoDeProjeto integracaoDeProjeto : itens) {
 			try {
-				gastoExecutadoCusteioReais += integracaoDeProjeto.getCustoTotal();
+				gastoExecutadoCusteioReais += integracaoDeProjeto.getCusteioReaisNaoGastoTotal();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.getMessage();
