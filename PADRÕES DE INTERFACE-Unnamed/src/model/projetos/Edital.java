@@ -22,8 +22,8 @@ public class Edital extends IntegracaoDeProjeto {
 	}
 
 	public void remover(IntegracaoDeProjeto integracao) throws Exception {
-		integracao.setProjetoPai(null);
 		itens.remove(integracao);
+		integracao.setProjetoPai(null);
 	}
 
 	@Override

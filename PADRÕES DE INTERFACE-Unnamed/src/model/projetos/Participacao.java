@@ -45,17 +45,10 @@ public class Participacao extends IntegracaoDeProjeto{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	@Override
-	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
-		// TODO Auto-generated method stub
-		throw new Exception("Paricipação não adciona!");
-	}
-	
 	@Override
 	public void remover(IntegracaoDeProjeto integracao) throws Exception {
 		// TODO Auto-generated method stub
-		throw new Exception("Paricipação não adciona!");
+		throw new Exception("Paricipação não remove!");
 	}
 	
 	@Override

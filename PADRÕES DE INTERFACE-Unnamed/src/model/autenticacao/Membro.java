@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import model.projetos.IntegracaoDeProjeto;
 import model.projetos.Participacao;
-import persistenia.xml.DAOXMLMembroConta;
 
 public class Membro extends IntegracaoDeProjeto {
 
@@ -85,17 +84,14 @@ public class Membro extends IntegracaoDeProjeto {
 
 	}
 
-	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
-		if (integracao instanceof Participacao) {
+	public void adicionar(Participacao integracao) throws Exception {
 			integracao.setProjetoPai(this);
 			participacoes.add(integracao);
-		}
-		throw new Exception("Membro não pode ter esse tipo de objeto!");
 	}
 
 	public void remover(IntegracaoDeProjeto integracao) throws Exception {
-		integracao.setProjetoPai(null);
 		participacoes.remove(integracao);
+		integracao.setProjetoPai(null);
 
 	}
 

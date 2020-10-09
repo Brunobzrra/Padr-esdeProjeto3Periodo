@@ -1,5 +1,7 @@
 package model.projetos;
 
+import model.autenticacao.Membro;
+
 public abstract class IntegracaoDeProjeto {
 
 	private boolean ativo;
@@ -23,13 +25,27 @@ public abstract class IntegracaoDeProjeto {
 	public abstract float getCustoTotal() throws Exception;
 
 	public abstract float getCusteioReaisNaoGastoTotal() throws Exception;
-	
-	public abstract void adicionar(IntegracaoDeProjeto integracao) throws Exception;
-	
+
+	public void adicionar(Membro integracao) throws Exception{
+		throw new Exception("Membro não pode ser adcionado aqui!");
+	}
+
+	public void adicionar(Projeto integracao) throws Exception{
+		throw new Exception("Projeto não pode ser adcionado aqui!");
+	}
+	public void adicionar(Participacao integracao) throws Exception{
+		throw new Exception("Participação não pode ser adcionado aqui!");
+	}
+	public void adicionar(Edital integracao) throws Exception{
+		throw new Exception("Edital não pode ser adcionado aqui!");
+	}
+	public void adicionar(Grupo integracao) throws Exception{
+		throw new Exception("Grupo não pode ser adcionado aqui!");
+	}
 	public abstract void remover(IntegracaoDeProjeto integracao) throws Exception;
-	
+
 	public abstract void mover(IntegracaoDeProjeto integracao) throws Exception;
-	
+
 	public abstract float getCapitalReaiNaoGastoTotal() throws Exception;
 
 	// metodos que precisão ser não abstratos pois só estarão em algumas as classes

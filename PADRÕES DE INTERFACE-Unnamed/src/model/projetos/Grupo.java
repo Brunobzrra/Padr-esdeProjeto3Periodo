@@ -15,17 +15,18 @@ public class Grupo extends IntegracaoDeProjeto {
 
 	private ArrayList<IntegracaoDeProjeto> itens = new ArrayList<IntegracaoDeProjeto>();
 
-	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
-		if (integracao instanceof Membro || integracao instanceof Projeto) {
+	public void adicionar(Membro integracao) throws Exception {	
 			integracao.setProjetoPai(this);
 			itens.add(integracao);
-		}
-		throw new Exception("Grupo não pode adcionar coisas desse tipo!");
+	}
+	public void adicionar(Projeto integracao) throws Exception {
+			integracao.setProjetoPai(this);
+			itens.add(integracao);
 	}
 
 	public void remover(IntegracaoDeProjeto integracao) {
-		integracao.setProjetoPai(null);
 		itens.remove(integracao);
+		integracao.setProjetoPai(null);
 	}
 
 	@Override

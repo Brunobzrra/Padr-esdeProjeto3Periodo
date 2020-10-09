@@ -16,18 +16,14 @@ public class Projeto extends IntegracaoDeProjeto {
 
 	private float gastoExecutadoCapitalReais;
 
-	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
-		if (integracao instanceof Edital) {
+	public void adicionar(Edital integracao) throws Exception {
 			integracao.setProjetoPai(this);
 			itens.add(integracao);
-			return;
-		}
-		throw new Exception("Projeto não pode adcionar coisas desse tipo!");
 	}
 
 	public void remover(IntegracaoDeProjeto integracao) throws Exception {
-		integracao.setProjetoPai(null);
 		itens.remove(integracao);
+		integracao.setProjetoPai(null);
 	}
 
 	public void mover(IntegracaoDeProjeto integracao) throws Exception {
