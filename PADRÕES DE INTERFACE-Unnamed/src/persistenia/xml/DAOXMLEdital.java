@@ -63,8 +63,20 @@ public class DAOXMLEdital {
 		return auxiliar;
 	}
 
-	public Set<Edital> consultarOr(String[] atributos, String[] respectivosValoresAtributos) {
-		return null;
+	public Set<Edital> consultarOr(String nome, Date dataInicio, Date dataTermino, boolean ativo) {
+		this.persistidos = this.carregarXML();
+		Set<Edital> auxiliar = new HashSet<Edital>();
+
+		for (int i = 0; i < persistidos.size(); i++) {
+			Edital editalAuxiliar = persistidos.get(i);
+			if (editalAuxiliar.getNome().equalsIgnoreCase(nome) || editalAuxiliar.getDataInicio().equals(dataInicio)
+					|| editalAuxiliar.getDataTermino().equals(dataTermino) || editalAuxiliar.getAtivo() == ativo) {
+				auxiliar.add(editalAuxiliar);
+				
+			}
+
+		}
+		return auxiliar;
 	}
 
 	private void salvarXML(HashMap<Long, Edital> persistidos) {
