@@ -51,14 +51,24 @@ public class Grupo extends ProjetoComponente {
 
 	@Override
 	public float getCustoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		float aux = 0;
+		for (ProjetoComponente participantes : itens) {
+			if(participantes instanceof Projeto) {
+				aux += participantes.getCustoTotal();
+			}
+		}
+		return aux;
 	}
 
 	@Override
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		float aux = 0;
+		for (ProjetoComponente participantes : itens) {
+			if(participantes instanceof Projeto) {
+				aux += participantes.getCusteioReaisNaoGastoTotal();
+			}
+		}
+		return aux;
 	}
 
 	// metodos obrigatorios
