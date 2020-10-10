@@ -39,19 +39,29 @@ public class Edital extends ProjetoComponente {
 	}
 
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
-		return 0;
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCapitalReaiNaoGastoTotal();
+		}
+		return aux;
 	}
 
 	@Override
 	public float getCustoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCustoTotal();
+		}
+		return aux;
 	}
 
 	@Override
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCusteioReaisNaoGastoTotal();
+		}
+		return aux;
 	}
 
 	// metodos obrigatorios
