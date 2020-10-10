@@ -55,7 +55,7 @@ public class DAOXMLEdital {
 		for (Long chave : chaves) {
 			if (chave != null) {
 				Edital editalAuxiliar = persistidos.get(chave);
-				boolean[] confirmacoes = new boolean[3];
+				boolean[] confirmacoes = new boolean[4];
 				if (atributos != null) {
 					for (int j = 0; j < atributos.length; j++) {
 						if (valores != null) {
@@ -69,9 +69,12 @@ public class DAOXMLEdital {
 									if (valores[1].equals(nomeRecuperado)) {
 										confirmacoes[1] = true;
 									}
-								} else {
+								} else if (j == 2) {
 									if (valores[2].equals(nomeRecuperado))
 										confirmacoes[2] = true;
+								} else {
+									if (valores[3].equals(nomeRecuperado))
+										confirmacoes[3] = true;
 								}
 							} else if (atributos[j].equals("dataDeInicio")) {
 								Date dataDeInicioRecuperada = editalAuxiliar.getDataInicio();
@@ -83,9 +86,13 @@ public class DAOXMLEdital {
 									if (dataDeInicioRecuperada.equals(valores[1])) {
 										confirmacoes[1] = true;
 									}
-								} else {
+								} else if (j == 2) {
 									if (dataDeInicioRecuperada.equals(valores[2]))
 										confirmacoes[2] = true;
+								} else {
+									if (dataDeInicioRecuperada.equals(valores[3])) {
+										confirmacoes[3] = true;
+									}
 								}
 							} else if (atributos[j].equals("dataTermino")) {
 								Date dataTerminoRecuperada = editalAuxiliar.getDataTermino();
@@ -97,10 +104,34 @@ public class DAOXMLEdital {
 									if (dataTerminoRecuperada.equals(valores[1])) {
 										confirmacoes[1] = true;
 									}
-								} else {
+								} else if (j == 2) {
 									if (dataTerminoRecuperada.equals(valores[2]))
 										confirmacoes[2] = true;
+								} else if (j == 3) {
+									if (dataTerminoRecuperada.equals(valores[3])) {
+										confirmacoes[3] = true;
+									}
 								}
+							} else if (atributos[j].equals("ativo")) {
+								Boolean ativo = editalAuxiliar.getAtivo();
+								if (j == 0) {
+									if (ativo.equals(valores[0])) {
+										confirmacoes[0] = true;
+									}
+								} else if (j == 1) {
+									if (ativo.equals(valores[1])) {
+										confirmacoes[1] = true;
+									}
+								} else if (j == 2) {
+									if (ativo.equals(valores[2])) {
+										confirmacoes[2] = true;
+									}
+								} else {
+									if (ativo.equals(valores[3])) {
+										confirmacoes[3] = true;
+									}
+								}
+
 							}
 						}
 					}
@@ -142,8 +173,14 @@ public class DAOXMLEdital {
 								if (valores[1].equals(nomeRecuperado)) {
 									adicionar = true;
 								}
-							} else {
-								adicionar = true;
+							} else if (i == 2) {
+								if (valores[2].equals(nomeRecuperado)) {
+									adicionar = true;
+								}
+							}else {
+								if (valores[3].equals(nomeRecuperado)) {
+									adicionar = true;
+								}
 							}
 						} else if (atributos[i].equals("dataDeInicio")) {
 							Date dataDeInicioRecuperada = editalAuxiliar.getDataInicio();
@@ -154,9 +191,14 @@ public class DAOXMLEdital {
 							} else if (i == 1) {
 								if (dataDeInicioRecuperada.equals(valores[1]))
 									adicionar = true;
-							} else {
-								if (dataDeInicioRecuperada.equals(valores[2]))
+							} else if (i == 2) {
+								if (valores[2].equals(dataDeInicioRecuperada)) {
 									adicionar = true;
+								}
+							}else {
+								if (valores[3].equals(dataDeInicioRecuperada)) {
+									adicionar = true;
+								}
 							}
 						} else if (atributos[i].equals("dataTermino")) {
 							Date dataTerminoRecuperada = editalAuxiliar.getDataTermino();
@@ -168,11 +210,35 @@ public class DAOXMLEdital {
 								if (dataTerminoRecuperada.equals(valores[1])) {
 									adicionar = true;
 								}
-							} else {
-								if (dataTerminoRecuperada.equals(valores[2])) {
+							} else if (i == 2) {
+								if (valores[2].equals(dataTerminoRecuperada)) {
+									adicionar = true;
+								}
+							}else {
+								if (valores[3].equals(dataTerminoRecuperada)) {
 									adicionar = true;
 								}
 							}
+						} else if (atributos[i].equals("ativo")) {
+							Boolean ativo = editalAuxiliar.getAtivo();
+							if (i == 0) {
+								if (ativo.equals(valores[0])) {
+									adicionar = true;
+								}
+							} else if (i == 1) {
+								if (ativo.equals(valores[1])) {
+									adicionar = true;
+								}
+							} else if (i == 2) {
+								if (ativo.equals(valores[2])) {
+									adicionar = true;
+								}
+							} else {
+								if (ativo.equals(valores[3])) {
+									adicionar = true;
+								}
+							}
+
 						}
 					}
 				}
