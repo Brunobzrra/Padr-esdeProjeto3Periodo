@@ -2,9 +2,11 @@ package model.projetos;
 
 import java.util.ArrayList;
 
-public class Projeto extends IntegracaoDeProjeto {
+import model.autenticacao.Membro;
 
-	private ArrayList<IntegracaoDeProjeto> itens = new ArrayList<IntegracaoDeProjeto>();
+public class Projeto extends ProjetoComponente {
+
+	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
 	private String nome;
 
@@ -16,22 +18,24 @@ public class Projeto extends IntegracaoDeProjeto {
 
 	private float gastoExecutadoCapitalReais;
 
-	public void adicionar(Edital integracao) throws Exception {
-			integracao.setProjetoPai(this);
-			itens.add(integracao);
+	public void adicionar(Membro integracao) throws Exception {
+		integracao.setProjetoPai(this);
+		itens.add(integracao);
 	}
 
-	public void remover(IntegracaoDeProjeto integracao) throws Exception {
+	public void remover(ProjetoComponente integracao) throws Exception {
 		itens.remove(integracao);
 		integracao.setProjetoPai(null);
 	}
 
-	public void mover(IntegracaoDeProjeto integracao) throws Exception {
-		integracao.setProjetoPai(integracao);
-		try {
-			integracao.adicionar(this);
-		} catch (Exception e) {
-			e.getMessage();
+	public void mover(ProjetoComponente integracao) throws Exception {
+		if (integracao instanceof Grupo) {
+			integracao.setProjetoPai(integracao);
+			try {
+				integracao.adicionar(this);
+			} catch (Exception e) {
+				e.getMessage();
+			}
 		}
 	}
 
@@ -53,7 +57,7 @@ public class Projeto extends IntegracaoDeProjeto {
 		// TODO Auto-generated method stub
 		aporteCusteioReais = 0;
 
-		for (IntegracaoDeProjeto integracaoDeProjeto : itens) {
+		for (ProjetoComponente integracaoDeProjeto : itens) {
 			try {
 				aporteCusteioReais += integracaoDeProjeto.getCustoTotal();
 			} catch (Exception e) {
@@ -69,7 +73,7 @@ public class Projeto extends IntegracaoDeProjeto {
 		// TODO Auto-generated method stub
 		gastoExecutadoCusteioReais = 0;
 
-		for (IntegracaoDeProjeto integracaoDeProjeto : itens) {
+		for (ProjetoComponente integracaoDeProjeto : itens) {
 			try {
 				gastoExecutadoCusteioReais += integracaoDeProjeto.getCusteioReaisNaoGastoTotal();
 			} catch (Exception e) {
@@ -86,7 +90,7 @@ public class Projeto extends IntegracaoDeProjeto {
 	}
 
 	// getters e setters
-	public ArrayList<IntegracaoDeProjeto> getItens() {
+	public ArrayList<ProjetoComponente> getItens() {
 		return itens;
 	}
 

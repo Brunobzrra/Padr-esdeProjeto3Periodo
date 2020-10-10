@@ -2,17 +2,17 @@ package model.projetos;
 
 import model.autenticacao.Membro;
 
-public abstract class IntegracaoDeProjeto {
+public abstract class ProjetoComponente {
 
 	private boolean ativo;
 
-	private IntegracaoDeProjeto projetoPai;
+	private ProjetoComponente projetoPai;
 
-	public IntegracaoDeProjeto getProjetoPai() {
+	public ProjetoComponente getProjetoPai() {
 		return projetoPai;
 	}
 
-	public void setProjetoPai(IntegracaoDeProjeto projetoPai) {
+	public void setProjetoPai(ProjetoComponente projetoPai) {
 		this.projetoPai = projetoPai;
 	}
 
@@ -42,9 +42,9 @@ public abstract class IntegracaoDeProjeto {
 	public void adicionar(Grupo integracao) throws Exception{
 		throw new Exception("Grupo não pode ser adcionado aqui!");
 	}
-	public abstract void remover(IntegracaoDeProjeto integracao) throws Exception;
+	public abstract void remover(ProjetoComponente integracao) throws Exception;
 
-	public abstract void mover(IntegracaoDeProjeto integracao) throws Exception;
+	public abstract void mover(ProjetoComponente integracao) throws Exception;
 
 	public abstract float getCapitalReaiNaoGastoTotal() throws Exception;
 

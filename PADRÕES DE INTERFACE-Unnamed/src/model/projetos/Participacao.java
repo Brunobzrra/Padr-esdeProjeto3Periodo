@@ -2,21 +2,28 @@ package model.projetos;
 
 import java.util.Date;
 
-public class Participacao extends IntegracaoDeProjeto{
+import org.joda.time.DateTime;
+
+import org.joda.time.Period;
+
+public class Participacao extends ProjetoComponente {
 
 	private Date dataInicio;
 
 	private Date dataTermino;
 
+	// quantidade de dinheiro recebido por mes
 	private float aporteCusteioMensalReais;
 
+	// meses de recebimento futuro
 	private short qtdMesesCusteados;
 
+	// meses que foram pagos
 	private short qtdMesesPagos;
 
 	private boolean coordenador;
-	
-	//metodos obrigatorios
+
+	// metodos obrigatorios
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
@@ -29,36 +36,44 @@ public class Participacao extends IntegracaoDeProjeto{
 		setAtivo(false);
 	}
 
-
 	public float getCustoTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.quantidadeDeMesesProjeto() * aporteCusteioMensalReais;
+
 	}
 
-	
 	public float getCusteioReaisNaoGastoTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+		float mesesDife = this.quantidadeDeMesesProjeto() - qtdMesesPagos;
+		return aporteCusteioMensalReais * mesesDife;
 	}
+
+	private float quantidadeDeMesesProjeto() {
+		DateTime i = new DateTime(dataInicio);
+		DateTime f = new DateTime(dataTermino);
+		Period dura = new Period(i, f);
+		return dura.getMonths();
+	}
+
 	@Override
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		float aux = 0;
+		aux = this.qtdMesesCusteados - this.qtdMesesPagos;
+		return aux * this.aporteCusteioMensalReais;
 	}
+
 	@Override
-	public void remover(IntegracaoDeProjeto integracao) throws Exception {
+	public void remover(ProjetoComponente integracao) throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Paricipação não remove!");
 	}
-	
+
 	@Override
-	public void mover(IntegracaoDeProjeto integracao) throws Exception {
+	public void mover(ProjetoComponente integracao) throws Exception {
 		// TODO Auto-generated method stub
-		//Deixamos assim, pois, achamos que não faz sentido parciáção mover-se
+		// Deixamos assim, pois, achamos que não faz sentido parciáção mover-se
 		throw new Exception("Paricipação não se move!");
 	}
-	
-	//getters e setters
+
+	// getters e setters
 	public Date getDataInicio() {
 		return dataInicio;
 	}
@@ -74,6 +89,7 @@ public class Participacao extends IntegracaoDeProjeto{
 	public void setDataTermino(Date dataTermino) {
 		this.dataTermino = dataTermino;
 	}
+
 	public float getAporteCusteioMensalReais() {
 		return aporteCusteioMensalReais;
 	}

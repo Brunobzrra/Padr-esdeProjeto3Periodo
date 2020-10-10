@@ -2,10 +2,10 @@ package model.autenticacao;
 
 import java.util.ArrayList;
 
-import model.projetos.IntegracaoDeProjeto;
+import model.projetos.ProjetoComponente;
 import model.projetos.Participacao;
 
-public class Membro extends IntegracaoDeProjeto {
+public class Membro extends ProjetoComponente {
 
 	private long matricula;
 
@@ -21,7 +21,7 @@ public class Membro extends IntegracaoDeProjeto {
 
 	private boolean administrador;
 
-	private ArrayList<IntegracaoDeProjeto> participacoes = new ArrayList<>();
+	private ArrayList<ProjetoComponente> participacoes = new ArrayList<>();
 
 	// creio que seja +- assim, não sei se a composição dessa classe é pela conta email.
 	public Membro(long matricula, String nome, String email, String senha, TipoProvedorAutenticacao tipo, String senhaEmail) {
@@ -90,7 +90,7 @@ public class Membro extends IntegracaoDeProjeto {
 			participacoes.add(integracao);
 	}
 
-	public void remover(IntegracaoDeProjeto integracao) throws Exception {
+	public void remover(ProjetoComponente integracao) throws Exception {
 		participacoes.remove(integracao);
 		integracao.setProjetoPai(null);
 
@@ -109,7 +109,7 @@ public class Membro extends IntegracaoDeProjeto {
 	}
 
 	@Override
-	public void mover(IntegracaoDeProjeto integracao) throws Exception {
+	public void mover(ProjetoComponente integracao) throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
 

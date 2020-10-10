@@ -3,7 +3,7 @@ package model.projetos;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Edital extends IntegracaoDeProjeto {
+public class Edital extends ProjetoComponente {
 
 	private String nome;
 
@@ -11,23 +11,24 @@ public class Edital extends IntegracaoDeProjeto {
 
 	private Date dataTermino;
 
-	private ArrayList<IntegracaoDeProjeto> itens = new ArrayList<IntegracaoDeProjeto>();
+	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
-	public void adicionar(IntegracaoDeProjeto integracao) throws Exception {
-		if (integracao instanceof Grupo || integracao instanceof Edital) {
+	public void adicionar(ProjetoComponente integracao) throws Exception {
+		if (integracao instanceof Grupo || integracao instanceof Projeto) {
 			integracao.setProjetoPai(this);
 			itens.add(integracao);
 		}
+
 		throw new Exception("Edital não pode adcionar coisas desse tipo!");
 	}
 
-	public void remover(IntegracaoDeProjeto integracao) throws Exception {
+	public void remover(ProjetoComponente integracao) throws Exception {
 		itens.remove(integracao);
 		integracao.setProjetoPai(null);
 	}
 
 	@Override
-	public void mover(IntegracaoDeProjeto integracao) throws Exception {
+	public void mover(ProjetoComponente integracao) throws Exception {
 		// TODO Auto-generated method stub
 		integracao.setProjetoPai(integracao);
 		try {
@@ -36,6 +37,7 @@ public class Edital extends IntegracaoDeProjeto {
 			e.getMessage();
 		}
 	}
+
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
 		return 0;
 	}
@@ -45,12 +47,13 @@ public class Edital extends IntegracaoDeProjeto {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 	@Override
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 	// metodos obrigatorios
 	@Override
 	public void ativar() {
@@ -83,7 +86,6 @@ public class Edital extends IntegracaoDeProjeto {
 		this.dataInicio = dataInicio;
 	}
 
-	
 	public Date getDataTermino() {
 		return dataTermino;
 	}

@@ -5,7 +5,7 @@ import java.util.Date;
 
 import model.autenticacao.Membro;
 
-public class Grupo extends IntegracaoDeProjeto {
+public class Grupo extends ProjetoComponente {
 
 	private String nome;
 
@@ -13,7 +13,7 @@ public class Grupo extends IntegracaoDeProjeto {
 
 	private String linkCNPq;
 
-	private ArrayList<IntegracaoDeProjeto> itens = new ArrayList<IntegracaoDeProjeto>();
+	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
 	public void adicionar(Membro integracao) throws Exception {	
 			integracao.setProjetoPai(this);
@@ -24,13 +24,13 @@ public class Grupo extends IntegracaoDeProjeto {
 			itens.add(integracao);
 	}
 
-	public void remover(IntegracaoDeProjeto integracao) {
+	public void remover(ProjetoComponente integracao) {
 		itens.remove(integracao);
 		integracao.setProjetoPai(null);
 	}
 
 	@Override
-	public void mover(IntegracaoDeProjeto integracao) throws Exception {
+	public void mover(ProjetoComponente integracao) throws Exception {
 		// TODO Auto-generated method stub
 		integracao.setProjetoPai(integracao);
 		try {
@@ -40,7 +40,13 @@ public class Grupo extends IntegracaoDeProjeto {
 		}
 	}
 	public float getCapitalReaiNaoGastoTotal()  throws Exception {
-		return 0;
+		float aux = 0;
+		for (ProjetoComponente participantes : itens) {
+			if(participantes instanceof Projeto) {
+				aux =+ participantes.getCapitalReaiNaoGastoTotal();
+			}	
+		}
+		return aux;
 	}
 
 	@Override
