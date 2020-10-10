@@ -4,7 +4,7 @@
     <model.projetos.Edital>
       <ativo>true</ativo>
       <nome>Editalzin</nome>
-      <dataInicio>2020-10-10 03:00:19.503 UTC</dataInicio>
+      <dataInicio>2020-10-10 03:53:24.944 UTC</dataInicio>
       <itens/>
     </model.projetos.Edital>
   </entry>
@@ -12,8 +12,17 @@
     <long>2</long>
     <model.projetos.Edital>
       <ativo>true</ativo>
-      <nome>Editalzin</nome>
-      <dataInicio>2020-10-10 03:00:19.503 UTC</dataInicio>
+      <nome>editalzao</nome>
+      <dataInicio>2020-10-10 03:53:24.944 UTC</dataInicio>
+      <itens/>
+    </model.projetos.Edital>
+  </entry>
+  <entry>
+    <long>3</long>
+    <model.projetos.Edital>
+      <ativo>true</ativo>
+      <nome>editalzao</nome>
+      <dataInicio>2020-10-10 03:52:11.530 UTC</dataInicio>
       <itens/>
     </model.projetos.Edital>
   </entry>

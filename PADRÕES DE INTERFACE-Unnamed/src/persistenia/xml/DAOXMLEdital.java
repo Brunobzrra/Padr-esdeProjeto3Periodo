@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -121,18 +120,67 @@ public class DAOXMLEdital {
 		return auxiliar;
 	}
 
-	public Set<Edital> consultarOr(String nome, Date dataInicio, Date dataTermino, boolean ativo) {
+	public Set<Edital> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Edital> auxiliar = new HashSet<Edital>();
-
-		for (int i = 0; i < persistidos.size(); i++) {
-			Edital editalAuxiliar = persistidos.get(i);
-			if (editalAuxiliar.getNome().equalsIgnoreCase(nome) || editalAuxiliar.getDataInicio().equals(dataInicio)
-					|| editalAuxiliar.getDataTermino().equals(dataTermino) || editalAuxiliar.getAtivo() == ativo) {
-				auxiliar.add(editalAuxiliar);
+		Set<Long> chaves = persistidos.keySet();
+		Edital editalAuxiliar = null;
+		boolean adicionar = false;
+		for (Long chave : chaves) {
+			if (chave != null) {
+				editalAuxiliar = persistidos.get(chave);
+				if (atributos != null) {
+					for (int i = 0; i < atributos.length; i++) {
+						adicionar = false;
+						if (atributos[i].equals("nome")) {
+							String nomeRecuperado = editalAuxiliar.getNome();
+							if (i == 0) {
+								if (valores[0].equals(nomeRecuperado)) {
+									adicionar = true;
+								}
+							} else if (i == 1) {
+								if (valores[1].equals(nomeRecuperado)) {
+									adicionar = true;
+								}
+							} else {
+								adicionar = true;
+							}
+						} else if (atributos[i].equals("dataDeInicio")) {
+							Date dataDeInicioRecuperada = editalAuxiliar.getDataInicio();
+							if (i == 0) {
+								if (dataDeInicioRecuperada.equals(valores[0])) {
+									adicionar = true;
+								}
+							} else if (i == 1) {
+								if (dataDeInicioRecuperada.equals(valores[1]))
+									adicionar = true;
+							} else {
+								if (dataDeInicioRecuperada.equals(valores[2]))
+									adicionar = true;
+							}
+						} else if (atributos[i].equals("dataTermino")) {
+							Date dataTerminoRecuperada = editalAuxiliar.getDataTermino();
+							if (i == 0) {
+								if (dataTerminoRecuperada.equals(valores[0])) {
+									adicionar = true;
+								}
+							} else if (i == 1) {
+								if (dataTerminoRecuperada.equals(valores[1])) {
+									adicionar = true;
+								}
+							} else {
+								if (dataTerminoRecuperada.equals(valores[2])) {
+									adicionar = true;
+								}
+							}
+						}
+					}
+				}
 
 			}
-
+			if (adicionar) {
+				auxiliar.add(editalAuxiliar);
+			}
 		}
 		return auxiliar;
 	}
@@ -149,14 +197,13 @@ public class DAOXMLEdital {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	public void limpar() {
 		this.persistidos = this.carregarXML();
 		persistidos.clear();
 		this.salvarXML(persistidos);
 	}
-	
+
 	private HashMap<Long, Edital> carregarXML() {
 		if (arquivoColecao.exists()) {
 			try {
