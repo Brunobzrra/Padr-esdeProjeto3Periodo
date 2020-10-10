@@ -54,38 +54,15 @@ public class Projeto extends ProjetoComponente {
 
 	@Override
 	public float getCustoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		aporteCusteioReais = 0;
-
-		for (ProjetoComponente integracaoDeProjeto : itens) {
-			try {
-				aporteCusteioReais += integracaoDeProjeto.getCustoTotal();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.getMessage();
-			}
-		}
-		return aporteCusteioReais;
+		return gastoExecutadoCapitalReais;
 	}
 
 	@Override
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
-		// TODO Auto-generated method stub
-		gastoExecutadoCusteioReais = 0;
-
-		for (ProjetoComponente integracaoDeProjeto : itens) {
-			try {
-				gastoExecutadoCusteioReais += integracaoDeProjeto.getCusteioReaisNaoGastoTotal();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.getMessage();
-			}
-		}
-		return getCustoTotal() - gastoExecutadoCusteioReais;
+		return aporteCusteioReais - gastoExecutadoCusteioReais;
 	}
 
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
-		gastoExecutadoCusteioReais = getCustoTotal();
 		return aporteCapitalReais - gastoExecutadoCapitalReais;
 	}
 
