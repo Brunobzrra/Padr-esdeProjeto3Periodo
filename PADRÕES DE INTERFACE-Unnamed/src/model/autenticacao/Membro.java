@@ -34,7 +34,7 @@ public class Membro extends ProjetoComponente {
 		if (tipo.name().equals("INTERNAMENTE")) {
 			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
 		}else
-			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailSMTP());
+			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailPOP3());
 	}
 
 	public long getMatricula() {
