@@ -29,7 +29,7 @@ public class Membro extends ProjetoComponente {
 		this.matricula = matricula;
 		this.nome = nome;
 		this.email = email;
-		this.senha = senha;
+		this.setSenha(senha);
 	
 		if (tipo.name().equals("INTERNAMENTE")) {
 			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
@@ -127,6 +127,14 @@ public class Membro extends ProjetoComponente {
 
 	public void setConta(ContaEmail conta) {
 		this.conta = conta;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 }
