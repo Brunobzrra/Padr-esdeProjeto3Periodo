@@ -59,13 +59,13 @@ public class Grupo extends IntegracaoDeProjeto {
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		IniciativaCientifica.ativar(itens, this);
+		Utilidade.ativar(itens, this);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		IniciativaCientifica.desativar(itens, this);
+		Utilidade.desativar(itens, this);
 	}
 
 

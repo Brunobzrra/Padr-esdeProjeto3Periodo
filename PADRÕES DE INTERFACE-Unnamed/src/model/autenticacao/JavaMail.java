@@ -63,6 +63,7 @@ public class JavaMail {
 				return new PasswordAuthentication(remetente, senha);
 			}
 		});
+		
 		session.setDebug(true);
 		for (int i = 0; i < 2; i++) {
 			Address[] toUser = null;

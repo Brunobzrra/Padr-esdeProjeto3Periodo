@@ -2,7 +2,7 @@ package model.projetos;
 
 import java.util.ArrayList;
 
-public class IniciativaCientifica {
+public class Utilidade {
 	public static void ativar(ArrayList<IntegracaoDeProjeto> itens, IntegracaoDeProjeto integracaoDeProjeto) {
 		integracaoDeProjeto.setAtivo(true);
 		for (IntegracaoDeProjeto item : itens) {

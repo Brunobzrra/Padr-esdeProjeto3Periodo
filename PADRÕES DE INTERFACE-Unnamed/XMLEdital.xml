@@ -1,15 +1,19 @@
 <map>
   <entry>
-    <long>2</long>
+    <long>1</long>
     <model.projetos.Edital>
-      <ativo>false</ativo>
+      <ativo>true</ativo>
+      <nome>Editalzin</nome>
+      <dataInicio>2020-10-10 03:00:19.503 UTC</dataInicio>
       <itens/>
     </model.projetos.Edital>
   </entry>
   <entry>
-    <long>3</long>
+    <long>2</long>
     <model.projetos.Edital>
-      <ativo>false</ativo>
+      <ativo>true</ativo>
+      <nome>Editalzin</nome>
+      <dataInicio>2020-10-10 03:00:19.503 UTC</dataInicio>
       <itens/>
     </model.projetos.Edital>
   </entry>
