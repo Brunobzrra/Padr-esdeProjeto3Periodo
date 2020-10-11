@@ -1,17 +1,12 @@
-package model.fachadas;
+package model.casosDeUsofachadas;
 
 import java.util.Set;
 
-import model.autenticacao.ContaAutenticacaoProvedorEmailPOP3;
-import model.autenticacao.ContaAutenticacaoProvedorInterno;
-import model.autenticacao.ContaBridge;
 import model.autenticacao.ContaEmail;
-import model.autenticacao.ContaEmailIFPB;
-import model.autenticacao.ContaEmailLivre;
 import model.autenticacao.Membro;
-import model.autenticacao.TipoProvedorAutenticacao;
 import persistenia.xml.DAOXMLMembroConta;
 
+//caso de uso 1
 public class CasoDeUsoUmCadastroFachada {
 
 	DAOXMLMembroConta dao = new DAOXMLMembroConta();

@@ -1,4 +1,4 @@
-package model.fachadas;
+package model.casosDeUsofachadas;
 
 import model.projetos.Projeto;
 

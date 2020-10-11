@@ -1,4 +1,4 @@
-package model.fachadas;
+package model.casosDeUsofachadas;
 
 import model.autenticacao.ContaAutenticacaoProvedorEmailPOP3;
 import model.autenticacao.ContaAutenticacaoProvedorInterno;
@@ -9,6 +9,7 @@ import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
 import persistenia.xml.DAOXMLMembroConta;
 
+//caso de uso 2
 public class CasoDeUsoDoisAutenticacaoDeLogin {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();

@@ -1,4 +1,4 @@
-package model.fachadas;
+package model.casosDeUsofachadas;
 
 public class RelatorioFachada {
 	public void gerarRelatorio() {

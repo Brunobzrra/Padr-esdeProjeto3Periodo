@@ -18,6 +18,16 @@ public class Projeto extends ProjetoComponente {
 
 	private float gastoExecutadoCapitalReais;
 
+	
+	public Projeto(String nome, float aporteCusteioReais, float aporteCapitalReais, float gastoExecutadoCusteioReais,
+			float gastoExecutadoCapitalReais) {
+		this.nome = nome;
+		this.aporteCusteioReais = aporteCusteioReais;
+		this.aporteCapitalReais = aporteCapitalReais;
+		this.gastoExecutadoCusteioReais = gastoExecutadoCusteioReais;
+		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
+	}
+
 	public void adicionar(Membro integracao) throws Exception {
 		integracao.setProjetoPai(this);
 		itens.add(integracao);

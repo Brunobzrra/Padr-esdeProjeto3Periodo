@@ -4,7 +4,7 @@ import model.autenticacao.Membro;
 
 public abstract class ProjetoComponente {
 
-	private boolean ativo;
+	private boolean ativo = true;
 
 	private ProjetoComponente projetoPai;
 
@@ -26,22 +26,26 @@ public abstract class ProjetoComponente {
 
 	public abstract float getCusteioReaisNaoGastoTotal() throws Exception;
 
-	public void adicionar(Membro integracao) throws Exception{
+	public void adicionar(Membro integracao) throws Exception {
 		throw new Exception("Membro não pode ser adcionado aqui!");
 	}
 
-	public void adicionar(Projeto integracao) throws Exception{
+	public void adicionar(Projeto integracao) throws Exception {
 		throw new Exception("Projeto não pode ser adcionado aqui!");
 	}
-	public void adicionar(Participacao integracao) throws Exception{
+
+	public void adicionar(Participacao integracao) throws Exception {
 		throw new Exception("Participação não pode ser adcionado aqui!");
 	}
-	public void adicionar(Edital integracao) throws Exception{
+
+	public void adicionar(Edital integracao) throws Exception {
 		throw new Exception("Edital não pode ser adcionado aqui!");
 	}
-	public void adicionar(Grupo integracao) throws Exception{
+
+	public void adicionar(Grupo integracao) throws Exception {
 		throw new Exception("Grupo não pode ser adcionado aqui!");
 	}
+
 	public abstract void remover(ProjetoComponente integracao) throws Exception;
 
 	public abstract void mover(ProjetoComponente integracao) throws Exception;
