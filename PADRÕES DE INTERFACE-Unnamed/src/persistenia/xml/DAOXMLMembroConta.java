@@ -298,7 +298,7 @@ public class DAOXMLMembroConta {
 								} else if (valores[6].equals(nomeRecuperado)) {
 									adicionar = true;
 								}
-							} else if (atributos[j].equals("email")) {
+							} else if (atributos[j].equals("email") && adicionar==false) {
 								String emailRecuperado = membroAuxiliar.getEmail();
 								if (j == 0) {
 									if (emailRecuperado.equals(valores[0])) {
@@ -328,7 +328,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("senha")) {
+							} else if (atributos[j].equals("senha")&& adicionar==false) {
 								String senhaRecuperada = membroAuxiliar.getSenha();
 								if (j == 0) {
 									if (senhaRecuperada.equals(valores[0])) {
@@ -358,7 +358,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("conta")) {
+							} else if (atributos[j].equals("conta")&& adicionar==false) {
 								ContaEmail contaRecuperada = membroAuxiliar.getConta();
 								if (j == 0) {
 									if (contaRecuperada.equals(valores[0])) {
@@ -389,7 +389,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("matricula")) {
+							} else if (atributos[j].equals("matricula")&& adicionar==false) {
 								Long matriculaRecuperada = membroAuxiliar.getMatricula();
 								if (j == 0) {
 									if (matriculaRecuperada.equals(valores[0])) {
@@ -419,7 +419,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("ativo")) {
+							} else if (atributos[j].equals("ativo")&& adicionar==false) {
 								Boolean ativo = membroAuxiliar.getAtivo();
 								if (j == 0) {
 									if (ativo.equals(valores[0])) {

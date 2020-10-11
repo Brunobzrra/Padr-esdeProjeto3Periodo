@@ -178,7 +178,7 @@ public class DAOXMLGrupo {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("dataDeCriacao")) {
+							} else if (atributos[j].equals("dataDeCriacao")&& adicionar==false) {
 								Date dataDeCriacao = grupoAuxiliar.getDataCriacao();
 								if (j == 0) {
 									if (dataDeCriacao.equals(valores[0])) {
@@ -196,7 +196,7 @@ public class DAOXMLGrupo {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("linkCNPq")) {
+							} else if (atributos[j].equals("linkCNPq")&& adicionar==false) {
 								String linkCNPqRecuperado = grupoAuxiliar.getLinkCNPq();
 								if (j == 0) {
 									if (linkCNPqRecuperado.equals(valores[0])) {
@@ -214,7 +214,7 @@ public class DAOXMLGrupo {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("ativo")) {
+							} else if (atributos[j].equals("ativo")&& adicionar==false) {
 								Boolean ativo = grupoAuxiliar.getAtivo();
 								if (j == 0) {
 									if (ativo.equals(valores[0])) {

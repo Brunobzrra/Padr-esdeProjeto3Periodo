@@ -7,11 +7,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
@@ -48,12 +50,280 @@ public class DAOXMLProjetoParticipacao {
 		return true;
 	}
 
-	public Set<Projeto> consultarAnd(String atributos, String respectivosValoresAtributos) {
-		return null;
+	public Set<Projeto> consultarAnd(String[] atributos, Object[] valores) {
+		this.persistidos = this.carregarXML();
+		Set<Projeto> auxiliar = new HashSet<Projeto>();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (chave != null) {
+				Projeto projetoAuxiliar = persistidos.get(chave);
+				boolean[] confirmacoes = new boolean[5];
+				if (atributos != null) {
+					for (int j = 0; j < atributos.length; j++) {
+						if (valores != null) {
+							if (atributos[j].equals("nome")) {
+								String nomeRecuperado = projetoAuxiliar.getNome();
+								if (j == 0) {
+									if (valores[0].equals(nomeRecuperado)) {
+										confirmacoes[0] = true;
+									}
+								} else if (j == 1) {
+									if (valores[1].equals(nomeRecuperado)) {
+										confirmacoes[1] = true;
+									}
+								} else if (j == 2) {
+									if (valores[2].equals(nomeRecuperado))
+										confirmacoes[2] = true;
+								} else if (j == 3) {
+									if (valores[3].equals(nomeRecuperado)) {
+										confirmacoes[3] = true;
+									}
+								} else if (j == 4) {
+									if (valores[4].equals(nomeRecuperado)) {
+										confirmacoes[4] = true;
+									}
+								}
+							} else if (atributos[j].equals("aporteCusteioReais")) {
+								Float valorRecuperado = projetoAuxiliar.getAporteCusteioReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										confirmacoes[0] = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										confirmacoes[1] = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										confirmacoes[2] = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[3] = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[4] = true;
+									}
+								}
+							}  else if (atributos[j].equals("aporteCapitalReais")) {
+								Float valorRecuperado = projetoAuxiliar.getAporteCapitalReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										confirmacoes[0] = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										confirmacoes[1] = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										confirmacoes[2] = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[3] = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[4] = true;
+									}
+								}
+							}  else if (atributos[j].equals("gastoExecutadoCusteioReais")) {
+								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCusteioReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										confirmacoes[0] = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										confirmacoes[1] = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										confirmacoes[2] = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[3] = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[4] = true;
+									}
+								}
+							}else if (atributos[j].equals("gastoExecutadoCapitalReais")) {
+								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCapitalReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										confirmacoes[0] = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										confirmacoes[1] = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										confirmacoes[2] = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[3] = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										confirmacoes[4] = true;
+									}
+								}
+							}
+						}
+
+					}
+				}
+				int aux = 0;
+				for (int j = 0; j < confirmacoes.length; j++) {
+					if (confirmacoes[j] == true) {
+						aux++;
+					}
+				}
+				if (aux == atributos.length) {
+					auxiliar.add(projetoAuxiliar);
+				}
+			}
+		}
+		return auxiliar;
 	}
 
-	public Set<Projeto> consultarOr(String atributos, String respectivosValoresAtributos) {
-		return null;
+
+	public Set<Projeto> consultarOr(String[] atributos, Object[] valores) {
+		this.persistidos = this.carregarXML();
+		Set<Projeto> auxiliar = new HashSet<Projeto>();
+		Set<Long> chaves = persistidos.keySet();
+		boolean adicionar = false;
+		adicionar = true;
+		for (Long chave : chaves) {
+			if (chave != null) {
+				Projeto projetoAuxiliar = persistidos.get(chave);
+				if (atributos != null) {
+					for (int j = 0; j < atributos.length; j++) {
+						if (valores != null) {
+							if (atributos[j].equals("nome")) {
+								String nomeRecuperado = projetoAuxiliar.getNome();
+								if (j == 0) {
+									if (valores[0].equals(nomeRecuperado)) {
+										adicionar = true;
+									}
+								} else if (j == 1) {
+									if (valores[1].equals(nomeRecuperado)) {
+										adicionar = true;
+									}
+								} else if (j == 2) {
+									if (valores[2].equals(nomeRecuperado))
+										adicionar = true;
+								} else if (j == 3) {
+									if (valores[3].equals(nomeRecuperado)) {
+										adicionar = true;
+									}
+								} else if (j == 4) {
+									if (valores[4].equals(nomeRecuperado)) {
+										adicionar = true;
+									}
+								}
+							} else if (atributos[j].equals("aporteCusteioReais")) {
+								Float valorRecuperado = projetoAuxiliar.getAporteCusteioReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										adicionar = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										adicionar = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										adicionar = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								}
+							}  else if (atributos[j].equals("aporteCapitalReais")) {
+								Float valorRecuperado = projetoAuxiliar.getAporteCapitalReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										adicionar = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										adicionar = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										adicionar = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								}
+							}  else if (atributos[j].equals("gastoExecutadoCusteioReais")) {
+								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCusteioReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										adicionar = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										adicionar = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										adicionar = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								}
+							}else if (atributos[j].equals("gastoExecutadoCapitalReais")) {
+								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCapitalReais();
+								if (j == 0) {
+									if (valorRecuperado == valores[0]) {
+										adicionar = true;
+									}
+								} else if (j == 1) {
+									if (valorRecuperado == valores[1]) {
+										adicionar = true;
+									}
+								} else if (j == 2) {
+									if (valorRecuperado == valores[2])
+										adicionar = true;
+								} else if (j == 3) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								} else if (j == 4) {
+									if (valorRecuperado == valores[3]) {
+										adicionar = true;
+									}
+								}
+							}
+						}
+
+					}
+				}
+				if (adicionar) {
+					auxiliar.add(projetoAuxiliar);
+				}
+			}
+		}
+		return auxiliar;
 	}
 
 	private void salvarXML(HashMap<Long, Projeto> persistidos) {

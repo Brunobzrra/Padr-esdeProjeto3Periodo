@@ -182,7 +182,7 @@ public class DAOXMLEdital {
 									adicionar = true;
 								}
 							}
-						} else if (atributos[i].equals("dataDeInicio")) {
+						} else if (atributos[i].equals("dataDeInicio")&& adicionar==false) {
 							Date dataDeInicioRecuperada = editalAuxiliar.getDataInicio();
 							if (i == 0) {
 								if (dataDeInicioRecuperada.equals(valores[0])) {
@@ -200,7 +200,7 @@ public class DAOXMLEdital {
 									adicionar = true;
 								}
 							}
-						} else if (atributos[i].equals("dataTermino")) {
+						} else if (atributos[i].equals("dataTermino")&& adicionar==false) {
 							Date dataTerminoRecuperada = editalAuxiliar.getDataTermino();
 							if (i == 0) {
 								if (dataTerminoRecuperada.equals(valores[0])) {
@@ -219,7 +219,7 @@ public class DAOXMLEdital {
 									adicionar = true;
 								}
 							}
-						} else if (atributos[i].equals("ativo")) {
+						} else if (atributos[i].equals("ativo")&& adicionar==false) {
 							Boolean ativo = editalAuxiliar.getAtivo();
 							if (i == 0) {
 								if (ativo.equals(valores[0])) {
