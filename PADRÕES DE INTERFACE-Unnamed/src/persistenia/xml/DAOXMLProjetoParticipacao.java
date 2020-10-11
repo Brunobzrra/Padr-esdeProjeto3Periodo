@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,11 +12,8 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import model.autenticacao.ContaEmail;
-import model.autenticacao.Membro;
-import model.projetos.Participacao;
+
 import model.projetos.Projeto;
-import model.projetos.ProjetoComponente;
 
 public class DAOXMLProjetoParticipacao {
 
