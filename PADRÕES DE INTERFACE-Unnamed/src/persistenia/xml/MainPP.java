@@ -2,6 +2,7 @@ package persistenia.xml;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
@@ -10,6 +11,7 @@ import model.projetos.Edital;
 public class MainPP {
 
 	public static void main(String[] args) {
+		DAOXMLEdital xml = new DAOXMLEdital();
 		Edital edital = new Edital();
 		edital.setNome("Editalzin");
 		edital.setAtivo(true);
@@ -29,14 +31,20 @@ public class MainPP {
 //		}
 //
 //		edital2.setDataInicio(dataFormatada);
-		edital2.setDataInicio(new Date(System.currentTimeMillis()));
-
-		DAOXMLEdital xml = new DAOXMLEdital();
+		Date tempo = new Date(System.currentTimeMillis());
+		edital2.setDataInicio(tempo);
+		DAOXMLEdital xml2 = new DAOXMLEdital();
 		String[] atributos = { "nome", "dataDeInicio" };
 		Object[] valores = { "Editalzin", data };
 //		xml.limpar();
-		xml.criar(edital);
-		xml.criar(edital2);
+		Edital ed = new Edital();
+		ed.setNome("Uva");
+		ed.setAtivo(true);
+		ed.setDataInicio(tempo);
+		xml2.criar(ed);
+		xml2.criar(edital);
+		xml2.criar(edital2);
+		
 		Set<Edital> recuperado = xml.consultarAnd(atributos, valores);
 		Set<Edital> recuperadoOR = xml.consultarOr(atributos, valores);
 		for (Edital edital3 : recuperado) {

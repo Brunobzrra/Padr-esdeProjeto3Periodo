@@ -86,14 +86,17 @@ public class Membro extends ProjetoComponente {
 	}
 
 	public void adicionar(Participacao integracao) throws Exception {
+		if (integracao instanceof Participacao) {
 			integracao.setProjetoPai(this);
-			participacoes.add(integracao);
+			participacoes.add(integracao);			
+		}
 	}
 
 	public void remover(ProjetoComponente integracao) throws Exception {
-		participacoes.remove(integracao);
-		integracao.setProjetoPai(null);
-
+		if (integracao instanceof Participacao) {
+			participacoes.remove(integracao);
+			integracao.setProjetoPai(null);
+		}
 	}
 
 	@Override
