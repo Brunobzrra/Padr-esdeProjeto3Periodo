@@ -5,6 +5,7 @@ import model.projetos.Edital;
 import model.projetos.Grupo;
 import model.projetos.Projeto;
 
+//caso de uso 5
 public class ProjetoFachada {
 	private Projeto projeto;
 
