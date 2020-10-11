@@ -22,6 +22,9 @@ public class Membro extends ProjetoComponente {
 
 	private ArrayList<ProjetoComponente> participacoes = new ArrayList<>();
 
+	public ArrayList<ProjetoComponente> getParticipacoes() {
+		return participacoes;
+	}
 	public Membro() {}
 	public Membro(long matricula, String nome, String email, String senha, String senhaEmail) {
 		this.matricula = matricula;
