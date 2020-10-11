@@ -12,8 +12,10 @@ import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
 import persistenia.xml.DAOXMLMembroConta;
 
-public class CadastroFachada {
+public class CasoDeUsoUmCadastroFachada {
+
 	DAOXMLMembroConta dao = new DAOXMLMembroConta();
+
 	ContaEmail conta;
 
 	public boolean cadastrarMembro(String nome, long matricula, String email, String senha, String senhaEmail,
@@ -74,7 +76,7 @@ public class CadastroFachada {
 				membroAtual.setSenha((String) valores[i]);
 				atualizado = true;
 			}
-			
+
 			if (atributosQueroAtualizar[i].equals("conta")) {
 				ContaEmail contaCriada = criarConta(m.getEmail(), (TipoProvedorAutenticacao) valores[i]);
 				membroAtual.setConta(contaCriada);
@@ -83,9 +85,9 @@ public class CadastroFachada {
 		}
 		if (atualizado) {
 			dao.atualizar(m, membroAtual);
-		}else {
+		} else {
 			throw new Exception("O membro nao pode ser atualizado.");
-			
+
 		}
 
 	}
