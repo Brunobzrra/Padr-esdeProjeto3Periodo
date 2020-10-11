@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +14,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
-import model.projetos.Grupo;
 
 public class DAOXMLMembroConta {
 
@@ -24,6 +22,13 @@ public class DAOXMLMembroConta {
 	private HashMap<Long, Membro> persistidos;
 
 	private final File arquivoColecao = new File("XMLMembroConta.xml");
+
+	public boolean isVazia() {
+		if (persistidos.isEmpty()) {
+			return true;
+		}
+		return false;
+	}
 
 	public boolean criar(Membro membro) {
 		this.persistidos = this.carregarXML();
@@ -39,9 +44,15 @@ public class DAOXMLMembroConta {
 		this.salvarXML(persistidos);
 	}
 
-	public boolean atualizar(long id, Membro membro) {
+	public boolean atualizar(Membro membroSubstituivel, Membro membroSubstituto) {
 		this.persistidos = this.carregarXML();
-		persistidos.replace(id, membro);
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).equals(membroSubstituivel)) {
+				persistidos.replace(chave, membroSubstituto);
+			}
+		}
+		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}
@@ -298,7 +309,7 @@ public class DAOXMLMembroConta {
 								} else if (valores[6].equals(nomeRecuperado)) {
 									adicionar = true;
 								}
-							} else if (atributos[j].equals("email") && adicionar==false) {
+							} else if (atributos[j].equals("email") && adicionar == false) {
 								String emailRecuperado = membroAuxiliar.getEmail();
 								if (j == 0) {
 									if (emailRecuperado.equals(valores[0])) {
@@ -328,7 +339,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("senha")&& adicionar==false) {
+							} else if (atributos[j].equals("senha") && adicionar == false) {
 								String senhaRecuperada = membroAuxiliar.getSenha();
 								if (j == 0) {
 									if (senhaRecuperada.equals(valores[0])) {
@@ -358,7 +369,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("conta")&& adicionar==false) {
+							} else if (atributos[j].equals("conta") && adicionar == false) {
 								ContaEmail contaRecuperada = membroAuxiliar.getConta();
 								if (j == 0) {
 									if (contaRecuperada.equals(valores[0])) {
@@ -389,7 +400,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("matricula")&& adicionar==false) {
+							} else if (atributos[j].equals("matricula") && adicionar == false) {
 								Long matriculaRecuperada = membroAuxiliar.getMatricula();
 								if (j == 0) {
 									if (matriculaRecuperada.equals(valores[0])) {
@@ -419,7 +430,7 @@ public class DAOXMLMembroConta {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("ativo")&& adicionar==false) {
+							} else if (atributos[j].equals("ativo") && adicionar == false) {
 								Boolean ativo = membroAuxiliar.getAtivo();
 								if (j == 0) {
 									if (ativo.equals(valores[0])) {
@@ -490,5 +501,6 @@ public class DAOXMLMembroConta {
 		}
 		return new HashMap<Long, Membro>();
 	}
+
 
 }

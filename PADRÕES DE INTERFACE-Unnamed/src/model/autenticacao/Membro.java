@@ -6,7 +6,6 @@ import model.projetos.ProjetoComponente;
 import model.projetos.Participacao;
 
 public class Membro extends ProjetoComponente {
-
 	private long matricula;
 
 	private String nome;
@@ -23,18 +22,12 @@ public class Membro extends ProjetoComponente {
 
 	private ArrayList<ProjetoComponente> participacoes = new ArrayList<>();
 
-	// creio que seja +- assim, não sei se a composição dessa classe é pela conta email.
-	public Membro(long matricula, String nome, String email, String senha, TipoProvedorAutenticacao tipo, String senhaEmail) {
-		
+	public Membro() {}
+	public Membro(long matricula, String nome, String email, String senha, String senhaEmail) {
 		this.matricula = matricula;
 		this.nome = nome;
 		this.email = email;
 		this.setSenha(senha);
-	
-		if (tipo.name().equals("INTERNAMENTE")) {
-			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
-		}else
-			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailPOP3());
 	}
 
 	public long getMatricula() {
@@ -138,6 +131,14 @@ public class Membro extends ProjetoComponente {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	
+	public boolean equals(Membro m) {
+		long matricula = m.getMatricula();
+		if (this.matricula == matricula) {
+			return true;
+		}
+		return false;
 	}
 
 }
