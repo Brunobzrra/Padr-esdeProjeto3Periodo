@@ -23,24 +23,31 @@ public class DAOXMLProjetoParticipacao {
 
 	private final File arquivoColecao = new File("XMLProjetoParticipacao.xml");
 
-	private long id = 0;
-
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
+
+	long id = 0;
 
 	public boolean criar(Projeto projeto, Membro m, Participacao p) throws Exception {
 		this.persistidos = this.carregarXML();
 		Set<Long> chave = persistidos.keySet();
-		Long idRecuperado = null;
-		for (Long long1 : chave) {
-			if (persistidos.get(long1).getNome().equals(projeto.getNome())) {
-				idRecuperado = long1;
-				break;
+		long idRecuperado = 0;
+		if (!chave.isEmpty()) {
+			for (Long long1 : chave) {
+				if (!persistidos.isEmpty()) {
+					if (persistidos.get(long1).getNome().equals(projeto.getNome())) {
+						idRecuperado = long1;
+						break;
+					}
+				}
 			}
 		}
-		if (m != null && projeto != null && idRecuperado != null && p != null) {
+		if (m != null && projeto != null && idRecuperado > 0 && p != null) {
 			m.adicionar(p);
 			projeto.adicionar(m);
-			this.persistidos.put(idRecuperado, projeto);
+			if (idRecuperado > 0) {
+				id += 1;
+				this.persistidos.put(id, projeto);
+			}
 			this.salvarXML(persistidos);
 			return true;
 		}
@@ -51,10 +58,12 @@ public class DAOXMLProjetoParticipacao {
 		this.persistidos = this.carregarXML();
 		Set<Long> chave = persistidos.keySet();
 		Long idRecuperado = null;
-		for (Long long1 : chave) {
-			if (persistidos.get(long1).getNome().equals(p.getNome())) {
-				idRecuperado = long1;
-				break;
+		if (!chave.isEmpty()) {
+			for (Long long1 : chave) {
+				if (persistidos.get(long1).getNome().equals(p.getNome())) {
+					idRecuperado = long1;
+					break;
+				}
 			}
 		}
 		if (m != null && p != null && idRecuperado != null) {
@@ -75,14 +84,16 @@ public class DAOXMLProjetoParticipacao {
 		Set<Long> chave = persistidos.keySet();
 		int posParticipProjeto = 0;
 		Long idRecuperado = null;
-		for (Long long1 : chave) {
-			posParticipProjeto = 0;
-			ArrayList<ProjetoComponente> auxiliar = persistidos.get(long1).getItens();
-			for (int i = 0; i < auxiliar.size(); i++) {
-				posParticipProjeto++;
-				if (auxiliar.get(i).equals(partici)) {
-					idRecuperado = long1;
-					break;
+		if (!chave.isEmpty()) {
+			for (Long long1 : chave) {
+				posParticipProjeto = 0;
+				ArrayList<ProjetoComponente> auxiliar = persistidos.get(long1).getItens();
+				for (int i = 0; i < auxiliar.size(); i++) {
+					posParticipProjeto++;
+					if (auxiliar.get(i).equals(partici)) {
+						idRecuperado = long1;
+						break;
+					}
 				}
 			}
 		}
