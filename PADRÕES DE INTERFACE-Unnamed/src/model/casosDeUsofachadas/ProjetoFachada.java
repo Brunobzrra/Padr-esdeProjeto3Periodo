@@ -43,12 +43,12 @@ public class ProjetoFachada {
 		String[] atributo = { atributoASerAtualizado };
 		Object[] valor = { novoDado };
 		Set<Projeto> projetoRecuperados = projetoParticipacao.consultarAnd(atributo, valor);
-		
+
 		if (!projetoRecuperados.isEmpty()) {
-			Projeto auxiliar;
-			Iterator<Projeto> it = projetoRecuperados.iterator(); 
-			while(it.hasNext()) {
-				auxiliar = (Projeto) it.next();		
+			Projeto auxiliar = null;
+			Iterator<Projeto> it = projetoRecuperados.iterator();
+			while (it.hasNext()) {
+				auxiliar = (Projeto) it.next();
 			}
 			ArrayList<ProjetoComponente> itensProjeto = auxiliar.getItens();
 			if (atributoASerAtualizado.equalsIgnoreCase("participacao")) {
@@ -63,8 +63,7 @@ public class ProjetoFachada {
 						}
 					}
 				}
-			}
-			else if (atributoASerAtualizado.equalsIgnoreCase("membro")) {
+			} else if (atributoASerAtualizado.equalsIgnoreCase("membro")) {
 				boolean atributoNovoEhMembro = novoDado instanceof Membro;
 				for (int i = 0; i < itensProjeto.size(); i++) {
 					if (itensProjeto.get(i) instanceof Membro && atributoNovoEhMembro) {
@@ -75,15 +74,20 @@ public class ProjetoFachada {
 						}
 					}
 				}
-			}else if(atributoASerAtualizado.equalsIgnoreCase("aporteCusteioReais")) {
-				auxiliar.setAporteCusteioReais((float)novoDado);
+			} else if (atributoASerAtualizado.equalsIgnoreCase("aporteCusteioReais")) {
+				auxiliar.setAporteCusteioReais((float) novoDado);
+			} else if (atributoASerAtualizado.equalsIgnoreCase("gastoExecutadoCusteioReais")) {
+				auxiliar.setGastoExecutadoCapitalReais((float) novoDado);
+			} else if (atributoASerAtualizado.equalsIgnoreCase("gastoExecutadoCapitalReais")) {
+				auxiliar.setGastoExecutadoCapitalReais((float) novoDado);
+			} else if (atributoASerAtualizado.equalsIgnoreCase("aporteCusteioReais")) {
+				auxiliar.setGastoExecutadoCusteioReais((float) novoDado);
+			} else if (atributoASerAtualizado.equalsIgnoreCase("nome")) {
+				auxiliar.setNome((String) novoDado);
 			}
 			projetoParticipacao.atualizar(projeto, auxiliar);
-		
-			this.aporteCapitalReais = aporteCapitalReais;
-			this.gastoExecutadoCusteioReais = gastoExecutadoCusteioReais;
-			this.gastoExecutadoCapitalReais
+
 		}
-		
+
 	}
 }

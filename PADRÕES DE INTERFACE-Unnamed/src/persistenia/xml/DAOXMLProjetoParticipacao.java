@@ -12,7 +12,7 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-
+import model.autenticacao.Membro;
 import model.projetos.Projeto;
 
 public class DAOXMLProjetoParticipacao {
@@ -39,9 +39,15 @@ public class DAOXMLProjetoParticipacao {
 		this.salvarXML(persistidos);
 	}
 
-	public boolean atualizar(long id, Projeto projeto) {
+	public boolean atualizar(Projeto membroSubstituivel, Projeto membroSubstituto) {
 		this.persistidos = this.carregarXML();
-		persistidos.replace(id, projeto);
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).equals(membroSubstituivel)) {
+				persistidos.replace(chave, membroSubstituto);
+			}
+		}
+		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}
