@@ -23,86 +23,29 @@ public class DAOXMLProjetoParticipacao {
 
 	private final File arquivoColecao = new File("XMLProjetoParticipacao.xml");
 
+	private long id = 0;
+
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 
-	long id = 0;
-
-	public boolean criar(Projeto projeto, Membro m, Participacao p) throws Exception {
+	public boolean criar(Projeto projeto) throws Exception {
 		this.persistidos = this.carregarXML();
-		Set<Long> chave = persistidos.keySet();
-		long idRecuperado = 0;
-		if (!chave.isEmpty()) {
-			for (Long long1 : chave) {
-				if (!persistidos.isEmpty()) {
-					if (persistidos.get(long1).getNome().equals(projeto.getNome())) {
-						idRecuperado = long1;
-						break;
-					}
-				}
-			}
-		}
-		if (m != null && projeto != null && idRecuperado > 0 && p != null) {
-			m.adicionar(p);
-			projeto.adicionar(m);
-			if (idRecuperado > 0) {
-				id += 1;
-				this.persistidos.put(id, projeto);
-			}
-			this.salvarXML(persistidos);
-			return true;
-		}
-		return false;
+		id += 1;
+		this.persistidos.put(id, projeto);
+		this.salvarXML(persistidos);
+		return true;
 	}
 
-	public void remover(Projeto p, Membro m, Participacao part) throws Exception {
+	public void remover(long id) {
 		this.persistidos = this.carregarXML();
-		Set<Long> chave = persistidos.keySet();
-		Long idRecuperado = null;
-		if (!chave.isEmpty()) {
-			for (Long long1 : chave) {
-				if (persistidos.get(long1).getNome().equals(p.getNome())) {
-					idRecuperado = long1;
-					break;
-				}
-			}
-		}
-		if (m != null && p != null && idRecuperado != null) {
-			ArrayList<ProjetoComponente> itensRecuperados = p.getItens();
-			for (ProjetoComponente projetoComponente : itensRecuperados) {
-				if (projetoComponente instanceof Membro) {
-					if (m.getMatricula() == m.getMatricula()) {
-						m.remover(part);
-					}
-				}
-			}
-		}
+		persistidos.remove(id);
 		this.salvarXML(persistidos);
 	}
 
-	public boolean atualizar(Projeto proj, Participacao partici) {
+	public boolean atualizar(long id, Projeto projeto) {
 		this.persistidos = this.carregarXML();
-		Set<Long> chave = persistidos.keySet();
-		int posParticipProjeto = 0;
-		Long idRecuperado = null;
-		if (!chave.isEmpty()) {
-			for (Long long1 : chave) {
-				posParticipProjeto = 0;
-				ArrayList<ProjetoComponente> auxiliar = persistidos.get(long1).getItens();
-				for (int i = 0; i < auxiliar.size(); i++) {
-					posParticipProjeto++;
-					if (auxiliar.get(i).equals(partici)) {
-						idRecuperado = long1;
-						break;
-					}
-				}
-			}
-		}
-		if (partici != null && idRecuperado != null) {
-			persistidos.get(idRecuperado).getItens().set(posParticipProjeto, partici);
-			this.salvarXML(persistidos);
-			return true;
-		}
-		return false;
+		persistidos.replace(id, projeto);
+		this.salvarXML(persistidos);
+		return true;
 	}
 
 	public Set<Projeto> consultarAnd(String atributos, String respectivosValoresAtributos) {
