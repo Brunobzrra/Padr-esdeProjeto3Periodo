@@ -16,6 +16,7 @@ public class ProjetoFachada {
 	private Membro membro;
 	private Participacao participacao;
 	private DAOXMLProjetoParticipacao projetoParticipacao = new DAOXMLProjetoParticipacao();
+	private Projeto projetao;
 
 	public ProjetoFachada(Membro membro, Participacao participacao) throws Exception {
 		this.membro = membro;
@@ -29,9 +30,9 @@ public class ProjetoFachada {
 		Object[] valores = { nome };
 		Set<Projeto> projetoRecuperados = projetoParticipacao.consultarAnd(atributo, valores);
 		if (projetoRecuperados.size() == 0) {
-			Projeto projeto = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
+			projetao = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
 					gastoExecutadoCapitalReais);
-			projeto.adicionar(membro);
+			projetao.adicionar(membro);
 			participacao.setCoordenador(true);
 			membro.adicionar(participacao);
 			return;
@@ -88,6 +89,17 @@ public class ProjetoFachada {
 			projetoParticipacao.atualizar(projeto, auxiliar);
 
 		}
+	}
 
+	public void remover(Projeto preojetoParaRemover) throws Exception {
+		for (ProjetoComponente participacao : membro.getParticipacoes()) {
+			if (participacao instanceof Participacao) {
+				if (((Participacao) participacao).isCoordenador()) {
+					projetoParticipacao.remover(projetao);
+				}
+			} else {
+				throw new Exception("o membro que não for cordenador não pode remover");
+			}
+		}
 	}
 }

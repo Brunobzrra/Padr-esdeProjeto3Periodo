@@ -33,9 +33,9 @@ public class DAOXMLProjetoParticipacao {
 		return true;
 	}
 
-	public void remover(long id) {
+	public void remover(Projeto projetoRemover) {
 		this.persistidos = this.carregarXML();
-		persistidos.remove(id);
+		persistidos.remove(projetoRemover);
 		this.salvarXML(persistidos);
 	}
 
