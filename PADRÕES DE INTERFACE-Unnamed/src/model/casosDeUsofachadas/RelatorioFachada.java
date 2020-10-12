@@ -1,8 +1,10 @@
 package model.casosDeUsofachadas;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
 import java.util.Set;
 
 import model.projetos.Edital;
@@ -16,12 +18,12 @@ public class RelatorioFachada {
 		StringBuffer texto = new StringBuffer();
 		texto.append(String.format(
 				"<html>\n<head>\n<title>Relatorio de custos</title>\n</head>\n<body>\n<h1 style='text-align:center'>Relatorio</h1>\n"));
-		String[] consulta = { "*" };
+		String[] consulta = {"*"};
 		Set<Edital> editais = daoEdital.consultarAnd(consulta, consulta);
 		if (editais.size() != 0) {
 			try {
 				for (Edital edital : editais) {
-					texto.append(String.format(
+							texto.append(String.format(
 							"<span>Dados do edital %s -- Valor total de custeio não gasto %s -- valor total de capital não gasto %s</span><br>\n",
 							edital.getNome(), edital.getCusteioReaisNaoGastoTotal(),
 							edital.getCapitalReaiNaoGastoTotal()));
@@ -36,6 +38,7 @@ public class RelatorioFachada {
 		texto.append("</body>\n</html>");
 		System.out.println(texto);
 		gerarArquivoHTML(texto.toString());
+		abrirRelatorio();
 	}
 
 	// Não precisa mais fiz
@@ -52,7 +55,14 @@ public class RelatorioFachada {
 		}
 	}
 
-	public static void main(String[] args) {
-		new RelatorioFachada().gerarRelatorio();
+	private void abrirRelatorio() {
+
+		String file = System.getProperty("user.dir") + "/Relatorio.html";
+		try {
+			Desktop.getDesktop().open(new File(file));
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+
 	}
 }
