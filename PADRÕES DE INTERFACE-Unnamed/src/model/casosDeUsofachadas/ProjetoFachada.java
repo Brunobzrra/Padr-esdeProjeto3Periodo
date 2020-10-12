@@ -5,7 +5,6 @@ import java.util.Iterator;
 import java.util.Set;
 
 import model.autenticacao.Membro;
-import model.projetos.Grupo;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
