@@ -109,5 +109,7 @@ public class Grupo extends ProjetoComponente {
 	public void setLinkCNPq(String linkCNPq) {
 		this.linkCNPq = linkCNPq;
 	}
-
+	public ArrayList<ProjetoComponente> getItens() {
+		return itens;
+	}
 }

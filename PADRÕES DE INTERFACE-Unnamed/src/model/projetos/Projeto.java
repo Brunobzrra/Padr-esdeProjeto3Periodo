@@ -18,7 +18,6 @@ public class Projeto extends ProjetoComponente {
 
 	private float gastoExecutadoCapitalReais;
 
-	
 	public Projeto(String nome, float aporteCusteioReais, float aporteCapitalReais, float gastoExecutadoCusteioReais,
 			float gastoExecutadoCapitalReais) {
 		this.nome = nome;
@@ -39,13 +38,11 @@ public class Projeto extends ProjetoComponente {
 	}
 
 	public void mover(ProjetoComponente integracao) throws Exception {
-		if (integracao instanceof Grupo) {
-			integracao.setProjetoPai(integracao);
-			try {
-				integracao.adicionar(this);
-			} catch (Exception e) {
-				e.getMessage();
-			}
+		integracao.setProjetoPai(integracao);
+		try {
+			integracao.adicionar(this);
+		} catch (Exception e) {
+			e.getMessage();
 		}
 	}
 
@@ -64,12 +61,20 @@ public class Projeto extends ProjetoComponente {
 
 	@Override
 	public float getCustoTotal() throws Exception {
-		return gastoExecutadoCapitalReais;
+		float valorFinal= 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			valorFinal+=projetoComponente.getCustoTotal();
+		}
+		return valorFinal;
 	}
 
 	@Override
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
-		return aporteCusteioReais - gastoExecutadoCusteioReais;
+		float valorFinal= 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			valorFinal+=projetoComponente.getCapitalReaiNaoGastoTotal();
+		}
+		return valorFinal+(aporteCusteioReais-gastoExecutadoCusteioReais-valorFinal);
 	}
 
 	public float getCapitalReaiNaoGastoTotal() throws Exception {

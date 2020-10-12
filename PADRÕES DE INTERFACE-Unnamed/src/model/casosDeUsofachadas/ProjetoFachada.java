@@ -14,8 +14,8 @@ import persistenia.xml.DAOXMLProjetoParticipacao;
 public class ProjetoFachada {
 	private Membro membro;
 	private Participacao participacao;
-	private DAOXMLProjetoParticipacao projetoParticipacao = new DAOXMLProjetoParticipacao();
-	private Projeto projetao;
+	private DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
+	private Projeto projeto;
 
 	public ProjetoFachada(Membro membro, Participacao participacao) throws Exception {
 		this.membro = membro;
@@ -27,13 +27,14 @@ public class ProjetoFachada {
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais) throws Exception {
 		String[] atributo = { "nome" };
 		Object[] valores = { nome };
-		Set<Projeto> projetoRecuperados = projetoParticipacao.consultarAnd(atributo, valores);
+		Set<Projeto> projetoRecuperados = daoProjetoParticipacao.consultarAnd(atributo, valores);
 		if (projetoRecuperados.size() == 0) {
-			projetao = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
+			projeto = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
 					gastoExecutadoCapitalReais);
-			projetao.adicionar(membro);
+			projeto.adicionar(membro);
 			participacao.setCoordenador(true);
 			membro.adicionar(participacao);
+			daoProjetoParticipacao.criar(projeto);
 			return;
 		}
 		throw new Exception("Projeto já existente!");
@@ -42,7 +43,7 @@ public class ProjetoFachada {
 	public void atualizarDado(Projeto projeto, String atributoASerAtualizado, Object novoDado, Object dadoAntigo) {
 		String[] atributo = { atributoASerAtualizado };
 		Object[] valor = { novoDado };
-		Set<Projeto> projetoRecuperados = projetoParticipacao.consultarAnd(atributo, valor);
+		Set<Projeto> projetoRecuperados = daoProjetoParticipacao.consultarAnd(atributo, valor);
 
 		if (!projetoRecuperados.isEmpty()) {
 			Projeto auxiliar = null;
@@ -85,7 +86,7 @@ public class ProjetoFachada {
 			} else if (atributoASerAtualizado.equalsIgnoreCase("nome")) {
 				auxiliar.setNome((String) novoDado);
 			}
-			projetoParticipacao.atualizar(projeto, auxiliar);
+			daoProjetoParticipacao.atualizar(projeto, auxiliar);
 
 		}
 	}
@@ -94,11 +95,23 @@ public class ProjetoFachada {
 		for (ProjetoComponente participacao : membro.getParticipacoes()) {
 			if (participacao instanceof Participacao) {
 				if (((Participacao) participacao).isCoordenador()) {
-					projetoParticipacao.remover(projetao);
-				}
+					daoProjetoParticipacao.remover(projeto);				}
 			} else {
-				throw new Exception("o membro que não for cordenador não pode remover");
+				throw new Exception("O membro que não for cordenador não pode remover!");
 			}
 		}
+	}
+
+	public void setMembro(Membro membro) {
+		this.membro = membro;
+	}
+	public Membro getMembro() {
+		return membro;
+	}
+	public void setParticipacao(Participacao participacao) {
+		this.participacao = participacao;
+	}
+	public Projeto getProjeto() {
+		return projeto;
 	}
 }

@@ -41,7 +41,6 @@ public class RelatorioFachada {
 		abrirRelatorio();
 	}
 
-	// Não precisa mais fiz
 	private void gerarArquivoHTML(String texto) {
 		FileWriter fw;
 		try {
@@ -64,5 +63,8 @@ public class RelatorioFachada {
 			System.out.println(e.getMessage());
 		}
 
+	}
+	public static void main(String[] args) {
+		new RelatorioFachada().gerarRelatorio();
 	}
 }

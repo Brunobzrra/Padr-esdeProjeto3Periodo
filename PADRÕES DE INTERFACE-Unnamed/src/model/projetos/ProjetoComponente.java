@@ -16,6 +16,10 @@ public abstract class ProjetoComponente {
 		this.projetoPai = projetoPai;
 	}
 
+	public void remover(ProjetoComponente integracao) throws Exception{
+		throw new Exception("Este objeto não se move!");
+	}
+	
 	// metodos que precisão ser abstratatos pois estarão em todas as classes
 
 	public abstract void ativar();
@@ -46,7 +50,6 @@ public abstract class ProjetoComponente {
 		throw new Exception("Grupo não pode ser adcionado aqui!");
 	}
 
-	public abstract void remover(ProjetoComponente integracao) throws Exception;
 
 	public abstract void mover(ProjetoComponente integracao) throws Exception;
 

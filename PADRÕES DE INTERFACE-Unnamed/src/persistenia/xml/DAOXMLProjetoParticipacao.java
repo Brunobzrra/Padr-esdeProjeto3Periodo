@@ -12,7 +12,6 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import model.autenticacao.Membro;
 import model.projetos.Projeto;
 
 public class DAOXMLProjetoParticipacao {
@@ -26,11 +25,16 @@ public class DAOXMLProjetoParticipacao {
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 
 	public boolean criar(Projeto projeto) throws Exception {
-		this.persistidos = this.carregarXML();
-		id += 1;
-		this.persistidos.put(id, projeto);
-		this.salvarXML(persistidos);
-		return true;
+		String[] atributos = { "nome" };
+		Object[] valores = {projeto.getNome()};
+		if (consultarAnd(atributos, valores) == null) {
+			this.persistidos = this.carregarXML();
+			id += 1;
+			this.persistidos.put(id, projeto);
+			this.salvarXML(persistidos);
+			return true;
+		}
+		return false;
 	}
 
 	public void remover(Projeto projetoRemover) {
@@ -107,7 +111,7 @@ public class DAOXMLProjetoParticipacao {
 										confirmacoes[4] = true;
 									}
 								}
-							}  else if (atributos[j].equals("aporteCapitalReais")) {
+							} else if (atributos[j].equals("aporteCapitalReais")) {
 								Float valorRecuperado = projetoAuxiliar.getAporteCapitalReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
@@ -129,7 +133,7 @@ public class DAOXMLProjetoParticipacao {
 										confirmacoes[4] = true;
 									}
 								}
-							}  else if (atributos[j].equals("gastoExecutadoCusteioReais")) {
+							} else if (atributos[j].equals("gastoExecutadoCusteioReais")) {
 								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCusteioReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
@@ -151,7 +155,7 @@ public class DAOXMLProjetoParticipacao {
 										confirmacoes[4] = true;
 									}
 								}
-							}else if (atributos[j].equals("gastoExecutadoCapitalReais")) {
+							} else if (atributos[j].equals("gastoExecutadoCapitalReais")) {
 								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCapitalReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
@@ -192,7 +196,6 @@ public class DAOXMLProjetoParticipacao {
 		return auxiliar;
 	}
 
-
 	public Set<Projeto> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Projeto> auxiliar = new HashSet<Projeto>();
@@ -227,7 +230,7 @@ public class DAOXMLProjetoParticipacao {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("aporteCusteioReais")&& adicionar==false) {
+							} else if (atributos[j].equals("aporteCusteioReais") && adicionar == false) {
 								Float valorRecuperado = projetoAuxiliar.getAporteCusteioReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
@@ -249,7 +252,7 @@ public class DAOXMLProjetoParticipacao {
 										adicionar = true;
 									}
 								}
-							}  else if (atributos[j].equals("aporteCapitalReais")&& adicionar==false) {
+							} else if (atributos[j].equals("aporteCapitalReais") && adicionar == false) {
 								Float valorRecuperado = projetoAuxiliar.getAporteCapitalReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
@@ -271,7 +274,7 @@ public class DAOXMLProjetoParticipacao {
 										adicionar = true;
 									}
 								}
-							}  else if (atributos[j].equals("gastoExecutadoCusteioReais")&& adicionar==false) {
+							} else if (atributos[j].equals("gastoExecutadoCusteioReais") && adicionar == false) {
 								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCusteioReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
@@ -293,7 +296,7 @@ public class DAOXMLProjetoParticipacao {
 										adicionar = true;
 									}
 								}
-							}else if (atributos[j].equals("gastoExecutadoCapitalReais")&& adicionar==false) {
+							} else if (atributos[j].equals("gastoExecutadoCapitalReais") && adicionar == false) {
 								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCapitalReais();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {

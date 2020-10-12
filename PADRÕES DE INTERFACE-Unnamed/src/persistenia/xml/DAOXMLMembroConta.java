@@ -31,11 +31,17 @@ public class DAOXMLMembroConta {
 	}
 
 	public boolean criar(Membro membro) {
-		this.persistidos = this.carregarXML();
-		id += 1;
-		this.persistidos.put(id, membro);
-		this.salvarXML(persistidos);
-		return true;
+
+		String[] atributos = { "matricula", "email" };
+		Object[] valores = { membro.getMatricula(), membro.getEmail() };
+		if (consultarAnd(atributos, valores) == null) {
+			this.persistidos = this.carregarXML();
+			id += 1;
+			this.persistidos.put(id, membro);
+			this.salvarXML(persistidos);
+			return true;
+		}
+		return false;
 	}
 
 	public void remover(long id) {
@@ -501,6 +507,5 @@ public class DAOXMLMembroConta {
 		}
 		return new HashMap<Long, Membro>();
 	}
-
 
 }

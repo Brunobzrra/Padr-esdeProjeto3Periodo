@@ -13,8 +13,8 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import model.projetos.Edital;
 import model.projetos.Grupo;
+import model.projetos.Projeto;
 
 public class DAOXMLGrupo {
 
@@ -26,22 +26,33 @@ public class DAOXMLGrupo {
 	private long id = 0;
 
 	public boolean criar(Grupo grupo) {
-		this.persistidos = this.carregarXML();
-		id += 1;
-		this.persistidos.put(id, grupo);
-		this.salvarXML(persistidos);
-		return true;
+		String[] atributos = { "linkCNPq" };
+		Object[] valores = { grupo.getLinkCNPq() };
+		if (consultarAnd(atributos, valores) == null) {
+			this.persistidos = this.carregarXML();
+			id += 1;
+			this.persistidos.put(id, grupo);
+			this.salvarXML(persistidos);
+			return true;
+		}
+		return false;
 	}
 
-	public void remover(long id) {
+	public void remover(Grupo grupo) {
 		this.persistidos = this.carregarXML();
-		persistidos.remove(id);
+		persistidos.remove(grupo);
 		this.salvarXML(persistidos);
 	}
 
-	public boolean atualizar(long id, Grupo grupo) {
+	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) {
 		this.persistidos = this.carregarXML();
-		persistidos.replace(id, grupo);
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).equals(grupoSubstituivel)) {
+				persistidos.replace(chave, grupoSubistituto);
+			}
+		}
+		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}
@@ -178,7 +189,7 @@ public class DAOXMLGrupo {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("dataDeCriacao")&& adicionar==false) {
+							} else if (atributos[j].equals("dataDeCriacao") && adicionar == false) {
 								Date dataDeCriacao = grupoAuxiliar.getDataCriacao();
 								if (j == 0) {
 									if (dataDeCriacao.equals(valores[0])) {
@@ -196,7 +207,7 @@ public class DAOXMLGrupo {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("linkCNPq")&& adicionar==false) {
+							} else if (atributos[j].equals("linkCNPq") && adicionar == false) {
 								String linkCNPqRecuperado = grupoAuxiliar.getLinkCNPq();
 								if (j == 0) {
 									if (linkCNPqRecuperado.equals(valores[0])) {
@@ -214,7 +225,7 @@ public class DAOXMLGrupo {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("ativo")&& adicionar==false) {
+							} else if (atributos[j].equals("ativo") && adicionar == false) {
 								Boolean ativo = grupoAuxiliar.getAtivo();
 								if (j == 0) {
 									if (ativo.equals(valores[0])) {

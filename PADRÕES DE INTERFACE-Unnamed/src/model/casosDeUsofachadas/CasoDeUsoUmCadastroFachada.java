@@ -1,42 +1,30 @@
 package model.casosDeUsofachadas;
 
-import java.util.Set;
-
-import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
 import persistenia.xml.DAOXMLMembroConta;
 
 //caso de uso 1
 public class CasoDeUsoUmCadastroFachada {
 
-	DAOXMLMembroConta dao = new DAOXMLMembroConta();
-
-	ContaEmail conta;
+	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
 	public boolean cadastrarMembro(String nome, long matricula, String email, String senha, String senhaEmail) {
-		Membro m = new Membro(matricula, nome, email, senha, senhaEmail);
+		Membro membro = new Membro(matricula, nome, email, senha, senhaEmail);
 
 		
 
-		String[] atributos = { "matricula", "email" };
-		Object[] valores = { matricula, email };
-		Set<Membro> membroRecuperado = dao.consultarAnd(atributos, valores);
-		if (membroRecuperado == null) {
-			m.setAtivo(true);
-			if (dao.isVazia()) {
-				m.setAdministrador(true);
-			} else {
-				m.setAdministrador(false);
-			}
-			dao.criar(m);
-			return true;
+		membro.setAtivo(true);
+		if (daoMembro.isVazia()) {
+			membro.setAdministrador(true);
+		} else {
+			membro.setAdministrador(false);
 		}
-		return false;
+		return daoMembro.criar(membro);
 	}
 
-	public void atualizarMembro(Membro m, String[] atributosQueroAtualizar, Object[] valores) throws Exception {
+	public void atualizarMembro(Membro membro, String[] atributosQueroAtualizar, Object[] valores) throws Exception {
 		boolean atualizado = false;
-		Membro membroAtual = m;
+		Membro membroAtual = membro;
 		for (int i = 0; i < atributosQueroAtualizar.length; i++) {
 			if (atributosQueroAtualizar[i].equals("nome")) {
 				membroAtual.setNome((String) valores[i]);
@@ -57,7 +45,7 @@ public class CasoDeUsoUmCadastroFachada {
 
 		}
 		if (atualizado) {
-			dao.atualizar(m, membroAtual);
+			daoMembro.atualizar(membro, membroAtual);
 		} else {
 			throw new Exception("O membro nao pode ser atualizado.");
 
