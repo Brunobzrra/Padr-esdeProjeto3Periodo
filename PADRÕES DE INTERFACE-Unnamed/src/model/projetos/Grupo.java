@@ -15,13 +15,14 @@ public class Grupo extends ProjetoComponente {
 
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
-	public void adicionar(Membro integracao) throws Exception {	
-			integracao.setProjetoPai(this);
-			itens.add(integracao);
+	public void adicionar(Membro integracao) throws Exception {
+		integracao.setProjetoPai(this);
+		itens.add(integracao);
 	}
+
 	public void adicionar(Projeto integracao) throws Exception {
-			integracao.setProjetoPai(this);
-			itens.add(integracao);
+		integracao.setProjetoPai(this);
+		itens.add(integracao);
 	}
 
 	public void remover(ProjetoComponente integracao) {
@@ -39,12 +40,11 @@ public class Grupo extends ProjetoComponente {
 			e.getMessage();
 		}
 	}
-	public float getCapitalReaiNaoGastoTotal()  throws Exception {
+
+	public float getCapitalReaiNaoGastoTotal() throws Exception {
 		float aux = 0;
 		for (ProjetoComponente participantes : itens) {
-			if(participantes instanceof Projeto) {
-				aux =+ participantes.getCapitalReaiNaoGastoTotal();
-			}	
+			aux = +participantes.getCapitalReaiNaoGastoTotal();
 		}
 		return aux;
 	}
@@ -53,9 +53,7 @@ public class Grupo extends ProjetoComponente {
 	public float getCustoTotal() throws Exception {
 		float aux = 0;
 		for (ProjetoComponente participantes : itens) {
-			if(participantes instanceof Projeto) {
-				aux += participantes.getCustoTotal();
-			}
+			aux += participantes.getCustoTotal();
 		}
 		return aux;
 	}
@@ -64,9 +62,7 @@ public class Grupo extends ProjetoComponente {
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
 		float aux = 0;
 		for (ProjetoComponente participantes : itens) {
-			if(participantes instanceof Projeto) {
-				aux += participantes.getCusteioReaisNaoGastoTotal();
-			}
+			aux += participantes.getCusteioReaisNaoGastoTotal();
 		}
 		return aux;
 	}
@@ -83,7 +79,6 @@ public class Grupo extends ProjetoComponente {
 		// TODO Auto-generated method stub
 		Utilidade.desativar(itens, this);
 	}
-
 
 	// getters e setters
 	public String getNome() {
@@ -109,6 +104,7 @@ public class Grupo extends ProjetoComponente {
 	public void setLinkCNPq(String linkCNPq) {
 		this.linkCNPq = linkCNPq;
 	}
+
 	public ArrayList<ProjetoComponente> getItens() {
 		return itens;
 	}

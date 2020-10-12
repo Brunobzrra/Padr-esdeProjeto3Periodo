@@ -1,4 +1,4 @@
-package persistenia.xml;
+ package persistenia.xml;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,6 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.projetos.Grupo;
-import model.projetos.Projeto;
 
 public class DAOXMLGrupo {
 

@@ -13,13 +13,13 @@ public class Edital extends ProjetoComponente {
 
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
-	public void adicionar(ProjetoComponente integracao) throws Exception {
-		if (integracao instanceof Grupo || integracao instanceof Projeto) {
+	public void adicionar(Grupo integracao) throws Exception {
 			integracao.setProjetoPai(this);
 			itens.add(integracao);
-		}
-
-		throw new Exception("Edital não pode adcionar coisas desse tipo!");
+	}
+	public void adicionar(Projeto integracao) throws Exception {
+		integracao.setProjetoPai(this);
+		itens.add(integracao);
 	}
 
 	public void remover(ProjetoComponente integracao) throws Exception {
@@ -102,5 +102,8 @@ public class Edital extends ProjetoComponente {
 
 	public void setDataTermino(Date dataTermino) {
 		this.dataTermino = dataTermino;
+	}
+	public ArrayList<ProjetoComponente> getItens() {
+		return itens;
 	}
 }

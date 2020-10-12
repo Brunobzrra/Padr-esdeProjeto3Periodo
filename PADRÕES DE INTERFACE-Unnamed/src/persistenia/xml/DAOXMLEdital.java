@@ -38,16 +38,22 @@ public class DAOXMLEdital {
 		return false;
 	}
 
-	public void remover(long id) {
+	public void remover(Edital editalRemover) {
 		this.persistidos = this.carregarXML();
-		persistidos.remove(id);
+		persistidos.remove(editalRemover);
 		this.salvarXML(persistidos);
-
 	}
 
-	public boolean atualizar(long id, Edital edital) {
+
+	public boolean atualizar(Edital editalSubstituivel, Edital editalSubistituto) {
 		this.persistidos = this.carregarXML();
-		persistidos.replace(id, edital);
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).equals(editalSubstituivel)) {
+				persistidos.replace(chave, editalSubistituto);
+			}
+		}
+		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}

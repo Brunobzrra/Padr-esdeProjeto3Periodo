@@ -44,9 +44,9 @@ public class DAOXMLMembroConta {
 		return false;
 	}
 
-	public void remover(long id) {
+	public void remover(Membro membroRemover) {
 		this.persistidos = this.carregarXML();
-		persistidos.remove(id);
+		persistidos.remove(membroRemover);
 		this.salvarXML(persistidos);
 	}
 
