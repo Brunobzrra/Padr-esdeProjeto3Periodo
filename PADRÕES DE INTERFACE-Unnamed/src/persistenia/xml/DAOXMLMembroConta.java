@@ -44,10 +44,26 @@ public class DAOXMLMembroConta {
 		return false;
 	}
 
+	private Long procurarChave(Membro procurado) {
+		Long indice = null;
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			Membro recuperado = persistidos.get(long1);
+			if (recuperado.equals(procurado)) {
+				indice = long1;
+				break;
+			}
+		}
+		return indice;
+	}
+
 	public void remover(Membro membroRemover) {
 		this.persistidos = this.carregarXML();
-		persistidos.remove(membroRemover);
-		this.salvarXML(persistidos);
+		Long indice = procurarChave(membroRemover);
+		if (indice != null) {
+			persistidos.remove(indice, membroRemover);
+			this.salvarXML(persistidos);
+		}
 	}
 
 	public boolean atualizar(Membro membroSubstituivel, Membro membroSubstituto) {

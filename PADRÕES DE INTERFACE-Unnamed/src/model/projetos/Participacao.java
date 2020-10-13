@@ -25,10 +25,23 @@ public class Participacao extends ProjetoComponente {
 
 	// metodos obrigatorios
 	@Override
+	
 	public void ativar() {
 		// TODO Auto-generated method stub
 		setAtivo(true);
 	}
+
+	public Participacao(Date dataInicio, Date dataTermino, float aporteCusteioMensalReais, short qtdMesesCusteados,
+			short qtdMesesPagos, boolean coordenador) {
+		super();
+		this.dataInicio = dataInicio;
+		this.dataTermino = dataTermino;
+		this.aporteCusteioMensalReais = aporteCusteioMensalReais;
+		this.qtdMesesCusteados = qtdMesesCusteados;
+		this.qtdMesesPagos = qtdMesesPagos;
+		this.coordenador = coordenador;
+	}
+
 
 	@Override
 	public void desativar() {
@@ -71,6 +84,15 @@ public class Participacao extends ProjetoComponente {
 		// TODO Auto-generated method stub
 		// Deixamos assim, pois, achamos que não faz sentido parciáção mover-se
 		throw new Exception("Paricipação não se move!");
+	}
+
+	public boolean equals(Participacao participacao) {
+		if (participacao.getDataTermino().equals(dataTermino) && participacao.getDataInicio().equals(dataInicio)
+				&& aporteCusteioMensalReais == participacao.getAporteCusteioMensalReais()
+				&& qtdMesesCusteados == getQtdMesesCusteados() && qtdMesesPagos == getQtdMesesPagos()) {
+			return true;
+		}
+		return false;
 	}
 
 	// getters e setters

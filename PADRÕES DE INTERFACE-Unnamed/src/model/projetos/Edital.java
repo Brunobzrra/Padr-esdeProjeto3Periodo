@@ -12,7 +12,7 @@ public class Edital extends ProjetoComponente {
 	private Date dataTermino;
 
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
-
+	
 	public void adicionar(Grupo integracao) throws Exception {
 			integracao.setProjetoPai(this);
 			itens.add(integracao);
@@ -105,5 +105,12 @@ public class Edital extends ProjetoComponente {
 	}
 	public ArrayList<ProjetoComponente> getItens() {
 		return itens;
+	}
+	
+	public boolean equals(Edital edital) {
+		if (edital.getNome().equals(nome)) {
+			return true;
+		}
+		return false;
 	}
 }

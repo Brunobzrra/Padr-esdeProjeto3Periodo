@@ -108,4 +108,10 @@ public class Grupo extends ProjetoComponente {
 	public ArrayList<ProjetoComponente> getItens() {
 		return itens;
 	}
+	public boolean equals(Grupo grupo) {
+		if (grupo.getLinkCNPq().equals(linkCNPq)) {
+			return true;
+		}
+		return false;
+	}
 }

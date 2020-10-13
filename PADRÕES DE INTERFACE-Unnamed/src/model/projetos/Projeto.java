@@ -125,5 +125,10 @@ public class Projeto extends ProjetoComponente {
 	public void setGastoExecutadoCapitalReais(float gastoExecutadoCapitalReais) {
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 	}
-
+	public boolean equals(Projeto projeto) {
+		if (projeto.getNome().equals(nome)) {
+			return true;
+		}
+		return false;
+	}
 }

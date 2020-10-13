@@ -12,6 +12,7 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
 import model.projetos.Projeto;
 
 public class DAOXMLProjetoParticipacao {
@@ -26,7 +27,7 @@ public class DAOXMLProjetoParticipacao {
 
 	public boolean criar(Projeto projeto) throws Exception {
 		String[] atributos = { "nome" };
-		Object[] valores = {projeto.getNome()};
+		Object[] valores = { projeto.getNome() };
 		if (consultarAnd(atributos, valores) == null) {
 			this.persistidos = this.carregarXML();
 			id += 1;
@@ -37,18 +38,33 @@ public class DAOXMLProjetoParticipacao {
 		return false;
 	}
 
-	public void remover(Projeto projetoRemover) {
-		this.persistidos = this.carregarXML();
-		persistidos.remove(projetoRemover);
-		this.salvarXML(persistidos);
+	private Long procurarChave(Projeto procurado) {
+		Long indice = null;
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			Projeto recuperado = persistidos.get(long1);
+			if (recuperado.equals(procurado)) {
+				indice = long1;
+				break;
+			}
+		}
+		return indice;
 	}
 
-	public boolean atualizar(Projeto membroSubstituivel, Projeto membroSubstituto) {
+	public void remover(Projeto projetoRemover) {
+		this.persistidos = this.carregarXML();
+		Long indice = procurarChave(projetoRemover);
+		if (indice != null) {
+			persistidos.remove(indice, projetoRemover);
+			this.salvarXML(persistidos);
+		}
+	}
+	public boolean atualizar(Projeto projetoSubstituivel, Projeto projetoSubstituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
-			if (persistidos.get(chave).equals(membroSubstituivel)) {
-				persistidos.replace(chave, membroSubstituto);
+			if (persistidos.get(chave).equals(projetoSubstituivel)) {
+				persistidos.replace(chave, projetoSubstituto);
 			}
 		}
 		this.persistidos = this.carregarXML();

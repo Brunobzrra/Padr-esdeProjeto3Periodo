@@ -14,6 +14,7 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
 import model.projetos.Edital;
 
 public class DAOXMLEdital {
@@ -38,10 +39,26 @@ public class DAOXMLEdital {
 		return false;
 	}
 
+	private Long procurarChave(Edital procurado) {
+		Long indice = null;
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			Edital recuperado = persistidos.get(long1);
+			if (recuperado.equals(procurado)) {
+				indice = long1;
+				break;
+			}
+		}
+		return indice;
+	}
+
 	public void remover(Edital editalRemover) {
 		this.persistidos = this.carregarXML();
-		persistidos.remove(editalRemover);
-		this.salvarXML(persistidos);
+		Long indice = procurarChave(editalRemover);
+		if (indice != null) {
+			persistidos.remove(indice, editalRemover);
+			this.salvarXML(persistidos);
+		}
 	}
 
 

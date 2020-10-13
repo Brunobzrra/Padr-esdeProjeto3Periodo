@@ -13,6 +13,7 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
 import model.projetos.Grupo;
 
 public class DAOXMLGrupo {
@@ -37,12 +38,27 @@ public class DAOXMLGrupo {
 		return false;
 	}
 
-	public void remover(Grupo grupo) {
-		this.persistidos = this.carregarXML();
-		persistidos.remove(grupo);
-		this.salvarXML(persistidos);
+	private Long procurarChave(Grupo procurado) {
+		Long indice = null;
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			Grupo recuperado = persistidos.get(long1);
+			if (recuperado.equals(procurado)) {
+				indice = long1;
+				break;
+			}
+		}
+		return indice;
 	}
 
+	public void remover(Grupo grupoRemover) {
+		this.persistidos = this.carregarXML();
+		Long indice = procurarChave(grupoRemover);
+		if (indice != null) {
+			persistidos.remove(indice, grupoRemover);
+			this.salvarXML(persistidos);
+		}
+	}
 	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();

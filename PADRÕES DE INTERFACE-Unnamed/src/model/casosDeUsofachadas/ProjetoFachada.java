@@ -15,8 +15,9 @@ public class ProjetoFachada {
 	private Membro membro;
 	private Participacao participacao;
 	private DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
-	private Projeto projeto;
 
+	private Projeto projeto;
+	
 	public ProjetoFachada(Membro membro, Participacao participacao) throws Exception {
 		this.membro = membro;
 		this.participacao = participacao;
@@ -113,5 +114,11 @@ public class ProjetoFachada {
 	}
 	public Projeto getProjeto() {
 		return projeto;
+	}
+	protected void setProjeto(Projeto projeto) {
+		this.projeto = projeto;
+	}
+	public DAOXMLProjetoParticipacao getDaoProjetoParticipacao() {
+		return daoProjetoParticipacao;
 	}
 }
