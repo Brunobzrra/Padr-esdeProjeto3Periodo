@@ -26,11 +26,16 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 		Projeto auxiliar = super.getProjeto();
 		ArrayList<ProjetoComponente> membroParticipacao = removido.getParticipacoes();
 		Boolean foiMudado = null;
+		String assunto = "";
+		String mensagem = "";
 		for (ProjetoComponente participacaoAuxiliar : this.getMembro().getParticipacoes()) {
 			for (ProjetoComponente participacaoRemover : membroParticipacao) {
 				if (participacaoAuxiliar.equals(participacaoRemover)) {
 					if (((Participacao) participacaoAuxiliar).isCoordenador()) {
 						auxiliar.remover(removido);
+						assunto = "Situacao no projeto: " + auxiliar.getNome() + " Coordenador: "
+								+ getMembro().getNome();
+						mensagem = "Vc foi removido!";
 						foiMudado = true;
 					}
 				}
@@ -38,6 +43,8 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 		}
 		if (foiMudado != null) {
 			DAOProjPart.atualizar(this.getProjeto(), auxiliar);
+			EnviarEmail.enviarEmail("unnamed!", "fananittadz@gmail.com", "bruno.bzrrasantos@gmail.com", mensagem,
+					assunto);
 		}
 	}
 
@@ -51,6 +58,8 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 		Set<Membro> recuperados = daoMembroConta.consultarAnd(atributos, valores);
 
 		if (recuperados != null) {
+			String assunto = "";
+			String mensagem = "";
 			for (Membro membro : recuperados) {
 				if (membro.getConta() != null) {
 					for (ProjetoComponente participacaoAuxiliar : this.getMembro().getParticipacoes()) {
@@ -62,6 +71,9 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 											aporteCusteioMensalReais, qtdMesesCusteados, mesesCusteados, false);
 									adicionado.adicionar(novaParticipacao);
 									auxiliar.adicionar(adicionado);
+									assunto = "Situacao no projeto: " + auxiliar.getNome() + " Coordenador: "
+											+ getMembro().getNome();
+									mensagem = "Vc foi adicionado";
 									foiMudado = true;
 								}
 							}
@@ -69,6 +81,8 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 					}
 					if (foiMudado != null) {
 						DAOProjPart.atualizar(this.getProjeto(), auxiliar);
+						EnviarEmail.enviarEmail("unnamed!", "fananittadz@gmail.com", "bruno.bzrrasantos@gmail.com",
+								mensagem, assunto);
 					}
 
 				}
