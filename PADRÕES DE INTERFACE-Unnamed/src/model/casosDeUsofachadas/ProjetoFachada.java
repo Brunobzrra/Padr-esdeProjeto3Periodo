@@ -23,6 +23,7 @@ public class ProjetoFachada {
 		this.participacao = participacao;
 		membro.adicionar(participacao);
 	}
+	public ProjetoFachada() {}
 
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais) throws Exception {

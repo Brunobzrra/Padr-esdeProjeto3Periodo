@@ -17,7 +17,10 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 	private Membro membro;
 
 	private ContaEmail conta;
-
+	
+	public CasoDeUsoDoisAutenticacaoDeLogin() {
+	}
+	
 	public CasoDeUsoDoisAutenticacaoDeLogin(Membro membro) {
 		this.membro = membro;
 	}
@@ -38,6 +41,15 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailPOP3());
 		}
 		membro.setConta(conta);
+		System.out.println(membro.getConta().toString());
 		daoMembro.atualizar(membroValorAntigo, membro);
+	}
+	public DAOXMLMembroConta getDaoMembro() {
+		return daoMembro;
+	}
+
+
+	public Membro getMembro() {
+		return membro;
 	}
 }

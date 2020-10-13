@@ -28,7 +28,7 @@ public class DAOXMLProjetoParticipacao {
 	public boolean criar(Projeto projeto) throws Exception {
 		String[] atributos = { "nome" };
 		Object[] valores = { projeto.getNome() };
-		if (consultarAnd(atributos, valores) == null) {
+		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id += 1;
 			this.persistidos.put(id, projeto);
@@ -67,7 +67,6 @@ public class DAOXMLProjetoParticipacao {
 				persistidos.replace(chave, projetoSubstituto);
 			}
 		}
-		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}

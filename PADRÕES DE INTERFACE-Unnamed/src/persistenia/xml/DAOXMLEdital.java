@@ -29,7 +29,7 @@ public class DAOXMLEdital {
 	public boolean criar(Edital edital) {
 		String[] atributos = { "nome" };
 		Object[] valores = { edital.getNome() };
-		if (consultarAnd(atributos, valores) == null) {
+		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id += 1;
 			this.persistidos.put(id, edital);
@@ -70,7 +70,6 @@ public class DAOXMLEdital {
 				persistidos.replace(chave, editalSubistituto);
 			}
 		}
-		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}

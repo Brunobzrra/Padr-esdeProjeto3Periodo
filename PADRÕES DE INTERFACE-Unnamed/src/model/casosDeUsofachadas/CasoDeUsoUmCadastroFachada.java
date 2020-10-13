@@ -10,9 +10,6 @@ public class CasoDeUsoUmCadastroFachada {
 
 	public boolean cadastrarMembro(String nome, long matricula, String email, String senha, String senhaEmail) {
 		Membro membro = new Membro(matricula, nome, email, senha, senhaEmail);
-
-		
-
 		membro.setAtivo(true);
 		if (daoMembro.isVazia()) {
 			membro.setAdministrador(true);

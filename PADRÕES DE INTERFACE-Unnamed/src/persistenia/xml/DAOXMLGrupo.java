@@ -1,4 +1,4 @@
- package persistenia.xml;
+package persistenia.xml;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,7 +28,7 @@ public class DAOXMLGrupo {
 	public boolean criar(Grupo grupo) {
 		String[] atributos = { "linkCNPq" };
 		Object[] valores = { grupo.getLinkCNPq() };
-		if (consultarAnd(atributos, valores) == null) {
+		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id += 1;
 			this.persistidos.put(id, grupo);
@@ -59,6 +59,7 @@ public class DAOXMLGrupo {
 			this.salvarXML(persistidos);
 		}
 	}
+
 	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
@@ -67,7 +68,6 @@ public class DAOXMLGrupo {
 				persistidos.replace(chave, grupoSubistituto);
 			}
 		}
-		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}

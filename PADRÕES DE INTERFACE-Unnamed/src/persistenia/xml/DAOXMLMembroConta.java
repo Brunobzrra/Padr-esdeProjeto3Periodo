@@ -24,7 +24,8 @@ public class DAOXMLMembroConta {
 	private final File arquivoColecao = new File("XMLMembroConta.xml");
 
 	public boolean isVazia() {
-		if (persistidos.isEmpty()) {
+		persistidos =carregarXML();
+		if (persistidos.size()==0) {
 			return true;
 		}
 		return false;
@@ -34,9 +35,9 @@ public class DAOXMLMembroConta {
 
 		String[] atributos = { "matricula", "email" };
 		Object[] valores = { membro.getMatricula(), membro.getEmail() };
-		if (consultarAnd(atributos, valores) == null) {
+		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
-			id += 1;
+			id = persistidos.size()+1;
 			this.persistidos.put(id, membro);
 			this.salvarXML(persistidos);
 			return true;
@@ -73,8 +74,8 @@ public class DAOXMLMembroConta {
 			if (persistidos.get(chave).equals(membroSubstituivel)) {
 				persistidos.replace(chave, membroSubstituto);
 			}
+			
 		}
-		this.persistidos = this.carregarXML();
 		this.salvarXML(persistidos);
 		return true;
 	}

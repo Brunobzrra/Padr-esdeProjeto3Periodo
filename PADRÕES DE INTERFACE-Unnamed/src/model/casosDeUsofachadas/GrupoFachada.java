@@ -15,11 +15,11 @@ public class GrupoFachada extends ProjetoFachada {
 		super(membro, participacao);
 		// TODO Auto-generated constructor stub
 	}
+	public GrupoFachada() {}
 
 	public void adcionarGrupo(Grupo grupo) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
-			grupo.adicionar(super.getProjeto());
 			if (!daoGrupo.criar(grupo))
 				throw new Exception("Este grupo ja existe!");
 		}

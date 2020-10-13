@@ -10,7 +10,7 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import persistenia.xml.DAOXMLMembroConta;
 import persistenia.xml.DAOXMLProjetoParticipacao;
-
+//caso de uso 6
 public class GerenciadorMembroFachada extends ProjetoFachada {
 
 	private DAOXMLProjetoParticipacao DAOProjPart = getDaoProjetoParticipacao();

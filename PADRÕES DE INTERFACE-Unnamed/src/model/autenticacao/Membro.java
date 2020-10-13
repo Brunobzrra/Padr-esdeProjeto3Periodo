@@ -10,7 +10,7 @@ public class Membro extends ProjetoComponente {
 
 	private String nome;
 
-	private boolean ativo;
+	private boolean ativo = super.getAtivo();
 	
 	private String email;
 	
@@ -25,7 +25,6 @@ public class Membro extends ProjetoComponente {
 	public ArrayList<ProjetoComponente> getParticipacoes() {
 		return participacoes;
 	}
-	public Membro() {}
 	public Membro(long matricula, String nome, String email, String senha, String senhaEmail) {
 		this.matricula = matricula;
 		this.nome = nome;
