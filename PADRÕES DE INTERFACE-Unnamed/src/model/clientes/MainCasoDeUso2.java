@@ -11,7 +11,7 @@ public class MainCasoDeUso2 {
 	public static void main(String[] args) {
 	
 		DAOXMLMembroConta dao = new DAOXMLMembroConta();
-		Object[] valores = 	{"brunin", "fan@gmail.com"};
+		Object[] valores = 	{"bruno", "fananitadz@gmail.com"};
 		String[] atributos = {"nome", "email"};
 		Set<Membro> recuperado = dao.consultarAnd(atributos, valores);
 		Object[] recuperados = recuperado.toArray();

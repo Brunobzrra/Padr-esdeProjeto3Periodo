@@ -33,8 +33,8 @@ public class DAOXMLMembroConta {
 
 	public boolean criar(Membro membro) {
 
-		String[] atributos = { "matricula", "email" };
-		Object[] valores = { membro.getMatricula(), membro.getEmail() };
+		String[] atributos = { "matricula" };
+		Object[] valores = { membro.getMatricula()};
 		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id = persistidos.size()+1;

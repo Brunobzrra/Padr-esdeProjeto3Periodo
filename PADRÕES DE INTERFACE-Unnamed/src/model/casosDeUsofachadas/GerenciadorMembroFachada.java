@@ -10,6 +10,7 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import persistenia.xml.DAOXMLMembroConta;
 import persistenia.xml.DAOXMLProjetoParticipacao;
+
 //caso de uso 6
 public class GerenciadorMembroFachada extends ProjetoFachada {
 
@@ -53,8 +54,8 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 		Projeto auxiliar = super.getProjeto();
 		ArrayList<ProjetoComponente> membroParticipacao = adicionado.getParticipacoes();
 		Boolean foiMudado = null;
-		String[] atributos = { "nome", "conta" };
-		Object[] valores = { adicionado.getNome(), adicionado.getConta() };
+		String[] atributos = { "nome", "matricula" };
+		Object[] valores = { adicionado.getNome(), adicionado.getMatricula() };
 		Set<Membro> recuperados = daoMembroConta.consultarAnd(atributos, valores);
 
 		if (recuperados != null) {
@@ -63,31 +64,31 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 			for (Membro membro : recuperados) {
 				if (membro.getConta() != null) {
 					for (ProjetoComponente participacaoAuxiliar : this.getMembro().getParticipacoes()) {
-						for (ProjetoComponente participacaoRemover : membroParticipacao) {
-							if (participacaoAuxiliar.equals(participacaoRemover)) {
+						for (int i = 0; i < membroParticipacao.size(); i++) {
+							if (participacaoAuxiliar.equals(membroParticipacao.get(i))) {
 								if (((Participacao) participacaoAuxiliar).isCoordenador()) {
-									short mesesCusteados = Short.parseShort("0");
-									Participacao novaParticipacao = new Participacao(dataInicio, dataTermino,
-											aporteCusteioMensalReais, qtdMesesCusteados, mesesCusteados, false);
-									adicionado.adicionar(novaParticipacao);
-									auxiliar.adicionar(adicionado);
-									assunto = "Situacao no projeto: " + auxiliar.getNome() + " Coordenador: "
-											+ getMembro().getNome();
-									mensagem = "Vc foi adicionado";
 									foiMudado = true;
+									break;
 								}
 							}
 						}
-					}
-					if (foiMudado != null) {
-						DAOProjPart.atualizar(this.getProjeto(), auxiliar);
-						EnviarEmail.enviarEmail("unnamed!", "fananittadz@gmail.com", "bruno.bzrrasantos@gmail.com",
-								mensagem, assunto);
-					}
 
+					}
 				}
 			}
+			if (foiMudado != null) {
+				short mesesCusteados = Short.parseShort("0");
+				Participacao novaParticipacao = new Participacao(dataInicio, dataTermino, aporteCusteioMensalReais,
+						qtdMesesCusteados, mesesCusteados, false);
+				adicionado.adicionar(novaParticipacao);
+				auxiliar.adicionar(adicionado);
+				assunto = "Situacao no projeto: " + auxiliar.getNome() + " Coordenador: " + getMembro().getNome();
+				mensagem = "Vc foi adicionado";
+				DAOProjPart.atualizar(this.getProjeto(), auxiliar);
+				EnviarEmail.enviarEmail("0unnamed!", "fananittadz@gmail.com", "bruno.bzrrasantos@gmail.com", mensagem,
+						assunto);
+			}
+
 		}
 	}
-
 }

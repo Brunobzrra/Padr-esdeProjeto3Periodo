@@ -15,4 +15,251 @@
       <participacoes/>
     </model.autenticacao.Membro>
   </entry>
+  <entry>
+    <long>2</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <matricula>1121</matricula>
+      <nome>bruno</nome>
+      <ativo>true</ativo>
+      <email>bruno.bzrrasantos@gmail.com</email>
+      <senha>1212</senha>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorEmailPOP3"/>
+      </conta>
+      <administrador>false</administrador>
+      <participacoes>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:46:16.278 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:50:49.277 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:51:40.626 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:53:51.514 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:54:44.70 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:54:54.232 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:55:11.818 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 01:57:15.172 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:00:12.664 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:00:42.655 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:01:30.855 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:04:15.726 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:06:16.129 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:07:38.859 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:09:08.965 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:13:22.532 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:18:17.265 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:34:25.719 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:35:44.877 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:36:20.462 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 02:47:13.495 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 03:05:50.864 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
+          <dataInicio>2020-10-14 03:06:20.189 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+        </model.projetos.Participacao>
+      </participacoes>
+    </model.autenticacao.Membro>
+  </entry>
 </map>
