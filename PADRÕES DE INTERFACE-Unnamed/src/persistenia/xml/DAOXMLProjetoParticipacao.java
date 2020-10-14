@@ -23,7 +23,13 @@ public class DAOXMLProjetoParticipacao {
 	private long id = 0;
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
+	
 
+	/*
+	 * adiciona um novo projeto na colecao de persistidos, que é salvo posteriormente, adicionando assim
+	 * um projeto ao XML, que é nosso BD.
+	 * @params edital*/
+	
 	public boolean criar(Projeto projeto) throws Exception {
 		String[] atributos = { "nome" };
 		Object[] valores = { projeto.getNome() };
@@ -36,7 +42,10 @@ public class DAOXMLProjetoParticipacao {
 		}
 		return false;
 	}
-
+	/*
+	 * Metodo que ira procurar uma chave de um projeto especifico no HASHSET de persistidos, returna o indice
+	 * que o projeto se encontra no HASHSET
+	 * @params procurado*/
 	private Long procurarChave(Projeto procurado) {
 		Long indice = null;
 		Set<Long> chaves = persistidos.keySet();
@@ -49,7 +58,10 @@ public class DAOXMLProjetoParticipacao {
 		}
 		return indice;
 	}
-
+	/*
+	 * metodo usado para remover um projeto do HASHSET persistidos, que eh recuperado, modificado, e posterior
+	 * mente salvo no BD via salvarXML()
+	 * @params grupoRemover */
 	public void remover(Projeto projetoRemover) {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(projetoRemover);
@@ -58,6 +70,9 @@ public class DAOXMLProjetoParticipacao {
 			this.salvarXML(persistidos);
 		}
 	}
+	/*
+	 * Metodo que substitui um projeto no HASHSET de persistidos, colocando outro grupo de interesse no lugar
+	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do projeto no BD*/
 	public boolean atualizar(Projeto projetoSubstituivel, Projeto projetoSubstituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
@@ -69,6 +84,14 @@ public class DAOXMLProjetoParticipacao {
 		this.salvarXML(persistidos);
 		return true;
 	}
+	/*
+	 * metodo usado para consultar um projeto no hashset de persistidos, por meio de seus atributos. caso
+	 * exista um projeto com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 
+	 * projetos correspondentes. sao ultilizados como paramentro de entrada um array de string onde o nome
+	 * dos atributos que se deseja consulta, exatamente como estao declarados na classe do projeto sao inseridos
+	 * e os seus respectivos valores sao adicionados nas repectivas posicoes em um array de object, que no cao
+	 * sao os valores desses atributos.
+	 * @params atributos, valores */
 
 	public Set<Projeto> consultarAnd(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
@@ -209,7 +232,12 @@ public class DAOXMLProjetoParticipacao {
 		}
 		return auxiliar;
 	}
-
+	/*
+	 * metodo usado para cosultar se existe um determinado projeto no hashset de persistidos, que eh como o 
+	 * BD eh construido, isso eh feito por meio da disponibilizacao dos atribuos que vao ser consultados via 
+	 * array de string, e os seus respectivos valoress via um array de object, esse metodo retorna um set com
+	 * todos os projetos correspondentes a pelo menos um dos atributos consultados,
+	 * @params atributos, valores*/
 	public Set<Projeto> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Projeto> auxiliar = new HashSet<Projeto>();
@@ -344,7 +372,9 @@ public class DAOXMLProjetoParticipacao {
 		}
 		return auxiliar;
 	}
-
+	/*
+	 * salva o hashmap de persistidos em XML
+	 * @params persistidos*/
 	private void salvarXML(HashMap<Long, Projeto> persistidos) {
 
 		String xml = xstream.toXML(persistidos);
@@ -358,6 +388,8 @@ public class DAOXMLProjetoParticipacao {
 			e.printStackTrace();
 		}
 	}
+	/*
+	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh criado*/
 
 	private HashMap<Long, Projeto> carregarXML() {
 

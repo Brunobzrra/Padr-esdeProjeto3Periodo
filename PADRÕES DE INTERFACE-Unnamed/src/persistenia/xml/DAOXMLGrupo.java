@@ -23,7 +23,13 @@ public class DAOXMLGrupo {
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 	private long id = 0;
-
+	
+	
+	/*
+	 * adiciona um novo grupo na colecao de persistidos, que é salvo posteriormente, adicionando assim
+	 * um membro ao XML, que é nosso BD.
+	 * @params grupo*/
+	
 	public boolean criar(Grupo grupo) {
 		String[] atributos = { "linkCNPq" };
 		Object[] valores = { grupo.getLinkCNPq() };
@@ -36,6 +42,11 @@ public class DAOXMLGrupo {
 		}
 		return false;
 	}
+	/*
+	 * Metodo que ira procurar uma chave de um grupo especifico no HASHSET de persistidos, returna o indice
+	 * que o membro se encontra no HASHSET
+	 * @params procurado*/
+
 
 	private Long procurarChave(Grupo procurado) {
 		Long indice = null;
@@ -49,7 +60,10 @@ public class DAOXMLGrupo {
 		}
 		return indice;
 	}
-
+	/*
+	 * metodo usado para remover um grupo do HASHSET persistidos, que eh recuperado, modificado, e posterior
+	 * mente salvo no BD via salvarXML()
+	 * @params grupoRemover */
 	public void remover(Grupo grupoRemover) {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(grupoRemover);
@@ -58,7 +72,9 @@ public class DAOXMLGrupo {
 			this.salvarXML(persistidos);
 		}
 	}
-
+	/*
+	 * Metodo que substitui um grupo no HASHSET de persistidos, colocando outro grupo de interesse no lugar
+	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do edital no BD*/
 	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
@@ -70,6 +86,14 @@ public class DAOXMLGrupo {
 		this.salvarXML(persistidos);
 		return true;
 	}
+	/*
+	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de seus atributos. caso
+	 * exista um grupo com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 
+	 * grupos correspondentes. sao ultilizados como paramentro de entrada um array de string onde o nome
+	 * dos atributos que se deseja consulta, exatamente como estao declarados na classe do grupo sao inseridos
+	 * e os seus respectivos valores sao adicionados nas repectivas posicoes em um array de object, que no cao
+	 * sao os valores desses atributos.
+	 * @params atributos, valores */
 
 	public Set<Grupo> consultarAnd(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
@@ -172,6 +196,12 @@ public class DAOXMLGrupo {
 		}
 		return auxiliar;
 	}
+	/*
+	 * metodo usado para cosultar se existe um determinado grupo no hashset de persistidos, que eh como o 
+	 * BD eh construido, isso eh feito por meio da disponibilizacao dos atribuos que vao ser consultados via 
+	 * array de string, e os seus respectivos valoress via um array de object, esse metodo retorna um set com
+	 * todos os grupo correspondentes a pelo menos um dos atributos consultados,
+	 * @params atributos, valores*/
 
 	public Set<Grupo> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
@@ -271,6 +301,9 @@ public class DAOXMLGrupo {
 		}
 		return auxiliar;
 	}
+	/*
+	 * salva o hashmap de persistidos em XML
+	 * @params persistidos*/
 
 	private void salvarXML(HashMap<Long, Grupo> persistidos) {
 
@@ -285,7 +318,8 @@ public class DAOXMLGrupo {
 			e.printStackTrace();
 		}
 	}
-
+	/*
+	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh criado*/
 	private HashMap<Long, Grupo> carregarXML() {
 
 		if (arquivoColecao.exists()) {

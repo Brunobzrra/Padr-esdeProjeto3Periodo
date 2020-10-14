@@ -70,7 +70,4 @@ public class RelatorioFachada {
 		}
 
 	}
-	public static void main(String[] args) {
-		new RelatorioFachada().gerarRelatorio();
-	}
 }

@@ -24,7 +24,12 @@ public class DAOXMLEdital {
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 	private long id = 0;
-
+	
+	/*
+	 * adiciona um novo edital na colecao de persistidos, que é salvo posteriormente, adicionando assim
+	 * um edital ao XML, que é nosso BD.
+	 * @params edital*/
+	
 	public boolean criar(Edital edital) {
 		String[] atributos = { "nome" };
 		Object[] valores = { edital.getNome() };
@@ -37,6 +42,10 @@ public class DAOXMLEdital {
 		}
 		return false;
 	}
+	/*
+	 * Metodo que ira procurar uma chave de um edital especifico no HASHSET de persistidos, returna o indice
+	 * que o membro se encontra no HASHSET
+	 * @params procurado*/
 
 	private Long procurarChave(Edital procurado) {
 		Long indice = null;
@@ -50,6 +59,10 @@ public class DAOXMLEdital {
 		}
 		return indice;
 	}
+	/*
+	 * metodo usado para remover um edital do HASHSET persistidos, que eh recuperado, modificado, e posterior
+	 * mente salvo no BD via salvarXML()
+	 * @params editalRemover */
 
 	public void remover(Edital editalRemover) {
 		this.persistidos = this.carregarXML();
@@ -60,7 +73,9 @@ public class DAOXMLEdital {
 		}
 	}
 
-
+	/*
+	 * Metodo que substitui um edital no HASHSET de persistidos, colocando outro edital de interesse no lugar
+	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do edital no BD*/
 	public boolean atualizar(Edital editalSubstituivel, Edital editalSubistituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
@@ -72,6 +87,14 @@ public class DAOXMLEdital {
 		this.salvarXML(persistidos);
 		return true;
 	}
+	/*
+	 * metodo usado para consultar um edital no hashset de persistidos, por meio de seus atributos. caso
+	 * exista um edital com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 
+	 * edital correspondentes. sao ultilizados como paramentro de entrada um array de string onde o nome
+	 * dos atributos que se deseja consulta, exatamente como estao declarados na classe do edital sao inseridos
+	 * e os seus respectivos valores sao adicionados nas repectivas posicoes em um array de object, que no cao
+	 * sao os valores desses atributos.
+	 * @params atributos, valores */
 
 	public Set<Edital> consultarAnd(String[] atributos, Object[] valores) {
 
@@ -181,7 +204,12 @@ public class DAOXMLEdital {
 		}
 		return auxiliar;
 	}
-
+	/*
+	 * metodo usado para cosultar se existe um determinado edital no hashset de persistidos, que eh como o 
+	 * BD eh construido, isso eh feito por meio da disponibilizacao dos atribuos que vao ser consultados via 
+	 * array de string, e os seus respectivos valoress via um array de object, esse metodo retorna um set com
+	 * todos os editais correspondentes a pelo menos um dos atributos consultados,
+	 * @params atributos, valores*/
 	public Set<Edital> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Edital> auxiliar = new HashSet<Edital>();
@@ -281,7 +309,9 @@ public class DAOXMLEdital {
 		}
 		return auxiliar;
 	}
-
+	/*
+	 * salva o hashmap de persistidos em XML
+	 * @params persistidos*/
 	private void salvarXML(HashMap<Long, Edital> persistidos) {
 		String xml = xstream.toXML(persistidos);
 
@@ -294,13 +324,16 @@ public class DAOXMLEdital {
 			e.printStackTrace();
 		}
 	}
+	/*
+	 * remove todos os valores do hashmap de persistidos e salva no BD, que no caso, ira ficar vazio*/
 
 	public void limpar() {
 		this.persistidos = this.carregarXML();
 		persistidos.clear();
 		this.salvarXML(persistidos);
 	}
-
+	/*
+	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh criado*/
 	private HashMap<Long, Edital> carregarXML() {
 		if (arquivoColecao.exists()) {
 			try {

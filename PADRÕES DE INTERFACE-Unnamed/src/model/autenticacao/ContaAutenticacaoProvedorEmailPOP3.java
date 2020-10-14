@@ -10,6 +10,11 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 	private String provedorHost;
 
 	private String provedorPorta;
+	
+	/*
+	 *Autentica um membro via POP3, validando seu email caso existente, e consultando ele o
+	 *mesmo via BD posteriormente, caso ele passe pelos dois testes, é retornado 
+	 *@param email, senha*/
 
 	public Membro autenticar(String email, String senha) {
 		if (AutenticacaoPOP3.check(email, senha, provedorHost, provedorPorta)) {

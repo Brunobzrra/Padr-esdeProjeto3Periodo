@@ -22,7 +22,10 @@ public class DAOXMLMembroConta {
 	private HashMap<Long, Membro> persistidos;
 
 	private final File arquivoColecao = new File("XMLMembroConta.xml");
-
+	
+	/*
+	 * metodo que vai verificar se existe algum membro no hashmap de persistidos, caso sim, retorna true
+	 * */
 	public boolean isVazia() {
 		persistidos =carregarXML();
 		if (persistidos.size()==0) {
@@ -30,7 +33,10 @@ public class DAOXMLMembroConta {
 		}
 		return false;
 	}
-
+	/*
+	 * adiciona um novo membro na colecao de persistidos, que é salvo posteriormente, adicionando assim
+	 * um membro ao XML, que é nosso BD.
+	 * @params membro*/
 	public boolean criar(Membro membro) {
 
 		String[] atributos = { "matricula" };
@@ -44,6 +50,10 @@ public class DAOXMLMembroConta {
 		}
 		return false;
 	}
+	/*
+	 * Metodo que ira procurar uma chave de um membro especifico no HASHSET de persistidos, returna o indice
+	 * que o membro se encontra no HASHSET
+	 * @params procurado*/
 
 	private Long procurarChave(Membro procurado) {
 		Long indice = null;
@@ -57,7 +67,10 @@ public class DAOXMLMembroConta {
 		}
 		return indice;
 	}
-
+	/*
+	 * metodo usado para remover um membro do HASHSET persistidos, que eh recuperado, modificado, e posterior
+	 * mente salvo no BD via salvarXML()
+	 * @params membroRemover */
 	public void remover(Membro membroRemover) {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(membroRemover);
@@ -67,6 +80,10 @@ public class DAOXMLMembroConta {
 		}
 	}
 
+	/*
+	 * Metodo que substitui um membro no HASHSET de persistidos, colocando outro membro de interesse no lugar
+	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do membro no BD
+	 * */
 	public boolean atualizar(Membro membroSubstituivel, Membro membroSubstituto) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
@@ -80,8 +97,14 @@ public class DAOXMLMembroConta {
 		return true;
 	}
 
-	// vai retornar o Set de membro
-
+	/*
+	 * metodo usado para consultar um membro no hashset de persistidos, por meio de seus atributos. caso
+	 * exista um membro com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 
+	 * membros correspondentes. sao ultilizados como paramentro de entrada um array de string onde o nome
+	 * dos atributos que se deseja consulta, exatamente como estao declarados na classe do membro sao inseridos
+	 * e os seus respectivos valores sao adicionados nas repectivas posicoes em um array de object, que no cao
+	 * sao os valores desses atributos.
+	 * @params atributos, valores */
 	public Set<Membro> consultarAnd(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Membro> auxiliar = new HashSet<Membro>();
@@ -291,7 +314,12 @@ public class DAOXMLMembroConta {
 		}
 		return auxiliar;
 	}
-
+	/*
+	 * metodo usado para cosultar se existe um determinado membro no hashset de persistidos, que eh como o 
+	 * BD eh construido, isso eh feito por meio da disponibilizacao dos atribuos que vao ser consultados via 
+	 * array de string, e os seus respectivos valoress via um array de object, esse metodo retorna um set com
+	 * todos os membros correspondentes a pelo menos um dos atributos consultados,
+	 * @params atributos, valores*/
 	public Set<Membro> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Membro> auxiliar = new HashSet<Membro>();
@@ -497,7 +525,9 @@ public class DAOXMLMembroConta {
 		}
 		return auxiliar;
 	}
-
+	/*
+	 * salva o hashmap de persistidos em XML
+	 * @params persistidos*/
 	private void salvarXML(HashMap<Long, Membro> persistidos) {
 
 		String xml = xstream.toXML(persistidos);
@@ -511,7 +541,8 @@ public class DAOXMLMembroConta {
 			e.printStackTrace();
 		}
 	}
-
+	/*
+	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh criado*/
 	private HashMap<Long, Membro> carregarXML() {
 
 		if (arquivoColecao.exists()) {

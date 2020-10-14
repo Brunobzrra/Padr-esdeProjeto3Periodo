@@ -8,15 +8,12 @@ import javax.mail.Session;
 import javax.mail.Store;
 
 public class AutenticacaoPOP3 {
-
-	/**
-	 * Metodos= responsavel por tratar de tipos de autenticação do cliente
-	 * @param login
-	 * @param senha
-	 * @param provedor
-	 * @param porta
-	 * @return
-	 */
+	
+	/*
+	 * Método que ira autenticar um membro via protocolo de visualizacao de email POP3, caso autenticado
+	 * retorna true, e isso significa que o email é realmente válido, e é possivel usa=lo no sistema.
+	 * @params login, senha, provedor, porta*/
+	
 	public static boolean check(String login, String senha, String provedor, String porta) {
 
 		Properties properties = new Properties();
