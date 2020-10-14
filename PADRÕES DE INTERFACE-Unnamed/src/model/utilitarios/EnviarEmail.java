@@ -11,8 +11,20 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
-
+/**
+ * Classe responsavel por enviar email
+ * @author Antônio Amorim
+ *
+ */
 public class EnviarEmail {
+	/**
+	 * Metodo que envia emails
+	 * @param senha
+	 * @param remetente
+	 * @param destinatario
+	 * @param msg
+	 * @param assunto
+	 */
 	public static void enviarEmail(String senha,String remetente,String destinatario,String msg,String assunto) {
         Properties props = new Properties();
 

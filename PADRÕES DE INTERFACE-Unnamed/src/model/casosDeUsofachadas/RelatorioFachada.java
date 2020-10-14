@@ -13,7 +13,9 @@ import persistenia.xml.DAOXMLEdital;
 //caso de uso 8
 public class RelatorioFachada {
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
-
+	/**
+	 * gera instring equivalente a um html
+	 */
 	public void gerarRelatorio() {
 		StringBuffer texto = new StringBuffer();
 		texto.append(String.format(
@@ -40,7 +42,9 @@ public class RelatorioFachada {
 		gerarArquivoHTML(texto.toString());
 		abrirRelatorio();
 	}
-
+	/*
+	 * gera arquivo html
+	 */
 	private void gerarArquivoHTML(String texto) {
 		FileWriter fw;
 		try {
@@ -53,7 +57,9 @@ public class RelatorioFachada {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * Abre arquivo html gerado
+	 */
 	private void abrirRelatorio() {
 
 		String file = System.getProperty("user.dir") + "/Relatorio.html";

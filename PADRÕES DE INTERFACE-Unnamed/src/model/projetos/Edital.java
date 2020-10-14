@@ -12,13 +12,16 @@ public class Edital extends ProjetoComponente {
 	private Date dataInicio;
 
 	private Date dataTermino;
-
+	/**
+	 * coleção de grupos e projestos
+	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
-	
+
 	public void adicionar(Grupo integracao) throws Exception {
-			integracao.setProjetoPai(this);
-			itens.add(integracao);
+		integracao.setProjetoPai(this);
+		itens.add(integracao);
 	}
+
 	public void adicionar(Projeto integracao) throws Exception {
 		integracao.setProjetoPai(this);
 		itens.add(integracao);
@@ -105,10 +108,11 @@ public class Edital extends ProjetoComponente {
 	public void setDataTermino(Date dataTermino) {
 		this.dataTermino = dataTermino;
 	}
+
 	public ArrayList<ProjetoComponente> getItens() {
 		return itens;
 	}
-	
+
 	public boolean equals(Edital edital) {
 		if (edital.getNome().equals(nome)) {
 			return true;

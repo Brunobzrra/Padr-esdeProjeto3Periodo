@@ -1,7 +1,11 @@
 package model.projetos;
 
 import model.autenticacao.Membro;
-
+/**
+ * classe principal do composite =, interfaxce emcomum dos itens
+ * @author Antônio Amorim
+ *
+ */
 public abstract class ProjetoComponente {
 
 	private boolean ativo = true;
@@ -15,12 +19,12 @@ public abstract class ProjetoComponente {
 	public void setProjetoPai(ProjetoComponente projetoPai) {
 		this.projetoPai = projetoPai;
 	}
-
+	
 	public void remover(ProjetoComponente integracao) throws Exception{
 		throw new Exception("Este objeto não se move!");
 	}
 	
-	
+	//Varios metodos de adcionar para evitar o uso de instanceof, por isso sobrecarregar os metodos 
 	public void adicionar(Membro integracao) throws Exception {
 		throw new Exception("Membro não pode ser adcionado aqui!");
 	}

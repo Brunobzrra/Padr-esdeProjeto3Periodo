@@ -13,7 +13,9 @@ public class Grupo extends ProjetoComponente {
 	private Date dataCriacao;
 
 	private String linkCNPq;
-
+	/**
+	 * Coleção de Membros e Projetos
+	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
 	public void adicionar(Membro integracao) throws Exception {
@@ -109,6 +111,7 @@ public class Grupo extends ProjetoComponente {
 	public ArrayList<ProjetoComponente> getItens() {
 		return itens;
 	}
+
 	public boolean equals(Grupo grupo) {
 		if (grupo.getLinkCNPq().equals(linkCNPq)) {
 			return true;

@@ -9,6 +9,14 @@ import javax.mail.Store;
 
 public class AutenticacaoPOP3 {
 
+	/**
+	 * Metodos= responsavel por tratar de tipos de autenticação do cliente
+	 * @param login
+	 * @param senha
+	 * @param provedor
+	 * @param porta
+	 * @return
+	 */
 	public static boolean check(String login, String senha, String provedor, String porta) {
 
 		Properties properties = new Properties();

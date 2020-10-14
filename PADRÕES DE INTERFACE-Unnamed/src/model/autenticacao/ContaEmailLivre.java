@@ -14,7 +14,11 @@ public class ContaEmailLivre extends ContaEmail {
 			return null;
 		return super.getConta().autenticar(login, senha);
 	}
-
+	/**
+	 * metodo que criptografica a senha para segurança
+	 * @param senha
+	 * @return
+	 */
 	public String criptografarSenha(String senha) {
 
 		try {
@@ -33,6 +37,9 @@ public class ContaEmailLivre extends ContaEmail {
 	}
 
 	@Override
+	/**
+	 * Verifica se o email tem os requisitos nescessarios ex: @email.com
+	 */
 	public boolean validarLogin(String email) {
 		// TODO Auto-generated method stub
 		boolean isEmailIdValid = false;

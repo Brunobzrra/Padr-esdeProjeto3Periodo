@@ -11,20 +11,23 @@ public class Membro extends ProjetoComponente {
 	private String nome;
 
 	private boolean ativo = super.getAtivo();
-	
+
 	private String email;
-	
+
 	private String senha;
-	
+
 	private ContaEmail conta;
 
 	private boolean administrador;
-
+	/**
+	 * colecao de participações
+	 */
 	private ArrayList<ProjetoComponente> participacoes = new ArrayList<>();
 
 	public ArrayList<ProjetoComponente> getParticipacoes() {
 		return participacoes;
 	}
+
 	public Membro(long matricula, String nome, String email, String senha, String senhaEmail) {
 		this.matricula = matricula;
 		this.nome = nome;
@@ -80,29 +83,41 @@ public class Membro extends ProjetoComponente {
 
 	}
 
+	/**
+	 * adciona somente participação
+	 */
 	public void adicionar(Participacao integracao) throws Exception {
-			integracao.setProjetoPai(this);
-			participacoes.add(integracao);			
+		integracao.setProjetoPai(this);
+		participacoes.add(integracao);
 	}
 
 	public void remover(ProjetoComponente integracao) throws Exception {
-			participacoes.remove(integracao);
-			integracao.setProjetoPai(null);
+		participacoes.remove(integracao);
+		integracao.setProjetoPai(null);
 	}
 
 	@Override
+	/**
+	 * Este metodo não sao implemntados em membro
+	 */
 	public float getCustoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
 	}
 
 	@Override
+	/**
+	 * Este metodo não sao implemntados em membro
+	 */
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
 	}
 
 	@Override
+	/**
+	 * Este metodo não sao implemntados em membro
+	 */
 	public void mover(ProjetoComponente integracao) throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
@@ -110,6 +125,9 @@ public class Membro extends ProjetoComponente {
 	}
 
 	@Override
+	/**
+	 * Este metodo não sao implemntados em membro
+	 */
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
@@ -130,7 +148,7 @@ public class Membro extends ProjetoComponente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
+
 	public boolean equals(Membro m) {
 		long matricula = m.getMatricula();
 		if (this.matricula == matricula) {

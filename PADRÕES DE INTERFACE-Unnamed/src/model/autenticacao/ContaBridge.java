@@ -1,5 +1,9 @@
 package model.autenticacao;
-
+/**
+ * Esta é a classe e responsavel por fazer a ponte com Conta email
+ * @author Antônio Amorim
+ *
+ */
 public abstract class ContaBridge {
 
 	private TipoProvedorAutenticacao tipo;
@@ -8,6 +12,12 @@ public abstract class ContaBridge {
 
 	private String senha;
 
+	/**
+	 * Esse metodo todas as subclasses devem implemntar sua propria operação
+	 * @param login
+	 * @param senha
+	 * @return
+	 */
 	public abstract Membro autenticar(String login, String senha);
 
 	public TipoProvedorAutenticacao getTipo() {

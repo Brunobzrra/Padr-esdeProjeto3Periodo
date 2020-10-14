@@ -4,14 +4,20 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ContaEmailIFPB extends ContaEmail {
-
+	/*
+	 * Antes de autenticar o metodo valida o email
+	 * @see model.autenticacao.ContaEmail#autenticar(java.lang.String, java.lang.String)
+	 */
 	public Membro autenticar(String login, String senha) {
 		if(!validarLogin(login))
 			return null;
 		return super.getConta().autenticar(login, senha);
 	}
-
+	
 	@Override
+	/**
+	 * Nesse metodo primeiro testa se o email é um email academico
+	 */
 	public boolean validarLogin(String email) {
 		// TODO Auto-generated method stub
 		boolean isEmailIdValid = false;

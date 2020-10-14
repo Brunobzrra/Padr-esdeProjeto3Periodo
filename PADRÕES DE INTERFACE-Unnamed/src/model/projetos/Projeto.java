@@ -6,7 +6,9 @@ import model.autenticacao.Membro;
 import model.utilitarios.Utilidade;
 
 public class Projeto extends ProjetoComponente {
-
+	/**
+	 * coleção de membro
+	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
 	private String nome;
