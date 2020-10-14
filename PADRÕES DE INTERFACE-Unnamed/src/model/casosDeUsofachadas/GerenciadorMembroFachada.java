@@ -8,6 +8,7 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.EnviarEmail;
 import persistenia.xml.DAOXMLMembroConta;
 import persistenia.xml.DAOXMLProjetoParticipacao;
 
@@ -46,7 +47,11 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 			DAOProjPart.atualizar(this.getProjeto(), auxiliar);
 			EnviarEmail.enviarEmail("unnamed!", "fananittadz@gmail.com", "bruno.bzrrasantos@gmail.com", mensagem,
 					assunto);
+			System.out.println("Participação removida com sucesso!");
+			return;
 		}
+		System.out.println("Participação não pode ser removida!");
+
 	}
 
 	public void adicionar(Membro adicionado, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
@@ -87,8 +92,11 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 				DAOProjPart.atualizar(this.getProjeto(), auxiliar);
 				EnviarEmail.enviarEmail("0unnamed!", "fananittadz@gmail.com", "bruno.bzrrasantos@gmail.com", mensagem,
 						assunto);
+				System.out.println("Participação adcionada com sucesso!");
+				return;
 			}
 
 		}
+		System.out.println("Não foi possivel adcionar participação!");
 	}
 }

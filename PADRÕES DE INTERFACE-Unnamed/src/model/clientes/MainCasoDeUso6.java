@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Set;
 
 import model.autenticacao.Membro;
-import model.casosDeUsofachadas.GerenciadorDeMembrosFachada;
 import model.casosDeUsofachadas.GerenciadorMembroFachada;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
@@ -13,11 +12,17 @@ import persistenia.xml.DAOXMLMembroConta;
 public class MainCasoDeUso6 {
 	public static void main(String[] args) {
 		DAOXMLMembroConta dao = new DAOXMLMembroConta();
-		Object[] valores = { "bruno", "bruno.bzrrasantos@gmail.com" };
+		Object[] valores = { "bruno", "fananitadz@gmail.com" };
 		String[] atributos = { "nome", "email" };
 		Set<Membro> recuperado = dao.consultarAnd(atributos, valores);
 		Object[] recuperados = recuperado.toArray();
-		Membro membro = (Membro) recuperados[0];
+		Membro membro=null;
+		try {
+			membro = (Membro) recuperados[0];			
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Não foi possivel encontrar membro!");
+		}
 		Membro auxiliar = membro;
 		Date agora = new Date(System.currentTimeMillis());
 		Date termino = new Date("02/02/2021");

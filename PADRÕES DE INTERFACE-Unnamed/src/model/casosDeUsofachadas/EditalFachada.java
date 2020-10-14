@@ -1,7 +1,6 @@
-package model.utilitarios;
+package model.casosDeUsofachadas;
 
 import model.autenticacao.Membro;
-import model.casosDeUsofachadas.ProjetoFachada;
 import model.projetos.Edital;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
@@ -23,6 +22,7 @@ public class EditalFachada extends ProjetoFachada {
 			if (!daoEdital.criar(edital))
 				throw new Exception("Este grupo ja existe!");
 		}
+		System.out.println("Edital adcionado com sucesso!");
 	}
 
 	public void atualizarEdital(Edital editalSubstituivel, Edital editalSubistituto) throws Exception {
@@ -32,6 +32,7 @@ public class EditalFachada extends ProjetoFachada {
 				throw new Exception("Este edital não existe!");
 			}
 		}
+		System.out.println("Edital atualizado com sucesso!");
 	}
 
 	public void removerEdital(Edital edital) throws Exception {
@@ -44,6 +45,7 @@ public class EditalFachada extends ProjetoFachada {
 				}
 			}
 			daoEdital.remover(edital);
+			System.out.println("Edital removido com sucesso!");
 		}
 	}
 }

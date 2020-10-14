@@ -22,6 +22,7 @@ public class GrupoFachada extends ProjetoFachada {
 			if (!daoGrupo.criar(grupo))
 				throw new Exception("Este grupo ja existe!");
 		}
+		System.out.println("Grupo adcionado com sucesso!");
 	}
 
 	public void atualizarGrupo(Grupo grupoSubstituivel, Grupo grupoSubistituto) throws Exception {
@@ -31,6 +32,7 @@ public class GrupoFachada extends ProjetoFachada {
 				throw new Exception("Este grupo não existe!");
 			}
 		}
+		System.out.println("Grupo atualizado com sucesso!");
 	}
 
 	public void removerGrupo(Grupo grupo) throws Exception {
@@ -44,5 +46,6 @@ public class GrupoFachada extends ProjetoFachada {
 			}
 			daoGrupo.remover(grupo);
 		}
+		System.out.println("Grupo removido com sucesso!");
 	}
 }

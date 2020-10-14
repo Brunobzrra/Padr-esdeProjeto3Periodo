@@ -16,6 +16,7 @@ public class CasoDeUsoUmCadastroFachada {
 		} else {
 			membro.setAdministrador(false);
 		}
+		System.out.println("membro cadastrado!");
 		return daoMembro.criar(membro);
 	}
 
@@ -43,6 +44,7 @@ public class CasoDeUsoUmCadastroFachada {
 		}
 		if (atualizado) {
 			daoMembro.atualizar(membro, membroAtual);
+			System.out.println("Membro atualizado!");
 		} else {
 			throw new Exception("O membro nao pode ser atualizado.");
 

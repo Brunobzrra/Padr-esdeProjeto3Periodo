@@ -1,4 +1,4 @@
-package model.casosDeUsofachadas;
+package model.utilitarios;
 
 import java.util.Properties;
 

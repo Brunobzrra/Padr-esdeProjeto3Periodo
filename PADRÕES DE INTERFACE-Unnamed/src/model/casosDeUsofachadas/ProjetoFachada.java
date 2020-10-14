@@ -36,6 +36,7 @@ public class ProjetoFachada {
 			participacao.setCoordenador(true);
 			membro.adicionar(participacao);
 			daoProjetoParticipacao.criar(projeto);
+			System.out.println("Projeto criado com sucesso!");
 			return projeto;
 		}
 		throw new Exception("Projeto já existente!");
@@ -87,6 +88,7 @@ public class ProjetoFachada {
 			} else if (atributoASerAtualizado.equalsIgnoreCase("nome")) {
 				auxiliar.setNome((String) novoDado);
 			}
+			System.out.println("Projeto atualizado com sucesso!");
 			daoProjetoParticipacao.atualizar(projeto, auxiliar);
 
 		}
@@ -96,7 +98,9 @@ public class ProjetoFachada {
 		for (ProjetoComponente participacao : membro.getParticipacoes()) {
 			if (participacao instanceof Participacao) {
 				if (((Participacao) participacao).isCoordenador()) {
-					daoProjetoParticipacao.remover(projeto);				}
+					daoProjetoParticipacao.remover(projeto);
+					System.out.println("Projeto removido com sucesso!");
+				}
 			} else {
 				throw new Exception("O membro que não for cordenador não pode remover!");
 			}

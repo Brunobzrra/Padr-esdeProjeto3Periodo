@@ -5,11 +5,11 @@ import java.util.Set;
 import model.autenticacao.Membro;
 import persistenia.xml.DAOXMLMembroConta;
 //caso de uso 7
-public class GerenciadorDeMembrosFachada {
+public class GerenciadorDeAdministradorFachada {
 	private Membro administrador;
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public GerenciadorDeMembrosFachada(Membro administrador) {
+	public GerenciadorDeAdministradorFachada(Membro administrador) {
 		this.administrador = administrador;
 	}
 
