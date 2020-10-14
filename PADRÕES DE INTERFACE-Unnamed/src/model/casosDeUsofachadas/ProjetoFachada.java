@@ -23,9 +23,8 @@ public class ProjetoFachada {
 		this.participacao = participacao;
 		membro.adicionar(participacao);
 	}
-	public ProjetoFachada() {}
 
-	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
+	public Projeto criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais) throws Exception {
 		String[] atributo = { "nome" };
 		Object[] valores = { nome };
@@ -37,7 +36,7 @@ public class ProjetoFachada {
 			participacao.setCoordenador(true);
 			membro.adicionar(participacao);
 			daoProjetoParticipacao.criar(projeto);
-			return;
+			return projeto;
 		}
 		throw new Exception("Projeto já existente!");
 	}

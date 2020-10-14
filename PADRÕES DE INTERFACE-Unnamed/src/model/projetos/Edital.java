@@ -3,6 +3,8 @@ package model.projetos;
 import java.util.ArrayList;
 import java.util.Date;
 
+import model.utilitarios.Utilidade;
+
 public class Edital extends ProjetoComponente {
 
 	private String nome;

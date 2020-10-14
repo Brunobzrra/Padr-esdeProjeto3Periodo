@@ -1,6 +1,8 @@
-package model.projetos;
+package model.utilitarios;
 
 import java.util.ArrayList;
+
+import model.projetos.ProjetoComponente;
 
 public class Utilidade {
 	public static void ativar(ArrayList<ProjetoComponente> itens, ProjetoComponente integracaoDeProjeto) {

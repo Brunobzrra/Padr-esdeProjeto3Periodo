@@ -1,6 +1,6 @@
-package model.casosDeUsofachadas;
+package model.clientes;
 
-import java.util.Scanner;
+import model.casosDeUsofachadas.CasoDeUsoUmCadastroFachada;
 
 public class MainCasoDeUso1 {
 

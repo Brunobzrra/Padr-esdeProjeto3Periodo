@@ -13,7 +13,6 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import model.autenticacao.Membro;
 import model.projetos.Grupo;
 
 public class DAOXMLGrupo {
@@ -55,7 +54,7 @@ public class DAOXMLGrupo {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(grupoRemover);
 		if (indice != null) {
-			persistidos.remove(indice, grupoRemover);
+			persistidos.remove(indice);
 			this.salvarXML(persistidos);
 		}
 	}

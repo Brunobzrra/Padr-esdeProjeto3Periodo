@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import model.autenticacao.Membro;
+import model.utilitarios.Utilidade;
 
 public class Grupo extends ProjetoComponente {
 

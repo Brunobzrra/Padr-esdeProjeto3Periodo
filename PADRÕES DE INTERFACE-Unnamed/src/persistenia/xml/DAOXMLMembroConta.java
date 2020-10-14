@@ -62,7 +62,7 @@ public class DAOXMLMembroConta {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(membroRemover);
 		if (indice != null) {
-			persistidos.remove(indice, membroRemover);
+			persistidos.remove(indice);
 			this.salvarXML(persistidos);
 		}
 	}

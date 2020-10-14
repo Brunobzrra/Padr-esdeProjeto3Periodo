@@ -2,6 +2,7 @@ package model.autenticacao;
 
 import java.util.Set;
 
+import model.utilitarios.AutenticacaoPOP3;
 import persistenia.xml.DAOXMLMembroConta;
 
 public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {

@@ -15,7 +15,6 @@ public class GrupoFachada extends ProjetoFachada {
 		super(membro, participacao);
 		// TODO Auto-generated constructor stub
 	}
-	public GrupoFachada() {}
 
 	public void adcionarGrupo(Grupo grupo) throws Exception {
 		// TODO Auto-generated method stub

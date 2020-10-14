@@ -3,6 +3,7 @@ package model.projetos;
 import java.util.ArrayList;
 
 import model.autenticacao.Membro;
+import model.utilitarios.Utilidade;
 
 public class Projeto extends ProjetoComponente {
 

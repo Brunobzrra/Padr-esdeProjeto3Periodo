@@ -1,4 +1,4 @@
-package model.autenticacao;
+package model.utilitarios;
 
 import java.util.Properties;
 

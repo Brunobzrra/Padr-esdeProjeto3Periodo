@@ -1,0 +1,18 @@
+<map>
+  <entry>
+    <long>1</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <matricula>1111</matricula>
+      <nome>brunin</nome>
+      <ativo>true</ativo>
+      <email>fan@gmail.com</email>
+      <senha>1212</senha>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorEmailPOP3"/>
+      </conta>
+      <administrador>true</administrador>
+      <participacoes/>
+    </model.autenticacao.Membro>
+  </entry>
+</map>

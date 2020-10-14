@@ -12,7 +12,6 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import model.autenticacao.Membro;
 import model.projetos.Projeto;
 
 public class DAOXMLProjetoParticipacao {
@@ -55,7 +54,7 @@ public class DAOXMLProjetoParticipacao {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(projetoRemover);
 		if (indice != null) {
-			persistidos.remove(indice, projetoRemover);
+			persistidos.remove(indice);
 			this.salvarXML(persistidos);
 		}
 	}

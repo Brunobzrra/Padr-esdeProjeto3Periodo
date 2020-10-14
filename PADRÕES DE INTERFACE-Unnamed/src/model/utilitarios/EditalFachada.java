@@ -1,6 +1,7 @@
-package model.casosDeUsofachadas;
+package model.utilitarios;
 
 import model.autenticacao.Membro;
+import model.casosDeUsofachadas.ProjetoFachada;
 import model.projetos.Edital;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
@@ -16,16 +17,15 @@ public class EditalFachada extends ProjetoFachada {
 		super(membro, participacao);
 		// TODO Auto-generated constructor stub
 	}
-	public void adcionarGrupo(Edital edital) throws Exception {
+	public void adcionarEdital(Edital edital) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
-			edital.adicionar(super.getProjeto());
 			if (!daoEdital.criar(edital))
 				throw new Exception("Este grupo ja existe!");
 		}
 	}
 
-	public void atualizarGrupo(Edital editalSubstituivel, Edital editalSubistituto) throws Exception {
+	public void atualizarEdital(Edital editalSubstituivel, Edital editalSubistituto) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
 			if (!daoEdital.atualizar(editalSubstituivel, editalSubistituto)) {
@@ -34,7 +34,7 @@ public class EditalFachada extends ProjetoFachada {
 		}
 	}
 
-	public void removerGrupo(Edital edital) throws Exception {
+	public void removerEdital(Edital edital) throws Exception {
 		// TODO Auto-generated method stub
 		// decidimos que seria melhor a fachada fazer o uso do instanceof
 		if (super.getMembro().isAdministrador()) {

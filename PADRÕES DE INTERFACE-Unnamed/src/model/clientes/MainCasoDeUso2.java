@@ -1,9 +1,10 @@
-package model.casosDeUsofachadas;
+package model.clientes;
 
 import java.util.Set;
 
 import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
+import model.casosDeUsofachadas.CasoDeUsoDoisAutenticacaoDeLogin;
 import persistenia.xml.DAOXMLMembroConta;
 
 public class MainCasoDeUso2 {
