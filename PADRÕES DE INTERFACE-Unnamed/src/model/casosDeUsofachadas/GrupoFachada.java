@@ -1,43 +1,48 @@
 package model.casosDeUsofachadas;
 
-import model.autenticacao.Membro;
+import java.util.Date;
+
 import model.projetos.Grupo;
-import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.AutenticadorDePersistencia;
 import persistenia.xml.DAOXMLGrupo;
 
 //caso de uso 3
 public class GrupoFachada extends ProjetoFachada {
 	private DAOXMLGrupo daoGrupo = new DAOXMLGrupo();
 
-	public GrupoFachada(Membro membro, Participacao participacao) throws Exception {
-		super(membro, participacao);
+	public GrupoFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
+		super(AutenticadorDePersistencia.verificarMembro(matricula),
+				AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,
+						aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador));
 		// TODO Auto-generated constructor stub
 	}
 
-	public void adcionarGrupo(Grupo grupo) throws Exception {
+	public void adcionarGrupo(String linkCNPq) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
-			if (!daoGrupo.criar(grupo))
+			if (!daoGrupo.criar(AutenticadorDePersistencia.verificarGrupo(linkCNPq)))
 				throw new Exception("Este grupo ja existe!");
 		}
 		System.out.println("Grupo adcionado com sucesso!");
 	}
 
-	public void atualizarGrupo(Grupo grupoSubstituivel, Grupo grupoSubistituto) throws Exception {
+	public void atualizarGrupo(String linkCNPq, Grupo grupoSubistituto) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
-			if (!daoGrupo.atualizar(grupoSubstituivel, grupoSubistituto)) {
+			if (!daoGrupo.atualizar(AutenticadorDePersistencia.verificarGrupo(linkCNPq), grupoSubistituto)) {
 				throw new Exception("Este grupo não existe!");
 			}
 		}
 		System.out.println("Grupo atualizado com sucesso!");
 	}
 
-	public void removerGrupo(Grupo grupo) throws Exception {
+	public void removerGrupo(String linkCNPq) throws Exception {
 		// TODO Auto-generated method stub
 		// decidimos que seria melhor a fachada fazer o uso do instanceof
+		Grupo grupo=AutenticadorDePersistencia.verificarGrupo(linkCNPq);
 		if (super.getMembro().isAdministrador()) {
 			for (ProjetoComponente projetoComponente : grupo.getItens()) {
 				if (projetoComponente instanceof Projeto) {

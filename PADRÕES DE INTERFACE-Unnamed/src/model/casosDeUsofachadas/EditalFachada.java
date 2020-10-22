@@ -1,10 +1,11 @@
 package model.casosDeUsofachadas;
 
-import model.autenticacao.Membro;
+import java.util.Date;
+
 import model.projetos.Edital;
-import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.AutenticadorDePersistencia;
 import persistenia.xml.DAOXMLEdital;
 
 //caso de uso 4
@@ -12,32 +13,34 @@ public class EditalFachada extends ProjetoFachada {
 
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
 
-	public EditalFachada(Membro membro, Participacao participacao) throws Exception {
-		super(membro, participacao);
+	public EditalFachada(long matricula,Date dataInicio, Date dataTermino, float aporteCusteioMensalReais, short qtdMesesCusteados,
+			short qtdMesesPagos, boolean coordenador) throws Exception {
+		super(AutenticadorDePersistencia.verificarMembro(matricula),AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador));
 		// TODO Auto-generated constructor stub
 	}
-	public void adcionarEdital(Edital edital) throws Exception {
+	public void adcionarEdital(String nome) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
-			if (!daoEdital.criar(edital))
+			if (!daoEdital.criar(nome))
 				throw new Exception("Este grupo ja existe!");
 		}
 		System.out.println("Edital adcionado com sucesso!");
 	}
 
-	public void atualizarEdital(Edital editalSubstituivel, Edital editalSubistituto) throws Exception {
+	public void atualizarEdital(String nome, Edital editalSubistituto) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
-			if (!daoEdital.atualizar(editalSubstituivel, editalSubistituto)) {
+			if (!daoEdital.atualizar(AutenticadorDePersistencia.verificarEdital(nome), editalSubistituto)) {
 				throw new Exception("Este edital não existe!");
 			}
 		}
 		System.out.println("Edital atualizado com sucesso!");
 	}
 
-	public void removerEdital(Edital edital) throws Exception {
+	public void removerEdital(String nome) throws Exception {
 		// TODO Auto-generated method stub
 		// decidimos que seria melhor a fachada fazer o uso do instanceof
+		Edital edital= AutenticadorDePersistencia.verificarEdital(nome);
 		if (super.getMembro().isAdministrador()) {
 			for (ProjetoComponente projetoComponente : edital.getItens()) {
 				if (projetoComponente instanceof Projeto) {

@@ -1,6 +1,7 @@
 package model.casosDeUsofachadas;
 
 import model.autenticacao.Membro;
+import model.utilitarios.AutenticadorDePersistencia;
 import persistenia.xml.DAOXMLMembroConta;
 
 //caso de uso 1
@@ -20,9 +21,10 @@ public class CasoDeUsoUmCadastroFachada {
 		return daoMembro.criar(membro);
 	}
 
-	public void atualizarMembro(Membro membro, String[] atributosQueroAtualizar, Object[] valores) throws Exception {
+	public void atualizarMembro(long matricula, String[] atributosQueroAtualizar, Object[] valores) throws Exception {
 		boolean atualizado = false;
-		Membro membroAtual = membro;
+		Membro membroAtual = AutenticadorDePersistencia.verificarMembro(matricula);
+		Membro membro= membroAtual;
 		for (int i = 0; i < atributosQueroAtualizar.length; i++) {
 			if (atributosQueroAtualizar[i].equals("nome")) {
 				membroAtual.setNome((String) valores[i]);

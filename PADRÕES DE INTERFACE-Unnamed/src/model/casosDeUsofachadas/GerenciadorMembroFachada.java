@@ -8,6 +8,7 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.AutenticadorDePersistencia;
 import model.utilitarios.EnviarEmail;
 import persistenia.xml.DAOXMLMembroConta;
 import persistenia.xml.DAOXMLProjetoParticipacao;
@@ -18,13 +19,16 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 	private DAOXMLProjetoParticipacao DAOProjPart = getDaoProjetoParticipacao();
 	private DAOXMLMembroConta daoMembroConta = new DAOXMLMembroConta();
 
-	public GerenciadorMembroFachada(Membro membro, Participacao participacao, Projeto projetoASerGerenciado)
-			throws Exception {
-		super(membro, participacao);
-		super.setProjeto(projetoASerGerenciado);
+	public GerenciadorMembroFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador, String nomeDoProjeto) throws Exception {
+		super(AutenticadorDePersistencia.verificarMembro(matricula),
+				AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,
+						aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador));
+		super.setProjeto(AutenticadorDePersistencia.verificarProjeto(nomeDoProjeto));
 	}
 
-	public void removerParticipacao(Membro removido) throws Exception {
+	public void removerParticipacao(long matricula)throws Exception {
+		Membro removido=AutenticadorDePersistencia.verificarMembro(matricula);
 		Projeto auxiliar = super.getProjeto();
 		ArrayList<ProjetoComponente> membroParticipacao = removido.getParticipacoes();
 		Boolean foiMudado = null;
@@ -54,8 +58,9 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 
 	}
 
-	public void adicionar(Membro adicionado, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+	public void adicionar(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados) throws Exception {
+		Membro adicionado=AutenticadorDePersistencia.verificarMembro(matricula);
 		Projeto auxiliar = super.getProjeto();
 		ArrayList<ProjetoComponente> membroParticipacao = adicionado.getParticipacoes();
 		Boolean foiMudado = null;

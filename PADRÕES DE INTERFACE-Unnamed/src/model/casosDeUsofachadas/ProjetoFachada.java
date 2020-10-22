@@ -1,6 +1,7 @@
 package model.casosDeUsofachadas;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -8,6 +9,7 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.AutenticadorDePersistencia;
 import persistenia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 5
@@ -17,10 +19,18 @@ public class ProjetoFachada {
 	private DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 
 	private Projeto projeto;
-	
+
 	public ProjetoFachada(Membro membro, Participacao participacao) throws Exception {
 		this.membro = membro;
 		this.participacao = participacao;
+		membro.adicionar(participacao);
+	}
+
+	public ProjetoFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
+		membro=AutenticadorDePersistencia.verificarMembro(matricula);		
+		participacao=AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,
+						aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador);
 		membro.adicionar(participacao);
 	}
 
@@ -42,7 +52,7 @@ public class ProjetoFachada {
 		throw new Exception("Projeto já existente!");
 	}
 
-	public void atualizarDado(Projeto projeto, String atributoASerAtualizado, Object novoDado, Object dadoAntigo) {
+	public void atualizarDado(String nomeDoProjeto,String atributoASerAtualizado, Object novoDado, Object dadoAntigo) {
 		String[] atributo = { atributoASerAtualizado };
 		Object[] valor = { novoDado };
 		Set<Projeto> projetoRecuperados = daoProjetoParticipacao.consultarAnd(atributo, valor);
@@ -94,7 +104,7 @@ public class ProjetoFachada {
 		}
 	}
 
-	public void remover(Projeto preojetoParaRemover) throws Exception {
+	public void remover(String nomeDoProjeto) throws Exception {
 		for (ProjetoComponente participacao : membro.getParticipacoes()) {
 			if (participacao instanceof Participacao) {
 				if (((Participacao) participacao).isCoordenador()) {
@@ -110,18 +120,23 @@ public class ProjetoFachada {
 	public void setMembro(Membro membro) {
 		this.membro = membro;
 	}
+
 	public Membro getMembro() {
 		return membro;
 	}
+
 	public void setParticipacao(Participacao participacao) {
 		this.participacao = participacao;
 	}
+
 	public Projeto getProjeto() {
 		return projeto;
 	}
+
 	protected void setProjeto(Projeto projeto) {
 		this.projeto = projeto;
 	}
+
 	public DAOXMLProjetoParticipacao getDaoProjetoParticipacao() {
 		return daoProjetoParticipacao;
 	}

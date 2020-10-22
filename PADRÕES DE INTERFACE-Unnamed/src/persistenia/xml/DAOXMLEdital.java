@@ -30,9 +30,11 @@ public class DAOXMLEdital {
 	 * um edital ao XML, que é nosso BD.
 	 * @params edital*/
 	
-	public boolean criar(Edital edital) {
+	public boolean criar(String nome) {
 		String[] atributos = { "nome" };
-		Object[] valores = { edital.getNome() };
+		Object[] valores = { nome };
+		Edital edital= new Edital();
+		edital.setNome(nome);
 		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id += 1;

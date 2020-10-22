@@ -7,6 +7,7 @@ import model.autenticacao.ContaEmailIFPB;
 import model.autenticacao.ContaEmailLivre;
 import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
+import model.utilitarios.AutenticadorDePersistencia;
 import persistenia.xml.DAOXMLMembroConta;
 
 //caso de uso 2
@@ -18,11 +19,8 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 
 	private ContaEmail conta;
 	
-	public CasoDeUsoDoisAutenticacaoDeLogin() {
-	}
-	
-	public CasoDeUsoDoisAutenticacaoDeLogin(Membro membro) {
-		this.membro = membro;
+	public CasoDeUsoDoisAutenticacaoDeLogin(long matricula) throws Exception {
+		this.membro = AutenticadorDePersistencia.verificarMembro(matricula);
 	}
 
 	public void selecionarFormaDeAutenticacao(TipoProvedorAutenticacao tipoDeAutenticacao) {
