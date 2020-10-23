@@ -42,7 +42,7 @@ public class GrupoFachada extends ProjetoFachada {
 	public void removerGrupo(String linkCNPq) throws Exception {
 		// TODO Auto-generated method stub
 		// decidimos que seria melhor a fachada fazer o uso do instanceof
-		Grupo grupo=AutenticadorDePersistencia.verificarGrupo(linkCNPq);
+		Grupo grupo = AutenticadorDePersistencia.verificarGrupo(linkCNPq);
 		if (super.getMembro().isAdministrador()) {
 			for (ProjetoComponente projetoComponente : grupo.getItens()) {
 				if (projetoComponente instanceof Projeto) {

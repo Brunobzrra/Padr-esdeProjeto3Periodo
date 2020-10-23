@@ -27,8 +27,8 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 		super.setProjeto(AutenticadorDePersistencia.verificarProjeto(nomeDoProjeto));
 	}
 
-	public void removerParticipacao(long matricula)throws Exception {
-		Membro removido=AutenticadorDePersistencia.verificarMembro(matricula);
+	public void removerParticipacao(long matricula) throws Exception {
+		Membro removido = AutenticadorDePersistencia.verificarMembro(matricula);
 		Projeto auxiliar = super.getProjeto();
 		ArrayList<ProjetoComponente> membroParticipacao = removido.getParticipacoes();
 		Boolean foiMudado = null;
@@ -60,7 +60,7 @@ public class GerenciadorMembroFachada extends ProjetoFachada {
 
 	public void adicionar(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados) throws Exception {
-		Membro adicionado=AutenticadorDePersistencia.verificarMembro(matricula);
+		Membro adicionado = AutenticadorDePersistencia.verificarMembro(matricula);
 		Projeto auxiliar = super.getProjeto();
 		ArrayList<ProjetoComponente> membroParticipacao = adicionado.getParticipacoes();
 		Boolean foiMudado = null;

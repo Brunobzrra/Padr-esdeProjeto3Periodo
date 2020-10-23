@@ -12,12 +12,15 @@ import persistenia.xml.DAOXMLEdital;
 public class EditalFachada extends ProjetoFachada {
 
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
+	
 
-	public EditalFachada(long matricula,Date dataInicio, Date dataTermino, float aporteCusteioMensalReais, short qtdMesesCusteados,
-			short qtdMesesPagos, boolean coordenador) throws Exception {
-		super(AutenticadorDePersistencia.verificarMembro(matricula),AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador));
-		// TODO Auto-generated constructor stub
+	public EditalFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
+		super(AutenticadorDePersistencia.verificarMembro(matricula),
+				AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,
+						aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador));
 	}
+
 	public void adcionarEdital(String nome) throws Exception {
 		// TODO Auto-generated method stub
 		if (super.getMembro().isAdministrador()) {
@@ -40,7 +43,7 @@ public class EditalFachada extends ProjetoFachada {
 	public void removerEdital(String nome) throws Exception {
 		// TODO Auto-generated method stub
 		// decidimos que seria melhor a fachada fazer o uso do instanceof
-		Edital edital= AutenticadorDePersistencia.verificarEdital(nome);
+		Edital edital = AutenticadorDePersistencia.verificarEdital(nome);
 		if (super.getMembro().isAdministrador()) {
 			for (ProjetoComponente projetoComponente : edital.getItens()) {
 				if (projetoComponente instanceof Projeto) {
