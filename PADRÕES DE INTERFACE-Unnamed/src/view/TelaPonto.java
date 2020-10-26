@@ -8,12 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 public class TelaPonto extends JFrame {
 	private JTextField nomeDoProjeto;
@@ -27,6 +23,7 @@ public class TelaPonto extends JFrame {
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Marcar Ponto");
 		adcionarLabels();
 		adcionarTextFields();
 		adcionarBotao();
