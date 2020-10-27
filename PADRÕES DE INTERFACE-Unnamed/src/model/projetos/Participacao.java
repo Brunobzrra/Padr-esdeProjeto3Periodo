@@ -1,10 +1,13 @@
 package model.projetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.joda.time.DateTime;
 
 import org.joda.time.Period;
+
+import ponto.model.projetos.PontoTrabalho;
 
 public class Participacao extends ProjetoComponente {
 
@@ -23,9 +26,11 @@ public class Participacao extends ProjetoComponente {
 
 	private boolean coordenador;
 
+	private ArrayList<PontoTrabalho> pontos = new ArrayList<PontoTrabalho>();
+
 	// metodos obrigatorios
 	@Override
-	
+
 	public void ativar() {
 		// TODO Auto-generated method stub
 		setAtivo(true);
@@ -42,7 +47,6 @@ public class Participacao extends ProjetoComponente {
 		this.coordenador = coordenador;
 	}
 
-
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
@@ -52,6 +56,18 @@ public class Participacao extends ProjetoComponente {
 	public float getCustoTotal() {
 		return this.quantidadeDeMesesProjeto() * aporteCusteioMensalReais;
 
+	}
+
+	public void adicionarPonto(PontoTrabalho ponto){
+		for (PontoTrabalho pontoTrabalho : pontos) {
+			if(ponto== pontoTrabalho) {
+				return;
+			}
+		}
+		pontos.add(ponto);
+	}
+	public void removerPonto(PontoTrabalho ponto) {
+		pontos.remove(ponto);
 	}
 
 	public float getCusteioReaisNaoGastoTotal() {
@@ -143,5 +159,7 @@ public class Participacao extends ProjetoComponente {
 	public void setCoordenador(boolean coordenador) {
 		this.coordenador = coordenador;
 	}
-
+	public ArrayList<PontoTrabalho> getPontos() {
+		return pontos;
+	}
 }

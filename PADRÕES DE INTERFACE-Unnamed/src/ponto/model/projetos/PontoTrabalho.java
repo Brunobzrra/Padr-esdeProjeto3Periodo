@@ -15,4 +15,29 @@ public class PontoTrabalho {
 	public int getHorasTrabalhadas() {
 		return 0;
 	}
+	public long getDataHoraEntrada() {
+		return dataHoraEntrada;
+	}
+	public void setDataHoraEntrada(long dataHoraEntrada) {
+		this.dataHoraEntrada = dataHoraEntrada;
+	}
+	public long getDataHoraSaida() {
+		return dataHoraSaida;
+	}
+	public void setDataHoraSaida(long dataHoraSaida) {
+		this.dataHoraSaida = dataHoraSaida;
+	}
+	public String getJustificativa() {
+		return justificativa;
+	}
+	public void setJustificativa(String justificativa) {
+		this.justificativa = justificativa;
+	}
+	public boolean isJustificativaAceita() {
+		return justificativaAceita;
+	}
+	public void setJustificativaAceita(boolean justificativaAceita) {
+		this.justificativaAceita = justificativaAceita;
+	}
+	
 }
