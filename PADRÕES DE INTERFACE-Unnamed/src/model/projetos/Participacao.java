@@ -7,6 +7,8 @@ import org.joda.time.DateTime;
 
 import org.joda.time.Period;
 
+import model.autenticacao.Membro;
+import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalho;
 
 public class Participacao extends ProjetoComponente {
@@ -27,6 +29,10 @@ public class Participacao extends ProjetoComponente {
 	private boolean coordenador;
 
 	private ArrayList<PontoTrabalho> pontos = new ArrayList<PontoTrabalho>();
+
+	private ArrayList<HorarioPrevisto> horarios = new ArrayList<HorarioPrevisto>();
+
+	private Membro membro;
 
 	// metodos obrigatorios
 	@Override
@@ -58,14 +64,24 @@ public class Participacao extends ProjetoComponente {
 
 	}
 
-	public void adicionarPonto(PontoTrabalho ponto){
+	public void adcionarHorarioPrevisto(HorarioPrevisto horario) {
+		for (HorarioPrevisto horarioPrevisto : horarios) {
+			if (horario == horarioPrevisto) {
+				return;
+			}
+		}
+		horarios.add(horario);
+	}
+
+	public void adicionarPonto(PontoTrabalho ponto) {
 		for (PontoTrabalho pontoTrabalho : pontos) {
-			if(ponto== pontoTrabalho) {
+			if (ponto == pontoTrabalho) {
 				return;
 			}
 		}
 		pontos.add(ponto);
 	}
+
 	public void removerPonto(PontoTrabalho ponto) {
 		pontos.remove(ponto);
 	}
@@ -87,6 +103,15 @@ public class Participacao extends ProjetoComponente {
 		float aux = 0;
 		aux = this.qtdMesesCusteados - this.qtdMesesPagos;
 		return aux * this.aporteCusteioMensalReais;
+	}
+
+	@Override
+	public void adicionar(Membro membro) throws Exception {
+		// TODO Auto-generated method stub
+		if (this.membro != null) {
+			this.membro = membro;
+			membro.adicionar(this);
+		}
 	}
 
 	@Override
@@ -159,7 +184,16 @@ public class Participacao extends ProjetoComponente {
 	public void setCoordenador(boolean coordenador) {
 		this.coordenador = coordenador;
 	}
+
 	public ArrayList<PontoTrabalho> getPontos() {
 		return pontos;
+	}
+
+	public Membro getMembro() {
+		return membro;
+	}
+
+	public ArrayList<HorarioPrevisto> getHorarios() {
+		return horarios;
 	}
 }

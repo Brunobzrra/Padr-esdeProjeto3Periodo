@@ -1,8 +1,6 @@
 package model.projetos;
 
 import java.util.ArrayList;
-
-import model.autenticacao.Membro;
 import model.utilitarios.Utilidade;
 
 public class Projeto extends ProjetoComponente {
@@ -30,7 +28,7 @@ public class Projeto extends ProjetoComponente {
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 	}
 
-	public void adicionar(Membro integracao) throws Exception {
+	public void adicionar(Participacao integracao) throws Exception {
 		integracao.setProjetoPai(this);
 		itens.add(integracao);
 	}
