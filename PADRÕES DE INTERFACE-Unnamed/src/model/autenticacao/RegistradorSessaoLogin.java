@@ -1,8 +1,11 @@
 package model.autenticacao;
 
+import java.util.ArrayList;
+
 public class RegistradorSessaoLogin {
 	private static RegistradorSessaoLogin registradorSingleton = new RegistradorSessaoLogin();
-
+	private ArrayList<Membro> logados= new ArrayList<Membro>();
+	
 	private RegistradorSessaoLogin() {
 
 	}
@@ -12,14 +15,25 @@ public class RegistradorSessaoLogin {
 	}
 
 	public void registrarOline(Membro membro) {
-
+		if(!isOline(membro.getEmail())) {
+			logados.add(membro);
+		}
 	}
 
-	public void registrarOline(String login) {
-
+	public void registrarOffline(String login) {
+		for (int i = 0; i < logados.size(); i++) {
+			if (logados.get(i).getEmail().equals(login)) {
+				logados.remove(i);
+			}
+		}
 	}
 
 	public boolean isOline(String login) {
-		return true;
+		for (Membro membro : logados) {
+			if(membro.getEmail().equals(login)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

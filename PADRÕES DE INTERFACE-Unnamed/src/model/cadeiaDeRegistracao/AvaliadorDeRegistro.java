@@ -3,19 +3,19 @@ package model.cadeiaDeRegistracao;
 import java.util.Date;
 
 import model.projetos.Participacao;
-import model.projetos.Projeto;
-import model.projetos.ProjetoComponente;
 import ponto.model.projetos.DiaSemana;
+import ponto.model.projetos.PontoTrabalho;
 
 public abstract class AvaliadorDeRegistro {
 	private AvaliadorDeRegistro proximo;
 	private Participacao participacao;
 
-	public abstract boolean registarPonto(Projeto projeto, String login);
-	
+	public abstract boolean justificarPontoInvalido(PontoTrabalho ponto, String justificativa, String login);
+
 	public AvaliadorDeRegistro getProximo() {
 		return proximo;
 	}
+
 	public void setProximo(AvaliadorDeRegistro proximo) {
 		this.proximo = proximo;
 	}
@@ -23,15 +23,7 @@ public abstract class AvaliadorDeRegistro {
 	public Participacao getParticipacao() {
 		return participacao;
 	}
-	protected boolean recuperarPontos(Projeto projeto, String login) {
-		for (ProjetoComponente participacaoDaVez : projeto.getItens()) {
-			Participacao participa = (Participacao) participacaoDaVez;
-			if (participa.getMembro().getEmail().equals(login)) {
-				participacao=participa;
-			}
-		}
-		return (getParticipacao() != null);
-	}
+
 	protected Object[] pegarHoraEDia() {
 		// TODO Auto-generated method stub
 		String dataQueOPontoFoiBatido = new Date(System.currentTimeMillis()).toString();
@@ -62,7 +54,7 @@ public abstract class AvaliadorDeRegistro {
 			diaEmPortugues = DiaSemana.DOM;
 			break;
 		}
-		Object[] resultado={horaExata,diaEmPortugues};
+		Object[] resultado = { horaExata, diaEmPortugues };
 		return resultado;
 	}
 }

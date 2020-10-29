@@ -1,8 +1,8 @@
 package model.cadeiaDeRegistracao;
 
-import model.projetos.Projeto;
 import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.HorarioPrevisto;
+import ponto.model.projetos.PontoTrabalho;
 
 public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends AvaliadorDeRegistro {
 
@@ -10,22 +10,20 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 		setProximo(avaliador);
 	}
 
-	public boolean registarPonto(Projeto projeto, String login) {
-		if (recuperarPontos(projeto, login)) {
-			Object[] horaEDia=pegarHoraEDia();
-			for (HorarioPrevisto horarioPrevisto : super.getParticipacao().getHorarios()) {
-				if (horarioPrevisto.getDiaSemana() == (DiaSemana)horaEDia[1]) {
-					long horaExata=(long)horaEDia[0];
-					if (horarioPrevisto.getHoraInicio() <= horaExata && horarioPrevisto.getHoraInicio()+horarioPrevisto.getToleranciaMinutos()>= horaExata) {
-						return getProximo().registarPonto(projeto, login);
-					}
-					if(horarioPrevisto.getHoraTermino() <= horaExata && horarioPrevisto.getHoraTermino()+horarioPrevisto.getToleranciaMinutos()>= horaExata) {
-						return getProximo().registarPonto(projeto, login);
-					}
+	public boolean justificarPontoInvalido(PontoTrabalho ponto, String justificativa, String login) {
+		Object[] horaEDia=pegarHoraEDia();
+		for (HorarioPrevisto horarioPrevisto : super.getParticipacao().getHorarios()) {
+			if (horarioPrevisto.getDiaSemana() == (DiaSemana)horaEDia[1]) {
+				long horaExata=(long)horaEDia[0];
+				if (horarioPrevisto.getHoraInicio() <= horaExata && horarioPrevisto.getHoraInicio()+horarioPrevisto.getToleranciaMinutos()>= horaExata) {
+					return super.getProximo().justificarPontoInvalido(ponto, justificativa, login);
+				}
+				if(horarioPrevisto.getHoraTermino() <= horaExata && horarioPrevisto.getHoraTermino()+horarioPrevisto.getToleranciaMinutos()>= horaExata) {
+					return super.getProximo().justificarPontoInvalido(ponto, justificativa, login);
 				}
 			}
 		}
-		return false;
+	return false;
 	}
 
 }

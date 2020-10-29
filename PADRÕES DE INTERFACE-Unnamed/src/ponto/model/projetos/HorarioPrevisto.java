@@ -12,7 +12,7 @@ public class HorarioPrevisto {
 		this.toleranciaMinutos = toleranciaMinutos;
 	}
 	public int getExpectativaHorasTrabalhadas() {
-		return 0;
+		return horaTermino-horaInicio;
 	}
 	public DiaSemana getDiaSemana() {
 		return diaSemana;
