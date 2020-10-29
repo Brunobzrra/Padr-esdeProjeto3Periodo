@@ -13,7 +13,7 @@ public class AvaliadorPontoSemEntradaeOuSaida extends AvaliadorDeRegistro {
 			return false;
 		}
 		for (PontoTrabalho ponto : getParticipacao().getPontos()) {
-			if (ponto.getDataHoraEntrada() == 0 || ponto.getDataHoraSaida() == 0)
+			if (ponto.getDataHoraEntrada() == null || ponto.getDataHoraSaida() == null)
 				return false;
 		}
 

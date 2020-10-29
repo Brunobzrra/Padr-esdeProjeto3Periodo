@@ -1,12 +1,14 @@
 package ponto.model.projetos;
 
+import org.joda.time.LocalDateTime;
+
 public class PontoTrabalho {
-	private long dataHoraEntrada;
-	private long dataHoraSaida;
+	private LocalDateTime dataHoraEntrada;
+	private LocalDateTime dataHoraSaida;
 	private String justificativa;
 	private boolean justificativaAceita;
 	
-	public PontoTrabalho(long dataHoraEntrada, long dataHoraSaida, String justificativa, boolean justificativaAceita) {
+	public PontoTrabalho(LocalDateTime dataHoraEntrada, LocalDateTime dataHoraSaida, String justificativa, boolean justificativaAceita) {
 		this.dataHoraEntrada = dataHoraEntrada;
 		this.dataHoraSaida = dataHoraSaida;
 		this.justificativa = justificativa;
@@ -15,16 +17,16 @@ public class PontoTrabalho {
 	public int getHorasTrabalhadas() {
 		return 0;
 	}
-	public long getDataHoraEntrada() {
+	public LocalDateTime getDataHoraEntrada() {
 		return dataHoraEntrada;
 	}
-	public void setDataHoraEntrada(long dataHoraEntrada) {
+	public void setDataHoraEntrada(LocalDateTime dataHoraEntrada) {
 		this.dataHoraEntrada = dataHoraEntrada;
 	}
-	public long getDataHoraSaida() {
+	public LocalDateTime getDataHoraSaida() {
 		return dataHoraSaida;
 	}
-	public void setDataHoraSaida(long dataHoraSaida) {
+	public void setDataHoraSaida(LocalDateTime dataHoraSaida) {
 		this.dataHoraSaida = dataHoraSaida;
 	}
 	public String getJustificativa() {
