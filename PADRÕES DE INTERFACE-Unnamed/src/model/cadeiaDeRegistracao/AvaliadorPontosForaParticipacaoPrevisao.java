@@ -5,8 +5,8 @@ import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.HorarioPrevisto;
 
 public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro {
-	public AvaliadorPontosForaParticipacaoPrevisao() {
-		setProximo(new AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos());
+	public AvaliadorPontosForaParticipacaoPrevisao(AvaliadorDeRegistro avaliador) {
+		setProximo(avaliador);
 	}
 
 	public boolean registarPonto(Projeto projeto, String login) {

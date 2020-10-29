@@ -23,15 +23,11 @@ public abstract class AvaliadorDeRegistro {
 	public Participacao getParticipacao() {
 		return participacao;
 	}
-
-	public void setParticipacao(Participacao participacao) {
-		this.participacao = participacao;
-	}
 	protected boolean recuperarPontos(Projeto projeto, String login) {
 		for (ProjetoComponente participacaoDaVez : projeto.getItens()) {
 			Participacao participa = (Participacao) participacaoDaVez;
 			if (participa.getMembro().getEmail().equals(login)) {
-				setParticipacao(participa);
+				participacao=participa;
 			}
 		}
 		return (getParticipacao() != null);

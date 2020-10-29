@@ -6,8 +6,8 @@ import ponto.model.projetos.HorarioPrevisto;
 
 public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends AvaliadorDeRegistro {
 
-	public AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos() {
-		setProximo(new AvaliadorPontosInvalidosComJustificativaNaoAceita());
+	public AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos(AvaliadorDeRegistro avaliador) {
+		setProximo(avaliador);
 	}
 
 	public boolean registarPonto(Projeto projeto, String login) {

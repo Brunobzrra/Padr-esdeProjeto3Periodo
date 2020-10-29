@@ -4,8 +4,8 @@ import model.projetos.Projeto;
 import ponto.model.projetos.PontoTrabalho;
 
 public class AvaliadorPontoSemEntradaeOuSaida extends AvaliadorDeRegistro {
-	public AvaliadorPontoSemEntradaeOuSaida() {
-		setProximo(new AvaliadorPontosForaParticipacaoPrevisao());
+	public AvaliadorPontoSemEntradaeOuSaida(AvaliadorDeRegistro avaliador) {
+		setProximo(avaliador);
 	}
 
 	public boolean registarPonto(Projeto projeto, String login) {
