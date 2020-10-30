@@ -20,22 +20,30 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		return null;
 	}
 
-	public float horasTrabalhadasValidas(long datInicio, long dataTermino, String login) {
-		return 0;
-	}
-
-	public float defcitHoras(long datInicio, long dataTermino, String login) {
-		return 0;
-	}
-
-	public Set<PontoTrabalhado> getPontosInvalidos(String login) {
-		return null;
-	}
 	public void justificarPontoInvalido(PontoTrabalhado ponto,String justificar,String login) {
 
 	}
+	
 	public void justificarPontoNaoBatido(PontoTrabalhado ponto,String justificar,String login) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public float horasTrabalhadasValidas(long datInicio, long dataTermino, String login) throws RemoteException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float defcitHoras(long datInicio, long dataTermino, String login) throws RemoteException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Set<PontoTrabalhado> getPontosInvalidos(String login) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
