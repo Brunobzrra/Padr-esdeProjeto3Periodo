@@ -1,16 +1,19 @@
 package model.cadeiaDeRegistracao;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import model.projetos.Participacao;
+import persistenia.xml.DAOXMLMembroConta;
 import ponto.model.projetos.DiaSemana;
-import ponto.model.projetos.PontoTrabalho;
+import ponto.model.projetos.PontoTrabalhado;
 
 public abstract class AvaliadorDeRegistro {
 	private AvaliadorDeRegistro proximo;
-	private Participacao participacao;
+	private Set<PontoTrabalhado> pontosInvalidos = new HashSet<PontoTrabalhado>();
 
-	public abstract boolean justificarPontoInvalido(PontoTrabalho ponto, String justificativa, String login);
+	public abstract Set<PontoTrabalhado> getPontosInvalidos(String login);
 
 	public AvaliadorDeRegistro getProximo() {
 		return proximo;
@@ -18,10 +21,6 @@ public abstract class AvaliadorDeRegistro {
 
 	public void setProximo(AvaliadorDeRegistro proximo) {
 		this.proximo = proximo;
-	}
-
-	public Participacao getParticipacao() {
-		return participacao;
 	}
 
 	protected Object[] pegarHoraEDia() {
@@ -57,4 +56,15 @@ public abstract class AvaliadorDeRegistro {
 		Object[] resultado = { horaExata, diaEmPortugues };
 		return resultado;
 	}
+
+	public Set<PontoTrabalhado> getPontosInvalidos() {
+		return pontosInvalidos;
+	}
+
+	public void setPontosInvalidos(Set<PontoTrabalhado> pontosInvalidos) {
+		this.pontosInvalidos = pontosInvalidos;
+	}
+
+
+
 }

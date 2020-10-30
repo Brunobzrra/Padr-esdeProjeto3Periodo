@@ -21,13 +21,13 @@ public class RegistradorPontoCentral {
 		return 0;
 	}
 
-	public Set<PontoTrabalho> getPontosInvalidos(String login) {
+	public Set<PontoTrabalhado> getPontosInvalidos(String login) {
 		return null;
 	}
-	public void justificarPontoInvalido(PontoTrabalho ponto,String justificar,String login) {
+	public void justificarPontoInvalido(PontoTrabalhado ponto,String justificar,String login) {
 
 	}
-	public void justificarPontoNaoBatido(PontoTrabalho ponto,String justificar,String login) {
+	public void justificarPontoNaoBatido(PontoTrabalhado ponto,String justificar,String login) {
 		// TODO Auto-generated method stub
 
 	}

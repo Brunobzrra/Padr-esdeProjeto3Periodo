@@ -1,8 +1,9 @@
 package model.cadeiaDeRegistracao;
 
+import model.projetos.Participacao;
 import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.HorarioPrevisto;
-import ponto.model.projetos.PontoTrabalho;
+import ponto.model.projetos.PontoTrabalhado;
 
 public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends AvaliadorDeRegistro {
 
@@ -10,20 +11,26 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 		setProximo(avaliador);
 	}
 
-	public boolean justificarPontoInvalido(PontoTrabalho ponto, String justificativa, String login) {
-		Object[] horaEDia=pegarHoraEDia();
-		for (HorarioPrevisto horarioPrevisto : super.getParticipacao().getHorarios()) {
-			if (horarioPrevisto.getDiaSemana() == (DiaSemana)horaEDia[1]) {
-				long horaExata=(long)horaEDia[0];
-				if (horarioPrevisto.getHoraInicio() <= horaExata && horarioPrevisto.getHoraInicio()+horarioPrevisto.getToleranciaMinutos()>= horaExata) {
-					return super.getProximo().justificarPontoInvalido(ponto, justificativa, login);
-				}
-				if(horarioPrevisto.getHoraTermino() <= horaExata && horarioPrevisto.getHoraTermino()+horarioPrevisto.getToleranciaMinutos()>= horaExata) {
-					return super.getProximo().justificarPontoInvalido(ponto, justificativa, login);
+	@Override
+	public boolean getPontosInvalidos(String login) {
+		Object[] horaEDia = pegarHoraEDia();
+		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
+			for (HorarioPrevisto horarioPrevisto : participacoe.getHorarios()) {
+				if (horarioPrevisto.getDiaSemana() == (DiaSemana) horaEDia[1]) {
+					long horaExata = (long) horaEDia[0];
+					if (horarioPrevisto.getHoraInicio() <= horaExata
+							&& horarioPrevisto.getHoraInicio() + horarioPrevisto.getToleranciaMinutos() >= horaExata) {
+						return super.getProximo().getPontosInvalidos(login);
+					}
+					if (horarioPrevisto.getHoraTermino() <= horaExata
+							&& horarioPrevisto.getHoraTermino() + horarioPrevisto.getToleranciaMinutos() >= horaExata) {
+						return super.getProximo().getPontosInvalidos(login);
+					}
 				}
 			}
 		}
-	return false;
+		return super.add(login);
+
 	}
 
 }

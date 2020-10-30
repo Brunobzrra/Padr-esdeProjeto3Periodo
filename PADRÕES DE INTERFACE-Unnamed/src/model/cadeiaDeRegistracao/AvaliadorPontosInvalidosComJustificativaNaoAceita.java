@@ -1,14 +1,17 @@
 package model.cadeiaDeRegistracao;
 
 import model.projetos.Projeto;
-import ponto.model.projetos.PontoTrabalho;
+import ponto.model.projetos.PontoTrabalhado;
 
 public class AvaliadorPontosInvalidosComJustificativaNaoAceita extends AvaliadorDeRegistro {
 	public AvaliadorPontosInvalidosComJustificativaNaoAceita(AvaliadorDeRegistro avaliador) {
 		setProximo(avaliador);
 	}
 
-	public boolean justificarPontoInvalido(PontoTrabalho ponto, String justificativa, String login) {
+
+	@Override
+	public boolean getPontosInvalidos(String login) {
+		// TODO Auto-generated method stub
 		return false;
 	}
 

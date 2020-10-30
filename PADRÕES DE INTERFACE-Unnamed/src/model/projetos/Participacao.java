@@ -9,7 +9,7 @@ import org.joda.time.Period;
 
 import model.autenticacao.Membro;
 import ponto.model.projetos.HorarioPrevisto;
-import ponto.model.projetos.PontoTrabalho;
+import ponto.model.projetos.PontoTrabalhado;
 
 public class Participacao extends ProjetoComponente {
 
@@ -28,7 +28,7 @@ public class Participacao extends ProjetoComponente {
 
 	private boolean coordenador;
 
-	private ArrayList<PontoTrabalho> pontos = new ArrayList<PontoTrabalho>();
+	private ArrayList<PontoTrabalhado> pontos = new ArrayList<PontoTrabalhado>();
 
 	private ArrayList<HorarioPrevisto> horarios = new ArrayList<HorarioPrevisto>();
 
@@ -73,8 +73,8 @@ public class Participacao extends ProjetoComponente {
 		horarios.add(horario);
 	}
 
-	public void adicionarPonto(PontoTrabalho ponto) {
-		for (PontoTrabalho pontoTrabalho : pontos) {
+	public void adicionarPonto(PontoTrabalhado ponto) {
+		for (PontoTrabalhado pontoTrabalho : pontos) {
 			if (ponto == pontoTrabalho) {
 				return;
 			}
@@ -82,7 +82,7 @@ public class Participacao extends ProjetoComponente {
 		pontos.add(ponto);
 	}
 
-	public void removerPonto(PontoTrabalho ponto) {
+	public void removerPonto(PontoTrabalhado ponto) {
 		pontos.remove(ponto);
 	}
 
@@ -185,7 +185,7 @@ public class Participacao extends ProjetoComponente {
 		this.coordenador = coordenador;
 	}
 
-	public ArrayList<PontoTrabalho> getPontos() {
+	public ArrayList<PontoTrabalhado> getPontos() {
 		return pontos;
 	}
 

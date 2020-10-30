@@ -2,13 +2,13 @@ package ponto.model.projetos;
 
 import org.joda.time.LocalDateTime;
 
-public class PontoTrabalho {
+public class PontoTrabalhado {
 	private LocalDateTime dataHoraEntrada;
 	private LocalDateTime dataHoraSaida;
 	private String justificativa;
 	private boolean justificativaAceita;
 	
-	public PontoTrabalho(LocalDateTime dataHoraEntrada, LocalDateTime dataHoraSaida, String justificativa, boolean justificativaAceita) {
+	public PontoTrabalhado(LocalDateTime dataHoraEntrada, LocalDateTime dataHoraSaida, String justificativa, boolean justificativaAceita) {
 		this.dataHoraEntrada = dataHoraEntrada;
 		this.dataHoraSaida = dataHoraSaida;
 		this.justificativa = justificativa;

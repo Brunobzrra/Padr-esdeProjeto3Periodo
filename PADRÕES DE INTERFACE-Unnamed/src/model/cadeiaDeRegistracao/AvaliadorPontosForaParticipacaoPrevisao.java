@@ -1,26 +1,40 @@
 package model.cadeiaDeRegistracao;
 
+import java.util.Set;
+
+import model.projetos.Participacao;
 import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.HorarioPrevisto;
-import ponto.model.projetos.PontoTrabalho;
+import ponto.model.projetos.PontoTrabalhado;
 
 public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro {
 	public AvaliadorPontosForaParticipacaoPrevisao(AvaliadorDeRegistro avaliador) {
 		setProximo(avaliador);
 	}
 
-	public boolean justificarPontoInvalido(PontoTrabalho ponto, String justificativa, String login) {
+	@Override
+	public Set<PontoTrabalhado> getPontosInvalidos(String login) {
 		Object[] horaEDia = pegarHoraEDia();
-		for (HorarioPrevisto horarioPrevisto : super.getParticipacao().getHorarios()) {
-			if (horarioPrevisto.getDiaSemana() == (DiaSemana) horaEDia[1]) {
-				if (horarioPrevisto.getHoraInicio() == (long) horaEDia[0]
-						|| horarioPrevisto.getHoraTermino() == (long) horaEDia[0]) {
-					return getProximo().justificarPontoInvalido(ponto, justificativa, login);
+		PontoTrabalhado ponto = null;
+		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
+			for (PontoTrabalhado pontoFor : participacao.getPontos()) {
+				for (HorarioPrevisto horarioPrevisto : participacao.getHorarios()) {
+					if (horarioPrevisto.getDiaSemana() == (DiaSemana) horaEDia[1]) {
+						if (horarioPrevisto.getHoraInicio() == (long) horaEDia[0]
+								|| horarioPrevisto.getHoraTermino() == (long) horaEDia[0]) {
+							return getProximo().getPontosInvalidos(login);
+						}
+
+						
+					}
+
 				}
+				ponto = pontoFor;
 			}
+			
 		}
-		
-		return false;
+		super.getPontosInvalidos().add(ponto);
+
 	}
 
 }
