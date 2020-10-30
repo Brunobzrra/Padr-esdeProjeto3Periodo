@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class PontoTrabalhado implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long 	serialVersionUID = 1L;
 	private LocalDateTime dataHoraEntrada;
 	private LocalDateTime dataHoraSaida;
 	private String justificativa;
