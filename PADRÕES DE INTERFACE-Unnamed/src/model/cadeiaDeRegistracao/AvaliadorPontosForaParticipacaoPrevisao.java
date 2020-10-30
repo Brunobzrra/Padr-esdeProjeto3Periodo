@@ -1,8 +1,10 @@
 package model.cadeiaDeRegistracao;
 
-import java.util.Set;
+import java.util.HashSet;
 
 import model.projetos.Participacao;
+import model.utilitarios.ConversorDeHoraEDia;
+import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
@@ -12,29 +14,26 @@ public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro
 		setProximo(avaliador);
 	}
 
-	@Override
-	public Set<PontoTrabalhado> getPontosInvalidos(String login) {
-		Object[] horaEDia = pegarHoraEDia();
-		PontoTrabalhado ponto = null;
+	public HashSet<PontoTrabalhado> getPontosInvalidos(String login) {
 		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
-			for (PontoTrabalhado pontoFor : participacao.getPontos()) {
-				for (HorarioPrevisto horarioPrevisto : participacao.getHorarios()) {
-					if (horarioPrevisto.getDiaSemana() == (DiaSemana) horaEDia[1]) {
-						if (horarioPrevisto.getHoraInicio() == (long) horaEDia[0]
-								|| horarioPrevisto.getHoraTermino() == (long) horaEDia[0]) {
-							return getProximo().getPontosInvalidos(login);
+			for (PontoTrabalhado ponto : participacao.getPontos()) {
+				boolean invalido = true;
+				for (HorarioPrevisto horario : participacao.getHorarios()) {
+					Object[] horaEDiaEntrada = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraEntrada());
+					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
+					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
+						if (horario.getHoraInicio() == (long) horaEDiaEntrada[0]
+								|| horario.getHoraTermino() == (long) horaEDiaSaida[0]) {
+							invalido = false;
 						}
-
-						
 					}
-
 				}
-				ponto = pontoFor;
+				if(invalido) {
+					 super.getPontosInvalidos().add(ponto);
+				}
 			}
-			
 		}
-		super.getPontosInvalidos().add(ponto);
-
+		getProximo().setPontosInvalidos(getPontosInvalidos());
+		return super.getProximo().getPontosInvalidos(login);
 	}
-
 }

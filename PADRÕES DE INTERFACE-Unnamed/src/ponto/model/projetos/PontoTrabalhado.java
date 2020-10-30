@@ -1,6 +1,6 @@
 package ponto.model.projetos;
 
-import org.joda.time.LocalDateTime;
+import java.time.LocalDateTime;
 
 public class PontoTrabalhado {
 	private LocalDateTime dataHoraEntrada;

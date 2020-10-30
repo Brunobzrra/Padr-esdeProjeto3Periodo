@@ -1,4 +1,4 @@
-package model.cadeiaDeRegistracao;
+package model.utilitarios;
 
 import java.util.ArrayList;
 import java.util.Set;

@@ -1,6 +1,9 @@
 package model.cadeiaDeRegistracao;
 
+import java.util.HashSet;
 import model.projetos.Participacao;
+import model.utilitarios.ConversorDeHoraEDia;
+import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
@@ -11,26 +14,28 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 		setProximo(avaliador);
 	}
 
-	@Override
-	public boolean getPontosInvalidos(String login) {
-		Object[] horaEDia = pegarHoraEDia();
-		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
-			for (HorarioPrevisto horarioPrevisto : participacoe.getHorarios()) {
-				if (horarioPrevisto.getDiaSemana() == (DiaSemana) horaEDia[1]) {
-					long horaExata = (long) horaEDia[0];
-					if (horarioPrevisto.getHoraInicio() <= horaExata
-							&& horarioPrevisto.getHoraInicio() + horarioPrevisto.getToleranciaMinutos() >= horaExata) {
-						return super.getProximo().getPontosInvalidos(login);
+	public HashSet<PontoTrabalhado> getPontosInvalidos(String login) {
+		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
+			for (PontoTrabalhado ponto : participacao.getPontos()) {
+				boolean invalido = true;
+				for (HorarioPrevisto horario : participacao.getHorarios()) {
+					Object[] horaEDiaEntrada = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraEntrada());
+					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
+					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
+						if (horario.getHoraInicio() <= (long) horaEDiaEntrada[0]
+								&& horario.getHoraInicio() + horario.getToleranciaMinutos() >= (long) horaEDiaEntrada[0]
+								&& horario.getHoraTermino() <= (long) horaEDiaSaida[0] && horario.getHoraTermino()
+										+ horario.getToleranciaMinutos() >= (long) horaEDiaSaida[0]) {
+							invalido = false;
+						}
 					}
-					if (horarioPrevisto.getHoraTermino() <= horaExata
-							&& horarioPrevisto.getHoraTermino() + horarioPrevisto.getToleranciaMinutos() >= horaExata) {
-						return super.getProximo().getPontosInvalidos(login);
-					}
+				}
+				if (invalido) {
+					super.getPontosInvalidos().add(ponto);
 				}
 			}
 		}
-		return super.add(login);
-
+		getProximo().setPontosInvalidos(getPontosInvalidos());
+		return super.getProximo().getPontosInvalidos(login);
 	}
-
 }

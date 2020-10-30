@@ -1,6 +1,9 @@
 package model.cadeiaDeRegistracao;
 
-import model.projetos.Projeto;
+import java.util.HashSet;
+
+import model.projetos.Participacao;
+import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.PontoTrabalhado;
 
 public class AvaliadorPontosInvalidosComJustificativaNaoAceita extends AvaliadorDeRegistro {
@@ -8,11 +11,16 @@ public class AvaliadorPontosInvalidosComJustificativaNaoAceita extends Avaliador
 		setProximo(avaliador);
 	}
 
+	public HashSet<PontoTrabalhado> getPontosInvalidos(String login) {
+		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
+			for (PontoTrabalhado ponto : participacoe.getPontos()) {
+				if (!ponto.isJustificativaAceita()) 
+					super.getPontosInvalidos().add(ponto);
+				}
 
-	@Override
-	public boolean getPontosInvalidos(String login) {
-		// TODO Auto-generated method stub
-		return false;
+		}
+		getProximo().setPontosInvalidos(getPontosInvalidos());
+		return super.getProximo().getPontosInvalidos(login);
 	}
 
 }

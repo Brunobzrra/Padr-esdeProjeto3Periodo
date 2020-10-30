@@ -34,7 +34,7 @@ public class TelaPonto extends JFrame {
 
 	}
 
-	public void botaoVerDetalhes() {
+	public void botaoVerDetalhes(String login,String nomeDoProjeto) {
 
 	}
 
@@ -94,6 +94,8 @@ public class TelaPonto extends JFrame {
 		baterPonto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				botaoBaterPonto(nomeDoProjeto.getText(), login.getText(), senha.getText());
+				senha.setText("");;
+				
 			}
 		});
 		baterPonto.setBounds(95, 225, 150, 30);
@@ -104,7 +106,7 @@ public class TelaPonto extends JFrame {
 		detalhes.setBackground(new Color(119, 221, 119));
 		detalhes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				botaoVerDetalhes();
+				botaoVerDetalhes(login.getText(),nomeDoProjeto.getText());
 			}
 		});
 		detalhes.setBounds(255, 225, 150, 30);
@@ -113,6 +115,6 @@ public class TelaPonto extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new TelaPonto().adcionarBotao();;
+		new TelaPonto();
 	}
 }

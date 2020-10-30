@@ -1,8 +1,10 @@
 package model.cadeiaDeRegistracao;
 
-import org.joda.time.DateTime;
-import org.joda.time.Period;
+import java.util.ArrayList;
+import java.util.HashSet;
 
+import model.projetos.Participacao;
+import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.PontoTrabalhado;
 
 public class AvaliadorPontosComIntervalosConflitantes extends AvaliadorDeRegistro {
@@ -10,19 +12,26 @@ public class AvaliadorPontosComIntervalosConflitantes extends AvaliadorDeRegistr
 		setProximo(avaliador);
 	}
 
-
-
-	@Override
-	public boolean getPontosInvalidos(String login) {
-		for (PontoTrabalhado element : getParticipacao().getPontos()) {
-			Period p = new Period(element.getDataHoraEntrada(), element.getDataHoraSaida());
-			
+	public HashSet<PontoTrabalhado> getPontosInvalidos(String login) {
+		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
+			ArrayList<PontoTrabalhado> aux = participacoe.getPontos();
+			for (PontoTrabalhado ponto1 : participacoe.getPontos()) {
+				for (PontoTrabalhado ponto2 : participacoe.getPontos()) {
+					if (aux == null) {
+						break;
+					}
+					if (ponto1.getDataHoraEntrada() == ponto2.getDataHoraEntrada()
+							&& ponto1.getDataHoraSaida() == ponto2.getDataHoraSaida()) {
+						aux.remove(ponto1);
+						aux.remove(ponto2);
+						super.getPontosInvalidos().add(ponto1);
+						super.getPontosInvalidos().add(ponto2);
+					}
+				}
+			}
 		}
-
-		
-		
-		
-		return false;
+		getProximo().setPontosInvalidos(getPontosInvalidos());
+		return super.getProximo().getPontosInvalidos(login);
 	}
 
 }
