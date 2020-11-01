@@ -8,8 +8,8 @@ import org.joda.time.DateTime;
 import org.joda.time.Period;
 
 import model.autenticacao.Membro;
-import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
+import ponto.model.projetos.flyweight.HorarioPrevisto;
 
 public class Participacao extends ProjetoComponente {
 

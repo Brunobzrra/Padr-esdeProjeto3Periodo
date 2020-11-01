@@ -1,11 +1,8 @@
 package model.cadeiaDeRegistracao;
 
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.HashSet;
 
-
-import ponto.model.projetos.DiaSemana;
+import model.autenticacao.Membro;
 import ponto.model.projetos.PontoTrabalhado;
 
 public abstract class AvaliadorDeRegistro {
@@ -16,7 +13,7 @@ public abstract class AvaliadorDeRegistro {
 	 */
 	private HashSet<PontoTrabalhado> pontosInvalidos = new HashSet<PontoTrabalhado>();
 
-	public abstract HashSet<PontoTrabalhado> getPontosInvalidos(String login);
+	public abstract HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro);
 
 	public AvaliadorDeRegistro getProximo() {
 		return proximo;

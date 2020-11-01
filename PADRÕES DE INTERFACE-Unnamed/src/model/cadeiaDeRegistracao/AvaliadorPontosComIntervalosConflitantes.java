@@ -3,6 +3,7 @@ package model.cadeiaDeRegistracao;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.PontoTrabalhado;
@@ -12,8 +13,8 @@ public class AvaliadorPontosComIntervalosConflitantes extends AvaliadorDeRegistr
 		setProximo(avaliador);
 	}
 
-	public HashSet<PontoTrabalhado> getPontosInvalidos(String login) {
-		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(login)) {
+	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
+		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(membro)) {
 			ArrayList<PontoTrabalhado> aux = participacoe.getPontos();
 			for (PontoTrabalhado ponto1 : participacoe.getPontos()) {
 				for (PontoTrabalhado ponto2 : participacoe.getPontos()) {
@@ -31,7 +32,7 @@ public class AvaliadorPontosComIntervalosConflitantes extends AvaliadorDeRegistr
 			}
 		}
 		getProximo().setPontosInvalidos(getPontosInvalidos());
-		return super.getProximo().getPontosInvalidos(login);
+		return super.getProximo().getPontosInvalidos(membro);
 	}
 
 }
