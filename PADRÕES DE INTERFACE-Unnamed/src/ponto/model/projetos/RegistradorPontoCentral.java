@@ -11,6 +11,8 @@ import model.autenticacao.RegistradorSessaoLogin;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.ConversorDeHoraEDia;
+import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
 public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRemotoPontoTrabalhado {
 	private static final long serialVersionUID = 1L;
@@ -25,11 +27,24 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		}
 		for (ProjetoComponente participa : projeto.getItens()) {
 			Participacao participacao = (Participacao) participa;
+			LocalDateTime pontoBatidoagora = LocalDateTime.now();
 			if (participacao.getMembro().getEmail().equals(login)) {
-				// precisa terminar
+				int tamanho = participacao.getPontos().size();
+				PontoTrabalhado ponto = participacao.getPontos().get(tamanho);
+				if (tamanho != 0 && ponto.getDataHoraSaida() != null) {
+					ponto.setDataHoraSaida(pontoBatidoagora);
+					return true;
+				} else {
+					for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {
+						if (horario.getHoraInicio() == pontoBatidoagora.getHour() && ConversorDeHoraEDia.pegarHoraEDia(pontoBatidoagora)[1] == horario.getDiaSemana()) {
+							participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
+							return true;
+						}
+					}
+				}
 			}
 		}
-		return true;
+		return false;
 	}
 
 	public Set<Projeto> getProjetosAtivos(Membro membro) throws Exception {
@@ -64,7 +79,7 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		for (ProjetoComponente participacao : membro.getParticipacoes()) {
 			Participacao participa = (Participacao) participacao;
 			for (PontoTrabalhado ponto : participa.getPontos()) {
-				if (ponto.getDataHoraEntrada()==datInicio && ponto.getDataHoraSaida()==dataTermino) {
+				if (ponto.getDataHoraEntrada() == datInicio && ponto.getDataHoraSaida() == dataTermino) {
 					return ponto.getHorasTrabalhadas();
 				}
 			}

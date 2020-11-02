@@ -9,7 +9,7 @@ import org.joda.time.Period;
 
 import model.autenticacao.Membro;
 import ponto.model.projetos.PontoTrabalhado;
-import ponto.model.projetos.flyweight.HorarioPrevisto;
+import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
 public class Participacao extends ProjetoComponente {
 
@@ -30,7 +30,7 @@ public class Participacao extends ProjetoComponente {
 
 	private ArrayList<PontoTrabalhado> pontos = new ArrayList<PontoTrabalhado>();
 
-	private ArrayList<HorarioPrevisto> horarios = new ArrayList<HorarioPrevisto>();
+	private ArrayList<HorarioPrevistoExatoFlyweight> horarios = new ArrayList<HorarioPrevistoExatoFlyweight>();
 
 	private Membro membro;
 
@@ -64,8 +64,8 @@ public class Participacao extends ProjetoComponente {
 
 	}
 
-	public void adcionarHorarioPrevisto(HorarioPrevisto horario) {
-		for (HorarioPrevisto horarioPrevisto : horarios) {
+	public void adcionarHorarioPrevisto(HorarioPrevistoExatoFlyweight horario) {
+		for (HorarioPrevistoExatoFlyweight horarioPrevisto : horarios) {
 			if (horario == horarioPrevisto) {
 				return;
 			}
@@ -193,7 +193,7 @@ public class Participacao extends ProjetoComponente {
 		return membro;
 	}
 
-	public ArrayList<HorarioPrevisto> getHorarios() {
+	public ArrayList<HorarioPrevistoExatoFlyweight> getHorarios() {
 		return horarios;
 	}
 }

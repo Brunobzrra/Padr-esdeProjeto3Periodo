@@ -1,25 +1,45 @@
 package ponto.model.projetos.flyweight;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import ponto.model.projetos.DiaSemana;
-
+/**
+ * factory Flywieght
+ * @author Antônio Amorim
+ *
+ */
 public class HorarioPrevisto {
-	private HorarioDeToleranciaFlyweight toleranciaMinutos;
+	private static HorarioPrevisto horarioPrevistoSingleton= new HorarioPrevisto();
 	private HorarioPrevistoExatoFlyweight horarioPrevisto;
-
+	private ArrayList<HorarioPrevistoFlyweight> toleranciaMinutos = new ArrayList<HorarioPrevistoFlyweight>();
+	private HorarioPrevisto() {
+		
+	}
+	public static synchronized HorarioPrevisto getInstance(){
+		return horarioPrevistoSingleton;
+	}
 	public int getExpectativaHorasTrabalhadas() {
 		return horarioPrevisto.getHoraTermino()-horarioPrevisto.getHoraInicio();
 	}
-	public HorarioPrevisto getFlyweight(DiaSemana diaSemana, LocalDateTime horaInicio, LocalDateTime horaTerminei,short toleranciaEmMinutos ) {
-		return null;
-		
+	public HorarioPrevistoFlyweight getFlyweight(DiaSemana dia,short horaInicio, short horaTermino,short toleranciaEmMinutos ) {
+		HorarioPrevistoFlyweight horarioExistente = null;
+		for (HorarioPrevistoFlyweight horarioBuscado : toleranciaMinutos) {
+			if (horarioBuscado.getToleranciaMinutos() == toleranciaEmMinutos) {
+				horarioExistente = horarioBuscado;
+			}
+		}
+		if (horarioExistente == null) {
+			horarioExistente = new HorarioDeToleranciaFlyweight(toleranciaEmMinutos);
+			toleranciaMinutos.add(horarioExistente);
+		}
+		horarioPrevisto= new HorarioPrevistoExatoFlyweight(dia,horaInicio, horaTermino, horarioExistente);
+		return horarioPrevisto;
 	}
-	public HorarioDeToleranciaFlyweight getToleranciaMinutos() {
+	public ArrayList<HorarioPrevistoFlyweight> getToleranciaMinutos() {
 		return toleranciaMinutos;
 	}
 
-	public void setToleranciaMinutos(HorarioDeToleranciaFlyweight toleranciaMinutos) {
+	public void setToleranciaMinutos(ArrayList<HorarioPrevistoFlyweight> toleranciaMinutos) {
 		this.toleranciaMinutos = toleranciaMinutos;
 	}
 

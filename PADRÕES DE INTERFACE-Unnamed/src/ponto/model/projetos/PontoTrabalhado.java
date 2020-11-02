@@ -10,6 +10,9 @@ public class PontoTrabalhado implements Serializable {
 	private String justificativa;
 	private boolean justificativaAceita;
 	
+	public PontoTrabalhado(LocalDateTime dataHoraEntrada) {
+		this.dataHoraEntrada = dataHoraEntrada;
+	}
 	public PontoTrabalhado(LocalDateTime dataHoraEntrada, LocalDateTime dataHoraSaida, String justificativa, boolean justificativaAceita) {
 		this.dataHoraEntrada = dataHoraEntrada;
 		this.dataHoraSaida = dataHoraSaida;

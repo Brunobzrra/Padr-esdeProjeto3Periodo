@@ -8,7 +8,7 @@ import model.utilitarios.ConversorDeHoraEDia;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.PontoTrabalhado;
-import ponto.model.projetos.flyweight.HorarioPrevisto;
+import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
 public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro {
 	public AvaliadorPontosForaParticipacaoPrevisao(AvaliadorDeRegistro avaliador) {
@@ -19,12 +19,12 @@ public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro
 		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(membro)) {
 			for (PontoTrabalhado ponto : participacao.getPontos()) {
 				boolean invalido = true;
-				for (HorarioPrevisto horario : participacao.getHorarios()) {
+				for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {
 					Object[] horaEDiaEntrada = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraEntrada());
 					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
-					if (horario.getHorarioPrevisto().getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
-						if (horario.getHorarioPrevisto().getHoraInicio() == (long) horaEDiaEntrada[0]
-								|| horario.getHorarioPrevisto().getHoraTermino() == (long) horaEDiaSaida[0]) {
+					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
+						if (horario.getHoraInicio() == (long) horaEDiaEntrada[0]
+								|| horario.getHoraTermino() == (long) horaEDiaSaida[0]) {
 							invalido = false;
 						}
 					}

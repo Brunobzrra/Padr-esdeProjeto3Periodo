@@ -1,17 +1,22 @@
 package ponto.model.projetos.flyweight;
 
 import ponto.model.projetos.DiaSemana;
-
+/**
+ * parte EXTRÍNSECA - Flyweight 
+ * @author Antônio Amorim
+ *
+ */
 public class HorarioPrevistoExatoFlyweight implements HorarioPrevistoFlyweight {
 	private DiaSemana diaSemana;
 	private short horaInicio;
 	private short horaTermino;
-	private HorarioDeToleranciaFlyweight toleranciaMinutos;
+	private HorarioPrevistoFlyweight minutosTolerante;
 
-	public HorarioPrevistoExatoFlyweight(short horaInicio, short horaTermino, short toleranciaMinutos) {
+	public HorarioPrevistoExatoFlyweight(DiaSemana dia,short horaInicio, short horaTermino, HorarioPrevistoFlyweight toleranciaMinutos) {
+		diaSemana=dia;
 		this.horaInicio = horaInicio;
 		this.horaTermino = horaTermino;
-		this.setToleranciaMinutos(new HorarioDeToleranciaFlyweight(toleranciaMinutos));
+		this.setToleranciaMinutos(toleranciaMinutos);
 	}
 
 	public DiaSemana getDiaSemana() {
@@ -37,15 +42,15 @@ public class HorarioPrevistoExatoFlyweight implements HorarioPrevistoFlyweight {
 	public void setHoraTermino(short horaTermino) {
 		this.horaTermino = horaTermino;
 	}
-
-	@Override
+	public HorarioPrevistoFlyweight getMinutosTolerantes(){
+		return minutosTolerante;
+	}
 	public short getToleranciaMinutos() {
-		// TODO Auto-generated method stub
-		return toleranciaMinutos.getToleranciaMinutos();
+		return minutosTolerante.getToleranciaMinutos();
 	}
 
-	public void setToleranciaMinutos(HorarioDeToleranciaFlyweight toleranciaMinutos) {
-		this.toleranciaMinutos = toleranciaMinutos;
+	public void setToleranciaMinutos(HorarioPrevistoFlyweight minutosTolerante) {
+		this.minutosTolerante = minutosTolerante;
 	}
 
 }
