@@ -1,4 +1,4 @@
-package model.cadeiaDeRegistracao;
+package model.chainOfResponsibility;
 
 import java.util.HashSet;
 

@@ -8,13 +8,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import ponto.model.projetos.ControllerRegistradorEView;
 
 public class TelaPonto extends JFrame {
 	private JTextField nomeDoProjeto;
 	private JTextField login;
 	private JPasswordField senha;
+	private ControllerRegistradorEView controller = ControllerRegistradorEView.getInstance();
 
 	public TelaPonto() {
 		setLayout(null);
@@ -32,35 +36,49 @@ public class TelaPonto extends JFrame {
 
 	public void botaoBaterPonto(String nomeDoProjeto, String login, String senha) {
 
+		try {
+			controller.registrarPonto(nomeDoProjeto, login, senha);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
+
 	}
 
-	public void botaoVerDetalhes(String login,String nomeDoProjeto) {
-
+	public void botaoVerDetalhes(String login, String nomeDoProjeto) {
+		try {
+			controller.horasTrabalhadasValidas(login, nomeDoProjeto);
+			controller.defcitHoras(login, nomeDoProjeto);
+			controller.getPontosInvalidos(login, nomeDoProjeto);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
 	}
 
 	private void adcionarLabels() {
 		JLabel marcarPonto = new JLabel("Marcar Ponto");
 		marcarPonto.setFont(new Font("Arial", Font.BOLD, 25));
 		marcarPonto.setBounds(160, 20, 250, 30);
-		marcarPonto.setForeground(new Color(192,192,192));
+		marcarPonto.setForeground(new Color(192, 192, 192));
 		this.add(marcarPonto);
 
 		JLabel nome = new JLabel("Nome do projeto:");
 		nome.setFont(new Font("Arial", Font.BOLD, 12));
 		nome.setBounds(50, 90, 120, 15);
-		nome.setForeground(new Color(192,192,192));
+		nome.setForeground(new Color(192, 192, 192));
 		this.add(nome);
 
 		JLabel login = new JLabel("Email:");
 		login.setFont(new Font("Arial", Font.BOLD, 12));
 		login.setBounds(50, 140, 120, 15);
-		login.setForeground(new Color(192,192,192));
+		login.setForeground(new Color(192, 192, 192));
 		this.add(login);
 
 		JLabel senha = new JLabel("Senha:");
 		senha.setFont(new Font("Arial", Font.BOLD, 12));
 		senha.setBounds(50, 190, 120, 15);
-		senha.setForeground(new Color(192,192,192));
+		senha.setForeground(new Color(192, 192, 192));
 		this.add(senha);
 	}
 
@@ -74,7 +92,7 @@ public class TelaPonto extends JFrame {
 
 		login = new JTextField();
 		login.setToolTipText("ex: nome@gmail.com...");
-		login.setForeground(Color.WHITE); 
+		login.setForeground(Color.WHITE);
 		login.setBackground(new Color(25, 25, 25));
 		login.setBounds(165, 135, 280, 25);
 		this.add(login);
@@ -94,8 +112,9 @@ public class TelaPonto extends JFrame {
 		baterPonto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				botaoBaterPonto(nomeDoProjeto.getText(), login.getText(), senha.getText());
-				senha.setText("");;
-				
+				senha.setText("");
+				;
+
 			}
 		});
 		baterPonto.setBounds(95, 225, 150, 30);
@@ -106,7 +125,7 @@ public class TelaPonto extends JFrame {
 		detalhes.setBackground(new Color(119, 221, 119));
 		detalhes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				botaoVerDetalhes(login.getText(),nomeDoProjeto.getText());
+				botaoVerDetalhes(login.getText(), nomeDoProjeto.getText());
 			}
 		});
 		detalhes.setBounds(255, 225, 150, 30);

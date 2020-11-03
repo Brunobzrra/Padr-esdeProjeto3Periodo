@@ -1,4 +1,4 @@
-package model.cadeiaDeRegistracao;
+package model.chainOfResponsibility;
 
 import java.util.HashSet;
 
@@ -7,17 +7,17 @@ import model.projetos.Participacao;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.PontoTrabalhado;
 
-public class AvaliadorPontoSemEntradaeOuSaida extends AvaliadorDeRegistro {
-	public AvaliadorPontoSemEntradaeOuSaida(AvaliadorDeRegistro avaliador) {
+public class AvaliadorPontosInvalidosComJustificativaNaoAceita extends AvaliadorDeRegistro {
+	public AvaliadorPontosInvalidosComJustificativaNaoAceita(AvaliadorDeRegistro avaliador) {
 		setProximo(avaliador);
 	}
 
 	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
 		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(membro)) {
 			for (PontoTrabalhado ponto : participacoe.getPontos()) {
-				if (ponto.getDataHoraEntrada() == null || ponto.getDataHoraSaida() == null)
-					 super.getPontosInvalidos().add(ponto);
-			}
+				if (!ponto.isJustificativaAceita()) 
+					super.getPontosInvalidos().add(ponto);
+				}
 
 		}
 		getProximo().setPontosInvalidos(getPontosInvalidos());

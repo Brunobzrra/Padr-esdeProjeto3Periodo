@@ -12,7 +12,6 @@ import persistenia.xml.DAOXMLEdital;
 public class EditalFachada extends ProjetoFachada {
 
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
-	
 
 	public EditalFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
