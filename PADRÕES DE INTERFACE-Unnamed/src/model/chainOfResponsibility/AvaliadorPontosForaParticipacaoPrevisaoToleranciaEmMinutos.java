@@ -10,6 +10,11 @@ import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
+/**
+ * Nesta parte do chain verifica se o ponto foi batido ate o horario de tolerancia
+ * @author Antônio Amorim
+ *
+ */
 public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends AvaliadorDeRegistro {
 
 	public AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos(AvaliadorDeRegistro avaliador) {
@@ -17,7 +22,7 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 	}
 
 	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
-		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(membro)) {
+		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			for (PontoTrabalhado ponto : participacao.getPontos()) {
 				boolean invalido = true;
 				for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {

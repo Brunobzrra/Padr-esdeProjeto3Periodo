@@ -48,7 +48,7 @@ public class ControllerRegistradorEView {
 			if (membroDoFor instanceof Membro) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
-							.recuperarParticipacaoPorEmail((Membro) membroDoFor)) {
+							.recuperarParticipacao((Membro) membroDoFor)) {
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
 							registrador.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
 									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor);
@@ -88,7 +88,7 @@ public class ControllerRegistradorEView {
 			if (membroDoFor instanceof Membro) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
-							.recuperarParticipacaoPorEmail((Membro) membroDoFor)) {
+							.recuperarParticipacao((Membro) membroDoFor)) {
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
 							registrador.defcitHoras(pontoDoFor.getDataHoraEntrada(), pontoDoFor.getDataHoraSaida(),
 									(Membro) membroDoFor);

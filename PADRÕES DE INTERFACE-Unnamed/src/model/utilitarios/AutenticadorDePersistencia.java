@@ -1,6 +1,6 @@
 package model.utilitarios;
 /**
- * esta classe sreve para que o clinte (main) não precise instaciar nada, apenas acesse tudo atraves dos tipo primitivos
+ * esta classe serve para que o clinte (main) não precise instaciar nada, apenas acesse tudo atraves dos tipo primitivos
  * @author Antônio Amorim
  *
  */

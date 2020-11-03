@@ -8,13 +8,18 @@ import model.projetos.Participacao;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.PontoTrabalhado;
 
+/**
+ * Esta etapa do chain avalia se pontos os pontos tem a mesma hora de entrada e saida 
+ * @author Antônio Amorim
+ *
+ */
 public class AvaliadorPontosComIntervalosConflitantes extends AvaliadorDeRegistro {
 	public AvaliadorPontosComIntervalosConflitantes(AvaliadorDeRegistro avaliador) {
 		setProximo(avaliador);
 	}
 
 	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
-		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(membro)) {
+		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			ArrayList<PontoTrabalhado> aux = participacoe.getPontos();
 			for (PontoTrabalhado ponto1 : participacoe.getPontos()) {
 				for (PontoTrabalhado ponto2 : participacoe.getPontos()) {

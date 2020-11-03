@@ -10,13 +10,18 @@ import ponto.model.projetos.DiaSemana;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
+/**
+ * Nesta parte do chain é testado se o ponto batido na hora exata 
+ * @author Antônio Amorim
+ *
+ */
 public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro {
 	public AvaliadorPontosForaParticipacaoPrevisao(AvaliadorDeRegistro avaliador) {
 		setProximo(avaliador);
 	}
 
 	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
-		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacaoPorEmail(membro)) {
+		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			for (PontoTrabalhado ponto : participacao.getPontos()) {
 				boolean invalido = true;
 				for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {
