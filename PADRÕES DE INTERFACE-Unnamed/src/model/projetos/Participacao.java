@@ -34,6 +34,10 @@ public class Participacao extends ProjetoComponente {
 
 	private Membro membro;
 
+	public void setMembro(Membro membro) {
+		this.membro = membro;
+	}
+
 	// metodos obrigatorios
 	@Override
 

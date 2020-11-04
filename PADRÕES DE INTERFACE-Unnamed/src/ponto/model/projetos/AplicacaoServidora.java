@@ -20,7 +20,6 @@ public class AplicacaoServidora {
 				System.setProperty("java.rmi.server.hostname", InetAddress.getLocalHost().getHostAddress());
 				RegistradorPontoCentral remoto = new RegistradorPontoCentral();
 				Naming.rebind("ServicoRemotoPontoTrabalhado", (Remote) remoto);
-				System.out.println("a");
 		} catch (RemoteException | MalformedURLException | UnknownHostException e) {
 			/* se não conseguiu criar vê se está rodando */
 			try {

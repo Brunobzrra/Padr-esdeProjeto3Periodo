@@ -87,13 +87,13 @@ public class Membro extends ProjetoComponente {
 	 * adciona somente participação
 	 */
 	public void adicionar(Participacao integracao) throws Exception {
-		integracao.setProjetoPai(this);
+		integracao.setMembro(this);
 		participacoes.add(integracao);
 	}
 
-	public void remover(ProjetoComponente integracao) throws Exception {
+	public void remover(Participacao integracao) throws Exception {
 		participacoes.remove(integracao);
-		integracao.setProjetoPai(null);
+		integracao.setMembro(null);
 	}
 
 	@Override

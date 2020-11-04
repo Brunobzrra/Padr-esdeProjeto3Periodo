@@ -44,7 +44,6 @@ public class TelaPonto extends JFrame {
 			// TODO Auto-generated catch block
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
-
 	}
 
 	public void botaoVerDetalhes(String login, String nomeDoProjeto) {

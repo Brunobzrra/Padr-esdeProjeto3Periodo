@@ -1,6 +1,13 @@
 package ponto.model.projetos;
 
+import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.UnknownHostException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
 import java.util.Date;
 import java.util.Set;
 
@@ -19,12 +26,15 @@ public class ControllerRegistradorEView {
 
 	private static ControllerRegistradorEView controllerUnico;
 
-	private static RegistradorPontoCentral registrador;
-
 	private static DAOXMLProjetoParticipacao dao = new DAOXMLProjetoParticipacao();
 
-	private ControllerRegistradorEView() throws RemoteException {
-		registrador = new RegistradorPontoCentral();
+	private ServicoRegistradorPontoCentral proxy;
+
+	private ControllerRegistradorEView()
+			throws RemoteException, MalformedURLException, UnknownHostException, NotBoundException {
+		proxy = (ServicoRegistradorPontoCentral) Naming
+				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "ServicoRemotoPontoTrabalhado");
+
 	}
 
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
@@ -33,7 +43,7 @@ public class ControllerRegistradorEView {
 		String[] atributos = { "nome" };
 		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
 		Object[] recuperados = recuperado.toArray();
-		registrador.registrarPonto((Projeto) recuperados[0], login);
+		proxy.registrarPonto((Projeto) recuperados[0], login);
 	}
 
 	public void horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
@@ -48,7 +58,7 @@ public class ControllerRegistradorEView {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
-							registrador.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
+							proxy.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
 									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor);
 						}
 					}
@@ -59,7 +69,7 @@ public class ControllerRegistradorEView {
 
 	}
 
-	public void getPontosInvalidos(String login, String nomeDoProjeto) throws RemoteException {
+	public Set<PontoTrabalhado> getPontosInvalidos(String login, String nomeDoProjeto) throws Exception {
 		Object[] valores = { nomeDoProjeto };
 		String[] atributos = { "nome" };
 		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
@@ -68,7 +78,7 @@ public class ControllerRegistradorEView {
 		for (ProjetoComponente membroDoFor : recuperados[0].getItens()) {
 			if (membroDoFor instanceof Membro) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
-					registrador.getPontosInvalidos((Membro) membroDoFor);
+					proxy.getPontosInvalidos((Membro) membroDoFor);
 
 				}
 
@@ -76,7 +86,11 @@ public class ControllerRegistradorEView {
 		}
 	}
 
-	public void defcitHoras(String login, String nomeDoProjeto) throws RemoteException {
+	public String getDetalhes(String login, String nomeDoProjeto) {
+		
+	}
+
+	public float defcitHoras(String login, String nomeDoProjeto) throws Exception {
 		Object[] valores = { nomeDoProjeto };
 		String[] atributos = { "nome" };
 		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
@@ -88,7 +102,7 @@ public class ControllerRegistradorEView {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
-							registrador.defcitHoras(pontoDoFor.getDataHoraEntrada(), pontoDoFor.getDataHoraSaida(),
+							return proxy.defcitHoras(pontoDoFor.getDataHoraEntrada(), pontoDoFor.getDataHoraSaida(),
 									(Membro) membroDoFor);
 						}
 					}
@@ -96,6 +110,7 @@ public class ControllerRegistradorEView {
 
 			}
 		}
+		return 0;
 	}
 
 	public static ControllerRegistradorEView getInstance() {
@@ -103,7 +118,7 @@ public class ControllerRegistradorEView {
 		if (controllerUnico == null) {
 			try {
 				return new ControllerRegistradorEView();
-			} catch (RemoteException e) {
+			} catch (RemoteException | MalformedURLException | UnknownHostException | NotBoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
