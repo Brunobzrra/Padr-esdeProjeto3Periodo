@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import ponto.model.projetos.ControllerRegistradorEView;
 
 public class TelaPonto extends JFrame {
+
+	private static final long serialVersionUID = 1L;
 	private JTextField nomeDoProjeto;
 	private JTextField login;
 	private JPasswordField senha;

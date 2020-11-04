@@ -3,37 +3,16 @@
     <long>1</long>
     <model.autenticacao.Membro>
       <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-      <matricula>1121</matricula>
-      <nome>bruno</nome>
+      <matricula>111</matricula>
+      <nome>jose claudiu</nome>
       <ativo>true</ativo>
       <email>fananitadz@gmail.com</email>
       <senha>1212</senha>
       <conta class="model.autenticacao.ContaEmailLivre">
-        <conta class="model.autenticacao.ContaAutenticacaoProvedorEmailPOP3"/>
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
       </conta>
       <administrador>true</administrador>
-      <participacoes>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
-          <dataInicio>2020-10-14 04:07:08.678 UTC</dataInicio>
-          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
-          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>10</qtdMesesCusteados>
-          <qtdMesesPagos>30</qtdMesesPagos>
-          <coordenador>true</coordenador>
-        </model.projetos.Participacao>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.autenticacao.Membro" reference="../../.."/>
-          <dataInicio>2020-10-14 04:07:58.672 UTC</dataInicio>
-          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
-          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>10</qtdMesesCusteados>
-          <qtdMesesPagos>30</qtdMesesPagos>
-          <coordenador>true</coordenador>
-        </model.projetos.Participacao>
-      </participacoes>
+      <participacoes/>
     </model.autenticacao.Membro>
   </entry>
 </map>

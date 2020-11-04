@@ -25,8 +25,11 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		if (RegistradorSessaoLogin.getInstance().isOline(login)) {
 			throw new Exception("Este membro não estar online!");
 		}
+		Participacao participacao = null;
 		for (ProjetoComponente participa : projeto.getItens()) {
-			Participacao participacao = (Participacao) participa;
+			if(participa instanceof Participacao) {
+				 participacao = (Participacao) participa;
+			}
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
 			if (participacao.getMembro().getEmail().equals(login)) {
 				int tamanho = participacao.getPontos().size();
