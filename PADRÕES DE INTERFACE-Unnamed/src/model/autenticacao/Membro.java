@@ -1,11 +1,17 @@
 package model.autenticacao;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import model.projetos.ProjetoComponente;
 import model.projetos.Participacao;
 
-public class Membro extends ProjetoComponente {
+public class Membro extends ProjetoComponente implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private long matricula;
 
 	private String nome;

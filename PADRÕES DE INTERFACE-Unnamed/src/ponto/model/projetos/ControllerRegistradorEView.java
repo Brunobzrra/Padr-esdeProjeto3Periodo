@@ -5,9 +5,7 @@ import java.net.MalformedURLException;
 import java.net.UnknownHostException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
-import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
 import java.util.Date;
 import java.util.Set;
 
@@ -18,6 +16,7 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.utilitarios.ConversorDeHoraEDia;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import persistenia.xml.DAOXMLMembroConta;
 import persistenia.xml.DAOXMLProjetoParticipacao;
@@ -33,7 +32,7 @@ public class ControllerRegistradorEView {
 	private ControllerRegistradorEView()
 			throws RemoteException, MalformedURLException, UnknownHostException, NotBoundException {
 		proxy = (ServicoRegistradorPontoCentral) Naming
-				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "ServicoRemotoPontoTrabalhado");
+				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "/ServicoRemotoPontoTrabalhado");
 
 	}
 
@@ -46,7 +45,8 @@ public class ControllerRegistradorEView {
 		proxy.registrarPonto((Projeto) recuperados[0], login);
 	}
 
-	public void horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
+	public float horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
+
 		Object[] valores = { nomeDoProjeto };
 		String[] atributos = { "nome" };
 		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
@@ -58,7 +58,7 @@ public class ControllerRegistradorEView {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
-							proxy.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
+							return proxy.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
 									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor);
 						}
 					}
@@ -66,6 +66,7 @@ public class ControllerRegistradorEView {
 
 			}
 		}
+		return 0;
 
 	}
 
@@ -78,16 +79,29 @@ public class ControllerRegistradorEView {
 		for (ProjetoComponente membroDoFor : recuperados[0].getItens()) {
 			if (membroDoFor instanceof Membro) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
-					proxy.getPontosInvalidos((Membro) membroDoFor);
+					return proxy.getPontosInvalidos((Membro) membroDoFor);
 
 				}
 
 			}
 		}
+		return null;
 	}
 
-	public String getDetalhes(String login, String nomeDoProjeto) {
-		
+	public String getDetalhes(String login, String nomeDoProjeto) throws Exception {
+		String retorno = "Defict de Horas: " + defcitHoras(login, nomeDoProjeto) + "\n Horas trabalhadas validas: "
+				+ horasTrabalhadasValidas(login, nomeDoProjeto) + "\nPontos invalidos: ";
+
+		Set<PontoTrabalhado> pontos = getPontosInvalidos(login, nomeDoProjeto);
+		PontoTrabalhado[] recuperados = (PontoTrabalhado[]) pontos.toArray();
+
+		for (int i = 0; i < recuperados.length; i++) {
+			retorno += "\n" + " Hora e dia de entrada: "
+					+ ConversorDeHoraEDia.pegarHoraEDia(recuperados[i].getDataHoraEntrada()) + " Hora e dia de saida: "
+					+ ConversorDeHoraEDia.pegarHoraEDia(recuperados[i].getDataHoraSaida()) + " justificativa: "
+					+ recuperados[i].getJustificativa() + "\n";
+		}
+		return retorno;
 	}
 
 	public float defcitHoras(String login, String nomeDoProjeto) throws Exception {

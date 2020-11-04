@@ -1,5 +1,6 @@
 package ponto.model.projetos;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.Duration;
@@ -18,7 +19,11 @@ import model.projetos.ProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
-public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRegistradorPontoCentral {
+public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRegistradorPontoCentral, Serializable {
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
 	protected RegistradorPontoCentral() throws RemoteException {
