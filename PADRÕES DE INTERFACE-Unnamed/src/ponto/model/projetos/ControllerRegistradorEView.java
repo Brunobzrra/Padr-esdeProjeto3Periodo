@@ -22,10 +22,10 @@ public class ControllerRegistradorEView {
 
 	private static RegistradorPontoCentral registrador;
 
-	private static DAOXMLProjetoParticipacao dao;
+	private static DAOXMLProjetoParticipacao dao = new DAOXMLProjetoParticipacao();
 
-	private ControllerRegistradorEView() {
-
+	private ControllerRegistradorEView() throws RemoteException {
+		registrador = new RegistradorPontoCentral();
 	}
 
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
@@ -103,7 +103,12 @@ public class ControllerRegistradorEView {
 	public static ControllerRegistradorEView getInstance() {
 
 		if (controllerUnico == null) {
-			return new ControllerRegistradorEView();
+			try {
+				return new ControllerRegistradorEView();
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return controllerUnico;
 	}

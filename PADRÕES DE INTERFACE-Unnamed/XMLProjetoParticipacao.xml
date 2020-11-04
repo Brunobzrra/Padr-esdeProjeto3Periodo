@@ -1,1 +1,27 @@
-<map/>
+<map>
+  <entry>
+    <long>1</long>
+    <model.projetos.Projeto>
+      <ativo>true</ativo>
+      <itens>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.projetos.Projeto" reference="../../.."/>
+          <dataInicio>2020-11-03 22:54:32.50 UTC</dataInicio>
+          <dataTermino>2021-02-02 02:00:00.0 UTC</dataTermino>
+          <aporteCusteioMensalReais>200.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>10</qtdMesesCusteados>
+          <qtdMesesPagos>30</qtdMesesPagos>
+          <coordenador>true</coordenador>
+          <pontos/>
+          <horarios/>
+        </model.projetos.Participacao>
+      </itens>
+      <nome>Projet</nome>
+      <aporteCusteioReais>200.0</aporteCusteioReais>
+      <aporteCapitalReais>100.0</aporteCapitalReais>
+      <gastoExecutadoCusteioReais>30.0</gastoExecutadoCusteioReais>
+      <gastoExecutadoCapitalReais>20.0</gastoExecutadoCapitalReais>
+    </model.projetos.Projeto>
+  </entry>
+</map>

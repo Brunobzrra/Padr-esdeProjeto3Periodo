@@ -29,11 +29,9 @@ public class MainCasoDeUso5 {
 		try {
 			ProjetoFachada fachada= new ProjetoFachada(membro, participacao);
 			Projeto projeto=fachada.criarProjeto("Projet", 200, 100, 30, 20);
-			fachada.atualizarDado(projeto, "nome", "Projeto", "Projet");
-			fachada.remover(projeto);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 }

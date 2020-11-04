@@ -30,7 +30,7 @@ public class ProjetoFachada {
 			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
 		membro=AutenticadorDePersistencia.verificarMembro(matricula);		
 		participacao=AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,
-						aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador);
+		aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, coordenador);
 		membro.adicionar(participacao);
 	}
 
@@ -42,9 +42,9 @@ public class ProjetoFachada {
 		if (projetoRecuperados.size() == 0) {
 			projeto = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
 					gastoExecutadoCapitalReais);
-			projeto.adicionar(membro);
 			participacao.setCoordenador(true);
 			membro.adicionar(participacao);
+			projeto.adicionar(participacao);
 			daoProjetoParticipacao.criar(projeto);
 			System.out.println("Projeto criado com sucesso!");
 			return projeto;
