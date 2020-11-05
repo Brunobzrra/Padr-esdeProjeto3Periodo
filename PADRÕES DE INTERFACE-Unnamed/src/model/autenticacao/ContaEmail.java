@@ -1,10 +1,17 @@
 package model.autenticacao;
+
+import java.io.Serializable;
+
 /**
  * Essa classe responsaveis por fazer uso da ponte para variação de tratamento de contas
  * @author Antônio Amorim
  *
  */
-public abstract class ContaEmail {
+public abstract class ContaEmail implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ContaBridge conta;
 	/**
 	 * Todas subclasses tem sua propria operações de tratamento de conta

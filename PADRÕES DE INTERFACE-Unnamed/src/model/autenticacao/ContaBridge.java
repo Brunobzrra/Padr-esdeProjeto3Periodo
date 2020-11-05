@@ -1,10 +1,18 @@
 package model.autenticacao;
+
+import java.io.Serializable;
+
 /**
  * Esta é a classe e responsavel por fazer a ponte com Conta email
  * @author Antônio Amorim
  *
  */
-public abstract class ContaBridge {
+public abstract class ContaBridge implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private TipoProvedorAutenticacao tipo;
 

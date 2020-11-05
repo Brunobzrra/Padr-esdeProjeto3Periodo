@@ -1,12 +1,10 @@
 package ponto.model.projetos;
 
-import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.Period;
 import java.time.ZoneId;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,12 +17,12 @@ import model.projetos.ProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
-public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRegistradorPontoCentral, Serializable {
+public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRegistradorPontoCentral {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5185696354619610643L;
 
 	protected RegistradorPontoCentral() throws RemoteException {
 		super();
@@ -42,16 +40,20 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
 			if (participacao.getMembro().getEmail().equals(login)) {
 				int tamanho = participacao.getPontos().size();
-				PontoTrabalhado ponto = participacao.getPontos().get(tamanho);
-				if (tamanho != 0 && ponto.getDataHoraSaida() != null) {
-					ponto.setDataHoraSaida(pontoBatidoagora);
-					return ponto;
+				PontoTrabalhado ponto = null;
+				if (tamanho != 0) {
+					ponto = participacao.getPontos().get(tamanho);
+					if (ponto.getDataHoraSaida() != null) {
+						ponto.setDataHoraSaida(pontoBatidoagora);
+						return ponto;
+					}
 				} else {
 					for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {
 						if (horario.getHoraInicio() == pontoBatidoagora.getHour()
 								&& ConversorDeHoraEDia.pegarHoraEDia(pontoBatidoagora)[1] == horario.getDiaSemana()) {
 							participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
-							return ponto;
+							System.out.println("Ok");
+							return participacao.getPontos().get(0);
 						}
 					}
 				}
@@ -99,7 +101,6 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		return 0;
 	}
 
-	
 	public float defcitHoras(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");

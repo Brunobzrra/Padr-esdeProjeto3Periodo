@@ -7,6 +7,11 @@ import model.utilitarios.Utilidade;
 
 public class Edital extends ProjetoComponente {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String nome;
 
 	private Date dataInicio;

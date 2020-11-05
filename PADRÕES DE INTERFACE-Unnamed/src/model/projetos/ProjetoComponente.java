@@ -1,12 +1,19 @@
 package model.projetos;
 
+import java.io.Serializable;
+
 import model.autenticacao.Membro;
 /**
  * classe principal do composite =, interfaxce emcomum dos itens
  * @author Antônio Amorim
  *
  */
-public abstract class ProjetoComponente {
+public abstract class ProjetoComponente implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private boolean ativo = true;
 

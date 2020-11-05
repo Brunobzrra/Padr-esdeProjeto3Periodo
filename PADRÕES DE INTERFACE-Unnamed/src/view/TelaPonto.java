@@ -41,7 +41,7 @@ public class TelaPonto extends JFrame {
 		try {
 			controller.registrarPonto(nomeDoProjeto, login, senha);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
 	}

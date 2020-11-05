@@ -1,6 +1,5 @@
 package model.projetos;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,7 +11,7 @@ import model.autenticacao.Membro;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
-public class Participacao extends ProjetoComponente implements Serializable {
+public class Participacao extends ProjetoComponente  {
 
 	/**
 	 * 

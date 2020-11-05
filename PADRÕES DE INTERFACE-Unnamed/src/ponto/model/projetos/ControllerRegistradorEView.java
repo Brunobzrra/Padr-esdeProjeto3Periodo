@@ -42,7 +42,10 @@ public class ControllerRegistradorEView {
 		String[] atributos = { "nome" };
 		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
 		Object[] recuperados = recuperado.toArray();
-		proxy.registrarPonto((Projeto) recuperados[0], login);
+		if (recuperados!=null) {
+			proxy.registrarPonto((Projeto) recuperados[0], login);
+		}else
+			throw new Exception("Projeto não existente!");
 	}
 
 	public float horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
@@ -150,12 +153,13 @@ public class ControllerRegistradorEView {
 		joseClaudiu.setAdministrador(true);
 		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()), new Date(03 / 12 / 2020),
 				Float.parseFloat("0"), (short) 0, (short) 0, true);
+		participacao.setMembro(joseClaudiu);
 		try {
 			participacao.adicionar(joseClaudiu);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-		Projeto projeto1 = new Projeto("MeuCu", 0, 0, 0, 0);
+		Projeto projeto1 = new Projeto("Projeto novo", 0, 0, 0, 0);
 		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
 		try {
 			DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();

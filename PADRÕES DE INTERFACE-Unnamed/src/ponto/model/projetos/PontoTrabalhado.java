@@ -1,10 +1,8 @@
 package ponto.model.projetos;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class PontoTrabalhado implements Serializable {
-	private static final long 	serialVersionUID = 1L;
+public class PontoTrabalhado  {
 	private LocalDateTime dataHoraEntrada;
 	private LocalDateTime dataHoraSaida;
 	private String justificativa;
