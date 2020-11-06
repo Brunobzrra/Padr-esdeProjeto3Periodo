@@ -3,8 +3,6 @@ package model.projetos;
 import java.util.ArrayList;
 import java.util.Date;
 
-import model.utilitarios.Utilidade;
-
 public class Edital extends ProjetoComponente {
 
 	/**
@@ -22,14 +20,15 @@ public class Edital extends ProjetoComponente {
 	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
-	public void adicionar(Grupo integracao) throws Exception {
-		integracao.setProjetoPai(this);
-		itens.add(integracao);
-	}
-
-	public void adicionar(Projeto integracao) throws Exception {
-		integracao.setProjetoPai(this);
-		itens.add(integracao);
+	public void adicionar(ProjetoComponente item) throws Exception {
+		if(item instanceof Grupo || item instanceof Projeto) {
+			for (ProjetoComponente projetoComponente : itens) {
+				if(item.equals(projetoComponente)) {
+					throw new Exception("Este item ja existe aqui!");
+				}
+			}
+		}
+		itens.add(item);
 	}
 
 	public void remover(ProjetoComponente integracao) throws Exception {
@@ -78,13 +77,13 @@ public class Edital extends ProjetoComponente {
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		Utilidade.ativar(itens, this);
+		modificarAtivo(itens, this,true);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		Utilidade.desativar(itens, this);
+		modificarAtivo(itens, this,false);
 
 	}
 
@@ -124,4 +123,5 @@ public class Edital extends ProjetoComponente {
 		}
 		return false;
 	}
+
 }

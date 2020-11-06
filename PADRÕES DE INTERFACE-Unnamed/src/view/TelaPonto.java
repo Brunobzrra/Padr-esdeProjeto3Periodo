@@ -83,7 +83,8 @@ public class TelaPonto extends JFrame {
 		senha.setForeground(new Color(192, 192, 192));
 		this.add(senha);
 	}
-
+	/*TODO
+     * Ao invés do nome do projeto, colocar o combobox com a relação detodos os projetos para o membro inserido*/
 	private void adcionarTextFields() {
 		nomeDoProjeto = new JTextField();
 		nomeDoProjeto.setToolTipText("ex: Projeto de ADS...");

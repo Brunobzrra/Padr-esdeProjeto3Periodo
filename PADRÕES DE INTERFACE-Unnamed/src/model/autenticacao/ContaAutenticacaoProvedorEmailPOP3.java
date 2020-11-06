@@ -1,8 +1,13 @@
 package model.autenticacao;
 
+import java.util.Properties;
 import java.util.Set;
 
-import model.utilitarios.AutenticacaoPOP3;
+import javax.mail.NoSuchProviderException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Store;
+
 import persistenia.xml.DAOXMLMembroConta;
 
 public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
@@ -17,7 +22,7 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 	 *@param email, senha*/
 
 	public Membro autenticar(String email, String senha) {
-		if (AutenticacaoPOP3.check(email, senha, provedorHost, provedorPorta)) {
+		if (check(email, senha, provedorHost, provedorPorta)) {
 			DAOXMLMembroConta dao = new DAOXMLMembroConta();
 			String[] atributos = { "email", "senha" };
 			String[] valores = { email, senha };
@@ -28,6 +33,39 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 			}
 		}
 		return null;
+	}
+	/*
+	 * Método que ira autenticar um membro via protocolo de visualizacao de email POP3, caso autenticado
+	 * retorna true, e isso significa que o email é realmente válido, e é possivel usa=lo no sistema.
+	 * @params login, senha, provedor, porta*/
+	
+	private static boolean check(String login, String senha, String provedor, String porta) {
+
+		Properties properties = new Properties();
+
+		properties.put("mail.pop3s.host", provedor);
+		properties.put("mail.pop3s.port", porta);
+		properties.put("mail.pop3s.starttls.enable", "true");
+
+		Session emailSession = Session.getInstance(properties, new javax.mail.Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(login, senha);
+			}
+		});
+		emailSession.setDebug(true);
+
+		Store store;
+		try {
+			store = emailSession.getStore("pop3s");
+			store.connect();
+		} catch (NoSuchProviderException e) {
+			e.printStackTrace();
+			return false;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 }

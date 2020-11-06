@@ -1,7 +1,6 @@
 package model.projetos;
 
 import java.util.ArrayList;
-import model.utilitarios.Utilidade;
 
 public class Projeto extends ProjetoComponente  {
 
@@ -35,9 +34,15 @@ public class Projeto extends ProjetoComponente  {
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 	}
 
-	public void adicionar(Participacao integracao) throws Exception {
-		integracao.setProjetoPai(this);
-		itens.add(integracao);
+	public void adicionar(ProjetoComponente item) throws Exception {
+		if(item instanceof Participacao) {
+			for (ProjetoComponente projetoComponente : itens) {
+				if(item.equals(projetoComponente)) {
+					throw new Exception("Este item ja existe aqui!");
+				}
+			}
+		}
+		itens.add(item);
 	}
 
 	public void remover(ProjetoComponente integracao) throws Exception {
@@ -58,13 +63,13 @@ public class Projeto extends ProjetoComponente  {
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		Utilidade.ativar(itens, this);
+		modificarAtivo(itens, this,true);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		Utilidade.desativar(itens, this);
+		modificarAtivo(itens, this,false);
 	}
 
 	@Override

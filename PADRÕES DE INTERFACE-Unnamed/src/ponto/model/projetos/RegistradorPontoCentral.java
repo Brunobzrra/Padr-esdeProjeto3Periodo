@@ -6,19 +6,21 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 import model.autenticacao.Membro;
 import model.autenticacao.RegistradorSessaoLogin;
+import model.chainOfResponsibility.AvaliadorDeRegistro;
+import model.chainOfResponsibility.AvaliadorPontoSemEntradaeOuSaida;
 import model.chainOfResponsibility.AvaliadorPontosComIntervalosConflitantes;
+import model.chainOfResponsibility.AvaliadorPontosForaParticipacaoPrevisao;
+import model.chainOfResponsibility.AvaliadorPontosInvalidosComJustificativaNaoAceita;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
-import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
 public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRegistradorPontoCentral {
 
@@ -51,7 +53,7 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 						return ponto;
 					}
 				} else {
-					for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {
+					for (HorarioPrevisto horario : participacao.getHorarios()) {
 						if (horario.getHoraInicio() == pontoBatidoagora.getHour()
 								&& ConversorDeHoraEDia.pegarHoraEDia(pontoBatidoagora)[1] == horario.getDiaSemana()) {
 							participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
@@ -80,28 +82,40 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		return projetosAtivos;
 	}
 
-	public void justificarPontoInvalido(PontoTrabalhado ponto, String justificar,  Membro membro)  throws Exception {
+	public void justificarPontoInvalido(PontoTrabalhado ponto, String justificar, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
 		}
-		Set<PontoTrabalhado> pontosInvalidos= getPontosInvalidos(membro);
-		Iterator<PontoTrabalhado> pontos=pontosInvalidos.iterator();
-		PontoTrabalhado pontoJustificado= null;
+		Set<PontoTrabalhado> pontosInvalidos = getPontosInvalidos(membro);
+		Iterator<PontoTrabalhado> pontos = pontosInvalidos.iterator();
+		PontoTrabalhado pontoJustificado = null;
 		while (pontos.hasNext()) {
-			if(pontos.next().getId() == ponto.getId()) {
-				pontoJustificado= pontos.next();
+			if (pontos.next().equals(ponto)) {
+				pontoJustificado = pontos.next();
 			}
 		}
-		if(pontoJustificado==null) {
+		if (pontoJustificado == null) {
 			throw new Exception("Este ponto não existe!");
 		}
 		pontoJustificado.setJustificativa(justificar);
 	}
 
-	public void justificarPontoNaoBatido(PontoTrabalhado ponto, String justificar,  Membro membro) throws Exception {
+	public void justificarPontoNaoBatido(PontoTrabalhado ponto, String justificar, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
 		}
+		Set<PontoTrabalhado> pontosInvalidos = new AvaliadorPontoSemEntradaeOuSaida(null).getPontosInvalidos(membro);
+		Iterator<PontoTrabalhado> pontos = pontosInvalidos.iterator();
+		PontoTrabalhado pontoJustificado = null;
+		while (pontos.hasNext()) {
+			if (pontos.next().equals(ponto)) {
+				pontoJustificado = pontos.next();
+			}
+		}
+		if (pontoJustificado == null) {
+			throw new Exception("Este ponto não existe!");
+		}
+		pontoJustificado.setJustificativa(justificar);
 	}
 
 	public float horasTrabalhadasValidas(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro)
@@ -142,9 +156,12 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 	}
 
 	public Set<PontoTrabalhado> getPontosInvalidos(Membro membro) throws RemoteException, Exception {
-		if(!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
-			throw new Exception("Este membro não estar online!");	
+		if (!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
+			throw new Exception("Este membro não estar online!");
 		}
-		return new AvaliadorPontosComIntervalosConflitantes(null).getPontosInvalidos(membro);
+		AvaliadorDeRegistro cadeia = new AvaliadorPontosComIntervalosConflitantes(
+				new AvaliadorPontosForaParticipacaoPrevisao(new AvaliadorPontoSemEntradaeOuSaida(
+						new AvaliadorPontosInvalidosComJustificativaNaoAceita(null))));
+		return cadeia.getPontosInvalidos(membro);
 	}
 }

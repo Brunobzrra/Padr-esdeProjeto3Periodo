@@ -3,7 +3,6 @@ package ponto.model.projetos;
 import java.time.LocalDateTime;
 
 public class PontoTrabalhado {
-	private long id = System.currentTimeMillis();
 	private LocalDateTime dataHoraEntrada;
 	private LocalDateTime dataHoraSaida;
 	private String justificativa;
@@ -57,16 +56,19 @@ public class PontoTrabalhado {
 		this.justificativaAceita = justificativaAceita;
 	}
 
-	public long getId() {
-		return id;
-	}
-
 	public String toString() {
 		String aceito = "Aceita não";
 		if (justificativaAceita) {
 			aceito = "Aceita";
 		}
-		return "Ponto com id: " + getId() + "\nEntrada: " + getDataHoraEntrada().toString() + "\nSaida: "
-				+ getDataHoraSaida().toString() + "\nJustificativa: " + getJustificativa() + " - " + aceito;
+		return "Entrada: " + getDataHoraEntrada().toString() + "\nSaida: " + getDataHoraSaida().toString()
+				+ "\nJustificativa: " + getJustificativa() + " - " + aceito;
+	}
+
+	public boolean equals(PontoTrabalhado ponto) {
+		if (getDataHoraEntrada() == ponto.getDataHoraEntrada() && getDataHoraSaida() == ponto.getDataHoraSaida()
+				&& getHorasTrabalhadas() == ponto.getHorasTrabalhadas())
+			return true;
+		return false;
 	}
 }

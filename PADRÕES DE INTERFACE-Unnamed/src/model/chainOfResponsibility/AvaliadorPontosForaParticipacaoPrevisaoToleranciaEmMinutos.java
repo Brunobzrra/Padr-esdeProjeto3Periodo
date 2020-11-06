@@ -7,8 +7,8 @@ import model.projetos.Participacao;
 import model.utilitarios.ConversorDeHoraEDia;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import ponto.model.projetos.DiaSemana;
+import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
-import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
 /**
  * Nesta parte do chain verifica se o ponto foi batido ate o horario de tolerancia
@@ -25,11 +25,11 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			for (PontoTrabalhado ponto : participacao.getPontos()) {
 				boolean invalido = true;
-				for (HorarioPrevistoExatoFlyweight horario : participacao.getHorarios()) {
+				for (HorarioPrevisto horario : participacao.getHorarios()) {
 					Object[] horaEDiaEntrada = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraEntrada());
 					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
 					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
-						int tolerancia =horario.getMinutosTolerantes().getToleranciaMinutos() ;
+						int tolerancia =horario.getMinutosTolerante() ;
 						if (horario.getHoraInicio() <= (long) horaEDiaEntrada[0]
 								&& horario.getHoraInicio()
 										+ tolerancia >= (long) horaEDiaEntrada[0]

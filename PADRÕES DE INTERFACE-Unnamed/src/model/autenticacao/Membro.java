@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import model.projetos.ProjetoComponente;
+import model.projetos.Grupo;
 import model.projetos.Participacao;
+import model.projetos.Projeto;
 
 public class Membro extends ProjetoComponente implements Serializable {
 	/**
@@ -92,9 +94,15 @@ public class Membro extends ProjetoComponente implements Serializable {
 	/**
 	 * adciona somente participação
 	 */
-	public void adicionar(Participacao integracao) throws Exception {
-		integracao.setMembro(this);
-		participacoes.add(integracao);
+	public void adicionar(ProjetoComponente item) throws Exception {
+		if(item instanceof Participacao ) {
+			for (ProjetoComponente projetoComponente : participacoes) {
+				if(item.equals(projetoComponente)) {
+					throw new Exception("Este item ja existe aqui!");
+				}
+			}
+		}
+		participacoes.add(item);
 	}
 
 	public void remover(Participacao integracao) throws Exception {

@@ -8,10 +8,10 @@ import org.joda.time.DateTime;
 import org.joda.time.Period;
 
 import model.autenticacao.Membro;
+import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
-import ponto.model.projetos.flyweight.HorarioPrevistoExatoFlyweight;
 
-public class Participacao extends ProjetoComponente  {
+public class Participacao extends ProjetoComponente {
 
 	/**
 	 * 
@@ -35,7 +35,7 @@ public class Participacao extends ProjetoComponente  {
 
 	private ArrayList<PontoTrabalhado> pontos = new ArrayList<PontoTrabalhado>();
 
-	private ArrayList<HorarioPrevistoExatoFlyweight> horarios = new ArrayList<HorarioPrevistoExatoFlyweight>();
+	private ArrayList<HorarioPrevisto> horarios = new ArrayList<HorarioPrevisto>();
 
 	private Membro membro;
 
@@ -73,8 +73,8 @@ public class Participacao extends ProjetoComponente  {
 
 	}
 
-	public void adcionarHorarioPrevisto(HorarioPrevistoExatoFlyweight horario) {
-		for (HorarioPrevistoExatoFlyweight horarioPrevisto : horarios) {
+	public void adcionarHorarioPrevisto(HorarioPrevisto horario) {
+		for (HorarioPrevisto horarioPrevisto : horarios) {
 			if (horario == horarioPrevisto) {
 				return;
 			}
@@ -114,13 +114,8 @@ public class Participacao extends ProjetoComponente  {
 		return aux * this.aporteCusteioMensalReais;
 	}
 
-	@Override
-	public void adicionar(Membro membro) throws Exception {
-		// TODO Auto-generated method stub
-		if (this.membro != null) {
-			this.membro = membro;
-			membro.adicionar(this);
-		}
+	public void adicionar(ProjetoComponente item) throws Exception {
+	throw new Exception("Este item não adciona!");
 	}
 
 	@Override
@@ -202,7 +197,11 @@ public class Participacao extends ProjetoComponente  {
 		return membro;
 	}
 
-	public ArrayList<HorarioPrevistoExatoFlyweight> getHorarios() {
+	public ArrayList<HorarioPrevisto> getHorarios() {
 		return horarios;
+	}
+
+	public String getNome() {
+		return membro.getNome();
 	}
 }
