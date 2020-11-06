@@ -34,8 +34,8 @@ public class MainCasoDeUso6 {
 			membro.adicionar(participacao);
 			dao.atualizar(membro, auxiliar);
 			
-			GerenciadorMembroFachada gerenci = new GerenciadorMembroFachada(membro, participacao, p);
-			gerenci.adicionar(membro, agora, termino, Float.parseFloat("10"), Short.parseShort("5"));
+			GerenciadorMembroFachada gerenci = new GerenciadorMembroFachada(membro.getMatricula(),agora,termino, 1f, (short)1,(short) 1, false,p.getNome());
+			gerenci.adicionar(membro.getMatricula(), agora, termino, Float.parseFloat("10"), Short.parseShort("5"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -25,7 +25,12 @@ public class MainCasoDeUso7 {
 		Date agora = new Date(System.currentTimeMillis());
 		Date termino = new Date("02/02/2021");
 		Participacao participacao = new Participacao(agora, termino, (short) 200, (short) 10, (short) 30, true);
-		GerenciadorDeAdministradorFachada fachada= new GerenciadorDeAdministradorFachada(membro);
+		try {
+			GerenciadorDeAdministradorFachada fachada= new GerenciadorDeAdministradorFachada(membro.getMatricula());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

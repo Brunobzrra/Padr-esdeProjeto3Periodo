@@ -31,17 +31,17 @@ public class MainCasoDeUso4 {
 		try {
 			Edital edital1 = new Edital();
 			Edital edital2 = new Edital();
-			EditalFachada facade = new EditalFachada(membro, participacao);
+			EditalFachada facade = new EditalFachada((short)1 ,agora,termino, 1f, (short)1,(short) 1, false);
 			edital1.setNome("Edital 1");
 			edital2.setNome("Edital 2");
 			edital1.setDataInicio(agora);
 			edital2.setDataInicio(agora);
-			facade.adcionarEdital(edital2);
-			facade.adcionarEdital(edital1);
+			facade.adcionarEdital(edital2.getNome());
+			facade.adcionarEdital(edital1.getNome());
 			Edital antigoGrupo= edital2;
 			edital2.setNome("Edital novo 2");
-			facade.atualizarEdital(antigoGrupo,edital2);
-			facade.removerEdital(edital2);
+			facade.atualizarEdital(antigoGrupo.getNome(),edital2);
+			facade.removerEdital(edital2.getNome());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

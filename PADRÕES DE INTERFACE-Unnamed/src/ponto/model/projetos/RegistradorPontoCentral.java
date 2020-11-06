@@ -6,11 +6,14 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import model.autenticacao.Membro;
 import model.autenticacao.RegistradorSessaoLogin;
+import model.chainOfResponsibility.AvaliadorPontosComIntervalosConflitantes;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
@@ -77,12 +80,28 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		return projetosAtivos;
 	}
 
-	public void justificarPontoInvalido(PontoTrabalhado ponto, String justificar, String login) {
-
+	public void justificarPontoInvalido(PontoTrabalhado ponto, String justificar,  Membro membro)  throws Exception {
+		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
+			throw new Exception("Este membro não estar online!");
+		}
+		Set<PontoTrabalhado> pontosInvalidos= getPontosInvalidos(membro);
+		Iterator<PontoTrabalhado> pontos=pontosInvalidos.iterator();
+		PontoTrabalhado pontoJustificado= null;
+		while (pontos.hasNext()) {
+			if(pontos.next().getId() == ponto.getId()) {
+				pontoJustificado= pontos.next();
+			}
+		}
+		if(pontoJustificado==null) {
+			throw new Exception("Este ponto não existe!");
+		}
+		pontoJustificado.setJustificativa(justificar);
 	}
 
-	public void justificarPontoNaoBatido(PontoTrabalhado ponto, String justificar, String login) {
-
+	public void justificarPontoNaoBatido(PontoTrabalhado ponto, String justificar,  Membro membro) throws Exception {
+		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
+			throw new Exception("Este membro não estar online!");
+		}
 	}
 
 	public float horasTrabalhadasValidas(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro)
@@ -122,7 +141,10 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		return 0;
 	}
 
-	public Set<PontoTrabalhado> getPontosInvalidos(Membro membro) throws RemoteException {
-		return null;
+	public Set<PontoTrabalhado> getPontosInvalidos(Membro membro) throws RemoteException, Exception {
+		if(!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
+			throw new Exception("Este membro não estar online!");	
+		}
+		return new AvaliadorPontosComIntervalosConflitantes(null).getPontosInvalidos(membro);
 	}
 }

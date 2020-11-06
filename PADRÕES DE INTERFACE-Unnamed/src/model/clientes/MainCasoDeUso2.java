@@ -16,7 +16,13 @@ public class MainCasoDeUso2 {
 		Set<Membro> recuperado = dao.consultarAnd(atributos, valores);
 		Object[] recuperados = recuperado.toArray();
 		Membro m = (Membro) recuperados[0];
-		CasoDeUsoDoisAutenticacaoDeLogin caso2 = new CasoDeUsoDoisAutenticacaoDeLogin(m);
-		caso2.selecionarFormaDeAutenticacao(TipoProvedorAutenticacao.POP3);
+		CasoDeUsoDoisAutenticacaoDeLogin caso2;
+		try {
+			caso2 = new CasoDeUsoDoisAutenticacaoDeLogin(1);
+			caso2.selecionarFormaDeAutenticacao(TipoProvedorAutenticacao.POP3);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -40,6 +40,7 @@ public class TelaPonto extends JFrame {
 
 		try {
 			controller.registrarPonto(nomeDoProjeto, login, senha);
+			JOptionPane.showMessageDialog(this, "Ponto batido com sucesso");
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());

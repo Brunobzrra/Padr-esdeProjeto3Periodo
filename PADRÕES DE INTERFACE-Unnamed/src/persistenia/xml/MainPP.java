@@ -41,9 +41,9 @@ public class MainPP {
 		ed.setNome("Uva");
 		ed.setAtivo(true);
 		ed.setDataInicio(tempo);
-		xml2.criar(ed);
-		xml2.criar(edital);
-		xml2.criar(edital2);
+//		xml2.criar(ed);
+//		xml2.criar(edital);
+//		xml2.criar(edital2);
 		
 		Set<Edital> recuperado = xml.consultarAnd(atributos, valores);
 		Set<Edital> recuperadoOR = xml.consultarOr(atributos, valores);
