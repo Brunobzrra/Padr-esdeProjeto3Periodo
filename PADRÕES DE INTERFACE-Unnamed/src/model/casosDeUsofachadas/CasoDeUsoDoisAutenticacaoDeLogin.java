@@ -27,12 +27,12 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 		if (membros != null) {
 			Membro[] retorno = (Membro[]) membros.toArray();
 			membro = retorno[0];
-		}else {
+		} else {
 			throw new Exception("Membro não existente!");
 		}
 	}
 
-	public void selecionarFormaDeAutenticacao(TipoProvedorAutenticacao tipoDeAutenticacao) {
+	public void selecionarFormaDeAutenticacao(String tipoDeAutenticacao) {
 		Membro membroValorAntigo = membro;
 		String email = membro.getEmail();
 		int indice = email.indexOf("@");
@@ -42,7 +42,7 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 		} else {
 			conta = new ContaEmailLivre();
 		}
-		if (tipoDeAutenticacao == TipoProvedorAutenticacao.POP3) {
+		if (tipoDeAutenticacao.toLowerCase().equals(TipoProvedorAutenticacao.POP3.toString().toLowerCase())) {
 			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailPOP3());
 
 		} else {
