@@ -20,10 +20,10 @@ public class Grupo extends ProjetoComponente {
 	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
-	public Grupo(String nome, Date dataCriacao, String linkCNPq) {
+	public Grupo(String nome, String linkCNPq) {
 		super();
 		this.nome = nome;
-		this.dataCriacao = dataCriacao;
+		this.dataCriacao = new Date(System.currentTimeMillis());
 		this.linkCNPq = linkCNPq;
 		setTipo(TipoProjetoComponente.GRUPO);
 	}

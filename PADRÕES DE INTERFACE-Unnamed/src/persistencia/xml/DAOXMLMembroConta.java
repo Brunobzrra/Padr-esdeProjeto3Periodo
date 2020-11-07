@@ -33,6 +33,16 @@ public class DAOXMLMembroConta {
 		}
 		return false;
 	}
+	public Membro isAdmimPelaMatricula(long matricula) {
+		Object[] valor = { matricula };
+		String[] nomeAtributo = { "matricula" };
+		Set<Membro> membroRecuperado = this.consultarAnd(nomeAtributo, valor);
+		Membro[] membro = (Membro[]) membroRecuperado.toArray();
+		if (membro[0].isAdministrador()) {
+			return membro[0];
+		}
+		return null;
+	}
 	/*
 	 * adiciona um novo membro na colecao de persistidos, que é salvo posteriormente, adicionando assim
 	 * um membro ao XML, que é nosso BD.
