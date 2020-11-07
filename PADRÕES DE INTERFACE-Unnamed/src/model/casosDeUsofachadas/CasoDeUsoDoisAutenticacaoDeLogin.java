@@ -1,5 +1,7 @@
 package model.casosDeUsofachadas;
 
+import java.util.Set;
+
 import model.autenticacao.ContaAutenticacaoProvedorEmailPOP3;
 import model.autenticacao.ContaAutenticacaoProvedorInterno;
 import model.autenticacao.ContaEmail;
@@ -7,7 +9,6 @@ import model.autenticacao.ContaEmailIFPB;
 import model.autenticacao.ContaEmailLivre;
 import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
-import model.utilitarios.AutenticadorDePersistencia;
 import persistenia.xml.DAOXMLMembroConta;
 
 //caso de uso 2
@@ -18,9 +19,17 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 	private Membro membro;
 
 	private ContaEmail conta;
-	
+
 	public CasoDeUsoDoisAutenticacaoDeLogin(long matricula) throws Exception {
-		this.membro = AutenticadorDePersistencia.verificarMembro(matricula);
+		Object[] mat = { matricula };
+		String[] atr = { "matricula" };
+		Set<Membro> membros = daoMembro.consultarAnd(atr, mat);
+		if (membros != null) {
+			Membro[] retorno = (Membro[]) membros.toArray();
+			membro = retorno[0];
+		}else {
+			throw new Exception("Membro não existente!");
+		}
 	}
 
 	public void selecionarFormaDeAutenticacao(TipoProvedorAutenticacao tipoDeAutenticacao) {
@@ -33,19 +42,20 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 		} else {
 			conta = new ContaEmailLivre();
 		}
-		if (tipoDeAutenticacao == TipoProvedorAutenticacao.INTERNAMENTE) {
-			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
-		} else {
+		if (tipoDeAutenticacao == TipoProvedorAutenticacao.POP3) {
 			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailPOP3());
+
+		} else {
+			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
 		}
 		membro.setConta(conta);
 		System.out.println(membro.getConta().toString());
 		daoMembro.atualizar(membroValorAntigo, membro);
 	}
+
 	public DAOXMLMembroConta getDaoMembro() {
 		return daoMembro;
 	}
-
 
 	public Membro getMembro() {
 		return membro;
