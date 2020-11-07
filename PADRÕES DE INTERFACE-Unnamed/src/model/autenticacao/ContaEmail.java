@@ -14,7 +14,7 @@ public abstract class ContaEmail implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private ContaBridge conta;
+	protected ContaBridge conta;
 
 	/**
 	 * Todas subclasses tem sua propria operações de tratamento de conta
@@ -23,7 +23,9 @@ public abstract class ContaEmail implements Serializable {
 	 * @param senha
 	 * @return
 	 */
-	public abstract Membro autenticar(String login, String senha);
+	public Membro autenticar(String login, String senha) {
+		return conta.autenticar(login, senha);
+	}
 
 	public abstract boolean validarLogin(String email);
 

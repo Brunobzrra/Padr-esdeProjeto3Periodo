@@ -205,4 +205,16 @@ public class Participacao extends ProjetoComponente {
 	public String getNome() {
 		return membro.getNome();
 	}
+
+	public float getGastoTotal() throws Exception {
+		return getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+	}
+
+	public float getCusteioReaisGastoTotal() throws Exception {
+		return aporteCusteioMensalReais*qtdMesesPagos;
+	}
+
+	public float getCapitalReaiGastoTotal() throws Exception {
+		return 0;
+	}
 }

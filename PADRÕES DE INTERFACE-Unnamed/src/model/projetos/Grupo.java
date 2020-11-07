@@ -129,4 +129,28 @@ public class Grupo extends ProjetoComponente {
 		}
 		return false;
 	}
+
+	public float getGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getGastoTotal();
+		}
+		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+	}
+
+	public float getCusteioReaisGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCusteioReaisGastoTotal();
+		}
+		return aux;
+	}
+
+	public float getCapitalReaiGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCapitalReaiGastoTotal();
+		}
+		return aux;
+	}
 }

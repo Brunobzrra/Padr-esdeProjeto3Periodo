@@ -51,6 +51,11 @@ public abstract class ProjetoComponente implements Serializable {
 
 	public abstract float getCapitalReaiNaoGastoTotal() throws Exception;
 	
+	public abstract float getGastoTotal() throws Exception;
+	
+	public abstract float getCusteioReaisGastoTotal() throws Exception;
+
+	public abstract float getCapitalReaiGastoTotal() throws Exception;
 	// metodos que precisão ser não abstratos pois só estarão em algumas as classes
 
 	public boolean getAtivo() {
@@ -90,5 +95,4 @@ public abstract class ProjetoComponente implements Serializable {
 	public void setTipo(TipoProjetoComponente tipo) {
 		this.tipo = tipo;
 	}
-
 }

@@ -11,7 +11,7 @@ public class ContaEmailIFPB extends ContaEmail {
 	public Membro autenticar(String login, String senha) {
 		if(!validarLogin(login))
 			return null;
-		return super.getConta().autenticar(login, senha);
+		return super.autenticar(login, senha);
 	}
 	
 	@Override

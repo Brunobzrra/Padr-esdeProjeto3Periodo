@@ -12,7 +12,7 @@ public class ContaEmailLivre extends ContaEmail {
 		senha = criptografarSenha(senha);
 		if (!validarLogin(login))
 			return null;
-		return super.getConta().autenticar(login, senha);
+		return super.autenticar(login, senha);
 	}
 	/**
 	 * metodo que criptografica a senha para segurança

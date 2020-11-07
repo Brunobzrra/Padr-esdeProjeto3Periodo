@@ -178,4 +178,28 @@ public class Membro extends ProjetoComponente implements Serializable {
 		return false;
 	}
 
+	public float getGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : participacoes) {
+			aux += projetoComponente.getGastoTotal();
+		}
+		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+	}
+
+	public float getCusteioReaisGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : participacoes) {
+			aux += projetoComponente.getCusteioReaisGastoTotal();
+		}
+		return aux;
+	}
+
+	public float getCapitalReaiGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : participacoes) {
+			aux += projetoComponente.getCapitalReaiGastoTotal();
+		}
+		return aux;
+	}
+
 }

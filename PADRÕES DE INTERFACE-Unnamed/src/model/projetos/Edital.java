@@ -29,7 +29,7 @@ public class Edital extends ProjetoComponente {
 	}
 
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if (item.getTipo()==TipoProjetoComponente.GRUPO || item.getTipo()==TipoProjetoComponente.PROJETO) {
+		if (item.getTipo() == TipoProjetoComponente.GRUPO || item.getTipo() == TipoProjetoComponente.PROJETO) {
 			for (ProjetoComponente projetoComponente : itens) {
 				if (item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");
@@ -130,6 +130,30 @@ public class Edital extends ProjetoComponente {
 			return true;
 		}
 		return false;
+	}
+
+	public float getGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getGastoTotal();
+		}
+		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+	}
+
+	public float getCusteioReaisGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCusteioReaisGastoTotal();
+		}
+		return aux;
+	}
+
+	public float getCapitalReaiGastoTotal() throws Exception {
+		float aux = 0;
+		for (ProjetoComponente projetoComponente : itens) {
+			aux += projetoComponente.getCapitalReaiGastoTotal();
+		}
+		return aux;
 	}
 
 }
