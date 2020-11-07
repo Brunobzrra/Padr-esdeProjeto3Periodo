@@ -41,6 +41,13 @@ public class Membro extends ProjetoComponente implements Serializable {
 		this.email = email;
 		this.setSenha(senha);
 		setTipo(TipoProjetoComponente.MEMBRO);
+		int indice = email.indexOf("@");
+		String dominio = email.substring(indice, email.length());
+		if (dominio.equals("@academico.ifpb.edu.br")) {
+			conta = new ContaEmailIFPB();
+		} else {
+			conta = new ContaEmailLivre();
+		}
 	}
 
 	public long getMatricula() {

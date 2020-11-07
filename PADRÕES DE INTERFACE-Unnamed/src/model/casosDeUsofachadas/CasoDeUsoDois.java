@@ -2,12 +2,14 @@ package model.casosDeUsofachadas;
 
 import java.util.Set;
 
+import javax.mail.Session;
+
 import model.autenticacao.ContaAutenticacaoProvedorEmailPOP3;
 import model.autenticacao.ContaAutenticacaoProvedorInterno;
-import model.autenticacao.ContaEmail;
-import model.autenticacao.ContaEmailIFPB;
-import model.autenticacao.ContaEmailLivre;
+import model.autenticacao.ContaBridge;
+
 import model.autenticacao.Membro;
+import model.autenticacao.RegistradorSessaoLogin;
 import model.autenticacao.TipoProvedorAutenticacao;
 import persistencia.xml.DAOXMLMembroConta;
 
@@ -16,48 +18,29 @@ public class CasoDeUsoDois {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	private Membro membro;
+	private RegistradorSessaoLogin registrador = RegistradorSessaoLogin.getInstance();
 
-	private ContaEmail conta;
-
-	public CasoDeUsoDois(long matricula) throws Exception {
-		Object[] mat = { matricula };
-		String[] atr = { "matricula" };
-		Set<Membro> membros = daoMembro.consultarAnd(atr, mat);
-		if (membros != null) {
-			Membro[] retorno = (Membro[]) membros.toArray();
-			membro = retorno[0];
+	public boolean fazerLogin(String login, String senha, String tipoProvedor) {
+		Object[] email = { login };
+		String[] nomeAtributo = { "email" };
+		Set<Membro> membroRecuperado = daoMembro.consultarAnd(nomeAtributo, email);
+		Membro[] membro = (Membro[]) membroRecuperado.toArray();
+		Membro antigo = membro[0];
+		ContaBridge contaBridge = null;
+		if (tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.POP3.toString())) {
+			contaBridge = new ContaAutenticacaoProvedorEmailPOP3();
 		} else {
-			throw new Exception("Membro não existente!");
+			contaBridge = new ContaAutenticacaoProvedorInterno();
 		}
-	}
-
-	public void selecionarFormaDeAutenticacao(String tipoDeAutenticacao) {
-		Membro membroValorAntigo = membro;
-		String email = membro.getEmail();
-		int indice = email.indexOf("@");
-		String dominio = email.substring(indice, email.length());
-		if (dominio.equals("@academico.ifpb.edu.br")) {
-			conta = new ContaEmailIFPB();
-		} else {
-			conta = new ContaEmailLivre();
+		membro[0].getConta().setImplementacaoContaBridge(contaBridge);
+		if (contaBridge.autenticar(login, senha) != null) {
+			daoMembro.atualizar(antigo, membro[0]);
+			registrador.registrarOline(membro[0]);
+			return true;
 		}
-		if (tipoDeAutenticacao.toLowerCase().equals(TipoProvedorAutenticacao.POP3.toString().toLowerCase())) {
-			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorEmailPOP3());
+		return false;
 
-		} else {
-			conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
-		}
-		membro.setConta(conta);
-		System.out.println(membro.getConta().toString());
-		daoMembro.atualizar(membroValorAntigo, membro);
 	}
 
-	public DAOXMLMembroConta getDaoMembro() {
-		return daoMembro;
-	}
-
-	public Membro getMembro() {
-		return membro;
-	}
 }
+
