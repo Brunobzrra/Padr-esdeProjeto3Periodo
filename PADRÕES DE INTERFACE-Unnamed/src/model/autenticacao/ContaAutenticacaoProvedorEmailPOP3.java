@@ -8,7 +8,7 @@ import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Store;
 
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 

@@ -7,7 +7,7 @@ import model.autenticacao.Membro;
 import model.casosDeUsofachadas.GrupoFachada;
 import model.projetos.Grupo;
 import model.projetos.Participacao;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 public class MainCasoDeUso3 {
 

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Set;
 
 import model.projetos.Edital;
-import persistenia.xml.DAOXMLEdital;
+import persistencia.xml.DAOXMLEdital;
 
 //caso de uso 8
 public class RelatorioFachada {

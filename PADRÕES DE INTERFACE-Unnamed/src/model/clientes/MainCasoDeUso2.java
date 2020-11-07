@@ -5,7 +5,7 @@ import java.util.Set;
 import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
 import model.casosDeUsofachadas.CasoDeUsoDoisAutenticacaoDeLogin;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 public class MainCasoDeUso2 {
 	public static void main(String[] args) {

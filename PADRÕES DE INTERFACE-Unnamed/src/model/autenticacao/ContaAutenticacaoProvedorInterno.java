@@ -2,7 +2,7 @@ package model.autenticacao;
 
 import java.util.Set;
 
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 public class ContaAutenticacaoProvedorInterno extends ContaBridge {
 /*

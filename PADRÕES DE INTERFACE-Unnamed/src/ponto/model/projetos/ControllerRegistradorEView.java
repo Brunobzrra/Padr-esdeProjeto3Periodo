@@ -18,8 +18,8 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
-import persistenia.xml.DAOXMLMembroConta;
-import persistenia.xml.DAOXMLProjetoParticipacao;
+import persistencia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 public class ControllerRegistradorEView {
 

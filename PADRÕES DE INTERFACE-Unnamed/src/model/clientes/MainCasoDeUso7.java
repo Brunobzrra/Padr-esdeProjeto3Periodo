@@ -6,7 +6,7 @@ import java.util.Set;
 import model.autenticacao.Membro;
 import model.casosDeUsofachadas.GerenciadorDeAdministradorFachada;
 import model.projetos.Participacao;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 public class MainCasoDeUso7 {
 	public static void main(String[] args) {

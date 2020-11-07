@@ -4,7 +4,7 @@ import java.util.Set;
 
 import model.autenticacao.Membro;
 import model.utilitarios.AutenticadorDePersistencia;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 //caso de uso 7
 public class GerenciadorDeAdministradorFachada {
 	private Membro administrador;

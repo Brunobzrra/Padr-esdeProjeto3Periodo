@@ -2,7 +2,7 @@ package model.casosDeUsofachadas;
 
 import model.autenticacao.Membro;
 import model.utilitarios.AutenticadorDePersistencia;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 //caso de uso 1
 public class CasoDeUsoUmCadastroFachada {

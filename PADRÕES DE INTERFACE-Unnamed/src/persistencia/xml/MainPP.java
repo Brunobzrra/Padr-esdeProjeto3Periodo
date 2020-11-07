@@ -1,4 +1,4 @@
-package persistenia.xml;
+package persistencia.xml;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

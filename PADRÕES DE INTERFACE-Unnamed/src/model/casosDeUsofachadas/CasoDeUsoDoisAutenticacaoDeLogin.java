@@ -9,7 +9,7 @@ import model.autenticacao.ContaEmailIFPB;
 import model.autenticacao.ContaEmailLivre;
 import model.autenticacao.Membro;
 import model.autenticacao.TipoProvedorAutenticacao;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 //caso de uso 2
 public class CasoDeUsoDoisAutenticacaoDeLogin {

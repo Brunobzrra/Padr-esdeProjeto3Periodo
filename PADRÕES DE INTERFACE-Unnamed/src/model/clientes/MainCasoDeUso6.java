@@ -7,7 +7,7 @@ import model.autenticacao.Membro;
 import model.casosDeUsofachadas.GerenciadorMembroFachada;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
-import persistenia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLMembroConta;
 
 public class MainCasoDeUso6 {
 	public static void main(String[] args) {

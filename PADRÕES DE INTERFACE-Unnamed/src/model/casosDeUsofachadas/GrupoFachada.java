@@ -6,7 +6,7 @@ import model.projetos.Grupo;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.AutenticadorDePersistencia;
-import persistenia.xml.DAOXMLGrupo;
+import persistencia.xml.DAOXMLGrupo;
 
 //caso de uso 3
 public class GrupoFachada extends ProjetoFachada {

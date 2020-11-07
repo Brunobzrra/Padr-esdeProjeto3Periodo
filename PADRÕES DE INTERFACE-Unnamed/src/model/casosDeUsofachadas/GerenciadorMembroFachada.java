@@ -10,8 +10,8 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.AutenticadorDePersistencia;
 import model.utilitarios.EnviarEmail;
-import persistenia.xml.DAOXMLMembroConta;
-import persistenia.xml.DAOXMLProjetoParticipacao;
+import persistencia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 6
 public class GerenciadorMembroFachada extends ProjetoFachada {

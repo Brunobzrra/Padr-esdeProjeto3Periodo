@@ -6,7 +6,7 @@ import model.projetos.Edital;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.AutenticadorDePersistencia;
-import persistenia.xml.DAOXMLEdital;
+import persistencia.xml.DAOXMLEdital;
 
 //caso de uso 4
 public class EditalFachada extends ProjetoFachada {

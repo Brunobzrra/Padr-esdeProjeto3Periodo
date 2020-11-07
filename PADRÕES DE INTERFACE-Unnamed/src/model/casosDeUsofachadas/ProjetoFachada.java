@@ -10,7 +10,7 @@ import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.AutenticadorDePersistencia;
-import persistenia.xml.DAOXMLProjetoParticipacao;
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 5
 public class ProjetoFachada {
