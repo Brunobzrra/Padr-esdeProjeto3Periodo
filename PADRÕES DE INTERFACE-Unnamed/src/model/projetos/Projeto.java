@@ -32,10 +32,11 @@ public class Projeto extends ProjetoComponente  {
 		this.aporteCapitalReais = aporteCapitalReais;
 		this.gastoExecutadoCusteioReais = gastoExecutadoCusteioReais;
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
+		setTipo(TipoProjetoComponente.MEMBRO);
 	}
 
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if(item instanceof Participacao) {
+		if(item.getTipo()==TipoProjetoComponente.PARTICIPACAO) {
 			for (ProjetoComponente projetoComponente : itens) {
 				if(item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");

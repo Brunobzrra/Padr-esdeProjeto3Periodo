@@ -1,30 +1,38 @@
 package model.casosDeUsofachadas;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import model.autenticacao.Membro;
-import model.utilitarios.AutenticadorDePersistencia;
 import persistencia.xml.DAOXMLMembroConta;
 
 //caso de uso 1
-public class CasoDeUsoUmCadastroFachada {
+public class CasoDeUsoUm {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public boolean cadastrarMembro(String nome, long matricula, String email, String senha, String senhaEmail) {
-		Membro membro = new Membro(matricula, nome, email, senha, senhaEmail);
-		membro.setAtivo(true);
-		if (daoMembro.isVazia()) {
-			membro.setAdministrador(true);
-		} else {
-			membro.setAdministrador(false);
+	public boolean cadastrarMembro(String nome, long matricula, String email, String senha) {
+		if(validarEmail(email)) {
+			Membro membro = new Membro(matricula, nome, email, senha);
+			membro.setAtivo(true);
+			if (daoMembro.isVazia()) {
+				membro.setAdministrador(true);
+			} else {
+				membro.setAdministrador(false);
+			}
+			System.out.println("membro cadastrado!");
+			return daoMembro.criar(membro);			
 		}
-		System.out.println("membro cadastrado!");
-		return daoMembro.criar(membro);
+		return false;
 	}
 
 	public void atualizarMembro(long matricula, String[] atributosQueroAtualizar, Object[] valores) throws Exception {
 		boolean atualizado = false;
-		Membro membroAtual = AutenticadorDePersistencia.verificarMembro(matricula);
-		Membro membro= membroAtual;
+		String[] atributo = { "matricula" };
+		Object[] valor = { matricula };
+		Membro membroAtual = daoMembro.consultarAnd(atributo, valor).iterator().next();
+
+		Membro membro = membroAtual;
 		for (int i = 0; i < atributosQueroAtualizar.length; i++) {
 			if (atributosQueroAtualizar[i].equals("nome")) {
 				membroAtual.setNome((String) valores[i]);
@@ -52,6 +60,19 @@ public class CasoDeUsoUmCadastroFachada {
 
 		}
 
+	}
+
+	private boolean validarEmail(String email) {
+		boolean isEmailIdValid = false;
+		if (email != null && email.length() > 0) {
+			String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+			Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+			Matcher matcher = pattern.matcher(email);
+			if (matcher.matches()) {
+				isEmailIdValid = true;
+			}
+		}
+		return isEmailIdValid;
 	}
 
 }

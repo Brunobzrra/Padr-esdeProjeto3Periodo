@@ -9,24 +9,23 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
-import model.utilitarios.AutenticadorDePersistencia;
 import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 5
-public class ProjetoFachada {
+public class CasoDeUsoCinco {
 	private Membro membro;
 	private Participacao participacao;
 	private DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 
 	private Projeto projeto;
 
-	public ProjetoFachada(Membro membro, Participacao participacao) throws Exception {
+	public CasoDeUsoCinco(Membro membro, Participacao participacao) throws Exception {
 		this.membro = membro;
 		this.participacao = participacao;
 		membro.adicionar(participacao);
 	}
 
-	public ProjetoFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+	public CasoDeUsoCinco(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
 		membro=AutenticadorDePersistencia.verificarMembro(matricula);		
 		participacao=AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,

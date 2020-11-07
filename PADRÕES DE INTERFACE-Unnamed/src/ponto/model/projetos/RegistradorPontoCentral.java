@@ -16,6 +16,7 @@ import model.chainOfResponsibility.AvaliadorDeRegistro;
 import model.chainOfResponsibility.AvaliadorPontoSemEntradaeOuSaida;
 import model.chainOfResponsibility.AvaliadorPontosComIntervalosConflitantes;
 import model.chainOfResponsibility.AvaliadorPontosForaParticipacaoPrevisao;
+import model.chainOfResponsibility.AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos;
 import model.chainOfResponsibility.AvaliadorPontosInvalidosComJustificativaNaoAceita;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
@@ -160,7 +161,7 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 			throw new Exception("Este membro não estar online!");
 		}
 		AvaliadorDeRegistro cadeia = new AvaliadorPontosComIntervalosConflitantes(
-				new AvaliadorPontosForaParticipacaoPrevisao(new AvaliadorPontoSemEntradaeOuSaida(
+				new AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos(new AvaliadorPontoSemEntradaeOuSaida(
 						new AvaliadorPontosInvalidosComJustificativaNaoAceita(null))));
 		return cadeia.getPontosInvalidos(membro);
 	}

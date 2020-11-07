@@ -11,7 +11,7 @@ import model.projetos.Edital;
 import persistencia.xml.DAOXMLEdital;
 
 //caso de uso 8
-public class RelatorioFachada {
+public class CasoDeUsoOito {
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
 	/**
 	 * gera instring equivalente a um html

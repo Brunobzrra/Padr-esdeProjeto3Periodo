@@ -12,7 +12,7 @@ import model.autenticacao.TipoProvedorAutenticacao;
 import persistencia.xml.DAOXMLMembroConta;
 
 //caso de uso 2
-public class CasoDeUsoDoisAutenticacaoDeLogin {
+public class CasoDeUsoDois {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
@@ -20,7 +20,7 @@ public class CasoDeUsoDoisAutenticacaoDeLogin {
 
 	private ContaEmail conta;
 
-	public CasoDeUsoDoisAutenticacaoDeLogin(long matricula) throws Exception {
+	public CasoDeUsoDois(long matricula) throws Exception {
 		Object[] mat = { matricula };
 		String[] atr = { "matricula" };
 		Set<Membro> membros = daoMembro.consultarAnd(atr, mat);

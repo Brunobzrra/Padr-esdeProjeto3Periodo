@@ -3,14 +3,13 @@ package model.casosDeUsofachadas;
 import java.util.Set;
 
 import model.autenticacao.Membro;
-import model.utilitarios.AutenticadorDePersistencia;
 import persistencia.xml.DAOXMLMembroConta;
 //caso de uso 7
-public class GerenciadorDeAdministradorFachada {
+public class CasoDeUsoSeisSete {
 	private Membro administrador;
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public GerenciadorDeAdministradorFachada(long matriculaDoAdministrador) throws Exception {
+	public CasoDeUsoSeisSete(long matriculaDoAdministrador) throws Exception {
 		this.administrador = AutenticadorDePersistencia.verificarMembro(matriculaDoAdministrador);
 	}
 

@@ -19,7 +19,9 @@ public abstract class ProjetoComponente implements Serializable {
 	private boolean ativo = true;
 
 	private ProjetoComponente projetoPai;
-
+	
+	private TipoProjetoComponente tipo;
+	
 	public ProjetoComponente getProjetoPai() {
 		return projetoPai;
 	}
@@ -48,7 +50,7 @@ public abstract class ProjetoComponente implements Serializable {
 	public abstract void mover(ProjetoComponente integracao) throws Exception;
 
 	public abstract float getCapitalReaiNaoGastoTotal() throws Exception;
-
+	
 	// metodos que precisão ser não abstratos pois só estarão em algumas as classes
 
 	public boolean getAtivo() {
@@ -79,6 +81,14 @@ public abstract class ProjetoComponente implements Serializable {
 				item.desativar();
 			}
 		}
+	}
+
+	public TipoProjetoComponente getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoProjetoComponente tipo) {
+		this.tipo = tipo;
 	}
 
 }

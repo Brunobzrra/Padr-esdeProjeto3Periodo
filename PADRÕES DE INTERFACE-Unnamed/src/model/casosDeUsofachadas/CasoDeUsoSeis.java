@@ -8,18 +8,17 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
-import model.utilitarios.AutenticadorDePersistencia;
 import model.utilitarios.EnviarEmail;
 import persistencia.xml.DAOXMLMembroConta;
 import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 6
-public class GerenciadorMembroFachada extends ProjetoFachada {
+public class CasoDeUsoSeis{
 
 	private DAOXMLProjetoParticipacao DAOProjPart = getDaoProjetoParticipacao();
 	private DAOXMLMembroConta daoMembroConta = new DAOXMLMembroConta();
 
-	public GerenciadorMembroFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+	public CasoDeUsoSeis(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador, String nomeDoProjeto) throws Exception {
 		super(AutenticadorDePersistencia.verificarMembro(matricula),
 				AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,

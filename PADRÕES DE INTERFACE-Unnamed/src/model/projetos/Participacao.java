@@ -60,6 +60,7 @@ public class Participacao extends ProjetoComponente {
 		this.qtdMesesCusteados = qtdMesesCusteados;
 		this.qtdMesesPagos = qtdMesesPagos;
 		this.coordenador = coordenador;
+		setTipo(TipoProjetoComponente.PARTICIPACAO);
 	}
 
 	@Override

@@ -5,14 +5,13 @@ import java.util.Date;
 import model.projetos.Grupo;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
-import model.utilitarios.AutenticadorDePersistencia;
 import persistencia.xml.DAOXMLGrupo;
 
 //caso de uso 3
-public class GrupoFachada extends ProjetoFachada {
+public class CasoDeUsoTres extends ProjetoFachada {
 	private DAOXMLGrupo daoGrupo = new DAOXMLGrupo();
 
-	public GrupoFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+	public CasoDeUsoTres(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
 		super(AutenticadorDePersistencia.verificarMembro(matricula),
 				AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,

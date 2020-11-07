@@ -5,15 +5,14 @@ import java.util.Date;
 import model.projetos.Edital;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
-import model.utilitarios.AutenticadorDePersistencia;
 import persistencia.xml.DAOXMLEdital;
 
 //caso de uso 4
-public class EditalFachada extends ProjetoFachada {
+public class CasoDeUsoQuatro {
 
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
 
-	public EditalFachada(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
+	public CasoDeUsoQuatro(long matricula, Date dataInicio, Date dataTermino, float aporteCusteioMensalReais,
 			short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador) throws Exception {
 		super(AutenticadorDePersistencia.verificarMembro(matricula),
 				AutenticadorDePersistencia.criarParticipacao(matricula, dataInicio, dataTermino,

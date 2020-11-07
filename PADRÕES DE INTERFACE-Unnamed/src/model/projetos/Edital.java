@@ -20,10 +20,18 @@ public class Edital extends ProjetoComponente {
 	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
+	public Edital(String nome, Date dataInicio, Date dataTermino) {
+		super();
+		this.nome = nome;
+		this.dataInicio = dataInicio;
+		this.dataTermino = dataTermino;
+		setTipo(TipoProjetoComponente.EDITAL);
+	}
+
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if(item instanceof Grupo || item instanceof Projeto) {
+		if (item.getTipo()==TipoProjetoComponente.GRUPO || item.getTipo()==TipoProjetoComponente.PROJETO) {
 			for (ProjetoComponente projetoComponente : itens) {
-				if(item.equals(projetoComponente)) {
+				if (item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
@@ -77,13 +85,13 @@ public class Edital extends ProjetoComponente {
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		modificarAtivo(itens, this,true);
+		modificarAtivo(itens, this, true);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		modificarAtivo(itens, this,false);
+		modificarAtivo(itens, this, false);
 
 	}
 

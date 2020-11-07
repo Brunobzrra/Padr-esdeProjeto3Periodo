@@ -4,9 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import model.projetos.ProjetoComponente;
-import model.projetos.Grupo;
+import model.projetos.TipoProjetoComponente;
 import model.projetos.Participacao;
-import model.projetos.Projeto;
 
 public class Membro extends ProjetoComponente implements Serializable {
 	/**
@@ -36,11 +35,12 @@ public class Membro extends ProjetoComponente implements Serializable {
 		return participacoes;
 	}
 
-	public Membro(long matricula, String nome, String email, String senha, String senhaEmail) {
+	public Membro(long matricula, String nome, String email, String senha) {
 		this.matricula = matricula;
 		this.nome = nome;
 		this.email = email;
 		this.setSenha(senha);
+		setTipo(TipoProjetoComponente.MEMBRO);
 	}
 
 	public long getMatricula() {
@@ -95,7 +95,7 @@ public class Membro extends ProjetoComponente implements Serializable {
 	 * adciona somente participação
 	 */
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if(item instanceof Participacao ) {
+		if(item.getTipo()==TipoProjetoComponente.PARTICIPACAO ) {
 			for (ProjetoComponente projetoComponente : participacoes) {
 				if(item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");

@@ -3,8 +3,6 @@ package model.projetos;
 import java.util.ArrayList;
 import java.util.Date;
 
-import model.autenticacao.Membro;
-
 public class Grupo extends ProjetoComponente {
 
 	/**
@@ -22,10 +20,18 @@ public class Grupo extends ProjetoComponente {
 	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
+	public Grupo(String nome, Date dataCriacao, String linkCNPq) {
+		super();
+		this.nome = nome;
+		this.dataCriacao = dataCriacao;
+		this.linkCNPq = linkCNPq;
+		setTipo(TipoProjetoComponente.GRUPO);
+	}
+
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if(item instanceof Membro || item instanceof Projeto) {
+		if (item.getTipo() == TipoProjetoComponente.MEMBRO || item.getTipo() == TipoProjetoComponente.PROJETO) {
 			for (ProjetoComponente projetoComponente : itens) {
-				if(item.equals(projetoComponente)) {
+				if (item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
@@ -79,13 +85,13 @@ public class Grupo extends ProjetoComponente {
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		modificarAtivo(itens, this,true);
+		modificarAtivo(itens, this, true);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		modificarAtivo(itens, this,false);
+		modificarAtivo(itens, this, false);
 	}
 
 	// getters e setters
