@@ -171,7 +171,7 @@ public class DAOXMLProjetoParticipacao {
 									}
 								}
 							} else if (atributos[j].equals("gastoExecutadoCusteioReais")) {
-								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCusteioReais();
+								Float valorRecuperado = projetoAuxiliar.getCusteioReaisGastoTotal();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
 										confirmacoes[0] = true;
@@ -193,7 +193,7 @@ public class DAOXMLProjetoParticipacao {
 									}
 								}
 							} else if (atributos[j].equals("gastoExecutadoCapitalReais")) {
-								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCapitalReais();
+								Float valorRecuperado = projetoAuxiliar.getCapitalReaiGastoTotal();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
 										confirmacoes[0] = true;
@@ -317,7 +317,7 @@ public class DAOXMLProjetoParticipacao {
 									}
 								}
 							} else if (atributos[j].equals("gastoExecutadoCusteioReais") && adicionar == false) {
-								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCusteioReais();
+								Float valorRecuperado = projetoAuxiliar.getCusteioReaisGastoTotal();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
 										adicionar = true;
@@ -339,7 +339,7 @@ public class DAOXMLProjetoParticipacao {
 									}
 								}
 							} else if (atributos[j].equals("gastoExecutadoCapitalReais") && adicionar == false) {
-								Float valorRecuperado = projetoAuxiliar.getGastoExecutadoCapitalReais();
+								Float valorRecuperado = projetoAuxiliar.getCapitalReaiGastoTotal();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
 										adicionar = true;

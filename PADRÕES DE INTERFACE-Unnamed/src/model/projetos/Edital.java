@@ -132,7 +132,7 @@ public class Edital extends ProjetoComponente {
 		return false;
 	}
 
-	public float getGastoTotal() throws Exception {
+	public float getGastoTotal(){
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getGastoTotal();
@@ -140,7 +140,7 @@ public class Edital extends ProjetoComponente {
 		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
 	}
 
-	public float getCusteioReaisGastoTotal() throws Exception {
+	public float getCusteioReaisGastoTotal(){
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCusteioReaisGastoTotal();
@@ -148,7 +148,7 @@ public class Edital extends ProjetoComponente {
 		return aux;
 	}
 
-	public float getCapitalReaiGastoTotal() throws Exception {
+	public float getCapitalReaiGastoTotal(){
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCapitalReaiGastoTotal();

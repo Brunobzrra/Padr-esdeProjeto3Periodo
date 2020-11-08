@@ -5,11 +5,11 @@ import java.util.Set;
 import model.autenticacao.Membro;
 import persistencia.xml.DAOXMLMembroConta;
 //caso de uso 7
-public class CasoDeUsoSeisSete {
+public class CasoDeUsoSete {
 	private Membro administrador;
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public CasoDeUsoSeisSete(long matriculaDoAdministrador) throws Exception {
+	public CasoDeUsoSete(long matriculaDoAdministrador) throws Exception {
 		this.administrador = AutenticadorDePersistencia.verificarMembro(matriculaDoAdministrador);
 	}
 

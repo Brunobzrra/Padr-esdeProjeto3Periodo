@@ -26,34 +26,19 @@ public class CasoDeUsoUm {
 		return false;
 	}
 
-	public void atualizarMembro(long matricula, String[] atributosQueroAtualizar, Object[] valores) throws Exception {
+	public void atualizarMembro(long matricula,long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova) throws Exception {
 		boolean atualizado = false;
 		String[] atributo = { "matricula" };
 		Object[] valor = { matricula };
 		Membro membroAtual = daoMembro.consultarAnd(atributo, valor).iterator().next();
 
-		Membro membro = membroAtual;
-		for (int i = 0; i < atributosQueroAtualizar.length; i++) {
-			if (atributosQueroAtualizar[i].equals("nome")) {
-				membroAtual.setNome((String) valores[i]);
-				atualizado = true;
-			}
-			if (atributosQueroAtualizar[i].equals("ativo")) {
-				membroAtual.setAtivo((boolean) valores[i]);
-				atualizado = true;
-			}
-			if (atributosQueroAtualizar[i].equals("email")) {
-				membroAtual.setEmail((String) valores[i]);
-				atualizado = true;
-			}
-			if (atributosQueroAtualizar[i].equals("senha")) {
-				membroAtual.setSenha((String) valores[i]);
-				atualizado = true;
-			}
-
-		}
+		Membro membroAtualizado = membroAtual;
+		membroAtualizado.setMatricula(matriculaNovo);
+		membroAtualizado.setNome(nomeNovo);
+		membroAtualizado.setEmail(emailNovo);
+		membroAtualizado.setSenha(senhaNova);
 		if (atualizado) {
-			daoMembro.atualizar(membro, membroAtual);
+			daoMembro.atualizar(membroAtual, membroAtualizado);
 			System.out.println("Membro atualizado!");
 		} else {
 			throw new Exception("O membro nao pode ser atualizado.");

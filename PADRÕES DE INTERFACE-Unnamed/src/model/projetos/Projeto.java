@@ -138,7 +138,7 @@ public class Projeto extends ProjetoComponente  {
 		return false;
 	}
 
-	public float getGastoTotal() throws Exception {
+	public float getGastoTotal(){
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getGastoTotal();
@@ -146,7 +146,7 @@ public class Projeto extends ProjetoComponente  {
 		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
 	}
 
-	public float getCusteioReaisGastoTotal() throws Exception {
+	public float getCusteioReaisGastoTotal(){
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCusteioReaisGastoTotal();
@@ -154,7 +154,7 @@ public class Projeto extends ProjetoComponente  {
 		return gastoExecutadoCusteioReais+aux;
 	}
 
-	public float getCapitalReaiGastoTotal() throws Exception {
+	public float getCapitalReaiGastoTotal(){
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCapitalReaiGastoTotal();
