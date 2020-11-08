@@ -15,6 +15,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.projetos.Edital;
+import model.projetos.Projeto;
 
 public class DAOXMLEdital {
 
@@ -44,6 +45,19 @@ public class DAOXMLEdital {
 			return true;
 		}
 		return false;
+	}
+	/**
+	 * este metodo retorna o objeto por indentificador
+	 * @param nome
+	 * @return
+	 */
+	public Edital recuperarPorIndentificador(String nome) {
+		for (int i = 0; i < persistidos.size(); i++) {
+			if(persistidos.get(i).getNome().equals(nome)){
+				return persistidos.get(i);
+			}
+		}
+		return null;
 	}
 	/*
 	 * Metodo que ira procurar uma chave de um edital especifico no HASHSET de persistidos, returna o indice

@@ -24,12 +24,10 @@ public class CasoDeUsoQuatro {
 		System.out.println("Edital adcionado com sucesso!");
 	}
 
-	public void atualizarEdital(String nomeEdital,String novoNome,Date dataInicio,Date dataTermino, Object[] valores, long matricula)
+	public void atualizarEdital(String nomeEdital,String novoNome,Date dataInicio,Date dataTermino, long matricula)
 			throws Exception {
-		String[] atributo = { "nome" };
-		Object[] valor = { nomeEdital };
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
-		Edital editalAntigo = daoEdital.consultarAnd(atributo, valor).iterator().next();
+		Edital editalAntigo = daoEdital.recuperarPorIndentificador(nomeEdital);
 		Edital editalAtualizado = editalAntigo;
 		editalAtualizado.setNome(novoNome);
 		editalAtualizado.setDataInicio(dataInicio);
@@ -45,9 +43,7 @@ public class CasoDeUsoQuatro {
 	public void removerEdital(String nomeEdital, long matricula) throws Exception {
 		// TODO Auto-generated method stub
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
-		String[] atributo = { "nome" };
-		Object[] valor = { nomeEdital };
-		Edital edital = daoEdital.consultarAnd(atributo, valor).iterator().next();
+		Edital edital = daoEdital.recuperarPorIndentificador(nomeEdital);
 		if (membro != null) {
 			for (ProjetoComponente projetoComponente : edital.getItens()) {
 				if (projetoComponente.getTipo() == TipoProjetoComponente.PROJETO) {

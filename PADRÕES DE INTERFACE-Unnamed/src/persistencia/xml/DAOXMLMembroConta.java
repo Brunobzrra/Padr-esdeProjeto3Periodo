@@ -14,6 +14,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
+import model.projetos.Projeto;
 
 public class DAOXMLMembroConta {
 
@@ -32,6 +33,19 @@ public class DAOXMLMembroConta {
 			return true;
 		}
 		return false;
+	}
+	/**
+	 * este metodo retorna o objeto por indentificador
+	 * @param nome
+	 * @return
+	 */
+	public Membro recuperarPorIndentificador(long matricula) {
+		for (int i = 0; i < persistidos.size(); i++) {
+			if(persistidos.get(i).getMatricula()==matricula){
+				return persistidos.get(i);
+			}
+		}
+		return null;
 	}
 	public Membro isAdmimPelaMatricula(long matricula) {
 		Object[] valor = { matricula };

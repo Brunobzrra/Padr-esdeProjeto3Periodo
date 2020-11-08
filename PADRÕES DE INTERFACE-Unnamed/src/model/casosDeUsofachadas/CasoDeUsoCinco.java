@@ -6,7 +6,6 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
-import model.projetos.TipoProjetoComponente;
 import persistencia.xml.DAOXMLMembroConta;
 import persistencia.xml.DAOXMLProjetoParticipacao;
 
@@ -15,29 +14,11 @@ public class CasoDeUsoCinco {
 	private DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-//	public Projeto criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
-//			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais) throws Exception {
-//
-//			System.out.println("Projeto criado com sucesso!");
-//			return projeto;
-//		}
-//		throw new Exception("Projeto já existente!");
-//	}
-//	
-//	public void atualizarDado(String nomeDoProjeto,String atributoASerAtualizado, Object novoDado, Object dadoAntigo) {
-//		
-//			System.out.println("Projeto atualizado com sucesso!");
-//			daoProjetoParticipacao.atualizar(projeto, auxiliar);
-//			
-//		}
-//	}
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais, long matricula,
 			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador)
 			throws Exception {
-		String[] atributos = { "matricula" };
-		Object[] valor = { matricula };
-		Membro cordenadorDoProjeto = daoMembro.consultarAnd(atributos, valor).iterator().next();
+		Membro cordenadorDoProjeto = daoMembro.recuperarPorIndentificador(matricula);
 		Participacao participacaoProjeto = new Participacao(new Date(System.currentTimeMillis()),
 				aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos, true);
 		Projeto projeto = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
@@ -50,10 +31,7 @@ public class CasoDeUsoCinco {
 
 	// olhem esse metodo
 	public void atualizarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais) {
-
-		String[] atributosProjeto = { "nome" };
-		Object[] valorProjeto = { nome };
-		Projeto projeto = daoProjetoParticipacao.consultarAnd(atributosProjeto, valorProjeto).iterator().next();
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nome);
 		Projeto projetoAntigo = projeto;
 		for (ProjetoComponente participacaoDoFor : projeto.getItens()) {
 			Participacao participacao = (Participacao) participacaoDoFor;
@@ -69,9 +47,7 @@ public class CasoDeUsoCinco {
 	}
 
 	public void removerProjeto(String nomeDoProjeto) throws Exception {
-		String[] atributos = { "nome" };
-		Object[] valor = { nomeDoProjeto };
-		Projeto projeto = daoProjetoParticipacao.consultarAnd(atributos, valor).iterator().next();
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
 		for (ProjetoComponente participacaoDaVez : projeto.getItens()) {
 			Participacao participacao = (Participacao) participacaoDaVez;
 			Membro membro = participacao.getMembro();

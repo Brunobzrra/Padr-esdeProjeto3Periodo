@@ -2,8 +2,6 @@ package model.casosDeUsofachadas;
 
 import java.util.Set;
 
-import javax.mail.Session;
-
 import model.autenticacao.ContaAutenticacaoProvedorEmailPOP3;
 import model.autenticacao.ContaAutenticacaoProvedorInterno;
 import model.autenticacao.ContaBridge;

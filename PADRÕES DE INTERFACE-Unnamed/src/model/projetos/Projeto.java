@@ -2,6 +2,8 @@ package model.projetos;
 
 import java.util.ArrayList;
 
+import model.autenticacao.Membro;
+
 public class Projeto extends ProjetoComponente {
 
 	/**
@@ -33,7 +35,7 @@ public class Projeto extends ProjetoComponente {
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 		setTipo(TipoProjetoComponente.MEMBRO);
 	}
-
+	
 	public void adicionar(ProjetoComponente item) throws Exception {
 		if (item.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
 			for (ProjetoComponente projetoComponente : itens) {
@@ -137,7 +139,24 @@ public class Projeto extends ProjetoComponente {
 		}
 		return false;
 	}
-
+	public Membro getCordenador() {
+		for (ProjetoComponente projetoComponente : itens) {
+			Participacao participacao= (Participacao) projetoComponente;
+			if(participacao.isCoordenador()) {
+				return participacao.getMembro();
+			}
+		}
+		return null;
+	}
+	public Participacao getMembro(long matricula) {
+		for (ProjetoComponente projetoComponente : itens) {
+			Participacao participacao= (Participacao) projetoComponente;
+			if(participacao.getMembro().getMatricula()==matricula) {
+				return participacao;
+			}
+		}
+		return null;
+	}
 	public float getGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {

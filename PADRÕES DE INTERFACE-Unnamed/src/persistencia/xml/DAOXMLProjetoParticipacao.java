@@ -42,6 +42,19 @@ public class DAOXMLProjetoParticipacao {
 		}
 		return false;
 	}
+	/**
+	 * este metodo retorna o objeto por indentificador
+	 * @param nome
+	 * @return
+	 */
+	public Projeto recuperarPorIndentificador(String nome) {
+		for (int i = 0; i < persistidos.size(); i++) {
+			if(persistidos.get(i).getNome().equals(nome)){
+				return persistidos.get(i);
+			}
+		}
+		return null;
+	}
 	/*
 	 * Metodo que ira procurar uma chave de um projeto especifico no HASHSET de persistidos, returna o indice
 	 * que o projeto se encontra no HASHSET

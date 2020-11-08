@@ -1,7 +1,5 @@
 package model.casosDeUsofachadas;
 
-import java.util.Set;
-
 import model.autenticacao.Membro;
 import model.projetos.Grupo;
 
@@ -27,10 +25,8 @@ public class CasoDeUsoTres {
 
 	public boolean removerGrupo(long matricula, String linkCNPq) {
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
-		Object[] valor = { linkCNPq };
-		String[] nomeAtributo = { "linkCNPq" };
 		if (membro != null) {
-			Grupo grupoRecuperado = daoGrupo.consultarAnd(nomeAtributo, valor).iterator().next();
+			Grupo grupoRecuperado = daoGrupo.recuperarPorIndentificador(linkCNPq);
 			if (grupoRecuperado.getItens().isEmpty()) {
 				daoGrupo.remover(grupoRecuperado);
 				return true;
@@ -39,12 +35,10 @@ public class CasoDeUsoTres {
 		return false;
 	}
 	//tirar duvida sobre este metodo
-	public boolean atualizarrGrupo(long matricula, String nome, String linkCNPq, String nomeNovo, String linkCNPqNovo) {
+	public boolean atualizarrGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo) {
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
-		Object[] valor = { nome, linkCNPq };
-		String[] nomeAtributo = { "nome", "linkCNPq" };
 		if (membro != null) {
-			Grupo grupoRecuperado = daoGrupo.consultarAnd(nomeAtributo, valor).iterator().next();
+			Grupo grupoRecuperado = daoGrupo.recuperarPorIndentificador(linkCNPq);
 			Grupo grupoAntigo = grupoRecuperado;
 			grupoRecuperado.setLinkCNPq(nomeNovo);
 			grupoRecuperado.setNome(nomeNovo);

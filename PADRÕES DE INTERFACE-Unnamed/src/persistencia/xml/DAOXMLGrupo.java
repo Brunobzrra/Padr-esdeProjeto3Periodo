@@ -42,6 +42,19 @@ public class DAOXMLGrupo {
 		}
 		return false;
 	}
+	/**
+	 * este metodo retorna o objeto por indentificador
+	 * @param nome
+	 * @return
+	 */
+	public Grupo recuperarPorIndentificador(String linkCNPq) {
+		for (int i = 0; i < persistidos.size(); i++) {
+			if(persistidos.get(i).getLinkCNPq().equals(linkCNPq)){
+				return persistidos.get(i);
+			}
+		}
+		return null;
+	}
 	/*
 	 * Metodo que ira procurar uma chave de um grupo especifico no HASHSET de persistidos, returna o indice
 	 * que o membro se encontra no HASHSET

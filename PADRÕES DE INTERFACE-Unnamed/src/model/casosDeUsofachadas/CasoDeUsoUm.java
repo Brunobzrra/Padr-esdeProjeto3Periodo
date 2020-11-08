@@ -28,9 +28,7 @@ public class CasoDeUsoUm {
 
 	public void atualizarMembro(long matricula,long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova) throws Exception {
 		boolean atualizado = false;
-		String[] atributo = { "matricula" };
-		Object[] valor = { matricula };
-		Membro membroAtual = daoMembro.consultarAnd(atributo, valor).iterator().next();
+		Membro membroAtual = daoMembro.recuperarPorIndentificador(matricula);
 
 		Membro membroAtualizado = membroAtual;
 		membroAtualizado.setMatricula(matriculaNovo);

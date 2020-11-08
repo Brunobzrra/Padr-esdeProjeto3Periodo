@@ -144,14 +144,13 @@ public class ControllerRegistradorEView {
 	}
 
 	public static void main(String[] args) {
-		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "1212",
-				"unnamed!");
+		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "1212");
 		ContaEmail conta = new ContaEmailLivre();
 		conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
 		joseClaudiu.setConta(conta);
 		joseClaudiu.setAtivo(true);
 		joseClaudiu.setAdministrador(true);
-		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()), new Date(03 / 12 / 2020),
+		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()),
 				Float.parseFloat("0"), (short) 0, (short) 0, true);
 		participacao.setMembro(joseClaudiu);
 		try {
