@@ -2,8 +2,7 @@ package model.projetos;
 
 import java.util.ArrayList;
 
-public class Projeto extends ProjetoComponente  {
-
+public class Projeto extends ProjetoComponente {
 
 	/**
 	 * 
@@ -11,7 +10,7 @@ public class Projeto extends ProjetoComponente  {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * coleção de membro
+	 * coleção de participacao
 	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
@@ -36,9 +35,9 @@ public class Projeto extends ProjetoComponente  {
 	}
 
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if(item.getTipo()==TipoProjetoComponente.PARTICIPACAO) {
+		if (item.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
 			for (ProjetoComponente projetoComponente : itens) {
-				if(item.equals(projetoComponente)) {
+				if (item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
@@ -64,31 +63,31 @@ public class Projeto extends ProjetoComponente  {
 	@Override
 	public void ativar() {
 		// TODO Auto-generated method stub
-		modificarAtivo(itens, this,true);
+		modificarAtivo(itens, this, true);
 	}
 
 	@Override
 	public void desativar() {
 		// TODO Auto-generated method stub
-		modificarAtivo(itens, this,false);
+		modificarAtivo(itens, this, false);
 	}
 
 	@Override
 	public float getCustoTotal() throws Exception {
-		float valorFinal= 0;
+		float valorFinal = 0;
 		for (ProjetoComponente projetoComponente : itens) {
-			valorFinal+=projetoComponente.getCustoTotal();
+			valorFinal += projetoComponente.getCustoTotal();
 		}
 		return valorFinal;
 	}
 
 	@Override
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
-		float valorFinal= 0;
+		float valorFinal = 0;
 		for (ProjetoComponente projetoComponente : itens) {
-			valorFinal+=projetoComponente.getCapitalReaiNaoGastoTotal();
+			valorFinal += projetoComponente.getCapitalReaiNaoGastoTotal();
 		}
-		return valorFinal+(aporteCusteioReais-gastoExecutadoCusteioReais-valorFinal);
+		return valorFinal + (aporteCusteioReais - gastoExecutadoCusteioReais - valorFinal);
 	}
 
 	public float getCapitalReaiNaoGastoTotal() throws Exception {
@@ -131,6 +130,7 @@ public class Projeto extends ProjetoComponente  {
 	public void setGastoExecutadoCapitalReais(float gastoExecutadoCapitalReais) {
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 	}
+
 	public boolean equals(Projeto projeto) {
 		if (projeto.getNome().equals(nome)) {
 			return true;
@@ -138,27 +138,28 @@ public class Projeto extends ProjetoComponente  {
 		return false;
 	}
 
-	public float getGastoTotal(){
+	public float getGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getGastoTotal();
 		}
-		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+		return aux + getCusteioReaisGastoTotal() + getCapitalReaiGastoTotal();
 	}
 
-	public float getCusteioReaisGastoTotal(){
+	public float getCusteioReaisGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCusteioReaisGastoTotal();
 		}
-		return gastoExecutadoCusteioReais+aux;
+		return gastoExecutadoCusteioReais + aux;
 	}
 
-	public float getCapitalReaiGastoTotal(){
+	public float getCapitalReaiGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCapitalReaiGastoTotal();
 		}
-		return gastoExecutadoCapitalReais+aux;
+		return gastoExecutadoCapitalReais + aux;
 	}
+
 }

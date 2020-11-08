@@ -51,11 +51,11 @@ public class Participacao extends ProjetoComponente {
 		setAtivo(true);
 	}
 
-	public Participacao(Date dataInicio, Date dataTermino, float aporteCusteioMensalReais, short qtdMesesCusteados,
-			short qtdMesesPagos, boolean coordenador) {
+	public Participacao(Date dataInicio, float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos,
+			boolean coordenador) {
 		super();
 		this.dataInicio = dataInicio;
-		this.dataTermino = dataTermino;
+
 		this.aporteCusteioMensalReais = aporteCusteioMensalReais;
 		this.qtdMesesCusteados = qtdMesesCusteados;
 		this.qtdMesesPagos = qtdMesesPagos;
@@ -116,7 +116,7 @@ public class Participacao extends ProjetoComponente {
 	}
 
 	public void adicionar(ProjetoComponente item) throws Exception {
-	throw new Exception("Este item não adciona!");
+		throw new Exception("Este item não adciona!");
 	}
 
 	@Override
@@ -206,15 +206,15 @@ public class Participacao extends ProjetoComponente {
 		return membro.getNome();
 	}
 
-	public float getGastoTotal(){
-		return getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+	public float getGastoTotal() {
+		return getCusteioReaisGastoTotal() + getCapitalReaiGastoTotal();
 	}
 
-	public float getCusteioReaisGastoTotal(){
-		return aporteCusteioMensalReais*qtdMesesPagos;
+	public float getCusteioReaisGastoTotal() {
+		return aporteCusteioMensalReais * qtdMesesPagos;
 	}
 
-	public float getCapitalReaiGastoTotal(){
+	public float getCapitalReaiGastoTotal() {
 		return 0;
 	}
 }
