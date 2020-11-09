@@ -11,22 +11,26 @@ public class CasoDeUsoUm {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public boolean cadastrarMembro(String nome, long matricula, String email, String senha) {
-		if(validarEmail(email)) {
-			Membro membro = new Membro(matricula, nome, email, senha);
-			membro.setAtivo(true);
+	public boolean cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
+		if (validarEmail(email)) {
+			Membro membro;
+			if (nome != null && email != null && senha != null) {
+				membro = new Membro(matricula, nome, email, senha);
+			} else {
+				throw new Exception("Dados inválidos!");
+			}
 			if (daoMembro.isVazia()) {
 				membro.setAdministrador(true);
 			} else {
 				membro.setAdministrador(false);
 			}
-			System.out.println("membro cadastrado!");
-			return daoMembro.criar(membro);			
+			return daoMembro.criar(membro);
 		}
 		return false;
 	}
 
-	public void atualizarMembro(long matricula,long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova) throws Exception {
+	public void atualizarMembro(long matricula, long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova)
+			throws Exception {
 		boolean atualizado = false;
 		Membro membroAtual = daoMembro.recuperarPorIndentificador(matricula);
 

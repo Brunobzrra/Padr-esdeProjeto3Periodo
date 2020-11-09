@@ -4,17 +4,18 @@ import java.util.Set;
 
 import model.autenticacao.Membro;
 import persistencia.xml.DAOXMLMembroConta;
+
 //caso de uso 7
 public class CasoDeUsoSete {
 	private Membro administrador;
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
 	public CasoDeUsoSete(long matriculaDoAdministrador) throws Exception {
-		this.administrador = AutenticadorDePersistencia.verificarMembro(matriculaDoAdministrador);
+		administrador = daoMembro.isAdmimPelaMatricula(matriculaDoAdministrador);
 	}
 
-	public Membro habilitarAdministrador(long matricula) {
-		if (administrador.isAdministrador()) {
+	public void habilitarAdministrador(long matricula) throws Exception {
+		if (administrador != null) {
 			String[] atributos = { "matricula" };
 			Object[] valores = { matricula };
 			Set<Membro> membro = daoMembro.consultarAnd(atributos, valores);
@@ -24,15 +25,15 @@ public class CasoDeUsoSete {
 						Membro membroAntigo = membroModificado;
 						membroModificado.setAdministrador(true);
 						daoMembro.atualizar(membroAntigo, membroModificado);
-						return membroModificado;
 					} else {
-						System.out.println("Voce não pode se modificar!");
+						throw new Exception("Você não pode se auto-desabilitar do cargo, contate outro administrador!");
 					}
 				}
 			} catch (Exception e) {
-				System.out.println("Não existe membro com essa matricula!");
+				throw new Exception("Não existe membro com essa matricula!");
 			}
+		} else {
+			throw new Exception("Você não é administrador");
 		}
-		return null;
 	}
 }

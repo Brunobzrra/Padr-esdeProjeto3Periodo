@@ -62,7 +62,6 @@ public class DAOXMLMembroConta {
 	 * um membro ao XML, que é nosso BD.
 	 * @params membro*/
 	public boolean criar(Membro membro) {
-
 		String[] atributos = { "matricula" };
 		Object[] valores = { membro.getMatricula()};
 		if (consultarAnd(atributos, valores).size()==0) {
