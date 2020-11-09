@@ -3,6 +3,7 @@
     <long>1</long>
     <model.autenticacao.Membro>
       <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
       <matricula>111</matricula>
       <nome>jose claudiu</nome>
       <ativo>true</ativo>
@@ -15,8 +16,44 @@
       <participacoes>
         <model.projetos.Participacao>
           <ativo>true</ativo>
-          <dataInicio>2020-11-05 16:42:20.973 UTC</dataInicio>
-          <dataTermino>1970-01-01 00:00:00.0 UTC</dataTermino>
+          <projetoPai class="model.projetos.Projeto">
+            <ativo>true</ativo>
+            <tipo>PROJETO</tipo>
+            <itens>
+              <model.projetos.Participacao reference="../../.."/>
+            </itens>
+            <nome>Projeto novo</nome>
+            <aporteCusteioReais>0.0</aporteCusteioReais>
+            <aporteCapitalReais>0.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>0.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>0.0</gastoExecutadoCapitalReais>
+          </projetoPai>
+          <tipo>PARTICIPACAO</tipo>
+          <dataInicio>2020-11-09 21:32:56.331 UTC</dataInicio>
+          <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>0</qtdMesesCusteados>
+          <qtdMesesPagos>0</qtdMesesPagos>
+          <coordenador>true</coordenador>
+          <pontos/>
+          <horarios/>
+          <membro reference="../../.."/>
+        </model.projetos.Participacao>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.projetos.Projeto">
+            <ativo>true</ativo>
+            <tipo>PROJETO</tipo>
+            <itens>
+              <model.projetos.Participacao reference="../../.."/>
+            </itens>
+            <nome>projeto 2</nome>
+            <aporteCusteioReais>0.0</aporteCusteioReais>
+            <aporteCapitalReais>0.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>0.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>0.0</gastoExecutadoCapitalReais>
+          </projetoPai>
+          <tipo>PARTICIPACAO</tipo>
+          <dataInicio>2020-11-09 21:32:56.337 UTC</dataInicio>
           <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
           <qtdMesesCusteados>0</qtdMesesCusteados>
           <qtdMesesPagos>0</qtdMesesPagos>

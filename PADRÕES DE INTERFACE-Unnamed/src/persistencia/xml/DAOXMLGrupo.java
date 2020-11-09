@@ -48,9 +48,10 @@ public class DAOXMLGrupo {
 	 * @return
 	 */
 	public Grupo recuperarPorIndentificador(String linkCNPq) {
-		for (int i = 0; i < persistidos.size(); i++) {
-			if(persistidos.get(i).getLinkCNPq().equals(linkCNPq)){
-				return persistidos.get(i);
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			if(persistidos.get(long1).getLinkCNPq().equals(linkCNPq)){
+				return persistidos.get(long1);
 			}
 		}
 		return null;

@@ -15,7 +15,6 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.projetos.Edital;
-import model.projetos.Projeto;
 
 public class DAOXMLEdital {
 
@@ -52,9 +51,11 @@ public class DAOXMLEdital {
 	 * @return
 	 */
 	public Edital recuperarPorIndentificador(String nome) {
-		for (int i = 0; i < persistidos.size(); i++) {
-			if(persistidos.get(i).getNome().equals(nome)){
-				return persistidos.get(i);
+		this.persistidos = this.carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			if(persistidos.get(long1).getNome().equals(nome)){
+				return persistidos.get(long1);
 			}
 		}
 		return null;

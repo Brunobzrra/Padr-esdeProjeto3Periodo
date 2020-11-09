@@ -35,8 +35,9 @@ public class Grupo extends ProjetoComponente {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
+			item.setProjetoPai(this);
+			itens.add(item);
 		}
-		itens.add(item);
 	}
 
 	public void remover(ProjetoComponente integracao) {

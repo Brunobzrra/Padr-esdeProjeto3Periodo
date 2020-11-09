@@ -6,6 +6,7 @@ import java.net.UnknownHostException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Set;
 
@@ -16,6 +17,7 @@ import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.projetos.TipoProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import persistencia.xml.DAOXMLMembroConta;
@@ -24,8 +26,8 @@ import persistencia.xml.DAOXMLProjetoParticipacao;
 public class ControllerRegistradorEView {
 
 	private static ControllerRegistradorEView controllerUnico;
-
-	private static DAOXMLProjetoParticipacao dao = new DAOXMLProjetoParticipacao();
+	private static DAOXMLMembroConta daMembro= new DAOXMLMembroConta();
+	private static DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 
 	private ServicoRegistradorPontoCentral proxy;
 
@@ -38,25 +40,26 @@ public class ControllerRegistradorEView {
 
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
 
-		Object[] valores = { nomeDoProjeto };
-		String[] atributos = { "nome" };
-		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
-		Object[] recuperados = recuperado.toArray();
-		if (recuperados!=null) {
-			proxy.registrarPonto((Projeto) recuperados[0], login);
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+
+		if (projeto!=null) {
+			proxy.registrarPonto((Projeto) projeto, login);
 		}else
 			throw new Exception("Projeto não existente!");
 	}
-
+	public ArrayList<String> recuperarProjetos(String email) {
+		ArrayList<ProjetoComponente> participacao=daMembro.recuperarPorEmail(email).getParticipacoes();
+		ArrayList<String> nomes= new ArrayList<String>();
+		for (ProjetoComponente participa : participacao) {
+			nomes.add(participa.getProjetoPai().getNome());
+		}
+		return nomes;
+	}
 	public float horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
 
-		Object[] valores = { nomeDoProjeto };
-		String[] atributos = { "nome" };
-		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
-		Projeto[] recuperados = (Projeto[]) recuperado.toArray();
-		dao.consultarAnd(atributos, valores);
-		for (ProjetoComponente membroDoFor : recuperados[0].getItens()) {
-			if (membroDoFor instanceof Membro) {
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+		for (ProjetoComponente membroDoFor : projeto.getItens()) {
+			if (membroDoFor.getTipo()==TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
@@ -74,13 +77,10 @@ public class ControllerRegistradorEView {
 	}
 
 	public Set<PontoTrabalhado> getPontosInvalidos(String login, String nomeDoProjeto) throws Exception {
-		Object[] valores = { nomeDoProjeto };
-		String[] atributos = { "nome" };
-		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
-		Projeto[] recuperados = (Projeto[]) recuperado.toArray();
-		dao.consultarAnd(atributos, valores);
-		for (ProjetoComponente membroDoFor : recuperados[0].getItens()) {
-			if (membroDoFor instanceof Membro) {
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+
+		for (ProjetoComponente membroDoFor : projeto.getItens()) {
+			if (membroDoFor.getTipo()==TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					return proxy.getPontosInvalidos((Membro) membroDoFor);
 
@@ -108,13 +108,10 @@ public class ControllerRegistradorEView {
 	}
 
 	public float defcitHoras(String login, String nomeDoProjeto) throws Exception {
-		Object[] valores = { nomeDoProjeto };
-		String[] atributos = { "nome" };
-		Set<Projeto> recuperado = dao.consultarAnd(atributos, valores);
-		Projeto[] recuperados = (Projeto[]) recuperado.toArray();
-		dao.consultarAnd(atributos, valores);
-		for (ProjetoComponente membroDoFor : recuperados[0].getItens()) {
-			if (membroDoFor instanceof Membro) {
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+
+		for (ProjetoComponente membroDoFor : projeto.getItens()) {
+			if (membroDoFor.getTipo()==TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
@@ -152,21 +149,24 @@ public class ControllerRegistradorEView {
 		joseClaudiu.setAdministrador(true);
 		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()),
 				Float.parseFloat("0"), (short) 0, (short) 0, true);
-		participacao.setMembro(joseClaudiu);
-		try {
-			participacao.adicionar(joseClaudiu);
-		} catch (Exception e1) {
-			e1.printStackTrace();
-		}
 		Projeto projeto1 = new Projeto("Projeto novo", 0, 0, 0, 0);
+		Projeto projeto2 = new Projeto("projeto 2", 0, 0, 0, 0);
+
 		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
 		try {
 			DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
-			daoMembro.criar(joseClaudiu);
+			Participacao participacao2 = new Participacao(new Date(System.currentTimeMillis()),
+					Float.parseFloat("0"), (short) 0, (short) 0, true);
+			joseClaudiu.adicionar(participacao);
 			projeto1.adicionar(participacao);
+			joseClaudiu.adicionar(participacao2);
+			projeto2.adicionar(participacao2);
+			daoMembro.criar(joseClaudiu);
 			daoao.criar(projeto1);
-		} catch (Exception e) {
-			e.printStackTrace();
+			daoao.criar(projeto2);
+		} catch (Exception e1) {
+			e1.printStackTrace();
 		}
+
 	}
 }

@@ -33,7 +33,7 @@ public class Projeto extends ProjetoComponente {
 		this.aporteCapitalReais = aporteCapitalReais;
 		this.gastoExecutadoCusteioReais = gastoExecutadoCusteioReais;
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
-		setTipo(TipoProjetoComponente.MEMBRO);
+		setTipo(TipoProjetoComponente.PROJETO);
 	}
 	
 	public void adicionar(ProjetoComponente item) throws Exception {
@@ -43,8 +43,9 @@ public class Projeto extends ProjetoComponente {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
+			item.setProjetoPai(this);
+			itens.add(item);
 		}
-		itens.add(item);
 	}
 
 	public void remover(ProjetoComponente integracao) throws Exception {

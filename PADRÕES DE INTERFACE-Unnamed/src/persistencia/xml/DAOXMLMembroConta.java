@@ -14,7 +14,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
-import model.projetos.Projeto;
 
 public class DAOXMLMembroConta {
 
@@ -40,20 +39,30 @@ public class DAOXMLMembroConta {
 	 * @return
 	 */
 	public Membro recuperarPorIndentificador(long matricula) {
-		for (int i = 0; i < persistidos.size(); i++) {
-			if(persistidos.get(i).getMatricula()==matricula){
-				return persistidos.get(i);
+		this.persistidos = this.carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			if(persistidos.get(long1).getMatricula()==matricula){
+				return persistidos.get(long1);
+			}
+		}
+		return null;
+	}
+	public Membro recuperarPorEmail(String email) {
+		this.persistidos = this.carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if(persistidos.get(chave).getEmail().equals(email)){
+				return persistidos.get(chave);
 			}
 		}
 		return null;
 	}
 	public Membro isAdmimPelaMatricula(long matricula) {
-		Object[] valor = { matricula };
-		String[] nomeAtributo = { "matricula" };
-		Set<Membro> membroRecuperado = this.consultarAnd(nomeAtributo, valor);
-		Membro[] membro = (Membro[]) membroRecuperado.toArray();
-		if (membro[0].isAdministrador()) {
-			return membro[0];
+		this.persistidos = this.carregarXML();
+		Membro membro = recuperarPorIndentificador(matricula);
+		if (membro.isAdministrador()) {
+			return membro;
 		}
 		return null;
 	}

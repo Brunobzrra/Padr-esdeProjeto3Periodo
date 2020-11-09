@@ -102,14 +102,16 @@ public class Membro extends ProjetoComponente implements Serializable {
 	 * adciona somente participação
 	 */
 	public void adicionar(ProjetoComponente item) throws Exception {
-		if(item.getTipo()==TipoProjetoComponente.PARTICIPACAO ) {
+		if (item.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
 			for (ProjetoComponente projetoComponente : participacoes) {
-				if(item.equals(projetoComponente)) {
+				if (item.equals(projetoComponente)) {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
+			Participacao participa=(Participacao) item;
+			participa.setMembro(this);;
+			participacoes.add(item);
 		}
-		participacoes.add(item);
 	}
 
 	public void remover(Participacao integracao) throws Exception {
@@ -178,15 +180,15 @@ public class Membro extends ProjetoComponente implements Serializable {
 		return false;
 	}
 
-	public float getGastoTotal(){
+	public float getGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : participacoes) {
 			aux += projetoComponente.getGastoTotal();
 		}
-		return aux+getCusteioReaisGastoTotal()+getCapitalReaiGastoTotal();
+		return aux + getCusteioReaisGastoTotal() + getCapitalReaiGastoTotal();
 	}
 
-	public float getCusteioReaisGastoTotal(){
+	public float getCusteioReaisGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : participacoes) {
 			aux += projetoComponente.getCusteioReaisGastoTotal();
@@ -194,7 +196,7 @@ public class Membro extends ProjetoComponente implements Serializable {
 		return aux;
 	}
 
-	public float getCapitalReaiGastoTotal(){
+	public float getCapitalReaiGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : participacoes) {
 			aux += projetoComponente.getCapitalReaiGastoTotal();
