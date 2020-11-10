@@ -14,6 +14,7 @@ import model.autenticacao.ContaAutenticacaoProvedorInterno;
 import model.autenticacao.ContaEmail;
 import model.autenticacao.ContaEmailLivre;
 import model.autenticacao.Membro;
+import model.autenticacao.RegistradorSessaoLogin;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
@@ -43,9 +44,22 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
 
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+		Projeto projetoAux = projeto;
 
 		if (projeto != null) {
-			proxy.registrarPonto((Projeto) projeto, login);
+			if (senha.length() == 0) {
+				throw new Exception("Digite uma senha!");
+			}
+			Membro m = daMembro.recuperarPorEmail(login);
+			RegistradorSessaoLogin.getInstance().registrarOline(m);
+			Membro aux = m;
+			if (m.getSenha().equalsIgnoreCase(senha)) {
+				proxy.registrarPonto((Projeto) projeto, m);
+				daMembro.atualizar(aux, m);
+				daoProjetoParticipacao.atualizar(projetoAux, projeto);
+			} else {
+				throw new Exception("Senha incorreta!");
+			}
 		} else
 			throw new Exception("Projeto não existente!");
 	}
@@ -133,15 +147,10 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 		return 0;
 	}
 
-	public static ControllerRegistradorEViewCasoDeUsoOnze getInstance() {
+	public static ControllerRegistradorEViewCasoDeUsoOnze getInstance() throws Exception {
 
 		if (controllerUnico == null) {
-			try {
-				return new ControllerRegistradorEViewCasoDeUsoOnze();
-			} catch (RemoteException | MalformedURLException | UnknownHostException | NotBoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			return new ControllerRegistradorEViewCasoDeUsoOnze();
 		}
 		return controllerUnico;
 	}

@@ -33,8 +33,8 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 		super();
 	}
 
-	public PontoTrabalhado registrarPonto(Projeto projeto, String login) throws Exception {
-		if (RegistradorSessaoLogin.getInstance().isOline(login)) {
+	public PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception {
+		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
 		}
 		Participacao participacao = null;
@@ -43,7 +43,7 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 				participacao = (Participacao) participa;
 			}
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
-			if (participacao.getMembro().getEmail().equals(login)) {
+			if (participacao.getMembro().getEmail().equals(membro.getEmail())) {
 				int tamanho = participacao.getPontos().size();
 				PontoTrabalhado ponto = null;
 				if (tamanho != 0) {

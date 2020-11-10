@@ -208,4 +208,8 @@ public class Membro extends ProjetoComponente implements Serializable {
 		return aux;
 	}
 
+	public void setParticipacoes(ArrayList<ProjetoComponente> participacoes) {
+		this.participacoes = participacoes;
+	}
+	
 }

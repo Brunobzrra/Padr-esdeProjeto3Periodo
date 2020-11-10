@@ -4,11 +4,11 @@
     <model.autenticacao.Membro>
       <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
       <tipo>MEMBRO</tipo>
-      <matricula>111</matricula>
+      <matricula>11111111</matricula>
       <nome>jose claudiu</nome>
       <ativo>true</ativo>
       <email>fananitadz@gmail.com</email>
-      <senha>1212</senha>
+      <senha>121212</senha>
       <conta class="model.autenticacao.ContaEmailLivre">
         <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
       </conta>

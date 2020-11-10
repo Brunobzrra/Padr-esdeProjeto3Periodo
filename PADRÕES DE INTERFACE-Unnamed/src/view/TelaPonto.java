@@ -22,12 +22,19 @@ public class TelaPonto extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
 	private JPasswordField senha;
-	private ControllerRegistradorEViewCasoDeUsoOnze controller = ControllerRegistradorEViewCasoDeUsoOnze.getInstance();
+	private ControllerRegistradorEViewCasoDeUsoOnze controller;
 	private JComboBox<Object> op;
 
 	public TelaPonto() {
+		try {
+			controller = ControllerRegistradorEViewCasoDeUsoOnze.getInstance();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Aplicacao servidora não inicializada", "Erro",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
 		setLayout(null);
-		setSize(700, 200);
+		setSize(700, 250);
 		getContentPane().setBackground(Color.DARK_GRAY);
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -41,7 +48,6 @@ public class TelaPonto extends JFrame {
 	}
 
 	public void botaoBaterPonto(String nomeDoProjeto, String login, String senha) {
-
 		try {
 			controller.registrarPonto(nomeDoProjeto, login, senha);
 			JOptionPane.showMessageDialog(this, "Ponto batido com sucesso");
@@ -61,9 +67,9 @@ public class TelaPonto extends JFrame {
 	}
 
 	private void adcionarLabels() {
-		JLabel marcarPonto = new JLabel("Marcar Ponto");
+		JLabel marcarPonto = new JLabel("Bater Ponto");
 		marcarPonto.setFont(new Font("Arial", Font.BOLD, 25));
-		marcarPonto.setBounds(160, 20, 250, 30);
+		marcarPonto.setBounds(270, 20, 250, 30);
 		marcarPonto.setForeground(new Color(192, 192, 192));
 		this.add(marcarPonto);
 
@@ -79,27 +85,31 @@ public class TelaPonto extends JFrame {
 		senha.setForeground(new Color(192, 192, 192));
 		this.add(senha);
 	}
+
 	private void adcionarCombo(Object[] projetos) {
-		if(projetos==null) {
-			projetos= new String[1];
-			projetos[0]="  ------Nenhum Projeto------";
+		if (projetos == null) {
+			projetos = new String[1];
+			projetos[0] = "------Nenhum Projeto------";
 		}
-		if(op!=null) {
+		if (op != null) {
 			op.removeAllItems();
 			for (Object object : projetos) {
-				op.addItem(object.toString());				
+				op.addItem(object.toString());
 			}
 			this.repaint();
 		}
-		op = new JComboBox<Object>(projetos) ;
+		op = new JComboBox<Object>(projetos);
 		op.setBounds(480, 86, 190, 25);
 		op.setBackground(new Color(25, 25, 25));
-		op.setForeground(Color.WHITE);;
+		op.setForeground(Color.WHITE);
+		;
 		add(op);
 	}
 
-	/*TODO
-     * Ao invés do nome do projeto, colocar o combobox com a relação detodos os projetos para o membro inserido*/
+	/*
+	 * TODO Ao invés do nome do projeto, colocar o combobox com a relação detodos os
+	 * projetos para o membro inserido
+	 */
 	private void adcionarTextFields() {
 		login = new JTextField();
 		login.setToolTipText("ex: nome@gmail.com...");
@@ -109,11 +119,19 @@ public class TelaPonto extends JFrame {
 		login.addKeyListener(new KeyListener() {
 			public void keyTyped(KeyEvent e) {
 			}
-			
+
 			public void keyReleased(KeyEvent e) {
-				adcionarCombo(controller.recuperarProjetos(login.getText()).toArray());
+				try {
+					adcionarCombo(controller.recuperarProjetos(login.getText()).toArray());
+				} catch (NullPointerException e2) {
+					if (!op.getItemAt(0).equals("------Nenhum Projeto------")) {
+						op.removeAllItems();
+						op.addItem("------Nenhum Projeto------");
+						op.repaint();
+					}
+				}
 			}
-			
+
 			public void keyPressed(KeyEvent e) {
 			}
 		});
@@ -133,7 +151,7 @@ public class TelaPonto extends JFrame {
 		baterPonto.setBackground(new Color(119, 221, 119));
 		baterPonto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				botaoBaterPonto((String) op.getSelectedItem(),login.getText(), senha.getText());
+				botaoBaterPonto((String) op.getSelectedItem(), login.getText(), senha.getText());
 				senha.setText("");
 				;
 

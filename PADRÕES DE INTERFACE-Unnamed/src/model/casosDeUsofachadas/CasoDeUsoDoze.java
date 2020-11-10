@@ -1,17 +1,23 @@
 package model.casosDeUsofachadas;
 
+import java.net.InetAddress;
+import java.rmi.Naming;
 import java.time.LocalDateTime;
 
 import model.autenticacao.Membro;
 import persistencia.xml.DAOXMLMembroConta;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.RegistradorPontoCentral;
+import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
 public class CasoDeUsoDoze {
-	DAOXMLMembroConta daoMembroConta= new DAOXMLMembroConta();
-	public void justifiarPonto(LocalDateTime dataHoraEntrada, String justificar, long matricula) throws Exception {
-		RegistradorPontoCentral registrador;
-		Membro membro=daoMembroConta.recuperarPorIndentificador(matricula);
+	DAOXMLMembroConta daoMembroConta = new DAOXMLMembroConta();
+
+	public void justificarPonto(LocalDateTime dataHoraEntrada, String justificar, long matricula) throws Exception {
+		ServicoRegistradorPontoCentral registrador = (ServicoRegistradorPontoCentral) Naming
+				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "/ServicoRemotoPontoTrabalhado");
+		;
+		Membro membro = daoMembroConta.recuperarPorIndentificador(matricula);
 		registrador.justificarPontoNaoBatido(new PontoTrabalhado(dataHoraEntrada), justificar, membro);
 		daoMembroConta.atualizar(membro, membro);
 	}

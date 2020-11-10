@@ -18,7 +18,9 @@ public interface ServicoRegistradorPontoCentral extends Remote {
 			throws RemoteException, Exception;
 
 	public abstract float defcitHoras(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro) throws RemoteException, Exception;
-	public abstract PontoTrabalhado registrarPonto(Projeto projeto, String login) throws Exception;
+	public abstract PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception;
 
 	public abstract Set<PontoTrabalhado> getPontosInvalidos(Membro membro) throws RemoteException,Exception;
+
+	public abstract void justificarPontoNaoBatido(PontoTrabalhado pontoTrabalhado, String justificar, Membro membro) throws Exception;
 }

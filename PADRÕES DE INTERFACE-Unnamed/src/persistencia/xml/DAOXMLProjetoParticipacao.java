@@ -248,8 +248,8 @@ public class DAOXMLProjetoParticipacao {
 										confirmacoes[4] = true;
 									}
 								}
-							} else if (atributos[j].equals("gastoExecutadoCapitalReais")) {
-								Float valorRecuperado = projetoAuxiliar.getCapitalReaiGastoTotal();
+							} else if (atributos[j].equals("getCapitalReaisGastoTotal")) {
+								Float valorRecuperado = projetoAuxiliar.getCapitalReaisGastoTotal();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
 										confirmacoes[0] = true;
@@ -399,8 +399,8 @@ public class DAOXMLProjetoParticipacao {
 										adicionar = true;
 									}
 								}
-							} else if (atributos[j].equals("gastoExecutadoCapitalReais") && adicionar == false) {
-								Float valorRecuperado = projetoAuxiliar.getCapitalReaiGastoTotal();
+							} else if (atributos[j].equals("getCapitalReaisGastoTotal") && adicionar == false) {
+								Float valorRecuperado = projetoAuxiliar.getCapitalReaisGastoTotal();
 								if (j == 0) {
 									if (valorRecuperado == valores[0]) {
 										adicionar = true;
