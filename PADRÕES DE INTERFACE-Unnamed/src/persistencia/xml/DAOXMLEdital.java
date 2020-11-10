@@ -15,6 +15,10 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.projetos.Edital;
+import model.projetos.Grupo;
+import model.projetos.Projeto;
+import model.projetos.ProjetoComponente;
+import model.projetos.TipoProjetoComponente;
 
 public class DAOXMLEdital {
 
@@ -30,7 +34,10 @@ public class DAOXMLEdital {
 	 * um edital ao XML, que é nosso BD.
 	 * @params edital*/
 	
-	public boolean criar(String nome, Date dataInicio, Date dataTermino) {
+	public boolean criar(String nome, Date dataInicio, Date dataTermino)throws Exception {
+		if(nome.length()<5 || dataInicio==null || dataTermino==null) {
+			throw new Exception("Digite todos os parametros corretamente!");
+		}
 		String[] atributos = { "nome" };
 		Object[] valores = { nome };
 		Edital edital= new Edital(nome, dataInicio, dataTermino);
@@ -41,6 +48,7 @@ public class DAOXMLEdital {
 			id += 1;
 			this.persistidos.put(id, edital);
 			this.salvarXML(persistidos);
+			atualizarComponentes(edital);
 			return true;
 		}
 		return false;
@@ -94,7 +102,10 @@ public class DAOXMLEdital {
 	/*
 	 * Metodo que substitui um edital no HASHSET de persistidos, colocando outro edital de interesse no lugar
 	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do edital no BD*/
-	public boolean atualizar(Edital editalSubstituivel, Edital editalSubistituto) {
+	public boolean atualizar(Edital editalSubstituivel, Edital editalSubistituto) throws Exception {
+		if(editalSubistituto.getNome().length()<5 || editalSubistituto.getDataInicio()==null || editalSubistituto.getDataTermino()==null) {
+			throw new Exception("Digite todos os parametros corretamente!");
+		}
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
@@ -102,8 +113,22 @@ public class DAOXMLEdital {
 				persistidos.replace(chave, editalSubistituto);
 			}
 		}
+		atualizarComponentes(editalSubistituto);
 		this.salvarXML(persistidos);
 		return true;
+	}
+
+	private void atualizarComponentes(Edital edital) throws Exception {
+		DAOXMLProjetoParticipacao daoProjeto = new DAOXMLProjetoParticipacao();
+		DAOXMLGrupo daoGrupo = new DAOXMLGrupo();
+		for (ProjetoComponente item : edital.getItens()) {
+			if (item.getTipo() == TipoProjetoComponente.PROJETO) {
+
+				daoProjeto.atualizar((Projeto) item, (Projeto) item);
+			} else {
+				daoGrupo.atualizar((Grupo) item, (Grupo) item);
+			}
+		}
 	}
 	/*
 	 * metodo usado para consultar um edital no hashset de persistidos, por meio de seus atributos. caso

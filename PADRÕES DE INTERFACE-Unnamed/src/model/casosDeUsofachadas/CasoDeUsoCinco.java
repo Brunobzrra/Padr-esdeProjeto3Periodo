@@ -30,7 +30,7 @@ public class CasoDeUsoCinco {
 	}
 
 	// olhem esse metodo
-	public void atualizarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais) {
+	public void atualizarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais) throws Exception {
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nome);
 		Projeto projetoAntigo = projeto;
 		for (ProjetoComponente participacaoDoFor : projeto.getItens()) {

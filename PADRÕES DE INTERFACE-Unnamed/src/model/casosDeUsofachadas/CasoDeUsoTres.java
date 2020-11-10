@@ -13,7 +13,7 @@ public class CasoDeUsoTres {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public boolean adcionarGrupo(String nome, String linkCNPq, long matricula) {
+	public boolean adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
 		if (membro != null) {
 			Grupo grupo = new Grupo(nome, linkCNPq);
@@ -35,7 +35,7 @@ public class CasoDeUsoTres {
 		return false;
 	}
 	//tirar duvida sobre este metodo
-	public boolean atualizarrGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo) {
+	public boolean atualizarrGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo) throws Exception {
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
 		if (membro != null) {
 			Grupo grupoRecuperado = daoGrupo.recuperarPorIndentificador(linkCNPq);

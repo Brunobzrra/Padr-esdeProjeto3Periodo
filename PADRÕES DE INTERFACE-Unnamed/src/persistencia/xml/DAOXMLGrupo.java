@@ -13,7 +13,11 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
 import model.projetos.Grupo;
+import model.projetos.Projeto;
+import model.projetos.ProjetoComponente;
+import model.projetos.TipoProjetoComponente;
 
 public class DAOXMLGrupo {
 
@@ -30,13 +34,17 @@ public class DAOXMLGrupo {
 	 * um membro ao XML, que é nosso BD.
 	 * @params grupo*/
 	
-	public boolean criar(Grupo grupo) {
+	public boolean criar(Grupo grupo) throws Exception{
+		if(grupo.getNome().length()<5 || grupo.getLinkCNPq().length()<5) {
+			throw new Exception("Digite todos os parametros corretamente!");
+		}
 		String[] atributos = { "linkCNPq" };
 		Object[] valores = { grupo.getLinkCNPq() };
 		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id += 1;
 			this.persistidos.put(id, grupo);
+			atualizarComponentes(grupo);
 			this.salvarXML(persistidos);
 			return true;
 		}
@@ -89,7 +97,10 @@ public class DAOXMLGrupo {
 	/*
 	 * Metodo que substitui um grupo no HASHSET de persistidos, colocando outro grupo de interesse no lugar
 	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do edital no BD*/
-	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) {
+	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) throws Exception{
+		if(grupoSubistituto.getNome().length()<5 || grupoSubistituto.getLinkCNPq().length()<5) {
+			throw new Exception("Digite todos os parametros corretamente!");
+		}
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
@@ -97,8 +108,21 @@ public class DAOXMLGrupo {
 				persistidos.replace(chave, grupoSubistituto);
 			}
 		}
+		atualizarComponentes(grupoSubistituto);
 		this.salvarXML(persistidos);
 		return true;
+	}
+	private void atualizarComponentes(Grupo grupo) throws Exception {
+		DAOXMLProjetoParticipacao daoProjeto=new DAOXMLProjetoParticipacao();
+		DAOXMLMembroConta daoMembro=new DAOXMLMembroConta();
+		for (ProjetoComponente item : grupo.getItens()) {
+			if(item.getTipo()==TipoProjetoComponente.PROJETO) {
+				daoProjeto.atualizar((Projeto)item,(Projeto) item);
+			}
+			else{
+				daoMembro.atualizar((Membro)item,(Membro) item);
+			}
+		}
 	}
 	/*
 	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de seus atributos. caso

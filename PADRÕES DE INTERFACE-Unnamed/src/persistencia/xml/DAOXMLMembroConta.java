@@ -14,6 +14,8 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
+import model.projetos.Participacao;
+import model.projetos.ProjetoComponente;
 
 public class DAOXMLMembroConta {
 
@@ -70,13 +72,17 @@ public class DAOXMLMembroConta {
 	 * adiciona um novo membro na colecao de persistidos, que é salvo posteriormente, adicionando assim
 	 * um membro ao XML, que é nosso BD.
 	 * @params membro*/
-	public boolean criar(Membro membro) {
+	public boolean criar(Membro membro) throws Exception {
+		if(membro.getNome().length()<5||membro.getSenha().length()<5||membro.getMatricula()==0) {
+			throw new Exception("Digite todos os parametros corretamente!");
+		}
 		String[] atributos = { "matricula" };
 		Object[] valores = { membro.getMatricula()};
 		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
 			id = persistidos.size()+1;
 			this.persistidos.put(id, membro);
+			atualizarComponentes(membro);
 			this.salvarXML(persistidos);
 			return true;
 		}
@@ -116,7 +122,7 @@ public class DAOXMLMembroConta {
 	 * Metodo que substitui um membro no HASHSET de persistidos, colocando outro membro de interesse no lugar
 	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do membro no BD
 	 * */
-	public boolean atualizar(Membro membroSubstituivel, Membro membroSubstituto) {
+	public boolean atualizar(Membro membroSubstituivel, Membro membroSubstituto) throws Exception {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
@@ -125,8 +131,17 @@ public class DAOXMLMembroConta {
 			}
 			
 		}
+		atualizarComponentes(membroSubstituto);
 		this.salvarXML(persistidos);
 		return true;
+	}
+	private void atualizarComponentes(Membro membro) throws Exception {
+		DAOXMLMembroConta daoProjeto = new DAOXMLMembroConta();
+		for (ProjetoComponente item : membro.getParticipacoes()) {
+			Participacao participacao = (Participacao) item;
+			daoProjeto.atualizar(participacao.getMembro(), participacao.getMembro());
+
+		}
 	}
 
 	/*
