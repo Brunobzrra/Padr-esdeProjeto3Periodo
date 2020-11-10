@@ -24,7 +24,7 @@ public class TelaPonto extends JFrame {
 	private JPasswordField senha;
 	private ControllerRegistradorEViewCasoDeUsoOnze controller;
 	private JComboBox<Object> op;
-
+	
 	public TelaPonto() {
 		try {
 			controller = ControllerRegistradorEViewCasoDeUsoOnze.getInstance();
