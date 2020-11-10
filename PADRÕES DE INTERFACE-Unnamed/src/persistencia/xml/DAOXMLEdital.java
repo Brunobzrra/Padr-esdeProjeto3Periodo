@@ -48,7 +48,6 @@ public class DAOXMLEdital {
 			id += 1;
 			this.persistidos.put(id, edital);
 			this.salvarXML(persistidos);
-			atualizarComponentes(edital);
 			return true;
 		}
 		return false;
@@ -113,23 +112,10 @@ public class DAOXMLEdital {
 				persistidos.replace(chave, editalSubistituto);
 			}
 		}
-		atualizarComponentes(editalSubistituto);
 		this.salvarXML(persistidos);
 		return true;
 	}
 
-	private void atualizarComponentes(Edital edital) throws Exception {
-		DAOXMLProjetoParticipacao daoProjeto = new DAOXMLProjetoParticipacao();
-		DAOXMLGrupo daoGrupo = new DAOXMLGrupo();
-		for (ProjetoComponente item : edital.getItens()) {
-			if (item.getTipo() == TipoProjetoComponente.PROJETO) {
-
-				daoProjeto.atualizar((Projeto) item, (Projeto) item);
-			} else {
-				daoGrupo.atualizar((Grupo) item, (Grupo) item);
-			}
-		}
-	}
 	/*
 	 * metodo usado para consultar um edital no hashset de persistidos, por meio de seus atributos. caso
 	 * exista um edital com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 

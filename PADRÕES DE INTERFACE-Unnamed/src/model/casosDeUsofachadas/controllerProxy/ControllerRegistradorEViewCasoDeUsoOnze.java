@@ -54,7 +54,7 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 			RegistradorSessaoLogin.getInstance().registrarOline(m);
 			Membro aux = m;
 			if (m.getSenha().equalsIgnoreCase(senha)) {
-				PontoTrabalhado o=proxy.registrarPonto((Projeto) projeto, m);
+				PontoTrabalhado o = proxy.registrarPonto((Projeto) projeto, m);
 				daMembro.atualizar(aux, m);
 				daoProjetoParticipacao.atualizar(projetoAux, projeto);
 			} else {
@@ -75,26 +75,48 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 		return nomes;
 	}
 
-	public float horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
+	public StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
 
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+		StringBuffer texto = new StringBuffer("Horas Trabalhadas Validas\n");
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
 			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
+						texto.append("O membro " + participacaoDoFor.getMembro().getNome() + " trabalhou\n");
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
-							return proxy.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
-									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor);
+							texto.append(proxy.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
+									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor) + "\n");
 						}
 					}
 				}
 
 			}
 		}
-		return 0;
+		return texto;
 
 	}
+
+	public StringBuffer getPontosValidos(String login, String nomeDoProjeto) {
+		// TODO Auto-generated method stub
+		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
+		StringBuffer texto = new StringBuffer("Ponto inalidas\n");
+
+		for (ProjetoComponente membroDoFor : projeto.getItens()) {
+			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
+				Membro membro=(Membro) membroDoFor;
+				if ((membro).getEmail().equalsIgnoreCase(login)) {
+					texto.append("Membro " + membroDoFor.getNome() + " seus pontos validos /n"+membro.getPontosValidos().toString());
+			
+				}
+
+			}
+		}
+		return texto;
+	}
+
+
 
 	public Set<PontoTrabalhado> getPontosInvalidos(String login, String nomeDoProjeto) throws Exception {
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
@@ -127,24 +149,25 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 		return retorno;
 	}
 
-	public float defcitHoras(String login, String nomeDoProjeto) throws Exception {
+	public StringBuffer defcitHoras(String login, String nomeDoProjeto) throws Exception {
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
-
+		StringBuffer texto = new StringBuffer("Deficit de Horas\n");
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
 			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
+						texto.append("O membro " + participacaoDoFor.getMembro().getNome() + " teve um deficit de\n");
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
-							return proxy.defcitHoras(pontoDoFor.getDataHoraEntrada(), pontoDoFor.getDataHoraSaida(),
-									(Membro) membroDoFor);
+							texto.append(proxy.defcitHoras(pontoDoFor.getDataHoraEntrada(),
+									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor) + "\n");
 						}
 					}
 				}
 
 			}
 		}
-		return 0;
+		return texto;
 	}
 
 	public static ControllerRegistradorEViewCasoDeUsoOnze getInstance() throws Exception {
@@ -156,7 +179,7 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 	}
 
 	public static void main(String[] args) {
-		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "1212");
+		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "121212");
 		ContaEmail conta = new ContaEmailLivre();
 		conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
 		joseClaudiu.setConta(conta);
@@ -164,8 +187,8 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 		joseClaudiu.setAdministrador(true);
 		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()), Float.parseFloat("0"),
 				(short) 0, (short) 0, true);
-		Projeto projeto1 = new Projeto("Projeto novo", 0, 0, 0, 0);
-		Projeto projeto2 = new Projeto("projeto 2", 0, 0, 0, 0);
+		Projeto projeto1 = new Projeto("Projeto novo", 1, 2, 2, 3);
+		Projeto projeto2 = new Projeto("projeto 2", 1, 2, 3, 5);
 
 		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
 		try {

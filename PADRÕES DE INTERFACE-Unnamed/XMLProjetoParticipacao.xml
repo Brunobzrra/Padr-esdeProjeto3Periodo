@@ -9,7 +9,7 @@
           <ativo>true</ativo>
           <projetoPai class="model.projetos.Projeto" reference="../../.."/>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-11-09 21:32:56.331 UTC</dataInicio>
+          <dataInicio>2020-11-10 22:32:38.101 UTC</dataInicio>
           <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
           <qtdMesesCusteados>0</qtdMesesCusteados>
           <qtdMesesPagos>0</qtdMesesPagos>
@@ -23,7 +23,7 @@
             <nome>jose claudiu</nome>
             <ativo>true</ativo>
             <email>fananitadz@gmail.com</email>
-            <senha>1212</senha>
+            <senha>121212</senha>
             <conta class="model.autenticacao.ContaEmailLivre">
               <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
             </conta>
@@ -39,13 +39,13 @@
                     <model.projetos.Participacao reference="../../.."/>
                   </itens>
                   <nome>projeto 2</nome>
-                  <aporteCusteioReais>0.0</aporteCusteioReais>
-                  <aporteCapitalReais>0.0</aporteCapitalReais>
-                  <gastoExecutadoCusteioReais>0.0</gastoExecutadoCusteioReais>
-                  <gastoExecutadoCapitalReais>0.0</gastoExecutadoCapitalReais>
+                  <aporteCusteioReais>1.0</aporteCusteioReais>
+                  <aporteCapitalReais>2.0</aporteCapitalReais>
+                  <gastoExecutadoCusteioReais>3.0</gastoExecutadoCusteioReais>
+                  <gastoExecutadoCapitalReais>5.0</gastoExecutadoCapitalReais>
                 </projetoPai>
                 <tipo>PARTICIPACAO</tipo>
-                <dataInicio>2020-11-09 21:32:56.337 UTC</dataInicio>
+                <dataInicio>2020-11-10 22:32:38.107 UTC</dataInicio>
                 <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
                 <qtdMesesCusteados>0</qtdMesesCusteados>
                 <qtdMesesPagos>0</qtdMesesPagos>
@@ -59,10 +59,10 @@
         </model.projetos.Participacao>
       </itens>
       <nome>Projeto novo</nome>
-      <aporteCusteioReais>0.0</aporteCusteioReais>
-      <aporteCapitalReais>0.0</aporteCapitalReais>
-      <gastoExecutadoCusteioReais>0.0</gastoExecutadoCusteioReais>
-      <gastoExecutadoCapitalReais>0.0</gastoExecutadoCapitalReais>
+      <aporteCusteioReais>1.0</aporteCusteioReais>
+      <aporteCapitalReais>2.0</aporteCapitalReais>
+      <gastoExecutadoCusteioReais>2.0</gastoExecutadoCusteioReais>
+      <gastoExecutadoCapitalReais>3.0</gastoExecutadoCapitalReais>
     </model.projetos.Projeto>
   </entry>
   <entry>
@@ -75,7 +75,7 @@
           <ativo>true</ativo>
           <projetoPai class="model.projetos.Projeto" reference="../../.."/>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-11-09 21:32:56.337 UTC</dataInicio>
+          <dataInicio>2020-11-10 22:32:38.107 UTC</dataInicio>
           <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
           <qtdMesesCusteados>0</qtdMesesCusteados>
           <qtdMesesPagos>0</qtdMesesPagos>
@@ -89,7 +89,7 @@
             <nome>jose claudiu</nome>
             <ativo>true</ativo>
             <email>fananitadz@gmail.com</email>
-            <senha>1212</senha>
+            <senha>121212</senha>
             <conta class="model.autenticacao.ContaEmailLivre">
               <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
             </conta>
@@ -104,13 +104,13 @@
                     <model.projetos.Participacao reference="../../.."/>
                   </itens>
                   <nome>Projeto novo</nome>
-                  <aporteCusteioReais>0.0</aporteCusteioReais>
-                  <aporteCapitalReais>0.0</aporteCapitalReais>
-                  <gastoExecutadoCusteioReais>0.0</gastoExecutadoCusteioReais>
-                  <gastoExecutadoCapitalReais>0.0</gastoExecutadoCapitalReais>
+                  <aporteCusteioReais>1.0</aporteCusteioReais>
+                  <aporteCapitalReais>2.0</aporteCapitalReais>
+                  <gastoExecutadoCusteioReais>2.0</gastoExecutadoCusteioReais>
+                  <gastoExecutadoCapitalReais>3.0</gastoExecutadoCapitalReais>
                 </projetoPai>
                 <tipo>PARTICIPACAO</tipo>
-                <dataInicio>2020-11-09 21:32:56.331 UTC</dataInicio>
+                <dataInicio>2020-11-10 22:32:38.101 UTC</dataInicio>
                 <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
                 <qtdMesesCusteados>0</qtdMesesCusteados>
                 <qtdMesesPagos>0</qtdMesesPagos>
@@ -125,10 +125,10 @@
         </model.projetos.Participacao>
       </itens>
       <nome>projeto 2</nome>
-      <aporteCusteioReais>0.0</aporteCusteioReais>
-      <aporteCapitalReais>0.0</aporteCapitalReais>
-      <gastoExecutadoCusteioReais>0.0</gastoExecutadoCusteioReais>
-      <gastoExecutadoCapitalReais>0.0</gastoExecutadoCapitalReais>
+      <aporteCusteioReais>1.0</aporteCusteioReais>
+      <aporteCapitalReais>2.0</aporteCapitalReais>
+      <gastoExecutadoCusteioReais>3.0</gastoExecutadoCusteioReais>
+      <gastoExecutadoCapitalReais>5.0</gastoExecutadoCapitalReais>
     </model.projetos.Projeto>
   </entry>
 </map>

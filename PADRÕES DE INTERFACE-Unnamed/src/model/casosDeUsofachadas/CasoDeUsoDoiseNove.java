@@ -9,7 +9,7 @@ import model.autenticacao.RegistradorSessaoLogin;
 import model.autenticacao.TipoProvedorAutenticacao;
 import persistencia.xml.DAOXMLMembroConta;
 
-//caso de uso 2
+//caso de uso 2 e 9
 public class CasoDeUsoDoiseNove {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
@@ -36,5 +36,8 @@ public class CasoDeUsoDoiseNove {
 
 	}
 
+	public void fazerLogout(String login) throws Exception {
+		Membro membroAtual = daoMembro.recuperarPorEmail(login);
+		registrador.registrarOline(membroAtual);
+	}
 }
-

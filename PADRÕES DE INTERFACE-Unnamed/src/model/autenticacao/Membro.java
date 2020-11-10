@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
+import ponto.model.projetos.PontoTrabalhado;
 import model.projetos.Participacao;
 
 public class Membro extends ProjetoComponente implements Serializable {
@@ -207,7 +208,18 @@ public class Membro extends ProjetoComponente implements Serializable {
 		}
 		return aux;
 	}
-
+	public ArrayList<PontoTrabalhado> getPontosValidos() {
+		ArrayList<PontoTrabalhado>pontos= new ArrayList<PontoTrabalhado>();
+		for (ProjetoComponente partcipa : getParticipacoes()) {
+			Participacao participacao= (Participacao)partcipa;
+			for (PontoTrabalhado ponto : participacao.getPontos()) {
+				if(ponto.isJustificativaAceita()) {
+					pontos.add(ponto);
+				}
+			}
+		}
+		return pontos;
+	}
 	public void setParticipacoes(ArrayList<ProjetoComponente> participacoes) {
 		this.participacoes = participacoes;
 	}

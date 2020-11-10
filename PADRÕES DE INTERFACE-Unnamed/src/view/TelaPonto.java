@@ -58,9 +58,9 @@ public class TelaPonto extends JFrame {
 
 	public void botaoVerDetalhes(String login, String nomeDoProjeto) {
 		try {
-			controller.horasTrabalhadasValidas(login, nomeDoProjeto);
-			controller.defcitHoras(login, nomeDoProjeto);
-			controller.getPontosInvalidos(login, nomeDoProjeto);
+			JOptionPane.showMessageDialog(this,controller.horasTrabalhadasValidas(login, nomeDoProjeto));
+			JOptionPane.showMessageDialog(this,controller.defcitHoras(login, nomeDoProjeto));
+			JOptionPane.showMessageDialog(this,controller.getPontosInvalidos(login, nomeDoProjeto));
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}

@@ -14,8 +14,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.ContaEmail;
 import model.autenticacao.Membro;
-import model.projetos.Participacao;
-import model.projetos.ProjetoComponente;
 
 public class DAOXMLMembroConta {
 
@@ -82,7 +80,6 @@ public class DAOXMLMembroConta {
 			this.persistidos = this.carregarXML();
 			id = persistidos.size()+1;
 			this.persistidos.put(id, membro);
-			atualizarComponentes(membro);
 			this.salvarXML(persistidos);
 			return true;
 		}
@@ -131,17 +128,8 @@ public class DAOXMLMembroConta {
 			}
 			
 		}
-		atualizarComponentes(membroSubstituto);
 		this.salvarXML(persistidos);
 		return true;
-	}
-	private void atualizarComponentes(Membro membro) throws Exception {
-		DAOXMLMembroConta daoProjeto = new DAOXMLMembroConta();
-		for (ProjetoComponente item : membro.getParticipacoes()) {
-			Participacao participacao = (Participacao) item;
-			daoProjeto.atualizar(participacao.getMembro(), participacao.getMembro());
-
-		}
 	}
 
 	/*

@@ -44,7 +44,6 @@ public class DAOXMLGrupo {
 			this.persistidos = this.carregarXML();
 			id += 1;
 			this.persistidos.put(id, grupo);
-			atualizarComponentes(grupo);
 			this.salvarXML(persistidos);
 			return true;
 		}
@@ -108,21 +107,8 @@ public class DAOXMLGrupo {
 				persistidos.replace(chave, grupoSubistituto);
 			}
 		}
-		atualizarComponentes(grupoSubistituto);
 		this.salvarXML(persistidos);
 		return true;
-	}
-	private void atualizarComponentes(Grupo grupo) throws Exception {
-		DAOXMLProjetoParticipacao daoProjeto=new DAOXMLProjetoParticipacao();
-		DAOXMLMembroConta daoMembro=new DAOXMLMembroConta();
-		for (ProjetoComponente item : grupo.getItens()) {
-			if(item.getTipo()==TipoProjetoComponente.PROJETO) {
-				daoProjeto.atualizar((Projeto)item,(Projeto) item);
-			}
-			else{
-				daoMembro.atualizar((Membro)item,(Membro) item);
-			}
-		}
 	}
 	/*
 	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de seus atributos. caso

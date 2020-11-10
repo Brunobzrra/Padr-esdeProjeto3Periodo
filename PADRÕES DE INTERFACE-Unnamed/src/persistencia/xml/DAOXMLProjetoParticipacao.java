@@ -9,8 +9,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.xml.crypto.dsig.spec.ExcC14NParameterSpec;
-
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
@@ -48,7 +46,6 @@ public class DAOXMLProjetoParticipacao {
 			id += 1;
 			this.persistidos.put(id, projeto);
 			this.salvarXML(persistidos);
-			atualizarComponentes(projeto);
 			return true;
 		}
 		return false;
@@ -123,19 +120,10 @@ public class DAOXMLProjetoParticipacao {
 				persistidos.replace(chave, projetoSubstituto);
 			}
 		}
-		atualizarComponentes(projetoSubstituto);
 		this.salvarXML(persistidos);
 		return true;
 	}
 
-	private void atualizarComponentes(Projeto projeto) throws Exception {
-		DAOXMLMembroConta daoProjeto = new DAOXMLMembroConta();
-		for (ProjetoComponente item : projeto.getItens()) {
-			Participacao participacao = (Participacao) item;
-			daoProjeto.atualizar(participacao.getMembro(), participacao.getMembro());
-
-		}
-	}
 	/*
 	 * metodo usado para consultar um projeto no hashset de persistidos, por meio de
 	 * seus atributos. caso exista um projeto com o mesmo ou os mesmos atributos

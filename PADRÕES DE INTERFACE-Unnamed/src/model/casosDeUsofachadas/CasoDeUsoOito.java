@@ -28,7 +28,7 @@ public class CasoDeUsoOito {
 							texto.append(String.format(
 							"<span>Dados do edital %s -- Valor total de custeio não gasto %s -- valor total de capital não gasto %s</span><br>\n",
 							edital.getNome(), edital.getCusteioReaisNaoGastoTotal(),
-							edital.getCapitalReaiNaoGastoTotal()));
+							edital.getCapitalReaisNaoGastoTotal()));
 				}
 			} catch (Exception e) {
 				// TODO: handle exception

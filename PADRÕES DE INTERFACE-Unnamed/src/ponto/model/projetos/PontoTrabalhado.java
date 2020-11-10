@@ -6,7 +6,7 @@ public class PontoTrabalhado {
 	private LocalDateTime dataHoraEntrada;
 	private LocalDateTime dataHoraSaida;
 	private String justificativa;
-	private boolean justificativaAceita;
+	private boolean justificativaAceita=true;
 
 	public PontoTrabalhado(LocalDateTime dataHoraEntrada) {
 		this.dataHoraEntrada = dataHoraEntrada;

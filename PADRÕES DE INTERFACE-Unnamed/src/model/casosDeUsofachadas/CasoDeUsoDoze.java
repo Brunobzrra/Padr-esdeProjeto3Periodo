@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 import model.autenticacao.Membro;
 import persistencia.xml.DAOXMLMembroConta;
 import ponto.model.projetos.PontoTrabalhado;
-import ponto.model.projetos.RegistradorPontoCentral;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
 public class CasoDeUsoDoze {
