@@ -54,7 +54,7 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 			RegistradorSessaoLogin.getInstance().registrarOline(m);
 			Membro aux = m;
 			if (m.getSenha().equalsIgnoreCase(senha)) {
-				proxy.registrarPonto((Projeto) projeto, m);
+				PontoTrabalhado o=proxy.registrarPonto((Projeto) projeto, m);
 				daMembro.atualizar(aux, m);
 				daoProjetoParticipacao.atualizar(projetoAux, projeto);
 			} else {
