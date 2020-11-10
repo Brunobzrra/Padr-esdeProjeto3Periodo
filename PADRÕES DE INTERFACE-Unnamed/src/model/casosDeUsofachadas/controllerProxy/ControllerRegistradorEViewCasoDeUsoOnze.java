@@ -1,4 +1,4 @@
-package ponto.model.projetos;
+package model.casosDeUsofachadas.controllerProxy;
 
 import java.net.InetAddress;
 import java.net.MalformedURLException;
@@ -22,16 +22,18 @@ import model.utilitarios.ConversorDeHoraEDia;
 import model.utilitarios.PegadorDeEmailDoDaoMembro;
 import persistencia.xml.DAOXMLMembroConta;
 import persistencia.xml.DAOXMLProjetoParticipacao;
+import ponto.model.projetos.PontoTrabalhado;
+import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
-public class ControllerRegistradorEView {
+public class ControllerRegistradorEViewCasoDeUsoOnze {
 
-	private static ControllerRegistradorEView controllerUnico;
-	private static DAOXMLMembroConta daMembro= new DAOXMLMembroConta();
+	private static ControllerRegistradorEViewCasoDeUsoOnze controllerUnico;
+	private static DAOXMLMembroConta daMembro = new DAOXMLMembroConta();
 	private static DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 
 	private ServicoRegistradorPontoCentral proxy;
 
-	private ControllerRegistradorEView()
+	private ControllerRegistradorEViewCasoDeUsoOnze()
 			throws RemoteException, MalformedURLException, UnknownHostException, NotBoundException {
 		proxy = (ServicoRegistradorPontoCentral) Naming
 				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "/ServicoRemotoPontoTrabalhado");
@@ -42,24 +44,28 @@ public class ControllerRegistradorEView {
 
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
 
-		if (projeto!=null) {
+		if (projeto != null) {
 			proxy.registrarPonto((Projeto) projeto, login);
-		}else
+		} else
 			throw new Exception("Projeto não existente!");
 	}
+
 	public ArrayList<String> recuperarProjetos(String email) {
-		ArrayList<ProjetoComponente> participacao=daMembro.recuperarPorEmail(email).getParticipacoes();
-		ArrayList<String> nomes= new ArrayList<String>();
+		ArrayList<ProjetoComponente> participacao = daMembro.recuperarPorEmail(email).getParticipacoes();
+		ArrayList<String> nomes = new ArrayList<String>();
 		for (ProjetoComponente participa : participacao) {
-			nomes.add(participa.getProjetoPai().getNome());
+			if (participa.getProjetoPai().getAtivo()) {
+				nomes.add(participa.getProjetoPai().getNome());
+			}
 		}
 		return nomes;
 	}
+
 	public float horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
 
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
-			if (membroDoFor.getTipo()==TipoProjetoComponente.MEMBRO) {
+			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
@@ -80,7 +86,7 @@ public class ControllerRegistradorEView {
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
 
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
-			if (membroDoFor.getTipo()==TipoProjetoComponente.MEMBRO) {
+			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					return proxy.getPontosInvalidos((Membro) membroDoFor);
 
@@ -111,7 +117,7 @@ public class ControllerRegistradorEView {
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
 
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
-			if (membroDoFor.getTipo()==TipoProjetoComponente.MEMBRO) {
+			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
@@ -127,11 +133,11 @@ public class ControllerRegistradorEView {
 		return 0;
 	}
 
-	public static ControllerRegistradorEView getInstance() {
+	public static ControllerRegistradorEViewCasoDeUsoOnze getInstance() {
 
 		if (controllerUnico == null) {
 			try {
-				return new ControllerRegistradorEView();
+				return new ControllerRegistradorEViewCasoDeUsoOnze();
 			} catch (RemoteException | MalformedURLException | UnknownHostException | NotBoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -147,16 +153,16 @@ public class ControllerRegistradorEView {
 		joseClaudiu.setConta(conta);
 		joseClaudiu.setAtivo(true);
 		joseClaudiu.setAdministrador(true);
-		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()),
-				Float.parseFloat("0"), (short) 0, (short) 0, true);
+		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()), Float.parseFloat("0"),
+				(short) 0, (short) 0, true);
 		Projeto projeto1 = new Projeto("Projeto novo", 0, 0, 0, 0);
 		Projeto projeto2 = new Projeto("projeto 2", 0, 0, 0, 0);
 
 		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
 		try {
 			DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
-			Participacao participacao2 = new Participacao(new Date(System.currentTimeMillis()),
-					Float.parseFloat("0"), (short) 0, (short) 0, true);
+			Participacao participacao2 = new Participacao(new Date(System.currentTimeMillis()), Float.parseFloat("0"),
+					(short) 0, (short) 0, true);
 			joseClaudiu.adicionar(participacao);
 			projeto1.adicionar(participacao);
 			joseClaudiu.adicionar(participacao2);

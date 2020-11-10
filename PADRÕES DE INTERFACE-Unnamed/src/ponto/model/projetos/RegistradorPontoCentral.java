@@ -15,7 +15,6 @@ import model.autenticacao.RegistradorSessaoLogin;
 import model.chainOfResponsibility.AvaliadorDeRegistro;
 import model.chainOfResponsibility.AvaliadorPontoSemEntradaeOuSaida;
 import model.chainOfResponsibility.AvaliadorPontosComIntervalosConflitantes;
-import model.chainOfResponsibility.AvaliadorPontosForaParticipacaoPrevisao;
 import model.chainOfResponsibility.AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos;
 import model.chainOfResponsibility.AvaliadorPontosInvalidosComJustificativaNaoAceita;
 import model.projetos.Participacao;

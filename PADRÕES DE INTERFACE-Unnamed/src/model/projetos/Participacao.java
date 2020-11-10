@@ -109,7 +109,7 @@ public class Participacao extends ProjetoComponente {
 	}
 
 	@Override
-	public float getCapitalReaiNaoGastoTotal() throws Exception {
+	public float getCapitalReaisNaoGastoTotal() throws Exception {
 		float aux = 0;
 		aux = this.qtdMesesCusteados - this.qtdMesesPagos;
 		return aux * this.aporteCusteioMensalReais;
@@ -207,14 +207,14 @@ public class Participacao extends ProjetoComponente {
 	}
 
 	public float getGastoTotal() {
-		return getCusteioReaisGastoTotal() + getCapitalReaiGastoTotal();
+		return getCusteioReaisGastoTotal() + getCapitalReaisGastoTotal();
 	}
 
 	public float getCusteioReaisGastoTotal() {
 		return aporteCusteioMensalReais * qtdMesesPagos;
 	}
 
-	public float getCapitalReaiGastoTotal() {
+	public float getCapitalReaisGastoTotal() {
 		return 0;
 	}
 }

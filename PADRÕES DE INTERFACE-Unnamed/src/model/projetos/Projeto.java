@@ -88,12 +88,12 @@ public class Projeto extends ProjetoComponente {
 	public float getCusteioReaisNaoGastoTotal() throws Exception {
 		float valorFinal = 0;
 		for (ProjetoComponente projetoComponente : itens) {
-			valorFinal += projetoComponente.getCapitalReaiNaoGastoTotal();
+			valorFinal += projetoComponente.getCapitalReaisNaoGastoTotal();
 		}
 		return valorFinal + (aporteCusteioReais - gastoExecutadoCusteioReais - valorFinal);
 	}
 
-	public float getCapitalReaiNaoGastoTotal() throws Exception {
+	public float getCapitalReaisNaoGastoTotal() throws Exception {
 		return aporteCapitalReais - gastoExecutadoCapitalReais;
 	}
 
@@ -171,7 +171,7 @@ public class Projeto extends ProjetoComponente {
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getGastoTotal();
 		}
-		return aux + getCusteioReaisGastoTotal() + getCapitalReaiGastoTotal();
+		return aux + getCusteioReaisGastoTotal() + getCapitalReaisGastoTotal();
 	}
 
 	public float getCusteioReaisGastoTotal() {
@@ -182,10 +182,10 @@ public class Projeto extends ProjetoComponente {
 		return gastoExecutadoCusteioReais + aux;
 	}
 
-	public float getCapitalReaiGastoTotal() {
+	public float getCapitalReaisGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
-			aux += projetoComponente.getCapitalReaiGastoTotal();
+			aux += projetoComponente.getCapitalReaisGastoTotal();
 		}
 		return gastoExecutadoCapitalReais + aux;
 	}

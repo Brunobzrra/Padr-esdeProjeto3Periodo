@@ -15,14 +15,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import ponto.model.projetos.ControllerRegistradorEView;
+import model.casosDeUsofachadas.controllerProxy.ControllerRegistradorEViewCasoDeUsoOnze;
 
 public class TelaPonto extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
 	private JPasswordField senha;
-	private ControllerRegistradorEView controller = ControllerRegistradorEView.getInstance();
+	private ControllerRegistradorEViewCasoDeUsoOnze controller = ControllerRegistradorEViewCasoDeUsoOnze.getInstance();
 	private JComboBox<Object> op;
 
 	public TelaPonto() {

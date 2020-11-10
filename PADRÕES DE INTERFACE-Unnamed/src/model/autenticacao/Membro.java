@@ -108,15 +108,19 @@ public class Membro extends ProjetoComponente implements Serializable {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
-			Participacao participa=(Participacao) item;
-			participa.setMembro(this);;
+			Participacao participa = (Participacao) item;
+			participa.setMembro(this);
+			;
 			participacoes.add(item);
 		}
 	}
 
-	public void remover(Participacao integracao) throws Exception {
-		participacoes.remove(integracao);
-		integracao.setMembro(null);
+	public void remover(ProjetoComponente integracao) throws Exception {
+		if (integracao.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
+			Participacao participa = (Participacao) integracao;
+			participacoes.remove(participa);
+			participa.setMembro(null);
+		}
 	}
 
 	@Override
@@ -151,7 +155,7 @@ public class Membro extends ProjetoComponente implements Serializable {
 	/**
 	 * Este metodo não sao implemntados em membro
 	 */
-	public float getCapitalReaiNaoGastoTotal() throws Exception {
+	public float getCapitalReaisNaoGastoTotal() throws Exception {
 		// TODO Auto-generated method stub
 		throw new Exception("Membro não este recurso!");
 	}
@@ -185,7 +189,7 @@ public class Membro extends ProjetoComponente implements Serializable {
 		for (ProjetoComponente projetoComponente : participacoes) {
 			aux += projetoComponente.getGastoTotal();
 		}
-		return aux + getCusteioReaisGastoTotal() + getCapitalReaiGastoTotal();
+		return aux + getCusteioReaisGastoTotal() + getCapitalReaisGastoTotal();
 	}
 
 	public float getCusteioReaisGastoTotal() {
@@ -196,10 +200,10 @@ public class Membro extends ProjetoComponente implements Serializable {
 		return aux;
 	}
 
-	public float getCapitalReaiGastoTotal() {
+	public float getCapitalReaisGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : participacoes) {
-			aux += projetoComponente.getCapitalReaiGastoTotal();
+			aux += projetoComponente.getCapitalReaisGastoTotal();
 		}
 		return aux;
 	}
