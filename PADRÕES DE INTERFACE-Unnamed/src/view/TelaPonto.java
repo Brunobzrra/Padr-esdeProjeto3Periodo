@@ -15,19 +15,20 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import model.casosDeUsofachadas.controllerProxy.ControllerRegistradorEViewCasoDeUsoOnze;
+import model.casosDeUsofachadas.controllerProxy.ControllerRegistradorEViewCasoDeUsoOnzeETreze;
+
 
 public class TelaPonto extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
 	private JPasswordField senha;
-	private ControllerRegistradorEViewCasoDeUsoOnze controller;
+	private ControllerRegistradorEViewCasoDeUsoOnzeETreze controller;
 	private JComboBox<Object> op;
 	
 	public TelaPonto() {
 		try {
-			controller = ControllerRegistradorEViewCasoDeUsoOnze.getInstance();
+			controller = ControllerRegistradorEViewCasoDeUsoOnzeETreze.getInstance();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Aplicacao servidora não inicializada", "Erro",
 					JOptionPane.ERROR_MESSAGE);

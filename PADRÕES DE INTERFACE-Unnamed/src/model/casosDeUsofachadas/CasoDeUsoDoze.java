@@ -8,7 +8,7 @@ import model.autenticacao.Membro;
 import persistencia.xml.DAOXMLMembroConta;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
-
+//Caso de uso 12
 public class CasoDeUsoDoze {
 	DAOXMLMembroConta daoMembroConta = new DAOXMLMembroConta();
 

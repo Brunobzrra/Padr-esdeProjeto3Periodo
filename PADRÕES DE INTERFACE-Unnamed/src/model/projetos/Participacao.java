@@ -95,7 +95,18 @@ public class Participacao extends ProjetoComponente {
 	public void removerPonto(PontoTrabalhado ponto) {
 		pontos.remove(ponto);
 	}
-
+	public boolean adicionarHorario(HorarioPrevisto hora) {
+		for (HorarioPrevisto horario : horarios) {
+			if (hora == horario) {
+				return false;
+			}
+		}
+		horarios.add(hora);
+		return true;
+	}
+	public void removerHrorario(HorarioPrevisto hora) {
+		horarios.remove(hora);
+	}
 	public float getCusteioReaisNaoGastoTotal() {
 		float mesesDife = this.quantidadeDeMesesProjeto() - qtdMesesPagos;
 		return aporteCusteioMensalReais * mesesDife;

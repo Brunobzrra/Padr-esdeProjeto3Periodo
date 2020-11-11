@@ -25,16 +25,16 @@ import persistencia.xml.DAOXMLMembroConta;
 import persistencia.xml.DAOXMLProjetoParticipacao;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
+//Caso de uso 11 e 13
+public class ControllerRegistradorEViewCasoDeUsoOnzeETreze {
 
-public class ControllerRegistradorEViewCasoDeUsoOnze {
-
-	private static ControllerRegistradorEViewCasoDeUsoOnze controllerUnico;
+	private static ControllerRegistradorEViewCasoDeUsoOnzeETreze controllerUnico;
 	private static DAOXMLMembroConta daMembro = new DAOXMLMembroConta();
 	private static DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 
 	private ServicoRegistradorPontoCentral proxy;
 
-	private ControllerRegistradorEViewCasoDeUsoOnze()
+	private ControllerRegistradorEViewCasoDeUsoOnzeETreze()
 			throws RemoteException, MalformedURLException, UnknownHostException, NotBoundException {
 		proxy = (ServicoRegistradorPontoCentral) Naming
 				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "/ServicoRemotoPontoTrabalhado");
@@ -170,10 +170,10 @@ public class ControllerRegistradorEViewCasoDeUsoOnze {
 		return texto;
 	}
 
-	public static ControllerRegistradorEViewCasoDeUsoOnze getInstance() throws Exception {
+	public static ControllerRegistradorEViewCasoDeUsoOnzeETreze getInstance() throws Exception {
 
 		if (controllerUnico == null) {
-			return new ControllerRegistradorEViewCasoDeUsoOnze();
+			return new ControllerRegistradorEViewCasoDeUsoOnzeETreze();
 		}
 		return controllerUnico;
 	}
