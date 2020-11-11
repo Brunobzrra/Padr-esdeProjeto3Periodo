@@ -35,7 +35,7 @@ public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoR
 	private CasoDeUsoOnzeETreze() throws Exception {
 		super();
 	}
-
+	//metodos usados pela view 
 	public static CasoDeUsoOnzeETreze getInstance() throws Exception {
 		if (fachadaSingleton == null) {
 			fachadaSingleton = new CasoDeUsoOnzeETreze();

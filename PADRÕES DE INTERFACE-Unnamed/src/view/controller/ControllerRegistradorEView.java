@@ -5,18 +5,9 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Set;
 
-import model.autenticacao.ContaAutenticacaoProvedorInterno;
-import model.autenticacao.ContaEmail;
-import model.autenticacao.ContaEmailLivre;
-import model.autenticacao.Membro;
-import model.projetos.Participacao;
-import model.projetos.Projeto;
-import persistencia.xml.DAOXMLMembroConta;
-import persistencia.xml.DAOXMLProjetoParticipacao;
-import ponto.model.projetos.DiaSemana;
-import ponto.model.projetos.HorarioPrevisto;
+import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
 public class ControllerRegistradorEView {
@@ -37,6 +28,12 @@ public class ControllerRegistradorEView {
 
 	public StringBuffer getPontosValidos(String login, String nomeDoProjeto) throws RemoteException, Exception {
 		return proxy.getPontosValidos(login, nomeDoProjeto);
+	}
+	public Set<PontoTrabalhado> getPontosInvalidos(String login, String nomeDoProjeto) throws Exception{
+		return proxy.getPontosInvalidos(login, nomeDoProjeto);
+	}
+	public String getDetalhes(String login, String nomeDoProjeto) throws Exception {
+		return proxy.getDetalhes(login, nomeDoProjeto);
 	}
 
 	public StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {

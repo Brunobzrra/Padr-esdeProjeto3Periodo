@@ -20,6 +20,7 @@ import model.chainOfResponsibility.AvaliadorPontosInvalidosComJustificativaNaoAc
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.projetos.TipoProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 
 public class RegistradorPontoCentral implements Serializable {
@@ -35,7 +36,7 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		Participacao participacao = null;
 		for (ProjetoComponente participa : projeto.getItens()) {
-			if (participa instanceof Participacao) {
+			if (participa.getTipo()==TipoProjetoComponente.PARTICIPACAO) {
 				participacao = (Participacao) participa;
 			}
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
