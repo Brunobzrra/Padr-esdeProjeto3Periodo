@@ -1,12 +1,11 @@
 package ponto.model.projetos;
 
-import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-import model.casosDeUsofachadas.CasoDeUsoOnze;
+import model.casosDeUsofachadas.CasoDeUsoOnzeETreze;
 
 public class AplicacaoServidora {
 
@@ -17,9 +16,10 @@ public class AplicacaoServidora {
 		try {
 			/* tenta iniciar o registro */
 				registry = LocateRegistry.createRegistry(1099);
-				ServicoRegistradorPontoCentral remoto = CasoDeUsoOnze.getInstance();
+				ServicoRegistradorPontoCentral remoto = CasoDeUsoOnzeETreze.getInstance();
 				Naming.rebind("//localhost/ServicoRemotoPontoTrabalhado", remoto);
-		} catch (RemoteException | MalformedURLException e) {
+		} catch (Exception e) {
+			e.printStackTrace();
 			/* se não conseguiu criar vê se está rodando */
 			try {
 				registry = LocateRegistry.getRegistry();

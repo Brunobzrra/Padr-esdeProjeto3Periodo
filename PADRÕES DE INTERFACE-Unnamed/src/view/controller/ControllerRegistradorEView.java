@@ -1,26 +1,34 @@
 package view.controller;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
-import model.casosDeUsofachadas.CasoDeUsoOnzeETreze;
+import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
 public class ControllerRegistradorEView {
 
-	private CasoDeUsoOnzeETreze fachada;
-	
+	private ServicoRegistradorPontoCentral proxy;
+	public ControllerRegistradorEView() throws MalformedURLException, RemoteException, NotBoundException {
+		proxy = (ServicoRegistradorPontoCentral) Naming.lookup("//localhost/ServicoRemotoPontoTrabalhado");
+	}
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
-		fachada.registrarPonto(nomeDoProjeto, login, senha);
+		proxy.registrarPonto(nomeDoProjeto, login, senha);
 	}
 	public StringBuffer defcitHoras(String login, String nomeDoProjeto) throws RemoteException, Exception {
-		return fachada.defcitHoras(login, nomeDoProjeto);
+		return proxy.defcitHoras(login, nomeDoProjeto);
 	}
-	public StringBuffer getPontosValidos(String login, String nomeDoProjeto) {
-		return fachada.getPontosValidos(login, nomeDoProjeto);
+	public StringBuffer getPontosValidos(String login, String nomeDoProjeto) throws RemoteException, Exception {
+		return proxy.getPontosValidos(login, nomeDoProjeto);
 	}
 	public StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
-		return fachada.horasTrabalhadasValidas(login, nomeDoProjeto);
+		return proxy.horasTrabalhadasValidas(login, nomeDoProjeto);
 	}
-	
+	public ArrayList<String> recuperarProjetos(String email) {
+		return proxy.recuperarProjetos(email);
+	}
 //	public static void main(String[] args) {
 //		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "121212");
 //		ContaEmail conta = new ContaEmailLivre();
