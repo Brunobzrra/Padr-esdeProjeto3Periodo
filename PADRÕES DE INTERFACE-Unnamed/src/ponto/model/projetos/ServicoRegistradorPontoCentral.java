@@ -2,11 +2,9 @@ package ponto.model.projetos;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Set;
 
-import model.autenticacao.Membro;
-import model.projetos.Projeto;
 /*
  * Os parametros de entrada dos métodos usados receberem tipos primitivos identificadores, para ficar fácil de manuesear, e tambem retornar tipos
  * que já implementam serialazible. 
@@ -14,13 +12,22 @@ import model.projetos.Projeto;
  * */
 public interface ServicoRegistradorPontoCentral extends Remote {
 
-	public abstract float horasTrabalhadasValidas(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro)
+	public abstract StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto)
 			throws RemoteException, Exception;
 
-	public abstract float defcitHoras(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro) throws RemoteException, Exception;
-	public abstract PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception;
+	public abstract ArrayList<String> recuperarProjetos(String email);
 
-	public abstract Set<PontoTrabalhado> getPontosInvalidos(Membro membro) throws RemoteException,Exception;
+	public abstract StringBuffer defcitHoras(String login, String nomeDoProjeto)throws RemoteException,Exception ;
 
-	public abstract void justificarPontoNaoBatido(PontoTrabalhado pontoTrabalhado, String justificar, Membro membro) throws Exception;
+
+	public abstract void registrarPonto(String nomeDoProjeto, String login, String senha)
+			throws RemoteException, Exception;
+
+	public abstract StringBuffer getPontosValidos(String login, String nomeDoProjeto) throws RemoteException, Exception;
+
+	public abstract Set<PontoTrabalhado> getPontosInvalidos(String login, String nomeDoProjeto)
+			throws RemoteException, Exception;
+
+	public abstract String getDetalhes(String login, String nomeDoProjeto) throws RemoteException, Exception;
+
 }

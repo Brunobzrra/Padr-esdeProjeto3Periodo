@@ -1,11 +1,11 @@
 package model.projetos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import model.autenticacao.Membro;
 
-public class Projeto extends ProjetoComponente {
-
+public class Projeto extends ProjetoComponente implements Serializable{
 	/**
 	 * 
 	 */

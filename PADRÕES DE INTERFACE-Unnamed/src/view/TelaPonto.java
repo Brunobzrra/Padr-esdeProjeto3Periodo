@@ -15,7 +15,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import model.casosDeUsofachadas.controllerProxy.ControllerRegistradorEViewCasoDeUsoOnzeETreze;
+import view.controller.ControllerRegistradorEView;
+
 
 
 public class TelaPonto extends JFrame {
@@ -23,12 +24,12 @@ public class TelaPonto extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
 	private JPasswordField senha;
-	private ControllerRegistradorEViewCasoDeUsoOnzeETreze controller;
+	private ControllerRegistradorEView controller;
 	private JComboBox<Object> op;
 	
 	public TelaPonto() {
 		try {
-			controller = ControllerRegistradorEViewCasoDeUsoOnzeETreze.getInstance();
+			controller = new ControllerRegistradorEView();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Aplicacao servidora não inicializada", "Erro",
 					JOptionPane.ERROR_MESSAGE);
@@ -62,7 +63,7 @@ public class TelaPonto extends JFrame {
 		try {
 			JOptionPane.showMessageDialog(this,controller.horasTrabalhadasValidas(login, nomeDoProjeto));
 			JOptionPane.showMessageDialog(this,controller.defcitHoras(login, nomeDoProjeto));
-			JOptionPane.showMessageDialog(this,controller.getPontosInvalidos(login, nomeDoProjeto));
+			JOptionPane.showMessageDialog(this,controller.getPontosValidos(login, nomeDoProjeto));
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}

@@ -6,6 +6,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+import model.casosDeUsofachadas.CasoDeUsoOnze;
+
 public class AplicacaoServidora {
 
 	public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class AplicacaoServidora {
 		try {
 			/* tenta iniciar o registro */
 				registry = LocateRegistry.createRegistry(1099);
-				ServicoRegistradorPontoCentral remoto = new RegistradorPontoCentral();
+				ServicoRegistradorPontoCentral remoto = CasoDeUsoOnze.getInstance();
 				Naming.rebind("//localhost/ServicoRemotoPontoTrabalhado", remoto);
 		} catch (RemoteException | MalformedURLException e) {
 			/* se não conseguiu criar vê se está rodando */

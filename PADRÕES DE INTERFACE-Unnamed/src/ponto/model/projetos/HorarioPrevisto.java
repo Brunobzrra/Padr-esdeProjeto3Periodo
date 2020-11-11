@@ -1,6 +1,8 @@
 package ponto.model.projetos;
 
-public class HorarioPrevisto {
+import java.io.Serializable;
+
+public class HorarioPrevisto implements Serializable{
 	private DiaSemana diaSemana;
 	private short horaInicio;
 	private short horaTermino;

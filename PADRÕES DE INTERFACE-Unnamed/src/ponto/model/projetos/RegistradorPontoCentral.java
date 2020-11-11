@@ -1,7 +1,7 @@
 package ponto.model.projetos;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -22,16 +22,12 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 
-public class RegistradorPontoCentral extends UnicastRemoteObject implements ServicoRegistradorPontoCentral {
+public class RegistradorPontoCentral implements Serializable{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	protected RegistradorPontoCentral() throws RemoteException {
-		super();
-	}
 
 	public PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
