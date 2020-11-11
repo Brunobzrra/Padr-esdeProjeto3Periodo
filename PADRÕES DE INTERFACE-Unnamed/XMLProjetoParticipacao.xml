@@ -9,13 +9,26 @@
           <ativo>true</ativo>
           <projetoPai class="model.projetos.Projeto" reference="../../.."/>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-11-10 22:32:38.101 UTC</dataInicio>
+          <dataInicio>2020-11-11 18:47:33.581 UTC</dataInicio>
           <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
           <qtdMesesCusteados>0</qtdMesesCusteados>
           <qtdMesesPagos>0</qtdMesesPagos>
           <coordenador>true</coordenador>
           <pontos/>
-          <horarios/>
+          <horarios>
+            <ponto.model.projetos.HorarioPrevisto>
+              <diaSemana>QUA</diaSemana>
+              <horaInicio>16</horaInicio>
+              <horaTermino>22</horaTermino>
+              <minutosTolerante>30</minutosTolerante>
+            </ponto.model.projetos.HorarioPrevisto>
+            <ponto.model.projetos.HorarioPrevisto>
+              <diaSemana>SEX</diaSemana>
+              <horaInicio>16</horaInicio>
+              <horaTermino>22</horaTermino>
+              <minutosTolerante>30</minutosTolerante>
+            </ponto.model.projetos.HorarioPrevisto>
+          </horarios>
           <membro>
             <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
             <tipo>MEMBRO</tipo>
@@ -45,7 +58,7 @@
                   <gastoExecutadoCapitalReais>5.0</gastoExecutadoCapitalReais>
                 </projetoPai>
                 <tipo>PARTICIPACAO</tipo>
-                <dataInicio>2020-11-10 22:32:38.107 UTC</dataInicio>
+                <dataInicio>2020-11-11 18:47:35.370 UTC</dataInicio>
                 <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
                 <qtdMesesCusteados>0</qtdMesesCusteados>
                 <qtdMesesPagos>0</qtdMesesPagos>
@@ -75,7 +88,7 @@
           <ativo>true</ativo>
           <projetoPai class="model.projetos.Projeto" reference="../../.."/>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-11-10 22:32:38.107 UTC</dataInicio>
+          <dataInicio>2020-11-11 18:47:35.370 UTC</dataInicio>
           <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
           <qtdMesesCusteados>0</qtdMesesCusteados>
           <qtdMesesPagos>0</qtdMesesPagos>
@@ -110,13 +123,26 @@
                   <gastoExecutadoCapitalReais>3.0</gastoExecutadoCapitalReais>
                 </projetoPai>
                 <tipo>PARTICIPACAO</tipo>
-                <dataInicio>2020-11-10 22:32:38.101 UTC</dataInicio>
+                <dataInicio>2020-11-11 18:47:33.581 UTC</dataInicio>
                 <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
                 <qtdMesesCusteados>0</qtdMesesCusteados>
                 <qtdMesesPagos>0</qtdMesesPagos>
                 <coordenador>true</coordenador>
                 <pontos/>
-                <horarios/>
+                <horarios>
+                  <ponto.model.projetos.HorarioPrevisto>
+                    <diaSemana>QUA</diaSemana>
+                    <horaInicio>16</horaInicio>
+                    <horaTermino>22</horaTermino>
+                    <minutosTolerante>30</minutosTolerante>
+                  </ponto.model.projetos.HorarioPrevisto>
+                  <ponto.model.projetos.HorarioPrevisto>
+                    <diaSemana>SEX</diaSemana>
+                    <horaInicio>16</horaInicio>
+                    <horaTermino>22</horaTermino>
+                    <minutosTolerante>30</minutosTolerante>
+                  </ponto.model.projetos.HorarioPrevisto>
+                </horarios>
                 <membro reference="../../.."/>
               </model.projetos.Participacao>
               <model.projetos.Participacao reference="../../.."/>

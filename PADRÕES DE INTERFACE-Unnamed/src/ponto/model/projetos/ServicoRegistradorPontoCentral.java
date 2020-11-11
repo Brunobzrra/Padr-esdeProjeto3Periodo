@@ -15,10 +15,9 @@ public interface ServicoRegistradorPontoCentral extends Remote {
 	public abstract StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto)
 			throws RemoteException, Exception;
 
-	public abstract ArrayList<String> recuperarProjetos(String email);
+	public abstract ArrayList<String> recuperarProjetos(String email) throws RemoteException, Exception;
 
-	public abstract StringBuffer defcitHoras(String login, String nomeDoProjeto)throws RemoteException,Exception ;
-
+	public abstract StringBuffer defcitHoras(String login, String nomeDoProjeto) throws RemoteException, Exception;
 
 	public abstract void registrarPonto(String nomeDoProjeto, String login, String senha)
 			throws RemoteException, Exception;

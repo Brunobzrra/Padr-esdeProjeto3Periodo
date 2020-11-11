@@ -15,9 +15,9 @@ public class AplicacaoServidora {
 		/* inicia rmi */
 		try {
 			/* tenta iniciar o registro */
-				registry = LocateRegistry.createRegistry(1099);
-				ServicoRegistradorPontoCentral remoto = CasoDeUsoOnzeETreze.getInstance();
-				Naming.rebind("//localhost/ServicoRemotoPontoTrabalhado", remoto);
+			registry = LocateRegistry.createRegistry(1099);
+			ServicoRegistradorPontoCentral remoto = CasoDeUsoOnzeETreze.getInstance();
+			Naming.rebind("//localhost/ServicoRemotoPontoTrabalhado", remoto);
 		} catch (Exception e) {
 			e.printStackTrace();
 			/* se não conseguiu criar vê se está rodando */

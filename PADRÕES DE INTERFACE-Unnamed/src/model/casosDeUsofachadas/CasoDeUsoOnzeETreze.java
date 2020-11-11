@@ -23,16 +23,23 @@ import ponto.model.projetos.ServicoRegistradorPontoCentral;
 //caso de uso 11 e 13
 public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoRegistradorPontoCentral {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static DAOXMLMembroConta daMembro = new DAOXMLMembroConta();
 	private static DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 	private static RegistradorPontoCentral registrador = new RegistradorPontoCentral();
 	private static CasoDeUsoOnzeETreze fachadaSingleton;
 
-	protected CasoDeUsoOnzeETreze() throws RemoteException {
+	private CasoDeUsoOnzeETreze() throws Exception {
 		super();
 	}
 
 	public static CasoDeUsoOnzeETreze getInstance() throws Exception {
+		if (fachadaSingleton == null) {
+			fachadaSingleton = new CasoDeUsoOnzeETreze();
+		}
 		return fachadaSingleton;
 	}
 
@@ -78,7 +85,7 @@ public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoR
 		return retorno;
 	}
 
-	//Metodo caso de uso 11
+	// Metodo caso de uso 11
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
 
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);

@@ -22,7 +22,7 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 
-public class RegistradorPontoCentral implements Serializable{
+public class RegistradorPontoCentral implements Serializable {
 
 	/**
 	 * 
@@ -30,7 +30,7 @@ public class RegistradorPontoCentral implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	public PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception {
-		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
+		if (!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
 		}
 		Participacao participacao = null;

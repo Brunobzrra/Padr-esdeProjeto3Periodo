@@ -3,6 +3,10 @@ package ponto.model.projetos;
 import java.io.Serializable;
 
 public class HorarioPrevisto implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private DiaSemana diaSemana;
 	private short horaInicio;
 	private short horaTermino;

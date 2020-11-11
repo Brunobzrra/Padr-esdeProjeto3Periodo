@@ -17,8 +17,6 @@ import javax.swing.JTextField;
 
 import view.controller.ControllerRegistradorEView;
 
-
-
 public class TelaPonto extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -26,7 +24,7 @@ public class TelaPonto extends JFrame {
 	private JPasswordField senha;
 	private ControllerRegistradorEView controller;
 	private JComboBox<Object> op;
-	
+
 	public TelaPonto() {
 		try {
 			controller = new ControllerRegistradorEView();
@@ -61,9 +59,9 @@ public class TelaPonto extends JFrame {
 
 	public void botaoVerDetalhes(String login, String nomeDoProjeto) {
 		try {
-			JOptionPane.showMessageDialog(this,controller.horasTrabalhadasValidas(login, nomeDoProjeto));
-			JOptionPane.showMessageDialog(this,controller.defcitHoras(login, nomeDoProjeto));
-			JOptionPane.showMessageDialog(this,controller.getPontosValidos(login, nomeDoProjeto));
+			JOptionPane.showMessageDialog(this, controller.horasTrabalhadasValidas(login, nomeDoProjeto));
+			JOptionPane.showMessageDialog(this, controller.defcitHoras(login, nomeDoProjeto));
+			JOptionPane.showMessageDialog(this, controller.getPontosValidos(login, nomeDoProjeto));
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
@@ -126,7 +124,7 @@ public class TelaPonto extends JFrame {
 			public void keyReleased(KeyEvent e) {
 				try {
 					adcionarCombo(controller.recuperarProjetos(login.getText()).toArray());
-				} catch (NullPointerException e2) {
+				} catch (Exception e2) {
 					if (!op.getItemAt(0).equals("------Nenhum Projeto------")) {
 						op.removeAllItems();
 						op.addItem("------Nenhum Projeto------");

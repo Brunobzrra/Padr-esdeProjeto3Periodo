@@ -5,30 +5,48 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Date;
 
+import model.autenticacao.ContaAutenticacaoProvedorInterno;
+import model.autenticacao.ContaEmail;
+import model.autenticacao.ContaEmailLivre;
+import model.autenticacao.Membro;
+import model.projetos.Participacao;
+import model.projetos.Projeto;
+import persistencia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLProjetoParticipacao;
+import ponto.model.projetos.DiaSemana;
+import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
 public class ControllerRegistradorEView {
 
 	private ServicoRegistradorPontoCentral proxy;
+
 	public ControllerRegistradorEView() throws MalformedURLException, RemoteException, NotBoundException {
 		proxy = (ServicoRegistradorPontoCentral) Naming.lookup("//localhost/ServicoRemotoPontoTrabalhado");
 	}
+
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
 		proxy.registrarPonto(nomeDoProjeto, login, senha);
 	}
+
 	public StringBuffer defcitHoras(String login, String nomeDoProjeto) throws RemoteException, Exception {
 		return proxy.defcitHoras(login, nomeDoProjeto);
 	}
+
 	public StringBuffer getPontosValidos(String login, String nomeDoProjeto) throws RemoteException, Exception {
 		return proxy.getPontosValidos(login, nomeDoProjeto);
 	}
+
 	public StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
 		return proxy.horasTrabalhadasValidas(login, nomeDoProjeto);
 	}
-	public ArrayList<String> recuperarProjetos(String email) {
+
+	public ArrayList<String> recuperarProjetos(String email) throws RemoteException, Exception {
 		return proxy.recuperarProjetos(email);
 	}
+}
 //	public static void main(String[] args) {
 //		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "121212");
 //		ContaEmail conta = new ContaEmailLivre();
@@ -40,6 +58,11 @@ public class ControllerRegistradorEView {
 //				(short) 0, (short) 0, true);
 //		Projeto projeto1 = new Projeto("Projeto novo", 1, 2, 2, 3);
 //		Projeto projeto2 = new Projeto("projeto 2", 1, 2, 3, 5);
+//		HorarioPrevisto horaprt = new HorarioPrevisto(DiaSemana.QUA, (short) 16, (short) 22, (short) 30);
+//		HorarioPrevisto horapr2 = new HorarioPrevisto(DiaSemana.SEX, (short) 16, (short) 22, (short) 30);
+//
+//		participacao.adcionarHorarioPrevisto(horaprt);
+//		participacao.adcionarHorarioPrevisto(horapr2);
 //
 //		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
 //		try {
@@ -58,4 +81,4 @@ public class ControllerRegistradorEView {
 //		}
 //
 //	}
-}
+//}
