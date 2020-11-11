@@ -32,6 +32,7 @@ public class TelaPonto extends JFrame {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Aplicacao servidora não inicializada", "Erro",
 					JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
 			return;
 		}
 		setLayout(null);

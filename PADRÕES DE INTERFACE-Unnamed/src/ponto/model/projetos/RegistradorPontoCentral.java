@@ -27,7 +27,7 @@ public class RegistradorPontoCentral extends UnicastRemoteObject implements Serv
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 5185696354619610643L;
+	private static final long serialVersionUID = 1L;
 
 	protected RegistradorPontoCentral() throws RemoteException {
 		super();

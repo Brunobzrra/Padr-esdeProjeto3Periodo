@@ -1,6 +1,5 @@
 package model.casosDeUsofachadas.controllerProxy;
 
-import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.UnknownHostException;
 import java.rmi.Naming;
@@ -25,6 +24,7 @@ import persistencia.xml.DAOXMLMembroConta;
 import persistencia.xml.DAOXMLProjetoParticipacao;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
+
 //Caso de uso 11 e 13
 public class ControllerRegistradorEViewCasoDeUsoOnzeETreze {
 
@@ -36,9 +36,7 @@ public class ControllerRegistradorEViewCasoDeUsoOnzeETreze {
 
 	private ControllerRegistradorEViewCasoDeUsoOnzeETreze()
 			throws RemoteException, MalformedURLException, UnknownHostException, NotBoundException {
-		proxy = (ServicoRegistradorPontoCentral) Naming
-				.lookup("rmi://" + InetAddress.getLocalHost().getHostAddress() + "/ServicoRemotoPontoTrabalhado");
-
+		proxy = (ServicoRegistradorPontoCentral) Naming.lookup("//localhost/ServicoRemotoPontoTrabalhado");
 	}
 
 	public void registrarPonto(String nomeDoProjeto, String login, String senha) throws Exception {
@@ -105,18 +103,17 @@ public class ControllerRegistradorEViewCasoDeUsoOnzeETreze {
 
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
 			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
-				Membro membro=(Membro) membroDoFor;
+				Membro membro = (Membro) membroDoFor;
 				if ((membro).getEmail().equalsIgnoreCase(login)) {
-					texto.append("Membro " + membroDoFor.getNome() + " seus pontos validos /n"+membro.getPontosValidos().toString());
-			
+					texto.append("Membro " + membroDoFor.getNome() + " seus pontos validos /n"
+							+ membro.getPontosValidos().toString());
+
 				}
 
 			}
 		}
 		return texto;
 	}
-
-
 
 	public Set<PontoTrabalhado> getPontosInvalidos(String login, String nomeDoProjeto) throws Exception {
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
