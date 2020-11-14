@@ -4,7 +4,11 @@ import java.util.HashSet;
 
 import model.autenticacao.Membro;
 import ponto.model.projetos.PontoTrabalhado;
-
+/**
+ * superclasse da cadeia do padrão chain of responsability
+ * @author Antônio Amorim
+ *
+ */
 public abstract class AvaliadorDeRegistro {
 	private AvaliadorDeRegistro proximo;
 	/**

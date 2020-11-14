@@ -26,6 +26,8 @@ import model.utilitarios.ConversorDeHoraEDia;
 public class RegistradorPontoCentral implements Serializable {
 
 	/**
+	 * Este metodo e responsavel por testar cadastrar um ponto na sua hora inicial
+	 * ou se o ponto de entrada ja foi batido ele bate o ponto de saida 
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -61,9 +63,14 @@ public class RegistradorPontoCentral implements Serializable {
 				}
 			}
 		}
-		return null;
+		throw new Exception("Este membro não estar neste projeto!");
 	}
-
+	/**
+	 * este metodo testa e retorna objetos ativos
+	 * @param membro
+	 * @return
+	 * @throws Exception
+	 */
 	public Set<Projeto> getProjetosAtivos(Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
@@ -78,7 +85,13 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		return projetosAtivos;
 	}
-
+	/**
+	 * Este metodo justifica um ponta invalido
+	 * @param ponto
+	 * @param justificar
+	 * @param membro
+	 * @throws Exception
+	 */
 	public void justificarPontoInvalido(PontoTrabalhado ponto, String justificar, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
@@ -96,7 +109,13 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		pontoJustificado.setJustificativa(justificar);
 	}
-
+	/**
+	 * Este metodo justifica quando um ponto não foi batido nio horario previsto
+	 * @param ponto
+	 * @param justificar
+	 * @param membro
+	 * @throws Exception
+	 */
 	public void justificarPontoNaoBatido(PontoTrabalhado ponto, String justificar, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
@@ -114,7 +133,15 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		pontoJustificado.setJustificativa(justificar);
 	}
-
+	/**
+	 * Metodo ressponsavel por pegar todos a horas trabalhadas que são validas do membro que é passado 
+	 * @param datInicio
+	 * @param dataTermino
+	 * @param membro
+	 * @return
+	 * @throws RemoteException
+	 * @throws Exception
+	 */
 	public float horasTrabalhadasValidas(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro)
 			throws RemoteException, Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
@@ -130,7 +157,14 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		return 0;
 	}
-
+	/**
+	 * Este metodo pega o deficit de horas do membro passado no parametro
+	 * @param datInicio
+	 * @param dataTermino
+	 * @param membro
+	 * @return
+	 * @throws Exception
+	 */
 	public float defcitHoras(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro) throws Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
@@ -151,7 +185,14 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		return 0;
 	}
-
+	/**
+	 * este metodo pega todos os pontos invalidos de acordo com a cadeia do padrão chain of responsability
+	 * escolhida aqui 
+	 * @param membro
+	 * @return
+	 * @throws RemoteException
+	 * @throws Exception
+	 */
 	public Set<PontoTrabalhado> getPontosInvalidos(Membro membro) throws RemoteException, Exception {
 		if (!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");

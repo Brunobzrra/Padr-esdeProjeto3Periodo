@@ -9,7 +9,11 @@ import java.util.Set;
 
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
-
+/**
+ * esta classe atraves do proxy faz uso de todos os metodos do caso de uso onze e treze
+ * @author Antônio Amorim
+ *
+ */
 public class ControllerRegistradorEView {
 
 	private ServicoRegistradorPontoCentral proxy;
