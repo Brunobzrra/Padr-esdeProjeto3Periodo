@@ -23,7 +23,7 @@ public class CasoDeUsoDoiseNove {
 		ContaBridge contaBridge = null;
 		if (tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.POP3.toString())) {
 			contaBridge = new ContaAutenticacaoProvedorEmailPOP3();
-		} else {
+		} else if(tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.INTERNAMENTE.toString())) {
 			contaBridge = new ContaAutenticacaoProvedorInterno();
 		}
 		membroAtual.getConta().setImplementacaoContaBridge(contaBridge);

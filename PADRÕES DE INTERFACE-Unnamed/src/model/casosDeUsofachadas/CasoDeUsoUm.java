@@ -31,7 +31,6 @@ public class CasoDeUsoUm {
 
 	public void atualizarMembro(long matricula, long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova)
 			throws Exception {
-		boolean atualizado = false;
 		Membro membroAtual = daoMembro.recuperarPorIndentificador(matricula);
 
 		Membro membroAtualizado = membroAtual;
@@ -39,14 +38,14 @@ public class CasoDeUsoUm {
 		membroAtualizado.setNome(nomeNovo);
 		membroAtualizado.setEmail(emailNovo);
 		membroAtualizado.setSenha(senhaNova);
-		if (atualizado) {
-			daoMembro.atualizar(membroAtual, membroAtualizado);
-			System.out.println("Membro atualizado!");
-		} else {
-			throw new Exception("O membro nao pode ser atualizado.");
+		daoMembro.atualizar(membroAtual, membroAtualizado);
+		System.out.println("Membro atualizado!");
+	}
 
-		}
-
+	public Object[] recuperarMembro(long matricula) {
+		Membro membro = daoMembro.recuperarPorIndentificador(matricula);
+		Object[] dados = { membro.getNome(), membro.getEmail(), membro.getSenha() };
+		return dados;
 	}
 
 	private boolean validarEmail(String email) {
