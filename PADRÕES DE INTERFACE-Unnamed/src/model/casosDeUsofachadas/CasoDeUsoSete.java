@@ -18,19 +18,14 @@ public class CasoDeUsoSete {
 	public void habilitarAdministrador(long matricula) throws Exception {
 		if (administrador != null) {
 			if (RegistradorSessaoLogin.getInstance().isOline(administrador.getEmail())) {
-				String[] atributos = { "matricula" };
-				Object[] valores = { matricula };
-				Set<Membro> membro = daoMembro.consultarAnd(atributos, valores);
+				Membro membro = daoMembro.recuperarPorIndentificador(matricula);
 				try {
-					for (Membro membroModificado : membro) {
-						if (!administrador.equals(membroModificado)) {
-							Membro membroAntigo = membroModificado;
-							membroModificado.setAdministrador(true);
-							daoMembro.atualizar(membroAntigo, membroModificado);
-						} else {
-							throw new Exception(
-									"Você não pode se auto-desabilitar do cargo, contate outro administrador!");
-						}
+					if (!administrador.equals(membro)) {
+						Membro membroAntigo = membro;
+						membro.setAdministrador(true);
+						daoMembro.atualizar(membroAntigo, membro);
+					} else {
+						throw new Exception("Você não pode se auto-desabilitar do cargo, contate outro administrador!");
 					}
 				} catch (Exception e) {
 					throw new Exception("Não existe membro com essa matricula!");
