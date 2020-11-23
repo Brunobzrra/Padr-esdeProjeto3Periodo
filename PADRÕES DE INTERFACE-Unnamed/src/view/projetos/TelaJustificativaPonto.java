@@ -14,11 +14,14 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import model.casosDeUsofachadas.CasoDeUsoDoze;
+import view.controller.ControllerTelaJustificativaPonto;
 
 public class TelaJustificativaPonto extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextField matricula;
 	private JTextArea justificativa;
+
+	private ControllerTelaJustificativaPonto controller = new ControllerTelaJustificativaPonto();
 
 	public TelaJustificativaPonto() {
 		setLayout(null);
@@ -40,7 +43,7 @@ public class TelaJustificativaPonto extends JFrame {
 
 	private void botaoJustificarPonto() {
 		try {
-			new CasoDeUsoDoze().justificarPonto(LocalDateTime.now(), justificativa.getText(),
+			controller.justificarPonto(LocalDateTime.now(), justificativa.getText(),
 					Long.parseLong(matricula.getText()));
 		} catch (Exception e) {
 			e.printStackTrace();

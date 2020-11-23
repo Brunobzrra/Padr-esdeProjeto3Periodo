@@ -22,19 +22,22 @@ public class DAOXMLMembroConta {
 	private HashMap<Long, Membro> persistidos;
 
 	private final File arquivoColecao = new File("XMLMembroConta.xml");
-	
+
 	/*
-	 * metodo que vai verificar se existe algum membro no hashmap de persistidos, caso sim, retorna true
-	 * */
+	 * metodo que vai verificar se existe algum membro no hashmap de persistidos,
+	 * caso sim, retorna true
+	 */
 	public boolean isVazia() {
-		persistidos =carregarXML();
-		if (persistidos.size()==0) {
+		persistidos = carregarXML();
+		if (persistidos.size() == 0) {
 			return true;
 		}
 		return false;
 	}
+
 	/**
 	 * este metodo retorna o objeto por indentificador
+	 * 
 	 * @param nome
 	 * @return
 	 */
@@ -42,22 +45,24 @@ public class DAOXMLMembroConta {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long long1 : chaves) {
-			if(persistidos.get(long1).getMatricula()==matricula){
+			if (persistidos.get(long1).getMatricula() == matricula) {
 				return persistidos.get(long1);
 			}
 		}
 		return null;
 	}
+
 	public Membro recuperarPorEmail(String email) {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
-			if(persistidos.get(chave).getEmail().equals(email)){
+			if (persistidos.get(chave).getEmail().equals(email)) {
 				return persistidos.get(chave);
 			}
 		}
 		return null;
 	}
+
 	public Membro isAdmimPelaMatricula(long matricula) {
 		this.persistidos = this.carregarXML();
 		Membro membro = recuperarPorIndentificador(matricula);
@@ -66,29 +71,34 @@ public class DAOXMLMembroConta {
 		}
 		return null;
 	}
+
 	/*
-	 * adiciona um novo membro na colecao de persistidos, que é salvo posteriormente, adicionando assim
-	 * um membro ao XML, que é nosso BD.
-	 * @params membro*/
-	public boolean criar(Membro membro) throws Exception {
-		if(membro.getNome().length()<5||membro.getSenha().length()<5||membro.getMatricula()==0) {
+	 * adiciona um novo membro na colecao de persistidos, que é salvo
+	 * posteriormente, adicionando assim um membro ao XML, que é nosso BD.
+	 * 
+	 * @params membro
+	 */
+	public void criar(Membro membro) throws Exception {
+		if (membro.getNome().length() < 5 || membro.getSenha().length() < 5 || membro.getMatricula() == 0) {
 			throw new Exception("Digite todos os parametros corretamente!");
 		}
 		String[] atributos = { "matricula" };
-		Object[] valores = { membro.getMatricula()};
-		if (consultarAnd(atributos, valores).size()==0) {
+		Object[] valores = { membro.getMatricula() };
+		if (consultarAnd(atributos, valores).size() == 0) {
 			this.persistidos = this.carregarXML();
-			id = persistidos.size()+1;
+			id = persistidos.size() + 1;
 			this.persistidos.put(id, membro);
 			this.salvarXML(persistidos);
-			return true;
+			return;
 		}
-		return false;
+		throw new Exception("Membro já existente");
 	}
 	/*
-	 * Metodo que ira procurar uma chave de um membro especifico no HASHSET de persistidos, returna o indice
-	 * que o membro se encontra no HASHSET
-	 * @params procurado*/
+	 * Metodo que ira procurar uma chave de um membro especifico no HASHSET de
+	 * persistidos, returna o indice que o membro se encontra no HASHSET
+	 * 
+	 * @params procurado
+	 */
 
 	private Long procurarChave(Membro procurado) {
 		Long indice = null;
@@ -102,10 +112,13 @@ public class DAOXMLMembroConta {
 		}
 		return indice;
 	}
+
 	/*
-	 * metodo usado para remover um membro do HASHSET persistidos, que eh recuperado, modificado, e posterior
-	 * mente salvo no BD via salvarXML()
-	 * @params membroRemover */
+	 * metodo usado para remover um membro do HASHSET persistidos, que eh
+	 * recuperado, modificado, e posterior mente salvo no BD via salvarXML()
+	 * 
+	 * @params membroRemover
+	 */
 	public void remover(Membro membroRemover) {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(membroRemover);
@@ -116,9 +129,10 @@ public class DAOXMLMembroConta {
 	}
 
 	/*
-	 * Metodo que substitui um membro no HASHSET de persistidos, colocando outro membro de interesse no lugar
-	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do membro no BD
-	 * */
+	 * Metodo que substitui um membro no HASHSET de persistidos, colocando outro
+	 * membro de interesse no lugar com isso e salvando o hashset posteriormente,
+	 * com isso, atualizando o valor do membro no BD
+	 */
 	public boolean atualizar(Membro membroSubstituivel, Membro membroSubstituto) throws Exception {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
@@ -126,20 +140,24 @@ public class DAOXMLMembroConta {
 			if (persistidos.get(chave).equals(membroSubstituivel)) {
 				persistidos.replace(chave, membroSubstituto);
 			}
-			
+
 		}
 		this.salvarXML(persistidos);
 		return true;
 	}
 
 	/*
-	 * metodo usado para consultar um membro no hashset de persistidos, por meio de seus atributos. caso
-	 * exista um membro com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 
-	 * membros correspondentes. sao ultilizados como paramentro de entrada um array de string onde o nome
-	 * dos atributos que se deseja consulta, exatamente como estao declarados na classe do membro sao inseridos
-	 * e os seus respectivos valores sao adicionados nas repectivas posicoes em um array de object, que no cao
-	 * sao os valores desses atributos.
-	 * @params atributos, valores */
+	 * metodo usado para consultar um membro no hashset de persistidos, por meio de
+	 * seus atributos. caso exista um membro com o mesmo ou os mesmos atributos
+	 * escolhidos,eh retornado um set com todos os membros correspondentes. sao
+	 * ultilizados como paramentro de entrada um array de string onde o nome dos
+	 * atributos que se deseja consulta, exatamente como estao declarados na classe
+	 * do membro sao inseridos e os seus respectivos valores sao adicionados nas
+	 * repectivas posicoes em um array de object, que no cao sao os valores desses
+	 * atributos.
+	 * 
+	 * @params atributos, valores
+	 */
 	public Set<Membro> consultarAnd(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Membro> auxiliar = new HashSet<Membro>();
@@ -349,12 +367,17 @@ public class DAOXMLMembroConta {
 		}
 		return auxiliar;
 	}
+
 	/*
-	 * metodo usado para cosultar se existe um determinado membro no hashset de persistidos, que eh como o 
-	 * BD eh construido, isso eh feito por meio da disponibilizacao dos atribuos que vao ser consultados via 
-	 * array de string, e os seus respectivos valoress via um array de object, esse metodo retorna um set com
-	 * todos os membros correspondentes a pelo menos um dos atributos consultados,
-	 * @params atributos, valores*/
+	 * metodo usado para cosultar se existe um determinado membro no hashset de
+	 * persistidos, que eh como o BD eh construido, isso eh feito por meio da
+	 * disponibilizacao dos atribuos que vao ser consultados via array de string, e
+	 * os seus respectivos valoress via um array de object, esse metodo retorna um
+	 * set com todos os membros correspondentes a pelo menos um dos atributos
+	 * consultados,
+	 * 
+	 * @params atributos, valores
+	 */
 	public Set<Membro> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
 		Set<Membro> auxiliar = new HashSet<Membro>();
@@ -560,9 +583,12 @@ public class DAOXMLMembroConta {
 		}
 		return auxiliar;
 	}
+
 	/*
 	 * salva o hashmap de persistidos em XML
-	 * @params persistidos*/
+	 * 
+	 * @params persistidos
+	 */
 	private void salvarXML(HashMap<Long, Membro> persistidos) {
 
 		String xml = xstream.toXML(persistidos);
@@ -576,8 +602,11 @@ public class DAOXMLMembroConta {
 			e.printStackTrace();
 		}
 	}
+
 	/*
-	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh criado*/
+	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh
+	 * criado
+	 */
 	private HashMap<Long, Membro> carregarXML() {
 
 		if (arquivoColecao.exists()) {

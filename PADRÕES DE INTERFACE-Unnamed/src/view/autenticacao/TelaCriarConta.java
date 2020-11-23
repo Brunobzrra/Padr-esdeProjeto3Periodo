@@ -16,6 +16,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import model.casosDeUsofachadas.CasoDeUsoUm;
+import view.controller.ControllerTelaCriarConta;
 
 public class TelaCriarConta extends JFrame {
 
@@ -29,7 +30,9 @@ public class TelaCriarConta extends JFrame {
 	private JTextField nomeAtualizar;
 	private JTextField loginAtualizar;
 	private JPasswordField senhaAtualizar;
-
+	
+	private ControllerTelaCriarConta controller = new ControllerTelaCriarConta();
+	
 	public TelaCriarConta() {
 		setLayout(null);
 		setSize(700, 500);
@@ -51,7 +54,7 @@ public class TelaCriarConta extends JFrame {
 
 	private void botaoCriarConta() {
 		try {
-			new CasoDeUsoUm().cadastrarMembro(nomeCriar.getText(), Long.parseLong(matriculaCriar.getText()),
+			controller.cadastrarMembro(nomeCriar.getText(), Long.parseLong(matriculaCriar.getText()),
 					loginCriar.getText(), senhaCriar.getText());
 			nomeCriar.setText("");
 			matriculaCriar.setText("");
@@ -65,7 +68,7 @@ public class TelaCriarConta extends JFrame {
 
 	private void botaoAtualizar() {
 		try {
-			new CasoDeUsoUm().atualizarMembro( Long.parseLong(matriculaADM.getText()),Long.parseLong(matriculaAtualizar.getText()),nomeAtualizar.getText(),
+			controller.atualizarMembro( Long.parseLong(matriculaADM.getText()),Long.parseLong(matriculaAtualizar.getText()),nomeAtualizar.getText(),
 					loginAtualizar.getText(), senhaAtualizar.getText());
 			nomeAtualizar.setText("");
 			matriculaADM.setText("");

@@ -1,6 +1,6 @@
 package model.casosDeUsofachadas;
 
-import java.util.Set;
+
 
 import model.autenticacao.Membro;
 import model.autenticacao.RegistradorSessaoLogin;

@@ -11,7 +11,7 @@ public class CasoDeUsoUm {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public boolean cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
+	public void cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
 		if (validarEmail(email)) {
 			Membro membro;
 			if (nome != null && email != null && senha != null) {
@@ -24,9 +24,10 @@ public class CasoDeUsoUm {
 			} else {
 				membro.setAdministrador(false);
 			}
-			return daoMembro.criar(membro);
+			daoMembro.criar(membro);
+			return;
 		}
-		return false;
+		throw new Exception("Email invalido!");
 	}
 
 	public void atualizarMembro(long matricula, long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova)

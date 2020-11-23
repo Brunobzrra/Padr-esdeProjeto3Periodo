@@ -13,29 +13,29 @@ public class CasoDeUsoTres {
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public boolean adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {
+	public void adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
 		if (membro != null) {
 			Grupo grupo = new Grupo(nome, linkCNPq);
 			daoGrupo.criar(grupo);
-			return true;
+			return;
 		}
-		return false;
+		throw new Exception("Membros que não forem administradores não podem criar grupos");
 	}
 
-	public boolean removerGrupo(long matricula, String linkCNPq) {
+	public void removerGrupo(long matricula, String linkCNPq) throws Exception{
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
 		if (membro != null) {
 			Grupo grupoRecuperado = daoGrupo.recuperarPorIndentificador(linkCNPq);
 			if (grupoRecuperado.getItens().isEmpty()) {
 				daoGrupo.remover(grupoRecuperado);
-				return true;
+				return;
 			}
 		}
-		return false;
+		throw new Exception("Membros que não forem administradores não podem remover grupos");
 	}
 	//tirar duvida sobre este metodo
-	public boolean atualizarrGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo) throws Exception {
+	public void atualizarrGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo) throws Exception {
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
 		if (membro != null) {
 			Grupo grupoRecuperado = daoGrupo.recuperarPorIndentificador(linkCNPq);
@@ -43,9 +43,9 @@ public class CasoDeUsoTres {
 			grupoRecuperado.setLinkCNPq(nomeNovo);
 			grupoRecuperado.setNome(nomeNovo);
 			daoGrupo.atualizar(grupoAntigo, grupoRecuperado);
-			return true;
+			return;
 		}
-		return false;
+		throw new Exception("Membros que não forem administradores não podem atualizar grupos");
 	}
 
 }

@@ -16,23 +16,24 @@ public class CasoDeUsoDoiseNove {
 
 	private RegistradorSessaoLogin registrador = RegistradorSessaoLogin.getInstance();
 
-	public boolean fazerLogin(String login, String senha, String tipoProvedor) throws Exception {
+	public void fazerLogin(String login, String senha, String tipoProvedor) throws Exception {
 		Membro membroAtual = daoMembro.recuperarPorEmail(login);
 
 		Membro antigo = membroAtual;
 		ContaBridge contaBridge = null;
 		if (tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.POP3.toString())) {
 			contaBridge = new ContaAutenticacaoProvedorEmailPOP3();
-		} else if(tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.INTERNAMENTE.toString())) {
+		} else if (tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.INTERNAMENTE.toString())) {
 			contaBridge = new ContaAutenticacaoProvedorInterno();
 		}
 		membroAtual.getConta().setImplementacaoContaBridge(contaBridge);
 		if (contaBridge.autenticar(login, senha) != null) {
 			daoMembro.atualizar(antigo, membroAtual);
 			registrador.registrarOline(membroAtual);
-			return true;
+			return;
+		} else {
+			throw new Exception("Login não realizado");
 		}
-		return false;
 
 	}
 

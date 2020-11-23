@@ -11,15 +11,19 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import model.casosDeUsofachadas.CasoDeUsoSete;
+
+import view.controller.ControllerTelaConfiguracaoAdmin;
 
 public class TelaConfiguracaoAdmin extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField matriculaAdministrador;
 	private JTextField matriculaMembro;
+	
+	private ControllerTelaConfiguracaoAdmin controller;
+	
+	public TelaConfiguracaoAdmin()  {
 
-	public TelaConfiguracaoAdmin() {
 		setLayout(null);
 		setSize(300, 320);
 		getContentPane().setBackground(Color.DARK_GRAY);
@@ -40,7 +44,8 @@ public class TelaConfiguracaoAdmin extends JFrame {
 
 	private void botaoModificar() {
 		try {
-			new CasoDeUsoSete(Long.parseLong(matriculaAdministrador.getText())).habilitarAdministrador(Long.parseLong(matriculaMembro.getText()));
+			controller = new ControllerTelaConfiguracaoAdmin(Long.parseLong(matriculaAdministrador.getText()));
+			controller.habilitarAdministrador(Long.parseLong(matriculaMembro.getText()));
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage());

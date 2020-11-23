@@ -11,6 +11,7 @@ import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 5
 public class CasoDeUsoCinco {
+
 	private DAOXMLProjetoParticipacao daoProjetoParticipacao = new DAOXMLProjetoParticipacao();
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 

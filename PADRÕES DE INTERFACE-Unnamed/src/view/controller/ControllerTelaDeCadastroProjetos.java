@@ -1,31 +1,41 @@
-package view.projetos;
+package view.controller;
 
 import java.util.Date;
 
-import view.controller.ControllerTelaDeCadastroProjetos;
+import model.casosDeUsofachadas.CasoDeUsoCinco;
+import model.casosDeUsofachadas.CasoDeUsoSeis;
 
-public class TelaCadastroProjetos {
+public class ControllerTelaDeCadastroProjetos {
 
-	private ControllerTelaDeCadastroProjetos controller = new ControllerTelaDeCadastroProjetos();
+	private CasoDeUsoCinco casoDeUsoCinco;
+
+	private CasoDeUsoSeis casoDeUsoSeis;
+
+	public ControllerTelaDeCadastroProjetos() {
+
+		casoDeUsoCinco = new CasoDeUsoCinco();
+
+		casoDeUsoSeis = new CasoDeUsoSeis();
+	}
 
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais, long matricula,
 			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador)
 			throws Exception {
 
-		controller.criarProjeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
+		casoDeUsoCinco.criarProjeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
 				gastoExecutadoCapitalReais, matricula, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos,
 				coordenador);
 
 	}
 
 	public void atualizarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais) throws Exception {
-		controller.atualizarProjeto(nome, aporteCusteioReais, aporteCapitalReais);
+		casoDeUsoCinco.atualizarProjeto(nome, aporteCusteioReais, aporteCapitalReais);
 
 	}
 
 	public void removerProjeto(String nomeDoProjeto) throws Exception {
-		controller.removerProjeto(nomeDoProjeto);
+		casoDeUsoCinco.removerProjeto(nomeDoProjeto);
 
 	}
 
@@ -33,14 +43,13 @@ public class TelaCadastroProjetos {
 			String nomeDoProjeto, Date dataInicio, float aporteCusteioMensalReais, short qtdMesesCusteados,
 			short qtdMesesPagos) throws Exception {
 
-		controller.adicionarParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerEstrarNoProjeto, nomeDoProjeto,
-				dataInicio, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos);
+		casoDeUsoSeis.adicionarParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerEstrarNoProjeto,
+				nomeDoProjeto, dataInicio, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos);
 	}
 
 	public void removerParticipacao(long matriculaDoCordenador, long matriculaDoMembroQueQuerRemover,
 			String nomeDoProjeto) throws Exception {
-		controller.removerParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerRemover, nomeDoProjeto);
-
+		casoDeUsoSeis.removerParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerRemover, nomeDoProjeto);
+		
 	}
-
 }

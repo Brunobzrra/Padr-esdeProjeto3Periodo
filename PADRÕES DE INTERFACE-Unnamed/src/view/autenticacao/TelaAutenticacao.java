@@ -14,6 +14,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import model.casosDeUsofachadas.CasoDeUsoDoiseNove;
+import view.controller.ControllerTelaAutenticacao;
 
 public class TelaAutenticacao extends JFrame{
 
@@ -21,6 +22,8 @@ public class TelaAutenticacao extends JFrame{
 	private JTextField login;
 	private JPasswordField senha;
 	private JComboBox<Object> op;
+	
+	private ControllerTelaAutenticacao controller = new ControllerTelaAutenticacao();
 
 	public TelaAutenticacao() {
 		setLayout(null);
@@ -41,7 +44,7 @@ public class TelaAutenticacao extends JFrame{
 	}
 	private void botaoDeLogin() {
 		try {
-			new CasoDeUsoDoiseNove().fazerLogin(login.getText(), senha.getText(), (String) op.getSelectedItem());
+			controller.fazerLogin(login.getText(), senha.getText(), (String) op.getSelectedItem());
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());
@@ -49,7 +52,7 @@ public class TelaAutenticacao extends JFrame{
 	}
 	private void botaoFazerLogout() {
 		try {
-			new CasoDeUsoDoiseNove().fazerLogout(login.getText());
+			controller.fazerLogout(login.getText());
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());
@@ -113,7 +116,7 @@ public class TelaAutenticacao extends JFrame{
 		});
 		this.add(cancelar);
 
-		JButton fazerLogout = new JButton("<-Fazer Logout");
+		JButton fazerLogout = new JButton("Fazer Logout");
 		fazerLogout.setForeground(Color.WHITE);
 		fazerLogout.setBackground(new Color(119, 221, 119));
 		fazerLogout.setBounds(326, 170, 120, 30);
@@ -125,7 +128,7 @@ public class TelaAutenticacao extends JFrame{
 		});
 		this.add(fazerLogout);
 		
-		JButton fazerLogin = new JButton("Fazer Login ->");
+		JButton fazerLogin = new JButton("Fazer Login ");
 		fazerLogin.setForeground(Color.WHITE);
 		fazerLogin.setBackground(new Color(119, 221, 119));
 		fazerLogin.setBounds(480, 170, 190, 30);
