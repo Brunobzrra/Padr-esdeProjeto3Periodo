@@ -209,7 +209,7 @@ public class TelaCriarConta extends JFrame {
 
 			public void keyReleased(KeyEvent e) {
 				try {
-					Object[] dados= new CasoDeUsoUm().recuperarMembro(Long.parseLong(matriculaAtualizar.getText()));
+					Object[] dados= controller.recuperarMembro(Long.parseLong(matriculaAtualizar.getText()));
 					nomeAtualizar.setText((String) dados[0]);
 					loginAtualizar.setText((String) dados[1]);
 					senhaAtualizar.setText((String) dados[2]);

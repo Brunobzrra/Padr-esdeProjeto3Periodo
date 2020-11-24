@@ -1,10 +1,12 @@
 package view.controller;
 
+import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoUm;
 
 public class ControllerTelaCriarConta {
 
 	private CasoDeUsoUm casoDeUsoUm;
+	private CasoDeUsoExtra casoDeUsoExtra;
 
 	public ControllerTelaCriarConta() {
 		casoDeUsoUm = new CasoDeUsoUm();
@@ -20,7 +22,8 @@ public class ControllerTelaCriarConta {
 		casoDeUsoUm.atualizarMembro(matricula, matriculaNovo, nomeNovo, emailNovo, senhaNova);
 
 	}
-	
-	
 
+	public Object[] recuperarMembro(long matricula) {
+		return casoDeUsoExtra.recuperarMembro(matricula);
+	}
 }

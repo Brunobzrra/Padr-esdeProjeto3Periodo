@@ -43,12 +43,6 @@ public class CasoDeUsoUm {
 		System.out.println("Membro atualizado!");
 	}
 
-	public Object[] recuperarMembro(long matricula) {
-		Membro membro = daoMembro.recuperarPorIndentificador(matricula);
-		Object[] dados = { membro.getNome(), membro.getEmail(), membro.getSenha() };
-		return dados;
-	}
-
 	private boolean validarEmail(String email) {
 		boolean isEmailIdValid = false;
 		if (email != null && email.length() > 0) {
