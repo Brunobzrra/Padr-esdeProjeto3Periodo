@@ -1,10 +1,19 @@
 package view.projetos;
 
+import java.awt.Color;
 import java.util.Date;
+
+import javax.swing.JPanel;
 
 import view.controller.ControllerCadastroEditais;
 
-public class TelaCadastroEditais {
+public class TelaCadastroEditais extends JPanel {
+	public TelaCadastroEditais() {
+		setBounds(150, 0, 550,500);
+		setBackground(Color.BLACK);
+		setVisible(true);
+	
+	}
 	
 	private ControllerCadastroEditais controller= new ControllerCadastroEditais();
 	

@@ -1,10 +1,17 @@
 package view.projetos;
 
 
+import java.awt.Color;
+
+import javax.swing.JPanel;
+
 import view.controller.ControllerCadastroGrupos;
 
-public class TelaCadastroGrupos {
-	
+public class TelaCadastroGrupos extends JPanel {
+	public TelaCadastroGrupos() {
+		setBounds(150, 0, 550,500);
+		setBackground(Color.BLACK);
+		setVisible(true);	}
 	private ControllerCadastroGrupos controller = new ControllerCadastroGrupos();
 	
 	public void adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {

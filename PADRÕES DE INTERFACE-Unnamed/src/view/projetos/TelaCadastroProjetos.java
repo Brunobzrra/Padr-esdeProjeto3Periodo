@@ -1,10 +1,18 @@
 package view.projetos;
 
+import java.awt.Color;
 import java.util.Date;
+
+import javax.swing.JPanel;
 
 import view.controller.ControllerTelaDeCadastroProjetos;
 
-public class TelaCadastroProjetos {
+public class TelaCadastroProjetos extends JPanel {
+	public TelaCadastroProjetos() {
+		setBounds(150, 0, 550, 500);
+		setBackground(Color.BLACK);
+		setVisible(true);
+	}
 
 	private ControllerTelaDeCadastroProjetos controller = new ControllerTelaDeCadastroProjetos();
 
