@@ -20,12 +20,11 @@ public class ControllerTelaDeCadastroProjetos {
 
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais, long matricula,
-			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador)
+			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos)
 			throws Exception {
 
 		casoDeUsoCinco.criarProjeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
-				gastoExecutadoCapitalReais, matricula, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos,
-				coordenador);
+				gastoExecutadoCapitalReais, matricula, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos);
 
 	}
 

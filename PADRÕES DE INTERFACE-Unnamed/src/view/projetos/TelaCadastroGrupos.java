@@ -230,8 +230,23 @@ public class TelaCadastroGrupos extends JPanel {
 				}
 			}
 		});
-		atualizar.setBounds(700,605,100,40);
+		atualizar.setBounds(600,605,100,40);
 		this.add(atualizar);
+		JButton mostrarGrupos = new JButton("Grupos");
+		mostrarGrupos.setForeground(Color.WHITE);
+		mostrarGrupos.setBackground(new Color(119, 221, 119));
+		mostrarGrupos.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+		mostrarGrupos.setBounds(720, 610, 100, 30);
+		this.add(mostrarGrupos);
 	}
 
 	public static void main(String[] args) {

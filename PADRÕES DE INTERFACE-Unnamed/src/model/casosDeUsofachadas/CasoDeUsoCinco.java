@@ -17,7 +17,7 @@ public class CasoDeUsoCinco {
 
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais, long matricula,
-			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos, boolean coordenador)
+			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos)
 			throws Exception {
 		Membro cordenadorDoProjeto = daoMembro.recuperarPorIndentificador(matricula);
 		Participacao participacaoProjeto = new Participacao(new Date(System.currentTimeMillis()),
