@@ -9,7 +9,7 @@ import view.controller.ControllerCadastroEditais;
 
 public class TelaCadastroEditais extends JPanel {
 	public TelaCadastroEditais() {
-		setBounds(150, 0, 550,500);
+		setBounds(150, 0, 850, 700);
 		setBackground(Color.BLACK);
 		setVisible(true);
 	

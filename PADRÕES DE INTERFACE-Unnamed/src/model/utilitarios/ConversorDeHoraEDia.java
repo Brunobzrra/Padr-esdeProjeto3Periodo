@@ -7,55 +7,59 @@ import ponto.model.projetos.DiaSemana;
 
 public class ConversorDeHoraEDia {
 	/**
-	 * Este metodo tem duas maneiras de agir, a que o cliente passar um localDateTime e a outra que recebe null
-	 * no caso de null ele considera que a localDateTime deve ser criado aqui
-	 * no outro caso o ele so cham o metodo de conversão
+	 * Este metodo tem duas maneiras de agir, a que o cliente passar um
+	 * localDateTime e a outra que recebe null no caso de null ele considera que a
+	 * localDateTime deve ser criado aqui no outro caso o ele so cham o metodo de
+	 * conversão
+	 * 
 	 * @param data
 	 * @return
 	 */
 	public static Object[] pegarHoraEDia(LocalDateTime data) {
-		if(data==null) {
+		if (data == null) {
 			String dataQueOPontoFoiBatido = new Date(System.currentTimeMillis()).toString();
 			String dia = dataQueOPontoFoiBatido.substring(0, 3);
-			String[] horaExataEmtexto = dataQueOPontoFoiBatido.substring(11, 16).split(":");
-			long horaExata = Long.parseLong((horaExataEmtexto[0] + horaExataEmtexto[1]));
-			return pegarHoraEDia(horaExata, dia);
-		}else {
-			return pegarHoraEDia(data.getHour(), data.getDayOfWeek().toString().substring(0,3));
+			return pegarHoraEDia(LocalDateTime.now(), dia);
+		} else {
+			return pegarHoraEDia(data, data.getDayOfWeek().toString().substring(0, 3));
 		}
 	}
+
 	/**
-	 * Este metodo encapsula o algoritimo responsavel pela conversão de hora e dia do cliente
+	 * Este metodo encapsula o algoritimo responsavel pela conversão de hora e dia
+	 * do cliente
+	 * 
 	 * @param horaExata
 	 * @param dia
 	 * @return
 	 */
-	private static Object[] pegarHoraEDia(long horaExata,String dia) {
+	private static Object[] pegarHoraEDia(LocalDateTime data, String dia) {
 		DiaSemana diaEmPortugues;
-		switch (dia) {
-		case "Mon":
+		switch (dia.toString()) {
+		case "MON":
 			diaEmPortugues = DiaSemana.SEG;
 			break;
-		case "Tue":
+		case "TUE":
 			diaEmPortugues = DiaSemana.TER;
 			break;
-		case "Wed":
+		case "WED":
 			diaEmPortugues = DiaSemana.QUA;
 			break;
-		case "Thu":
+		case "THU":
 			diaEmPortugues = DiaSemana.QUI;
 			break;
-		case "Fri":
+		case "FRI":
 			diaEmPortugues = DiaSemana.SEX;
 			break;
-		case "Sat":
+		case "SAT":
 			diaEmPortugues = DiaSemana.SAB;
 			break;
 		default:
 			diaEmPortugues = DiaSemana.DOM;
 			break;
 		}
-		Object[] resultado = { horaExata, diaEmPortugues };
+		Object[] resultado = { data, diaEmPortugues };
 		return resultado;
 	}
+
 }

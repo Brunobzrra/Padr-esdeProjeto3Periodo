@@ -1,11 +1,12 @@
 package view.controller;
 
+import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoTres;
 
 public class ControllerCadastroGrupos {
 
 	private CasoDeUsoTres casoDeUsoTres;
-
+	private CasoDeUsoExtra casoDeUsoExtra;
 	public ControllerCadastroGrupos() {
 		casoDeUsoTres = new CasoDeUsoTres();
 	}
@@ -24,8 +25,10 @@ public class ControllerCadastroGrupos {
 		casoDeUsoTres.atualizarrGrupo(matricula, linkCNPq, nomeNovo, linkCNPqNovo);
 
 	}
-	
+	public Object[] recuperarGrupo(String linkCNPq) {
+		return casoDeUsoExtra.recuperarGrupo(linkCNPq);
+	}
 	public void mostrarGruposDoUsuarioLogado() {
-		//o que fazer aqui?
+
 	}
 }

@@ -12,9 +12,8 @@ import javax.swing.JPanel;
 
 public class TelaPrincipal extends JFrame {
 	private JButton cancelar;
-	private JPanel painel;
+	private JPanel painelSecundario;
 	private JButton voltar;
-
 	private JLabel projeto;
 	private JLabel grupo;
 	private JLabel edital;
@@ -24,7 +23,7 @@ public class TelaPrincipal extends JFrame {
 
 	public TelaPrincipal() {
 		setLayout(null);
-		setSize(700, 500);
+		setSize(500, 280);
 		getContentPane().setBackground(new Color(213, 213, 213));
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -41,67 +40,60 @@ public class TelaPrincipal extends JFrame {
 	}
 
 	private void botaoVoltar() {
-		this.remove(painel);
-		painel = null;
-		this.remove(voltar);
-		voltar = null;
-		adcionarLabels();
-		adcionarBotao();
+		this.remove(painelSecundario);
+		painelSecundario = null;
+		grupo.setVisible(true);;
+		projeto.setVisible(true);
+		edital.setVisible(true);
+		proxima1.setVisible(true);
+		proxima2.setVisible(true);
+		proxima3.setVisible(true);
+		cancelar.setVisible(true);
+		voltar.setVisible(false);
+		setSize(500, 280);
+		setLocationRelativeTo(null);
 		this.repaint();
 	}
 
-	private void criarBotaoVoltar() {
-		voltar = new JButton("Voltar");
-		voltar.setForeground(Color.WHITE);
-		voltar.setBackground(new Color(119, 221, 119));
-		voltar.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				botaoVoltar();
-			}
-		});
-		voltar.setBounds(30, 410, 100, 40);
-		this.add(voltar);
-		this.remove(grupo);
-		grupo = null;
-		this.remove(projeto);
-		projeto = null;
-		this.remove(edital);
-		edital = null;
-		this.remove(proxima1);
-		proxima1 = null;
-		this.remove(proxima2);
-		proxima2 = null;
-		this.remove(proxima3);
-		proxima3 = null;
-		remove(cancelar);
+	private void transitarTela() {
+		voltar.setBounds(25, 620, 100, 40);
+		grupo.setVisible(false);;
+		projeto.setVisible(false);
+		edital.setVisible(false);
+		proxima1.setVisible(false);
+		proxima2.setVisible(false);
+		proxima3.setVisible(false);
+		cancelar.setVisible(false);
+		voltar.setVisible(true);
+		setSize(1000, 700);
+		setLocationRelativeTo(null);
 	}
 
 	private void criarGrupo() {
-		painel = new TelaCadastroGrupos();
-		criarBotaoVoltar();
-		add(painel);
+		painelSecundario = new TelaCadastroGrupos();
+		transitarTela();
+		add(painelSecundario);
 		repaint();
 	}
 
 	private void criarEdital() {
-		painel = new TelaCadastroEditais();
-		criarBotaoVoltar();
-		add(painel);
+		painelSecundario = new TelaCadastroEditais();
+		transitarTela();
+		add(painelSecundario);
 		repaint();
 	}
 
 	private void criarProjeto() {
-		painel = new TelaCadastroProjetos();
-		add(painel);
-		criarBotaoVoltar();
+		painelSecundario = new TelaCadastroProjetos();
+		add(painelSecundario);
+		transitarTela();
 		repaint();
 	}
 
 	private void adcionarPainel() {
 		JPanel painelCinza = new JPanel();
 		painelCinza.setBackground(Color.DARK_GRAY);
-		painelCinza.setSize(150, 500);
+		painelCinza.setSize(150, 1000);
 		add(painelCinza);
 	}
 
@@ -113,26 +105,37 @@ public class TelaPrincipal extends JFrame {
 		this.add(label);
 
 		projeto = new JLabel("Administrar Projetos");
-		projeto.setFont(new Font("Arial", Font.BOLD, 25));
+		projeto.setFont(new Font("Arial", Font.BOLD, 20));
 		projeto.setBounds(165, -40, 300, 150);
 		projeto.setForeground(Color.DARK_GRAY);
 		this.add(projeto);
 
 		grupo = new JLabel("Administrar Grupos");
-		grupo.setFont(new Font("Arial", Font.BOLD, 25));
-		grupo.setBounds(165, 95, 300, 150);
+		grupo.setFont(new Font("Arial", Font.BOLD, 20));
+		grupo.setBounds(165, 30, 300, 150);
 		grupo.setForeground(Color.DARK_GRAY);
 		this.add(grupo);
 
 		edital = new JLabel("Administrar Editais");
-		edital.setFont(new Font("Arial", Font.BOLD, 25));
-		edital.setBounds(165, 230, 300, 150);
+		edital.setFont(new Font("Arial", Font.BOLD, 20));
+		edital.setBounds(165, 100, 300, 150);
 		edital.setForeground(Color.DARK_GRAY);
 		this.add(edital);
 
 	}
 
 	private void adcionarBotao() {
+		voltar = new JButton("Voltar");
+		voltar.setForeground(Color.WHITE);
+		voltar.setBackground(new Color(119, 221, 119));
+		voltar.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				botaoVoltar();
+			}
+		});
+		this.add(voltar);
+
 		cancelar = new JButton("Cancelar");
 		cancelar.setForeground(Color.WHITE);
 		cancelar.setBackground(new Color(119, 221, 119));
@@ -142,7 +145,7 @@ public class TelaPrincipal extends JFrame {
 				botaCancelar();
 			}
 		});
-		cancelar.setBounds(30, 410, 100, 40);
+		cancelar.setBounds(25, 200, 100, 40);
 		this.add(cancelar);
 
 		proxima1 = new JButton("Proximo =>");
@@ -154,7 +157,7 @@ public class TelaPrincipal extends JFrame {
 				criarProjeto();
 			}
 		});
-		proxima1.setBounds(550, 15, 100, 40);
+		proxima1.setBounds(380, 15, 100, 40);
 		this.add(proxima1);
 
 		proxima2 = new JButton("Proximo =>");
@@ -166,7 +169,7 @@ public class TelaPrincipal extends JFrame {
 				criarGrupo();
 			}
 		});
-		proxima2.setBounds(550, 150, 100, 40);
+		proxima2.setBounds(380, 85, 100, 40);
 		this.add(proxima2);
 
 		proxima3 = new JButton("Proximo =>");
@@ -178,7 +181,7 @@ public class TelaPrincipal extends JFrame {
 				criarEdital();
 			}
 		});
-		proxima3.setBounds(550, 285, 100, 40);
+		proxima3.setBounds(380, 155, 100, 40);
 		this.add(proxima3);
 	}
 

@@ -1,5 +1,6 @@
 package model.chainOfResponsibility;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 
 import model.autenticacao.Membro;
@@ -27,9 +28,11 @@ public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro
 				for (HorarioPrevisto horario : participacao.getHorarios()) {
 					Object[] horaEDiaEntrada = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraEntrada());
 					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
+					LocalDateTime horaInicio=(LocalDateTime) horaEDiaEntrada[0];
+					LocalDateTime horaSaida=(LocalDateTime)horaEDiaSaida[0];
 					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
-						if (horario.getHoraInicio() == (long) horaEDiaEntrada[0]
-								|| horario.getHoraTermino() == (long) horaEDiaSaida[0]) {
+						if (horario.getHoraInicio() == horaInicio.getHour()
+								|| horario.getHoraTermino() == horaSaida.getHour()) {
 							invalido = false;
 						}
 					}

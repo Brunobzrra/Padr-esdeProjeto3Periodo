@@ -1,5 +1,6 @@
 package model.chainOfResponsibility;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 
 import model.autenticacao.Membro;
@@ -30,12 +31,12 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
 					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
 						int tolerancia =horario.getMinutosTolerante() ;
-						if (horario.getHoraInicio() <= (long) horaEDiaEntrada[0]
-								&& horario.getHoraInicio()
-										+ tolerancia >= (long) horaEDiaEntrada[0]
-								&& horario.getHoraTermino() <= (long) horaEDiaSaida[0]
-								&& horario.getHoraTermino()
-										+ tolerancia >= (long) horaEDiaSaida[0]) {
+						LocalDateTime horaEntrada=(LocalDateTime) horaEDiaEntrada[0];
+						LocalDateTime horaSaida=(LocalDateTime)horaEDiaSaida[0];
+						if (horario.getHoraInicio() == horaEntrada.getHour()
+								&& tolerancia >= horaEntrada.getMinute()
+								&& horario.getHoraTermino() <= horaSaida.getHour()
+								&&  tolerancia >= horaSaida.getMinute() ){
 							invalido = false;
 						}
 					}
