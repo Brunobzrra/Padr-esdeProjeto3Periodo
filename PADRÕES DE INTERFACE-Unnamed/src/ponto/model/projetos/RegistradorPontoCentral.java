@@ -27,7 +27,7 @@ public class RegistradorPontoCentral implements Serializable {
 
 	/**
 	 * Este metodo e responsavel por testar cadastrar um ponto na sua hora inicial
-	 * ou se o ponto de entrada ja foi batido ele bate o ponto de saida 
+	 * ou se o ponto de entrada ja foi batido ele bate o ponto de saida
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -38,7 +38,7 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		Participacao participacao = null;
 		for (ProjetoComponente participa : projeto.getItens()) {
-			if (participa.getTipo()==TipoProjetoComponente.PARTICIPACAO) {
+			if (participa.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
 				participacao = (Participacao) participa;
 			}
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
@@ -53,7 +53,7 @@ public class RegistradorPontoCentral implements Serializable {
 					}
 				} else {
 					for (HorarioPrevisto horario : participacao.getHorarios()) {
-						if (horario.getHoraInicio() == pontoBatidoagora.getHour()
+						if (pontoBatidoagora.isAfter(horario.getHoraInicio())
 								&& ConversorDeHoraEDia.pegarHoraEDia(pontoBatidoagora)[1] == horario.getDiaSemana()) {
 							participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
 							System.out.println("Ok");
@@ -65,8 +65,10 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		throw new Exception("Este membro não estar neste projeto!");
 	}
+
 	/**
 	 * este metodo testa e retorna objetos ativos
+	 * 
 	 * @param membro
 	 * @return
 	 * @throws Exception
@@ -85,8 +87,10 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		return projetosAtivos;
 	}
+
 	/**
 	 * Este metodo justifica um ponta invalido
+	 * 
 	 * @param ponto
 	 * @param justificar
 	 * @param membro
@@ -109,8 +113,10 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		pontoJustificado.setJustificativa(justificar);
 	}
+
 	/**
 	 * Este metodo justifica quando um ponto não foi batido nio horario previsto
+	 * 
 	 * @param ponto
 	 * @param justificar
 	 * @param membro
@@ -133,8 +139,11 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		pontoJustificado.setJustificativa(justificar);
 	}
+
 	/**
-	 * Metodo ressponsavel por pegar todos a horas trabalhadas que são validas do membro que é passado 
+	 * Metodo ressponsavel por pegar todos a horas trabalhadas que são validas do
+	 * membro que é passado
+	 * 
 	 * @param datInicio
 	 * @param dataTermino
 	 * @param membro
@@ -157,8 +166,10 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		return 0;
 	}
+
 	/**
 	 * Este metodo pega o deficit de horas do membro passado no parametro
+	 * 
 	 * @param datInicio
 	 * @param dataTermino
 	 * @param membro
@@ -185,9 +196,11 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		return 0;
 	}
+
 	/**
-	 * este metodo pega todos os pontos invalidos de acordo com a cadeia do padrão chain of responsability
-	 * escolhida aqui 
+	 * este metodo pega todos os pontos invalidos de acordo com a cadeia do padrão
+	 * chain of responsability escolhida aqui
+	 * 
 	 * @param membro
 	 * @return
 	 * @throws RemoteException

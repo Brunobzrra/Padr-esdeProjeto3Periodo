@@ -1,5 +1,7 @@
 package model.casosDeUsofachadas;
 
+import java.time.LocalDateTime;
+
 import model.autenticacao.Membro;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
@@ -15,7 +17,7 @@ public class CasoDeUsoDez {
 	private DAOXMLProjetoParticipacao daoProjeto = new DAOXMLProjetoParticipacao();
 
 	public void adcionarHorarioTrabalhado(long matriculaCoordenador, long matriculaMembro, String nomeDoProjeto,
-			DiaSemana dia, short horaInicio, short horaTermino, short toleranciaMinutos) throws Exception {
+			DiaSemana dia, LocalDateTime horaInicio, LocalDateTime horaTermino, long toleranciaMinutos) throws Exception {
 		Membro coordenador = daoMembro.recuperarPorIndentificador(matriculaCoordenador);
 		Projeto projeto = daoProjeto.recuperarPorIndentificador(nomeDoProjeto);
 		if (projeto.getCordenador().getMatricula() == coordenador.getMatricula()) {

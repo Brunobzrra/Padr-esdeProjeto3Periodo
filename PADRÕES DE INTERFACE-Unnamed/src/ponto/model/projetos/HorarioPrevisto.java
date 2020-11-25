@@ -3,7 +3,7 @@ package ponto.model.projetos;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class HorarioPrevisto implements Serializable{
+public class HorarioPrevisto implements Serializable {
 	/**
 	 * 
 	 */
@@ -11,10 +11,10 @@ public class HorarioPrevisto implements Serializable{
 	private DiaSemana diaSemana;
 	private LocalDateTime horaInicio;
 	private LocalDateTime horaTermino;
-	private short minutosTolerante;
+	private long minutosTolerante;
 
-	public HorarioPrevisto(DiaSemana dia,LocalDateTime horaInicio, LocalDateTime horaTermino, short toleranciaMinutos) {
-		diaSemana=dia;
+	public HorarioPrevisto(DiaSemana dia, LocalDateTime horaInicio, LocalDateTime horaTermino, long toleranciaMinutos) {
+		diaSemana = dia;
 		this.horaInicio = horaInicio;
 		this.horaTermino = horaTermino;
 		setMinutosTolerante(toleranciaMinutos);
@@ -44,11 +44,11 @@ public class HorarioPrevisto implements Serializable{
 		this.horaTermino = horaTermino;
 	}
 
-	public short getMinutosTolerante() {
+	public long getMinutosTolerante() {
 		return minutosTolerante;
 	}
 
-	public void setMinutosTolerante(short minutosTolerante) {
+	public void setMinutosTolerante(long minutosTolerante) {
 		this.minutosTolerante = minutosTolerante;
 	}
 

@@ -12,7 +12,9 @@ import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
 
 /**
- * Nesta parte do chain verifica se o ponto foi batido ate o horario de tolerancia
+ * Nesta parte do chain verifica se o ponto foi batido ate o horario de
+ * tolerancia
+ * 
  * @author Antônio Amorim
  *
  */
@@ -28,15 +30,10 @@ public class AvaliadorPontosForaParticipacaoPrevisaoToleranciaEmMinutos extends 
 				boolean invalido = true;
 				for (HorarioPrevisto horario : participacao.getHorarios()) {
 					Object[] horaEDiaEntrada = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraEntrada());
-					Object[] horaEDiaSaida = ConversorDeHoraEDia.pegarHoraEDia(ponto.getDataHoraSaida());
 					if (horario.getDiaSemana() == (DiaSemana) horaEDiaEntrada[1]) {
-						int tolerancia =horario.getMinutosTolerante() ;
-						LocalDateTime horaEntrada=(LocalDateTime) horaEDiaEntrada[0];
-						LocalDateTime horaSaida=(LocalDateTime)horaEDiaSaida[0];
-						if (horario.getHoraInicio() == horaEntrada.getHour()
-								&& tolerancia >= horaEntrada.getMinute()
-								&& horario.getHoraTermino() <= horaSaida.getHour()
-								&&  tolerancia >= horaSaida.getMinute() ){
+						LocalDateTime horaEntrada = (LocalDateTime) horaEDiaEntrada[0];
+						if (horaEntrada.isAfter(horario.getHoraInicio().plusMinutes(horario.getMinutosTolerante()))
+								&& horaEntrada.isBefore(horario.getHoraInicio().minusMinutes(1))) {
 							invalido = false;
 						}
 					}
