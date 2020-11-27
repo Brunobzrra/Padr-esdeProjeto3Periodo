@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JEditorPane;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -47,6 +48,11 @@ public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontage
 
 		setBounds(50, 50, 600, 800);
 		setVisible(true);		
+		JFrame tela= new JFrame();
+		tela.setSize(600, 800);
+		tela.setLayout(null);
+		tela.add(this);
+		tela.setVisible(true);
 	}
 
 
