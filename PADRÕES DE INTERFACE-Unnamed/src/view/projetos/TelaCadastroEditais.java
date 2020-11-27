@@ -11,6 +11,7 @@ import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -32,9 +33,7 @@ public class TelaCadastroEditais extends JPanel {
 	private JTextField novoNomeEdital;
 	private JTextField novaDataInicio;
 	private JTextField novaDataTermino;
-	
-	
-	
+		
 	public TelaCadastroEditais() {
 		
 			setBounds(150, 0, 850, 700);
@@ -47,6 +46,7 @@ public class TelaCadastroEditais extends JPanel {
 		
 	
 	}
+
 	//String nomeEdital, Date dataInicio, Date dataTermino, long matricula
 	private void adcionarLabels() {
 		JLabel cadastrar = new JLabel("Cadastrar Edital");
@@ -107,31 +107,31 @@ public class TelaCadastroEditais extends JPanel {
 		this.add(atualizar);
 
 		JLabel matriculaAtualizar = new JLabel("Matricula:");
-		matriculaAtualizar.setBounds(200, 440, 300, 40);
+		matriculaAtualizar.setBounds(100, 440, 300, 40);
 		matriculaAtualizar.setFont(new Font("Arial", Font.BOLD, 14));
 		matriculaAtualizar.setForeground(Color.DARK_GRAY);
 		this.add(matriculaAtualizar);
 
 		JLabel dataInicioAtualizar = new JLabel("Nova Data de Inicio:");
-		dataInicioAtualizar.setBounds(200, 530, 300, 40);
+		dataInicioAtualizar.setBounds(100, 530, 300, 40);
 		dataInicioAtualizar.setFont(new Font("Arial", Font.BOLD, 14));
 		dataInicioAtualizar.setForeground(Color.DARK_GRAY);
 		this.add(dataInicioAtualizar);
 
 		JLabel nomeNovo = new JLabel("Nome:");
-		nomeNovo.setBounds(500, 440, 300, 40);
+		nomeNovo.setBounds(350, 440, 300, 40);
 		nomeNovo.setFont(new Font("Arial", Font.BOLD, 14));
 		nomeNovo.setForeground(Color.DARK_GRAY);
 		this.add(nomeNovo);
 		
 		JLabel nomeAntigo = new JLabel("Novo nome:");
-		nomeAntigo.setBounds(750, 440, 300, 40);
+		nomeAntigo.setBounds(600, 440, 300, 40);
 		nomeAntigo.setFont(new Font("Arial", Font.BOLD, 14));
 		nomeAntigo.setForeground(Color.DARK_GRAY);
 		this.add(nomeAntigo);
 
 		JLabel dataDeterminoAtualizar = new JLabel("Nova Data de Termino:");
-		dataDeterminoAtualizar.setBounds(502, 530, 300, 40);
+		dataDeterminoAtualizar.setBounds(350, 530, 300, 40);
 		dataDeterminoAtualizar.setFont(new Font("Arial", Font.BOLD, 14));
 		dataDeterminoAtualizar.setForeground(Color.DARK_GRAY);
 		this.add(dataDeterminoAtualizar);
@@ -170,12 +170,12 @@ public class TelaCadastroEditais extends JPanel {
 		//-----------------------------------------------------------
 		matriculaAtualizar = new JTextField();
 		matriculaAtualizar.setToolTipText("ex: 123456...");
-		matriculaAtualizar.setBounds(200, 480, 200, 25);
+		matriculaAtualizar.setBounds(100, 480, 200, 25);
 		this.add(matriculaAtualizar);
 
 		novaDataInicio = new JTextField();
 		novaDataInicio.setToolTipText("ex: 123456...");
-		novaDataInicio.setBounds(200, 570, 200, 25);
+		novaDataInicio.setBounds(100, 570, 200, 25);
 		novaDataInicio.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
@@ -190,17 +190,17 @@ public class TelaCadastroEditais extends JPanel {
 
 		antigoNomeEdital = new JTextField();
 		antigoNomeEdital.setToolTipText("ex: Fulano...");
-		antigoNomeEdital.setBounds(500, 480, 200, 25);
+		antigoNomeEdital.setBounds(350, 480, 200, 25);
 		this.add(antigoNomeEdital);
 
 		novaDataTermino = new JTextField();
 		novaDataTermino.setToolTipText("ex: 00/00/0000...");
-		novaDataTermino.setBounds(502, 570, 200, 25);
+		novaDataTermino.setBounds(350, 570, 200, 25);
 		this.add(novaDataTermino);
 		
 		novoNomeEdital = new JTextField();
 		novoNomeEdital.setToolTipText("ex: Fulano...");
-		novoNomeEdital.setBounds(750, 480, 200, 25);
+		novoNomeEdital.setBounds(600, 480, 200, 25);
 		this.add(novoNomeEdital);
 		
 	}
@@ -259,7 +259,7 @@ public class TelaCadastroEditais extends JPanel {
 				}
 			}
 		});
-		atualizar.setBounds(750,550,100,40);
+		atualizar.setBounds(600,550,100,40);
 		this.add(atualizar);
 		
 		JButton mostrarEditais = new JButton("Editais");
@@ -275,7 +275,7 @@ public class TelaCadastroEditais extends JPanel {
 				}
 			}
 		});
-		mostrarEditais.setBounds(800, 20, 100, 30);
+		mostrarEditais.setBounds(730, 550, 100, 30);
 		this.add(mostrarEditais);
 	}
 	

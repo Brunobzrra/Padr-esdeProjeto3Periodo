@@ -8,7 +8,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import view.controller.ControllerTelaAutenticacao;
 
 public class TelaPrincipal extends JFrame {
 	private JButton cancelar;
@@ -20,6 +23,9 @@ public class TelaPrincipal extends JFrame {
 	private JButton proxima1;
 	private JButton proxima2;
 	private JButton proxima3;
+	private JButton logout;
+	private ControllerTelaAutenticacao controler= new ControllerTelaAutenticacao();
+
 
 	public TelaPrincipal() {
 		setLayout(null);
@@ -34,7 +40,15 @@ public class TelaPrincipal extends JFrame {
 		adcionarPainel();
 		setVisible(true);
 	}
-
+	private void botaoFazerLogout() {
+		String email=(String)JOptionPane.showInputDialog("Coloque o email");
+		try {
+			controler.fazerLogout(email);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, "Email errado!");
+			e.printStackTrace();
+		}
+	}
 	private void botaCancelar() {
 		this.dispose();
 	}
@@ -49,6 +63,7 @@ public class TelaPrincipal extends JFrame {
 		proxima2.setVisible(true);
 		proxima3.setVisible(true);
 		cancelar.setVisible(true);
+		logout.setVisible(true);
 		voltar.setVisible(false);
 		setSize(500, 280);
 		setLocationRelativeTo(null);
@@ -64,6 +79,7 @@ public class TelaPrincipal extends JFrame {
 		proxima2.setVisible(false);
 		proxima3.setVisible(false);
 		cancelar.setVisible(false);
+		logout.setVisible(false);
 		voltar.setVisible(true);
 		setSize(1000, 700);
 		setLocationRelativeTo(null);
@@ -145,8 +161,21 @@ public class TelaPrincipal extends JFrame {
 				botaCancelar();
 			}
 		});
-		cancelar.setBounds(25, 200, 100, 40);
+		cancelar.setBounds(25, 140, 100, 40);
 		this.add(cancelar);
+		
+		logout = new JButton("<html>Fazer logout</html>");
+		logout.setForeground(Color.WHITE);
+		logout.setBackground(new Color(119, 221, 119));
+		logout.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				botaoFazerLogout();
+			}
+		});
+		logout.setFont(new Font("Arial", Font.BOLD, 10));
+		logout.setBounds(25, 200, 100, 40);
+		this.add(logout);
 
 		proxima1 = new JButton("Proximo =>");
 		proxima1.setForeground(Color.WHITE);

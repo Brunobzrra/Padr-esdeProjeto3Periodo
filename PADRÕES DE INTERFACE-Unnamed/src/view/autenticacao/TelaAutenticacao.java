@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import model.casosDeUsofachadas.CasoDeUsoDoiseNove;
 import view.controller.ControllerTelaAutenticacao;
+import view.projetos.TelaPrincipal;
 
 public class TelaAutenticacao extends JFrame{
 
@@ -45,6 +45,8 @@ public class TelaAutenticacao extends JFrame{
 	private void botaoDeLogin() {
 		try {
 			controller.fazerLogin(login.getText(), senha.getText(), (String) op.getSelectedItem());
+			this.dispose();
+			new TelaPrincipal();
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());

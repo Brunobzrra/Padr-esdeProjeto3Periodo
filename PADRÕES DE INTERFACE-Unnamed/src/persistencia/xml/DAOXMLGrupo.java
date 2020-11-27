@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,12 +14,7 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import model.autenticacao.Membro;
 import model.projetos.Grupo;
-import model.projetos.Projeto;
-import model.projetos.ProjetoComponente;
-import model.projetos.TipoProjetoComponente;
-
 public class DAOXMLGrupo {
 
 	private HashMap<Long, Grupo> persistidos;
@@ -109,6 +105,9 @@ public class DAOXMLGrupo {
 		}
 		this.salvarXML(persistidos);
 		return true;
+	}
+	public  HashMap<Long, Grupo> recuperarTodos(){
+		return persistidos;
 	}
 	/*
 	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de seus atributos. caso
