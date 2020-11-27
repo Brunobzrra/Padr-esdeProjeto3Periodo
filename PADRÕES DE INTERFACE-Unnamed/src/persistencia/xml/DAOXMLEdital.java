@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -14,6 +15,7 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
 import model.projetos.Edital;
 import model.projetos.Grupo;
 import model.projetos.Projeto;
@@ -114,6 +116,17 @@ public class DAOXMLEdital {
 		}
 		this.salvarXML(persistidos);
 		return true;
+	}
+	public ArrayList<Edital> recuperarEditaisComMembro(Membro membro) throws Exception{
+		ArrayList<Edital> editais= new ArrayList<Edital>();
+		this.persistidos = this.carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).buscarComponente(membro)) {
+				editais.add(persistidos.get(chave));
+			}
+		}
+		return editais;
 	}
 
 	/*

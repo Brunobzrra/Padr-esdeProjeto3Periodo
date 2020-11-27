@@ -6,8 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -24,6 +26,8 @@ public class TelaCadastroGrupos extends JPanel {
 	private JTextField linkCNPqAntigo;
 	private JTextField nomeGrupoNovo;
 	private JTextField linkCNPqNovo;
+	private JComboBox<Object> op = new JComboBox<Object>();
+
 	public TelaCadastroGrupos() {
 		setBounds(150, 0, 850, 700);
 		setBackground(new Color(213, 213, 213));
@@ -31,6 +35,7 @@ public class TelaCadastroGrupos extends JPanel {
 		adcionarLabels();
 		adcionarTextFields();
 		adcionarBotao();
+		adcionarJComobox();
 		setVisible(true);
 	}
 
@@ -50,8 +55,16 @@ public class TelaCadastroGrupos extends JPanel {
 
 	}
 
-	public void mostrarGruposDoUsuarioLogado() {
-		// o que fazer aqui?
+	public Object[] mostrarGruposDoUsuarioLogado() {
+		try {
+			return controller.mostrarGruposDoUsuarioLogado().toArray();
+		} catch (NullPointerException e) {
+			return null;
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	private void adcionarLabels() {
@@ -163,9 +176,9 @@ public class TelaCadastroGrupos extends JPanel {
 		linkCNPqAntigo.setToolTipText("ex: 123456...");
 		linkCNPqAntigo.setBounds(200, 570, 200, 25);
 		linkCNPqAntigo.addActionListener(new ActionListener() {
-			
+
 			public void actionPerformed(ActionEvent e) {
-				Object[] dados=controller.recuperarGrupo(linkCNPqAntigo.getText());
+				Object[] dados = controller.recuperarGrupo(linkCNPqAntigo.getText());
 				nomeGrupoNovo.setText((String) dados[0]);
 				linkCNPqNovo.setText((String) dados[1]);
 				nomeGrupoNovo.repaint();
@@ -194,13 +207,14 @@ public class TelaCadastroGrupos extends JPanel {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					adcionarGrupo(nomeGrupoCriar.getText(), linkCNPqCriar.getText(), Long.parseLong(matriculaCriar.getText()));
+					adcionarGrupo(nomeGrupoCriar.getText(), linkCNPqCriar.getText(),
+							Long.parseLong(matriculaCriar.getText()));
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 			}
 		});
-		criar.setBounds(280,265,100,40);
+		criar.setBounds(280, 265, 100, 40);
 		this.add(criar);
 		JButton remover = new JButton("Remover");
 		remover.setForeground(Color.WHITE);
@@ -209,13 +223,13 @@ public class TelaCadastroGrupos extends JPanel {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					removerGrupo(Long.parseLong(matriculaRemover.getText()),linkCNPqRemover.getText());
+					removerGrupo(Long.parseLong(matriculaRemover.getText()), linkCNPqRemover.getText());
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 			}
 		});
-		remover.setBounds(700,265,100,40);
+		remover.setBounds(700, 265, 100, 40);
 		this.add(remover);
 		JButton atualizar = new JButton("Atualizar");
 		atualizar.setForeground(Color.WHITE);
@@ -224,29 +238,55 @@ public class TelaCadastroGrupos extends JPanel {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					atualizarrGrupo(Long.parseLong(matriculaAntigo.getText()), linkCNPqAntigo.getText(), nomeGrupoNovo.getText(), linkCNPqNovo.getText());
+					atualizarrGrupo(Long.parseLong(matriculaAntigo.getText()), linkCNPqAntigo.getText(),
+							nomeGrupoNovo.getText(), linkCNPqNovo.getText());
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 			}
 		});
-		atualizar.setBounds(600,605,100,40);
+		atualizar.setBounds(600, 605, 100, 40);
 		this.add(atualizar);
-		JButton mostrarGrupos = new JButton("Grupos");
+		JButton mostrarGrupos = new JButton("<html>Criar Relatorio</html>");
 		mostrarGrupos.setForeground(Color.WHITE);
 		mostrarGrupos.setBackground(new Color(119, 221, 119));
+		mostrarGrupos.setFont(new Font("Arial", Font.BOLD, 9));
 		mostrarGrupos.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-
+					String valor = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de relatorio",
+							"Gerar relatorio", JOptionPane.PLAIN_MESSAGE, null, new Object[] { "HTML", "JPAINEL" },
+							null);
+					DiretorDeMontagemDeRelatorio diretor = new DiretorDeMontagemDeRelatorio(
+							new MontadorRelatorioSwing());
+					if (valor.equals("HTML")) {
+						diretor.setMontadorDeRelatorio(new MontadorRelatorioProjetoHTML(""));
+					}
+					diretor.montarRelatorioCompleto(op.getSelectedItem().toString());
+					JOptionPane.showMessageDialog(null, "Relatorio criado!");
 				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, "Não foi possivel criar o realtorio!");
 					e1.printStackTrace();
 				}
 			}
 		});
 		mostrarGrupos.setBounds(720, 610, 100, 30);
 		this.add(mostrarGrupos);
+	}
+
+	private void adcionarJComobox() {
+		Object[] grupos = mostrarGruposDoUsuarioLogado();
+		String[] nome = { "---Nenhum Grupo cadastrado---" };
+		if (grupos == null || grupos.length==0) {
+			op.addItem(nome[0].toString());
+		} else {
+			for (Object object : grupos) {
+				op.addItem(object.toString());
+			}
+		}
+		op.setBounds(720, 580, 100, 20);
+		add(op);
 	}
 
 	public static void main(String[] args) {

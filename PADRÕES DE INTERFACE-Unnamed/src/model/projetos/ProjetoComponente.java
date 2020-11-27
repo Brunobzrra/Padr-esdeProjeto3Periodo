@@ -87,12 +87,17 @@ public abstract class ProjetoComponente implements Serializable {
 			}
 		}
 	}
-
+	public boolean buscarComponente(ProjetoComponente comonente)throws Exception {
+		throw new Exception("Aqui não existe coelção");
+	}
 	public TipoProjetoComponente getTipo() {
 		return tipo;
 	}
 
 	public void setTipo(TipoProjetoComponente tipo) {
 		this.tipo = tipo;
+	}
+	public String toStringHTML() {
+		return null;
 	}
 }

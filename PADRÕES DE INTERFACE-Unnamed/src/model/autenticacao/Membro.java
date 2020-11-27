@@ -177,6 +177,15 @@ public class Membro extends ProjetoComponente implements Serializable {
 		this.senha = senha;
 	}
 
+	public boolean buscarComponente(ProjetoComponente comonente) throws Exception {
+		for (ProjetoComponente projetoComponente : participacoes) {
+			if (projetoComponente == comonente) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public boolean equals(Membro m) {
 		long matricula = m.getMatricula();
 		if (this.matricula == matricula) {
@@ -208,20 +217,22 @@ public class Membro extends ProjetoComponente implements Serializable {
 		}
 		return aux;
 	}
+
 	public ArrayList<PontoTrabalhado> getPontosValidos() {
-		ArrayList<PontoTrabalhado>pontos= new ArrayList<PontoTrabalhado>();
+		ArrayList<PontoTrabalhado> pontos = new ArrayList<PontoTrabalhado>();
 		for (ProjetoComponente partcipa : getParticipacoes()) {
-			Participacao participacao= (Participacao)partcipa;
+			Participacao participacao = (Participacao) partcipa;
 			for (PontoTrabalhado ponto : participacao.getPontos()) {
-				if(ponto.isJustificativaAceita()) {
+				if (ponto.isJustificativaAceita()) {
 					pontos.add(ponto);
 				}
 			}
 		}
 		return pontos;
 	}
+
 	public void setParticipacoes(ArrayList<ProjetoComponente> participacoes) {
 		this.participacoes = participacoes;
 	}
-	
+
 }

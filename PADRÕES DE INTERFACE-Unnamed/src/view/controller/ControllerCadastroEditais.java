@@ -1,5 +1,6 @@
 package view.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import model.casosDeUsofachadas.CasoDeUsoExtra;
@@ -34,8 +35,7 @@ public class ControllerCadastroEditais {
 		return casoDeUsoExtra.recuperarEdital(nome);
 	}
 	
-	public void mostrarEditaisDoUsuario() {
-		//que metodo é pra chamar aqui?
+	public ArrayList<String> mostrarEditaisDoUsuario() throws Exception {
+		return casoDeUsoExtra.recuperarEditais();
 	}
-
 }

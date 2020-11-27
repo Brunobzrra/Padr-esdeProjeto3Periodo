@@ -1,5 +1,7 @@
 package view.controller;
 
+import java.util.ArrayList;
+
 import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoTres;
 
@@ -28,7 +30,7 @@ public class ControllerCadastroGrupos {
 	public Object[] recuperarGrupo(String linkCNPq) {
 		return casoDeUsoExtra.recuperarGrupo(linkCNPq);
 	}
-	public void mostrarGruposDoUsuarioLogado() {
-
+	public ArrayList<String> mostrarGruposDoUsuarioLogado() throws Exception {
+		return casoDeUsoExtra.recuperarGrupos();
 	}
 }

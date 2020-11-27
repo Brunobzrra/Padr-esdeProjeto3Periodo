@@ -3,8 +3,10 @@ package model.casosDeUsofachadas;
 import java.util.ArrayList;
 
 import model.autenticacao.Membro;
+import model.autenticacao.RegistradorSessaoLogin;
 import model.projetos.Edital;
 import model.projetos.Grupo;
+import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import persistencia.xml.DAOXMLEdital;
 import persistencia.xml.DAOXMLGrupo;
@@ -53,5 +55,31 @@ public class CasoDeUsoExtra {
 			throw new Exception("Componente nã encontrado");
 		}
 		return componente;
+	}
+	public ArrayList<String> recuperarProjetos() throws Exception {
+		Membro membro = RegistradorSessaoLogin.getInstance().getLogado();
+		ArrayList<String> projetos= new ArrayList<String>();
+		for (Projeto projeto : daoProjeto.recuperarProjetosComMembro(membro)) {
+			projetos.add(projeto.getNome());
+		}
+		return projetos;
+	}
+
+	public ArrayList<String> recuperarGrupos()  throws Exception {
+		Membro membro = RegistradorSessaoLogin.getInstance().getLogado();
+		ArrayList<String> grupos= new ArrayList<String>();
+		for (Grupo grupo : daoGrupo.recuperarGruposComMembro(membro)) {
+			grupos.add(grupo.getNome());
+		}
+		return grupos;
+	}
+	
+	public ArrayList<String> recuperarEditais()  throws Exception {
+		Membro membro = RegistradorSessaoLogin.getInstance().getLogado();
+		ArrayList<String> editais= new ArrayList<String>();
+		for (Edital edital : daoEdital.recuperarEditaisComMembro(membro)) {
+			editais.add(edital.getNome());
+		}
+		return editais;
 	}
 }

@@ -1,8 +1,10 @@
 package view.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import model.casosDeUsofachadas.CasoDeUsoCinco;
+import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoSeis;
 
 public class ControllerTelaDeCadastroProjetos {
@@ -10,12 +12,16 @@ public class ControllerTelaDeCadastroProjetos {
 	private CasoDeUsoCinco casoDeUsoCinco;
 
 	private CasoDeUsoSeis casoDeUsoSeis;
+	
+	private CasoDeUsoExtra casoDeUsoExtra;
 
 	public ControllerTelaDeCadastroProjetos() {
 
 		casoDeUsoCinco = new CasoDeUsoCinco();
 
 		casoDeUsoSeis = new CasoDeUsoSeis();
+		
+		casoDeUsoExtra= new CasoDeUsoExtra();
 	}
 
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
@@ -50,5 +56,8 @@ public class ControllerTelaDeCadastroProjetos {
 			String nomeDoProjeto) throws Exception {
 		casoDeUsoSeis.removerParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerRemover, nomeDoProjeto);
 		
+	}
+	public ArrayList<String> mostrarProjetosDoUsuarioLogado() throws Exception {
+		return casoDeUsoExtra.recuperarProjetos();
 	}
 }

@@ -14,7 +14,10 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
 import model.projetos.Grupo;
+import model.projetos.Grupo;
+import model.projetos.ProjetoComponente;
 public class DAOXMLGrupo {
 
 	private HashMap<Long, Grupo> persistidos;
@@ -106,8 +109,16 @@ public class DAOXMLGrupo {
 		this.salvarXML(persistidos);
 		return true;
 	}
-	public  HashMap<Long, Grupo> recuperarTodos(){
-		return persistidos;
+	public ArrayList<Grupo> recuperarGruposComMembro(Membro membro) throws Exception{
+		ArrayList<Grupo> grupos= new ArrayList<Grupo>();
+		this.persistidos = this.carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).buscarComponente(membro)) {
+				grupos.add(persistidos.get(chave));
+			}
+		}
+		return grupos;
 	}
 	/*
 	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de seus atributos. caso

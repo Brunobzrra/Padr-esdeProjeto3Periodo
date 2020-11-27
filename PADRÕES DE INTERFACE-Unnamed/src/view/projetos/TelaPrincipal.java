@@ -24,8 +24,7 @@ public class TelaPrincipal extends JFrame {
 	private JButton proxima2;
 	private JButton proxima3;
 	private JButton logout;
-	private ControllerTelaAutenticacao controler= new ControllerTelaAutenticacao();
-
+	private ControllerTelaAutenticacao controler = new ControllerTelaAutenticacao();
 
 	public TelaPrincipal() {
 		setLayout(null);
@@ -40,8 +39,9 @@ public class TelaPrincipal extends JFrame {
 		adcionarPainel();
 		setVisible(true);
 	}
+
 	private void botaoFazerLogout() {
-		String email=(String)JOptionPane.showInputDialog("Coloque o email");
+		String email = (String) JOptionPane.showInputDialog("Coloque o email");
 		try {
 			controler.fazerLogout(email);
 		} catch (Exception e) {
@@ -49,6 +49,7 @@ public class TelaPrincipal extends JFrame {
 			e.printStackTrace();
 		}
 	}
+
 	private void botaCancelar() {
 		this.dispose();
 	}
@@ -56,7 +57,7 @@ public class TelaPrincipal extends JFrame {
 	private void botaoVoltar() {
 		this.remove(painelSecundario);
 		painelSecundario = null;
-		grupo.setVisible(true);;
+		grupo.setVisible(true);
 		projeto.setVisible(true);
 		edital.setVisible(true);
 		proxima1.setVisible(true);
@@ -72,7 +73,7 @@ public class TelaPrincipal extends JFrame {
 
 	private void transitarTela() {
 		voltar.setBounds(25, 620, 100, 40);
-		grupo.setVisible(false);;
+		grupo.setVisible(false);
 		projeto.setVisible(false);
 		edital.setVisible(false);
 		proxima1.setVisible(false);
@@ -163,7 +164,7 @@ public class TelaPrincipal extends JFrame {
 		});
 		cancelar.setBounds(25, 140, 100, 40);
 		this.add(cancelar);
-		
+
 		logout = new JButton("<html>Fazer logout</html>");
 		logout.setForeground(Color.WHITE);
 		logout.setBackground(new Color(119, 221, 119));

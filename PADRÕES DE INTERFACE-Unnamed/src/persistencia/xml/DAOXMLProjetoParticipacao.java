@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +13,8 @@ import java.util.Set;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import model.autenticacao.Membro;
+import model.projetos.Projeto;
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
@@ -123,7 +126,17 @@ public class DAOXMLProjetoParticipacao {
 		this.salvarXML(persistidos);
 		return true;
 	}
-
+	public ArrayList<Projeto> recuperarProjetosComMembro(Membro membro) throws Exception{
+		ArrayList<Projeto> projetos= new ArrayList<Projeto>();
+		this.persistidos = this.carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long chave : chaves) {
+			if (persistidos.get(chave).buscarComponente(membro)) {
+				projetos.add(persistidos.get(chave));
+			}
+		}
+		return projetos;
+	}
 	/*
 	 * metodo usado para consultar um projeto no hashset de persistidos, por meio de
 	 * seus atributos. caso exista um projeto com o mesmo ou os mesmos atributos

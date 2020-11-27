@@ -133,15 +133,24 @@ public class Edital extends ProjetoComponente {
 		return false;
 	}
 
-	public float getGastoTotal(){
+	public boolean buscarComponente(ProjetoComponente comonente) throws Exception {
+		for (ProjetoComponente projetoComponente : itens) {
+			if (projetoComponente.buscarComponente(comonente)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public float getGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getGastoTotal();
 		}
-		return aux+getCusteioReaisGastoTotal()+getCapitalReaisGastoTotal();
+		return aux + getCusteioReaisGastoTotal() + getCapitalReaisGastoTotal();
 	}
 
-	public float getCusteioReaisGastoTotal(){
+	public float getCusteioReaisGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCusteioReaisGastoTotal();
@@ -149,7 +158,7 @@ public class Edital extends ProjetoComponente {
 		return aux;
 	}
 
-	public float getCapitalReaisGastoTotal(){
+	public float getCapitalReaisGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
 			aux += projetoComponente.getCapitalReaisGastoTotal();
@@ -157,4 +166,20 @@ public class Edital extends ProjetoComponente {
 		return aux;
 	}
 
+	public String toStringHTML() {
+		String texto = String.format(
+				"<span>Edital %s </span><br>\n<span>Data de Inicio %s </span><br>\n<span>Data Termino %s </span><br>\n<span>Grupos </span><br>\n",
+				nome, dataInicio.toString(), dataTermino.toString());
+		String grupos = "";
+		String projetos = "";
+		for (ProjetoComponente projetoComponente : itens) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.GRUPO) {
+				grupos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
+			} else {
+				projetos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
+			}
+		}
+		texto += grupos + String.format("<span>Projetos </span><br>\n" + projetos);
+		return texto;
+	}
 }

@@ -7,8 +7,10 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -44,6 +46,8 @@ public class TelaCadastroProjetos extends JPanel {
 	private JTextField qtdMesesCusteadosMensalReaisAdcionar;
 	private JTextField aporteCusteioMensalReaisAdcionar;
 
+	private JComboBox<Object> op = new JComboBox<Object>();
+
 	public TelaCadastroProjetos() {
 		setBounds(150, 0, 850, 700);
 		setBackground(new Color(213, 213, 213));
@@ -51,6 +55,7 @@ public class TelaCadastroProjetos extends JPanel {
 		adcionarLabels();
 		adcionarTextFields();
 		adcionarBotao();
+		adcionarJComobox();
 		setVisible(true);
 	}
 
@@ -87,8 +92,13 @@ public class TelaCadastroProjetos extends JPanel {
 
 	}
 
-	public void mostrarProjetosDoUsuarioLogado() {
-		// o que fazer aqui?
+	public Object[] mostrarProjetosDoUsuarioLogado() {
+		try {
+			return controller.mostrarProjetosDoUsuarioLogado().toArray();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	private void adcionarLabels() {
@@ -489,15 +499,26 @@ public class TelaCadastroProjetos extends JPanel {
 		adcionar.setBounds(650, 530, 100, 30);
 		this.add(adcionar);
 
-		JButton mostrarProjetos = new JButton("Projetos");
+		JButton mostrarProjetos = new JButton("<html>Criar Relatorio</html>");
 		mostrarProjetos.setForeground(Color.WHITE);
 		mostrarProjetos.setBackground(new Color(119, 221, 119));
+		mostrarProjetos.setFont(new Font("Arial", Font.BOLD, 9));
 		mostrarProjetos.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-
+					String valor = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de relatorio",
+							"Gerar relatorio", JOptionPane.PLAIN_MESSAGE, null, new Object[] { "HTML", "JPAINEL" },
+							null);
+					DiretorDeMontagemDeRelatorio diretor = new DiretorDeMontagemDeRelatorio(
+							new MontadorRelatorioSwing());
+					if (valor.equals("HTML")) {
+						diretor.setMontadorDeRelatorio(new MontadorRelatorioProjetoHTML(""));
+					}
+					diretor.montarRelatorioCompleto(op.getSelectedItem().toString());
+					JOptionPane.showMessageDialog(null, "Relatorio criado!");
 				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, "Não foi possivel criar o realtorio!");
 					e1.printStackTrace();
 				}
 			}
@@ -505,7 +526,19 @@ public class TelaCadastroProjetos extends JPanel {
 		mostrarProjetos.setBounds(650, 610, 100, 30);
 		this.add(mostrarProjetos);
 	}
-
+	private void adcionarJComobox() {
+		Object[] projetos = mostrarProjetosDoUsuarioLogado();
+		String[] nome = { "-Nenhum Projeto cadastrado-" };
+		if (projetos == null || projetos.length==0) {
+			op.addItem(nome[0].toString());
+		} else {
+			for (Object object : projetos) {
+				op.addItem(object.toString());
+			}
+		}
+		op.setBounds(650, 580, 100, 20);
+		add(op);
+	}
 	public static void main(String[] args) {
 		JFrame p = new JFrame();
 		p.add(new TelaCadastroProjetos());

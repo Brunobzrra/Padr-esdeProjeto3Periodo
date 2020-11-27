@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import model.autenticacao.Membro;
 
-public class Projeto extends ProjetoComponente implements Serializable{
+public class Projeto extends ProjetoComponente implements Serializable {
 	/**
 	 * 
 	 */
@@ -35,7 +35,7 @@ public class Projeto extends ProjetoComponente implements Serializable{
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 		setTipo(TipoProjetoComponente.PROJETO);
 	}
-	
+
 	public void adicionar(ProjetoComponente item) throws Exception {
 		if (item.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
 			for (ProjetoComponente projetoComponente : itens) {
@@ -133,7 +133,7 @@ public class Projeto extends ProjetoComponente implements Serializable{
 	public void setGastoExecutadoCapitalReais(float gastoExecutadoCapitalReais) {
 		this.gastoExecutadoCapitalReais = gastoExecutadoCapitalReais;
 	}
-	
+
 	public float getGastoExecutadoCusteioReais() {
 		return gastoExecutadoCusteioReais;
 	}
@@ -148,24 +148,27 @@ public class Projeto extends ProjetoComponente implements Serializable{
 		}
 		return false;
 	}
+
 	public Membro getCordenador() {
 		for (ProjetoComponente projetoComponente : itens) {
-			Participacao participacao= (Participacao) projetoComponente;
-			if(participacao.isCoordenador()) {
+			Participacao participacao = (Participacao) projetoComponente;
+			if (participacao.isCoordenador()) {
 				return participacao.getMembro();
 			}
 		}
 		return null;
 	}
+
 	public Participacao getMembro(long matricula) {
 		for (ProjetoComponente projetoComponente : itens) {
-			Participacao participacao= (Participacao) projetoComponente;
-			if(participacao.getMembro().getMatricula()==matricula) {
+			Participacao participacao = (Participacao) projetoComponente;
+			if (participacao.getMembro().getMatricula() == matricula) {
 				return participacao;
 			}
 		}
 		return null;
 	}
+
 	public float getGastoTotal() {
 		float aux = 0;
 		for (ProjetoComponente projetoComponente : itens) {
@@ -190,4 +193,24 @@ public class Projeto extends ProjetoComponente implements Serializable{
 		return gastoExecutadoCapitalReais + aux;
 	}
 
+	public boolean buscarComponente(ProjetoComponente comonente) throws Exception {
+		for (ProjetoComponente projetoComponente : itens) {
+			Participacao participacao=(Participacao) projetoComponente;
+			if(participacao.getMembro()==comonente) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public String toStringHTML() {
+		String texto = String.format(
+				"<span>Projeto %s </span><br>\n<span>Aporte Custeio Reais %s </span><br>\n"
+				+ "<span>Aporte Capital Reais %s </span><br>\n<span>Gasto Executado Custeio Reais %s </span><br>"
+				+ "\n<span>gasto Executado Capital Reais %s </span><br>\n<span>Membros </span><br>\n",
+				nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais, gastoExecutadoCapitalReais);
+		for (ProjetoComponente projetoComponente : itens) {
+			texto += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
+		}
+		return texto;
+	}
 }
