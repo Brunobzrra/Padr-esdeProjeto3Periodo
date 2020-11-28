@@ -609,14 +609,12 @@ public class DAOXMLMembroConta {
 	 */
 	private HashMap<Long, Membro> carregarXML() {
 
-		if (arquivoColecao.exists()) {
 			try {
 				FileInputStream r = new FileInputStream(arquivoColecao);
 				return (HashMap<Long, Membro>) xstream.fromXML(r);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		}
 		return new HashMap<Long, Membro>();
 	}
 

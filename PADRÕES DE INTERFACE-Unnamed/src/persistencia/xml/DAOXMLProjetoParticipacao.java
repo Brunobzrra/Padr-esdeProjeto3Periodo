@@ -15,9 +15,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.Membro;
 import model.projetos.Projeto;
-import model.projetos.Participacao;
-import model.projetos.Projeto;
-import model.projetos.ProjetoComponente;
 
 public class DAOXMLProjetoParticipacao {
 
