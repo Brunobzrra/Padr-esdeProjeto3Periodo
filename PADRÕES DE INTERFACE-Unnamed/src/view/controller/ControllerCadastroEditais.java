@@ -35,7 +35,7 @@ public class ControllerCadastroEditais {
 		return casoDeUsoExtra.recuperarEdital(nome);
 	}
 	
-	public ArrayList<String> mostrarEditaisDoUsuario() throws Exception {
+	public ArrayList<String> mostrarEditaisDoUsuarioLogado() throws Exception {
 		return casoDeUsoExtra.recuperarEditais();
 	}
 }

@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 import view.controller.ControllerTelaAutenticacao;
 import view.projetos.TelaPrincipal;
 
-public class TelaAutenticacao extends JFrame{
+public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticacao{
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
@@ -145,5 +145,15 @@ public class TelaAutenticacao extends JFrame{
 
 	public static void main(String[] args) {
 		new TelaAutenticacao();
+	}
+	@Override
+	public void fazerLogin(String login, String senha, String tipoProvedor) throws Exception {
+		controller.fazerLogin(login, senha, tipoProvedor);
+		
+	}
+	@Override
+	public void fazerLogout(String login) throws Exception {
+		controller.fazerLogout(login);
+		
 	}
 }

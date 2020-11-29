@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -18,7 +19,12 @@ import javax.swing.JTextField;
 
 import view.controller.ControllerCadastroEditais;
 
-public class TelaCadastroEditais extends JPanel {
+public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastroEditais {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private ControllerCadastroEditais controller = new ControllerCadastroEditais();
 
 	private JTextField matriculaCriar;
@@ -219,7 +225,7 @@ public class TelaCadastroEditais extends JPanel {
 					Date dateInicioFormatado = (Date) formatter.parse(dataInicio.getText());
 					Date dateTerminoFormatado = (Date) formatter.parse(dataTermino.getText());
 
-					cadastrarEdital(nomeEditalCriar.getText(), dateInicioFormatado, dateTerminoFormatado,
+					adcionarEdital(nomeEditalCriar.getText(), dateInicioFormatado, dateTerminoFormatado,
 							Long.parseLong(matriculaCriar.getText()));
 				} catch (Exception e1) {
 					e1.printStackTrace();
@@ -294,7 +300,7 @@ public class TelaCadastroEditais extends JPanel {
 	}
 
 	private void adcionarJComobox() {
-		Object[] editais = mostrarEditaisUsuarioLogado();
+		Object[] editais = mostrarEditaisDoUsuarioLogado();
 		String[] nome = { "---Nenhum edital cadastrado---" };
 		if (editais.length == 0 || editais == null) {
 			op.addItem(nome[0].toString());
@@ -307,7 +313,7 @@ public class TelaCadastroEditais extends JPanel {
 		add(op);
 	}
 
-	public void cadastrarEdital(String nomeEdital, Date dataInicio, Date dataTermino, long matricula) throws Exception {
+	public void adcionarEdital(String nomeEdital, Date dataInicio, Date dataTermino, long matricula) throws Exception {
 		controller.adcionarEdital(nomeEdital, dataInicio, dataTermino, matricula);
 
 	}
@@ -323,14 +329,18 @@ public class TelaCadastroEditais extends JPanel {
 
 	}
 
-	public Object[] mostrarEditaisUsuarioLogado() {
+	public Object[] mostrarEditaisDoUsuarioLogado() {
 		try {
-			return controller.mostrarEditaisDoUsuario().toArray();
+			return controller.mostrarEditaisDoUsuarioLogado().toArray();
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
 		return null;
+	}
+
+	public Object[] recuperarEdital(String nome) {
+		return controller.recuperarEdital(nome);
 	}
 
 	public static void main(String[] args) {
@@ -339,4 +349,5 @@ public class TelaCadastroEditais extends JPanel {
 		p.setSize(1000, 700);
 		p.setVisible(true);
 	}
+
 }

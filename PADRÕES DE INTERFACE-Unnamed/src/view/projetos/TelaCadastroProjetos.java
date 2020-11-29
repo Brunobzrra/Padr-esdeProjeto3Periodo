@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -16,7 +17,8 @@ import javax.swing.JTextField;
 
 import view.controller.ControllerTelaDeCadastroProjetos;
 
-public class TelaCadastroProjetos extends JPanel {
+public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastroProjetos {
+	
 	private ControllerTelaDeCadastroProjetos controller = new ControllerTelaDeCadastroProjetos();
 
 	private JTextField nomeProjetoCriar;
@@ -78,12 +80,13 @@ public class TelaCadastroProjetos extends JPanel {
 
 	}
 
+	@Override
 	public void adicionarParticipacao(long matriculaDoCordenador, long matriculaDoMembroQueQuerEstrarNoProjeto,
-			String nomeDoProjeto, String dataInicio, float aporteCusteioMensalReais, short qtdMesesCusteados,
+			String nomeDoProjeto, Date dataInicio, float aporteCusteioMensalReais, short qtdMesesCusteados,
 			short qtdMesesPagos) throws Exception {
-
 		controller.adicionarParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerEstrarNoProjeto, nomeDoProjeto,
-				new Date(dataInicio), aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos);
+				dataInicio, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos);
+
 	}
 
 	public void removerParticipacao(long matriculaDoCordenador, long matriculaDoMembroQueQuerRemover,
@@ -487,7 +490,7 @@ public class TelaCadastroProjetos extends JPanel {
 				try {
 					adicionarParticipacao(Long.parseLong(matriculaDoCordenadorAdcionar.getText()),
 							Long.parseLong(matriculaDoMembroQueQuerEstrarNoProjetoAdcionar.getText()),
-							nomeDoProjetoAdcionar.getText(), dataInicioAdcionar.getText(),
+							nomeDoProjetoAdcionar.getText(), new Date(dataInicioAdcionar.getText()),
 							Float.parseFloat(aporteCusteioMensalReaisAdcionar.getText()),
 							Short.parseShort(qtdMesesCusteadosMensalReaisAdcionar.getText()),
 							Short.parseShort(qtdMesesPagosAdcionar.getText()));
@@ -526,10 +529,11 @@ public class TelaCadastroProjetos extends JPanel {
 		mostrarProjetos.setBounds(650, 610, 100, 30);
 		this.add(mostrarProjetos);
 	}
+
 	private void adcionarJComobox() {
 		Object[] projetos = mostrarProjetosDoUsuarioLogado();
 		String[] nome = { "-Nenhum Projeto cadastrado-" };
-		if (projetos == null || projetos.length==0) {
+		if (projetos == null || projetos.length == 0) {
 			op.addItem(nome[0].toString());
 		} else {
 			for (Object object : projetos) {
@@ -539,6 +543,7 @@ public class TelaCadastroProjetos extends JPanel {
 		op.setBounds(650, 580, 100, 20);
 		add(op);
 	}
+
 	public static void main(String[] args) {
 		JFrame p = new JFrame();
 		p.add(new TelaCadastroProjetos());

@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 import model.casosDeUsofachadas.CasoDeUsoUm;
 import view.controller.ControllerTelaCriarConta;
 
-public class TelaCriarConta extends JFrame {
+public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 
 	private static final long serialVersionUID = 1L;
 	private JTextField nomeCriar;
@@ -287,5 +287,23 @@ public class TelaCriarConta extends JFrame {
 	}
 	public static void main(String[] args) {
 		new TelaCriarConta();
+	}
+
+	@Override
+	public void cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
+		controller.cadastrarMembro(nome, matricula, email, senha);
+		
+	}
+
+	@Override
+	public void atualizarMembro(long matricula, long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova)
+			throws Exception {
+		controller.atualizarMembro(matricula, matriculaNovo, nomeNovo, emailNovo, senhaNova);
+		
+	}
+
+	@Override
+	public Object[] recuperarMembro(long matricula) {
+		return controller.recuperarMembro(matricula);
 	}
 }

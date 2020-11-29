@@ -25,6 +25,7 @@ public class TelaPrincipal extends JFrame {
 	private JButton proxima3;
 	private JButton logout;
 	private ControllerTelaAutenticacao controler = new ControllerTelaAutenticacao();
+	FabricaDeTelasDeCadastro fabricaDeTelas = new FabricaDeTelasDeCadastroSwing();
 
 	public TelaPrincipal() {
 		setLayout(null);
@@ -87,21 +88,21 @@ public class TelaPrincipal extends JFrame {
 	}
 
 	private void criarGrupo() {
-		painelSecundario = new TelaCadastroGrupos();
+		painelSecundario = fabricaDeTelas.fabricarTelaCadastroGrupos();
 		transitarTela();
 		add(painelSecundario);
 		repaint();
 	}
 
 	private void criarEdital() {
-		painelSecundario = new TelaCadastroEditais();
+		painelSecundario = fabricaDeTelas.fabricarTelaCadastroEditais();
 		transitarTela();
 		add(painelSecundario);
 		repaint();
 	}
 
 	private void criarProjeto() {
-		painelSecundario = new TelaCadastroProjetos();
+		painelSecundario = fabricaDeTelas.fabricarTelaCadastroProjetos();
 		add(painelSecundario);
 		transitarTela();
 		repaint();

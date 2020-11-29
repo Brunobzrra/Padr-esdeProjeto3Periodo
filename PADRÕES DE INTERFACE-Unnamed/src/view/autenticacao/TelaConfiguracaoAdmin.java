@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 
 import view.controller.ControllerTelaConfiguracaoAdmin;
 
-public class TelaConfiguracaoAdmin extends JFrame {
+public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfiguracaoAdmin{
 
 	private static final long serialVersionUID = 1L;
 	private JTextField matriculaAdministrador;
@@ -44,7 +44,7 @@ public class TelaConfiguracaoAdmin extends JFrame {
 
 	private void botaoModificar() {
 		try {
-			controller = new ControllerTelaConfiguracaoAdmin(Long.parseLong(matriculaAdministrador.getText()));
+			
 			controller.habilitarAdministrador(Long.parseLong(matriculaMembro.getText()));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -122,5 +122,12 @@ public class TelaConfiguracaoAdmin extends JFrame {
 
 	public static void main(String[] args) {
 		new TelaConfiguracaoAdmin();
+	}
+
+	@Override
+	public void habilitarAdministrador(long matricula) throws Exception {
+		controller = new ControllerTelaConfiguracaoAdmin(Long.parseLong(matriculaAdministrador.getText()));
+		controller.habilitarAdministrador(matricula);
+		
 	}
 }

@@ -15,7 +15,8 @@ import javax.swing.JTextField;
 
 import view.controller.ControllerCadastroGrupos;
 
-public class TelaCadastroGrupos extends JPanel {
+public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroGrupos {
+
 	private ControllerCadastroGrupos controller = new ControllerCadastroGrupos();
 	private JTextField matriculaCriar;
 	private JTextField nomeGrupoCriar;
@@ -49,9 +50,8 @@ public class TelaCadastroGrupos extends JPanel {
 
 	}
 
-	public void atualizarrGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo)
-			throws Exception {
-		controller.atualizarrGrupo(matricula, linkCNPq, nomeNovo, linkCNPqNovo);
+	public void atualizarGrupo(long matricula, String linkCNPq, String nomeNovo, String linkCNPqNovo) throws Exception {
+		controller.atualizarGrupo(matricula, linkCNPq, nomeNovo, linkCNPqNovo);
 
 	}
 
@@ -65,6 +65,10 @@ public class TelaCadastroGrupos extends JPanel {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public Object[] recuperarGrupo(String linkCNPq) {
+		return controller.recuperarGrupo(linkCNPq);
 	}
 
 	private void adcionarLabels() {
@@ -238,7 +242,7 @@ public class TelaCadastroGrupos extends JPanel {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					atualizarrGrupo(Long.parseLong(matriculaAntigo.getText()), linkCNPqAntigo.getText(),
+					atualizarGrupo(Long.parseLong(matriculaAntigo.getText()), linkCNPqAntigo.getText(),
 							nomeGrupoNovo.getText(), linkCNPqNovo.getText());
 				} catch (Exception e1) {
 					e1.printStackTrace();
@@ -278,7 +282,7 @@ public class TelaCadastroGrupos extends JPanel {
 	private void adcionarJComobox() {
 		Object[] grupos = mostrarGruposDoUsuarioLogado();
 		String[] nome = { "---Nenhum Grupo cadastrado---" };
-		if (grupos == null || grupos.length==0) {
+		if (grupos == null || grupos.length == 0) {
 			op.addItem(nome[0].toString());
 		} else {
 			for (Object object : grupos) {
@@ -295,4 +299,5 @@ public class TelaCadastroGrupos extends JPanel {
 		p.setSize(1000, 700);
 		p.setVisible(true);
 	}
+
 }
