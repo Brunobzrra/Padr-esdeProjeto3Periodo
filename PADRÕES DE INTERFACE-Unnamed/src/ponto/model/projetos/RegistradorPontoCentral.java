@@ -46,24 +46,25 @@ public class RegistradorPontoCentral implements Serializable {
 				int tamanho = participacao.getPontos().size();
 				PontoTrabalhado ponto = null;
 				if (tamanho != 0) {
-					ponto = participacao.getPontos().get(tamanho);
-					if (ponto.getDataHoraSaida() != null) {
+					ponto = participacao.getPontos().get(tamanho - 1);
+					if (ponto.getDataHoraSaida() == null) {
 						ponto.setDataHoraSaida(pontoBatidoagora);
 						return ponto;
 					}
 				} else {
 					for (HorarioPrevisto horario : participacao.getHorarios()) {
 						if (pontoBatidoagora.isAfter(horario.getHoraInicio())
+								&& pontoBatidoagora
+										.isBefore(horario.getHoraInicio().plusMinutes(horario.getMinutosTolerante()))
 								&& ConversorDeHoraEDia.pegarHoraEDia(pontoBatidoagora)[1] == horario.getDiaSemana()) {
 							participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
-							System.out.println("Ok");
 							return participacao.getPontos().get(0);
 						}
 					}
 				}
 			}
 		}
-		throw new Exception("Este membro não estar neste projeto!");
+		throw new Exception("Este membro não esta neste projeto!");
 	}
 
 	/**

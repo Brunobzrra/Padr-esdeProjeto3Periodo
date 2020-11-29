@@ -32,7 +32,7 @@ public class RegistradorSessaoLogin {
 	}
 
 	public boolean isOline(String login) {
-		if (logado.getEmail().equals(login)) {
+		if (logado != null && logado.getEmail().equals(login)) {
 			return true;
 		}
 		return false;

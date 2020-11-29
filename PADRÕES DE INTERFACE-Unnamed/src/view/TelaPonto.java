@@ -54,6 +54,7 @@ public class TelaPonto extends JFrame {
 			JOptionPane.showMessageDialog(this, "Ponto batido com sucesso");
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
