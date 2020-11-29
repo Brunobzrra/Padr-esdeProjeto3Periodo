@@ -13,6 +13,9 @@ public class AplicacaoServidora {
 		@SuppressWarnings("unused")
 		Registry registry = null;
 		/* inicia rmi */
+		
+		
+		
 		try {
 			/* tenta iniciar o registro */
 			registry = LocateRegistry.createRegistry(1099);
