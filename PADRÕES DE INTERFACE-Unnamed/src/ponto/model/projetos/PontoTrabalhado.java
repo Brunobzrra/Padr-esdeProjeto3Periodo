@@ -1,12 +1,13 @@
 package ponto.model.projetos;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class PontoTrabalhado {
 	private LocalDateTime dataHoraEntrada;
 	private LocalDateTime dataHoraSaida;
 	private String justificativa;
-	private boolean justificativaAceita=true;
+	private boolean justificativaAceita = true;
 
 	public PontoTrabalhado(LocalDateTime dataHoraEntrada) {
 		this.dataHoraEntrada = dataHoraEntrada;
@@ -20,8 +21,12 @@ public class PontoTrabalhado {
 		this.justificativaAceita = justificativaAceita;
 	}
 
-	public int getHorasTrabalhadas() {
-		return 0;
+	public String getHorasTrabalhadas() throws Exception {
+		if (dataHoraEntrada != null && dataHoraSaida != null) {
+			return "Horas: " + (dataHoraSaida.getHour() - dataHoraEntrada.getHour()) + "Minutos: "
+					+ (dataHoraSaida.getMinute() - dataHoraEntrada.getMinute());
+		}
+		throw new Exception("Horario de saida/entrada nao encontrado");
 	}
 
 	public LocalDateTime getDataHoraEntrada() {
@@ -66,8 +71,8 @@ public class PontoTrabalhado {
 	}
 
 	public boolean equals(PontoTrabalhado ponto) {
-		if (getDataHoraEntrada() == ponto.getDataHoraEntrada() && getDataHoraSaida() == ponto.getDataHoraSaida()
-				&& getHorasTrabalhadas() == ponto.getHorasTrabalhadas())
+		if (getDataHoraEntrada().equals(ponto.getDataHoraEntrada())
+				&& getDataHoraSaida().equals(ponto.getDataHoraSaida()))
 			return true;
 		return false;
 	}

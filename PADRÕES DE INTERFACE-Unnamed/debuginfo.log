@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-11-30T04:40:44.598810700Z</date>
+  <millis>1606711244598</millis>
+  <nanos>810700</nanos>
+  <sequence>0</sequence>
+  <logger>LogProjeto</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>1</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-11-30T04:40:44.614430500Z</date>
+  <millis>1606711244614</millis>
+  <nanos>430500</nanos>
+  <sequence>1</sequence>
+  <logger>LogProjeto</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>1</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-11-30T04:40:44.645672900Z</date>
+  <millis>1606711244645</millis>
+  <nanos>672900</nanos>
+  <sequence>2</sequence>
+  <logger>LogProjeto</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>1</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-11-30T04:40:44.723780800Z</date>
+  <millis>1606711244723</millis>
+  <nanos>780800</nanos>
+  <sequence>3</sequence>
+  <logger>LogProjeto</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>1</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-11-30T04:40:44.723780800Z</date>
+  <millis>1606711244723</millis>
+  <nanos>780800</nanos>
+  <sequence>4</sequence>
+  <logger>LogProjeto</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>1</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+</log>

@@ -4,78 +4,14 @@
     <model.autenticacao.Membro>
       <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
       <tipo>MEMBRO</tipo>
-      <matricula>111</matricula>
-      <nome>jose claudiu</nome>
+      <matricula>112</matricula>
+      <nome>joaozin</nome>
       <ativo>true</ativo>
-      <email>fananitadz@gmail.com</email>
-      <senha>121212</senha>
-      <conta class="model.autenticacao.ContaEmailLivre">
-        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
-      </conta>
+      <email>bruno.bzrrasantos@gmail.com</email>
+      <senha>131313</senha>
+      <conta class="model.autenticacao.ContaEmailLivre"/>
       <administrador>true</administrador>
-      <participacoes>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.projetos.Projeto">
-            <ativo>true</ativo>
-            <tipo>PROJETO</tipo>
-            <itens>
-              <model.projetos.Participacao reference="../../.."/>
-            </itens>
-            <nome>Projeto novo</nome>
-            <aporteCusteioReais>1.0</aporteCusteioReais>
-            <aporteCapitalReais>2.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>2.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>3.0</gastoExecutadoCapitalReais>
-          </projetoPai>
-          <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-11-29 01:19:56.99 UTC</dataInicio>
-          <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>0</qtdMesesCusteados>
-          <qtdMesesPagos>0</qtdMesesPagos>
-          <coordenador>true</coordenador>
-          <pontos/>
-          <horarios>
-            <ponto.model.projetos.HorarioPrevisto>
-              <diaSemana>SAB</diaSemana>
-              <horaInicio>2020-11-28T22:20:00</horaInicio>
-              <horaTermino>2020-11-28T23:30:00</horaTermino>
-              <minutosTolerante>30</minutosTolerante>
-            </ponto.model.projetos.HorarioPrevisto>
-            <ponto.model.projetos.HorarioPrevisto>
-              <diaSemana>SAB</diaSemana>
-              <horaInicio>2020-11-28T22:20:00</horaInicio>
-              <horaTermino>2020-11-28T23:30:00</horaTermino>
-              <minutosTolerante>30</minutosTolerante>
-            </ponto.model.projetos.HorarioPrevisto>
-          </horarios>
-          <membro reference="../../.."/>
-        </model.projetos.Participacao>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.projetos.Projeto">
-            <ativo>true</ativo>
-            <tipo>PROJETO</tipo>
-            <itens>
-              <model.projetos.Participacao reference="../../.."/>
-            </itens>
-            <nome>projeto 2</nome>
-            <aporteCusteioReais>1.0</aporteCusteioReais>
-            <aporteCapitalReais>2.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>3.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>5.0</gastoExecutadoCapitalReais>
-          </projetoPai>
-          <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-11-29 01:19:57.894 UTC</dataInicio>
-          <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>0</qtdMesesCusteados>
-          <qtdMesesPagos>0</qtdMesesPagos>
-          <coordenador>true</coordenador>
-          <pontos/>
-          <horarios/>
-          <membro reference="../../.."/>
-        </model.projetos.Participacao>
-      </participacoes>
+      <participacoes/>
     </model.autenticacao.Membro>
   </entry>
 </map>

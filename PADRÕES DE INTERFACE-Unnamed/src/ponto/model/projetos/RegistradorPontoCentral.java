@@ -23,18 +23,19 @@ import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 
+/**
+ * @author bruno Este metodo e responsavel por testar cadastrar um ponto na sua
+ *         hora inicial ou se o ponto de entrada ja foi batido ele bate o ponto
+ *         de saida
+ * 
+ */
 public class RegistradorPontoCentral implements Serializable {
 
-	/**
-	 * Este metodo e responsavel por testar cadastrar um ponto na sua hora inicial
-	 * ou se o ponto de entrada ja foi batido ele bate o ponto de saida
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception {
 		if (!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
-			throw new Exception("Este membro não estar online!");
+			throw new Exception("Este membro não esta online!");
 		}
 		Participacao participacao = null;
 		for (ProjetoComponente participa : projeto.getItens()) {
@@ -43,28 +44,20 @@ public class RegistradorPontoCentral implements Serializable {
 			}
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
 			if (participacao.getMembro().getEmail().equals(membro.getEmail())) {
-				int tamanho = participacao.getPontos().size();
-				PontoTrabalhado ponto = null;
-				if (tamanho != 0) {
-					ponto = participacao.getPontos().get(tamanho - 1);
-					if (ponto.getDataHoraSaida() == null) {
-						ponto.setDataHoraSaida(pontoBatidoagora);
-						return ponto;
-					}
-				} else {
-					for (HorarioPrevisto horario : participacao.getHorarios()) {
-						if (pontoBatidoagora.isAfter(horario.getHoraInicio())
-								&& pontoBatidoagora
-										.isBefore(horario.getHoraInicio().plusMinutes(horario.getMinutosTolerante()))
-								&& ConversorDeHoraEDia.pegarHoraEDia(pontoBatidoagora)[1] == horario.getDiaSemana()) {
-							participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
-							return participacao.getPontos().get(0);
+				if (participacao.getPontos() != null) {
+					for (PontoTrabalhado p : participacao.getPontos()) {
+						if (p.getDataHoraSaida() == null) {
+							p.setDataHoraSaida(pontoBatidoagora);
+							return p;
 						}
 					}
+				} else {
+					participacao.adicionarPonto(new PontoTrabalhado(pontoBatidoagora));
+					return participacao.getPontos().get(0);
 				}
 			}
 		}
-		throw new Exception("Este membro não esta neste projeto!");
+		throw new Exception("Dia/Horario nao respeitado");
 	}
 
 	/**
@@ -152,7 +145,7 @@ public class RegistradorPontoCentral implements Serializable {
 	 * @throws RemoteException
 	 * @throws Exception
 	 */
-	public float horasTrabalhadasValidas(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro)
+	public String horasTrabalhadasValidas(LocalDateTime datInicio, LocalDateTime dataTermino, Membro membro)
 			throws RemoteException, Exception {
 		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
@@ -160,12 +153,12 @@ public class RegistradorPontoCentral implements Serializable {
 		for (ProjetoComponente participacao : membro.getParticipacoes()) {
 			Participacao participa = (Participacao) participacao;
 			for (PontoTrabalhado ponto : participa.getPontos()) {
-				if (ponto.getDataHoraEntrada() == datInicio && ponto.getDataHoraSaida() == dataTermino) {
+				if (ponto.getDataHoraEntrada().equals(datInicio) && ponto.getDataHoraSaida().equals(dataTermino)) {
 					return ponto.getHorasTrabalhadas();
 				}
 			}
 		}
-		return 0;
+		throw new Exception("Sem horas registradas");
 	}
 
 	/**

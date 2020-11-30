@@ -76,19 +76,19 @@ public class ControllerRegistradorEView {
 				(short) 0, (short) 0, true);
 		Projeto projeto1 = new Projeto("Projeto novo", 1, 2, 2, 3);
 		Projeto projeto2 = new Projeto("projeto 2", 1, 2, 3, 5);
-		HorarioPrevisto horaprt = new HorarioPrevisto(DiaSemana.SAB, LocalDateTime.of(2020, 11, 28, 22, 20),
+		HorarioPrevisto horaprt = new HorarioPrevisto(DiaSemana.SAB, LocalDateTime.of(2020, 11, 29, 22, 20),
 				LocalDateTime.of(2020, 11, 28, 23, 30), (long) 30);
-		HorarioPrevisto horapr2 = new HorarioPrevisto(DiaSemana.SAB, LocalDateTime.of(2020, 11, 28, 22, 20),
-				LocalDateTime.of(2020, 11, 28, 23, 30), (long) 30);
+		HorarioPrevisto horapr2 = new HorarioPrevisto(DiaSemana.DOM, LocalDateTime.of(2020, 11, 29, 20, 45),
+				LocalDateTime.of(2020, 11, 29, 21, 30), (long) 30);
 
 		participacao.adcionarHorarioPrevisto(horaprt);
-		participacao.adcionarHorarioPrevisto(horapr2);
 
 		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
+		DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 		try {
-			DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 			Participacao participacao2 = new Participacao(new Date(System.currentTimeMillis()), Float.parseFloat("0"),
 					(short) 0, (short) 0, true);
+			participacao2.adcionarHorarioPrevisto(horapr2);
 			joseClaudiu.adicionar(participacao);
 			projeto1.adicionar(participacao);
 			joseClaudiu.adicionar(participacao2);
