@@ -30,7 +30,9 @@ public class CasoDeUsoCinco {
 		LoggerProjeto.getInstance().getLogger().info("Preenchendo dados e participacaoo do membro que ira coordenar");
 		cordenadorDoProjeto.adicionar(participacaoProjeto);
 		projeto.adicionar(participacaoProjeto);
-		daoProjetoParticipacao.criar(projeto);
+		if(!daoProjetoParticipacao.criar(projeto)) {
+			throw new Exception("Projeto já existe!");
+		}
 		LoggerProjeto.getInstance().getLogger().warning("Projeto criado");
 
 	}
@@ -65,6 +67,7 @@ public class CasoDeUsoCinco {
 			Membro membro = participacao.getMembro();
 			projeto.remover(participacao);
 			membro.remover(participacao);
+			daoProjetoParticipacao.remover(projeto);
 			daoMembro.atualizar(membro, membro);
 			daoProjetoParticipacao.atualizar(projeto, projeto);
 			LoggerProjeto.getInstance().getLogger().warning("Removido com sucesso");

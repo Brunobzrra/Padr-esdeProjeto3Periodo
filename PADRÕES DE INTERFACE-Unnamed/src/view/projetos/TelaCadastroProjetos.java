@@ -6,15 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.text.ParseException;
 import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.text.MaskFormatter;
 
 import view.controller.ControllerTelaDeCadastroProjetos;
 import view.projetos.abstract_factory.InterfaceTelaCadastroProjetos;
@@ -397,7 +400,11 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		matriculaDoCordenadorAdcionar.setBounds(50, 620, 200, 25);
 		this.add(matriculaDoCordenadorAdcionar);
 
-		dataInicioAdcionar = new JTextField();
+		try {
+			MaskFormatter macaraDeData = new MaskFormatter("##/##/####");
+			dataInicioAdcionar = new JFormattedTextField(macaraDeData);
+		} catch (ParseException e) {
+		}
 		dataInicioAdcionar.setToolTipText("ex: Nome Projeto...");
 		dataInicioAdcionar.setBounds(300, 460, 200, 25);
 		this.add(dataInicioAdcionar);
@@ -435,6 +442,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 							Short.parseShort(qtdMesesCusteadosCriar.getText()),
 							Short.parseShort(qtdMesesPagosCriar.getText()));
 					JOptionPane.showMessageDialog(null, "Projeto cadastrado!");
+					adcionarJComobox();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -452,6 +460,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 				try {
 					atualizarProjeto(nomeProjetoAtualizar.getText(), Float.parseFloat(aporteCusteioReaisNovo.getText()),
 							Float.parseFloat(aporteCapitalReaisNovo.getText()));
+					adcionarJComobox();
 					JOptionPane.showMessageDialog(null, "Projeto atualizado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
@@ -469,6 +478,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 			public void actionPerformed(ActionEvent e) {
 				try {
 					removerProjeto(nomeProjetoRemover.getText());
+					adcionarJComobox();
 					JOptionPane.showMessageDialog(null, "Projeto removido!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
@@ -550,8 +560,10 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		Object[] projetos = mostrarProjetosDoUsuarioLogado();
 		String[] nome = { "-Nenhum Projeto cadastrado-" };
 		if (projetos == null || projetos.length == 0) {
+			op.removeAllItems();
 			op.addItem(nome[0].toString());
 		} else {
+			op.removeAllItems();
 			for (Object object : projetos) {
 				op.addItem(object.toString());
 			}
