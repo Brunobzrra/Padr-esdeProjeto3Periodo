@@ -69,4 +69,7 @@ public class CasoDeUsoUm {
 		}
 		return isEmailIdValid;
 	}
+	public boolean isVazia() {
+		return daoMembro.isVazia();
+	}
 }

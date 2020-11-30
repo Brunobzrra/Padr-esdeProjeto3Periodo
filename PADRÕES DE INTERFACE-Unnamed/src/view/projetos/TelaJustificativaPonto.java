@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import model.casosDeUsofachadas.CasoDeUsoDoze;
 import view.controller.ControllerTelaJustificativaPonto;
 
 public class TelaJustificativaPonto extends JFrame {
@@ -29,7 +28,7 @@ public class TelaJustificativaPonto extends JFrame {
 		getContentPane().setBackground(Color.DARK_GRAY);
 		setResizable(false);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(1);
 		setTitle("Justificar Ponto");
 		adcionarLabels();
 		adcionarBotao();

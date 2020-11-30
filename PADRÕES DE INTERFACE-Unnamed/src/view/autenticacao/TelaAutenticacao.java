@@ -16,13 +16,13 @@ import javax.swing.JTextField;
 import view.controller.ControllerTelaAutenticacao;
 import view.projetos.TelaPrincipal;
 
-public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticacao{
+public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticacao {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
 	private JPasswordField senha;
 	private JComboBox<Object> op;
-	
+
 	private ControllerTelaAutenticacao controller = new ControllerTelaAutenticacao();
 
 	public TelaAutenticacao() {
@@ -39,9 +39,11 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 		adcionarCombo();
 		setVisible(true);
 	}
+
 	private void botaCancelar() {
 		this.dispose();
 	}
+
 	private void botaoDeLogin() {
 		try {
 			controller.fazerLogin(login.getText(), senha.getText(), (String) op.getSelectedItem());
@@ -52,6 +54,7 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
 	}
+
 	private void botaoFazerLogout() {
 		try {
 			controller.fazerLogout(login.getText());
@@ -60,8 +63,9 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
 	}
+
 	private void adcionarCombo() {
-		Object[] projetos= {"Interno","ISMTP"};
+		Object[] projetos = { "INTERNAMENTE", "ISMTP" };
 		op = new JComboBox<Object>(projetos);
 		op.setBounds(480, 86, 190, 25);
 		op.setBackground(new Color(25, 25, 25));
@@ -69,6 +73,7 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 		;
 		add(op);
 	}
+
 	private void adcionarLabels() {
 		JLabel marcarPonto = new JLabel("Faça o seu Login");
 		marcarPonto.setFont(new Font("Arial", Font.BOLD, 25));
@@ -109,9 +114,9 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 		JButton cancelar = new JButton("Cancelar");
 		cancelar.setForeground(Color.WHITE);
 		cancelar.setBackground(new Color(119, 221, 119));
-		cancelar.setBounds(145, 170, 90, 30);
+		cancelar.setBounds(50, 170, 90, 30);
 		cancelar.addActionListener(new ActionListener() {
-			
+
 			public void actionPerformed(ActionEvent e) {
 				botaCancelar();
 			}
@@ -123,37 +128,57 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 		fazerLogout.setBackground(new Color(119, 221, 119));
 		fazerLogout.setBounds(326, 170, 120, 30);
 		fazerLogout.addActionListener(new ActionListener() {
-			
+
 			public void actionPerformed(ActionEvent e) {
 				botaoFazerLogout();
 			}
 		});
 		this.add(fazerLogout);
-		
+
 		JButton fazerLogin = new JButton("Fazer Login ");
 		fazerLogin.setForeground(Color.WHITE);
 		fazerLogin.setBackground(new Color(119, 221, 119));
 		fazerLogin.setBounds(480, 170, 190, 30);
 		fazerLogin.addActionListener(new ActionListener() {
-			
+
 			public void actionPerformed(ActionEvent e) {
 				botaoDeLogin();
 			}
 		});
 		this.add(fazerLogin);
+
+		JButton criarConta = new JButton("Criar Conta ");
+		criarConta.setForeground(Color.WHITE);
+		criarConta.setBackground(new Color(119, 221, 119));
+		criarConta.setBounds(480, 170, 190, 30);
+		criarConta.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				botaoCriarConta();
+			}
+		});
+		this.add(criarConta);
+
+	}
+	public void botaoCriarConta() {
+		this.dispose();
+		FabricaDeTelas fabrica = new FabricaDeTelasSwing();
+		fabrica.fabricarTelaCriarConta();
 	}
 
 	public static void main(String[] args) {
 		new TelaAutenticacao();
 	}
+
 	@Override
 	public void fazerLogin(String login, String senha, String tipoProvedor) throws Exception {
 		controller.fazerLogin(login, senha, tipoProvedor);
-		
+
 	}
+
 	@Override
 	public void fazerLogout(String login) throws Exception {
 		controller.fazerLogout(login);
-		
+
 	}
 }

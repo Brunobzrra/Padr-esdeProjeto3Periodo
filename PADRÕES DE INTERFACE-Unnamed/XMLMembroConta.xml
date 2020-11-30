@@ -9,7 +9,9 @@
       <ativo>true</ativo>
       <email>bruno.bzrrasantos@gmail.com</email>
       <senha>131313</senha>
-      <conta class="model.autenticacao.ContaEmailLivre"/>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+      </conta>
       <administrador>true</administrador>
       <participacoes/>
     </model.autenticacao.Membro>

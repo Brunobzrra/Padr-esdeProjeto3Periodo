@@ -41,4 +41,8 @@ public class RegistradorSessaoLogin {
 	public Membro getLogado() {
 		return logado;
 	}
+	
+	public boolean isAdmin() {
+        return logado.isAdministrador();
+    }
 }

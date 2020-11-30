@@ -11,7 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-
 import view.controller.ControllerTelaConfiguracaoAdmin;
 
 public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfiguracaoAdmin{
@@ -29,7 +28,7 @@ public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfig
 		getContentPane().setBackground(Color.DARK_GRAY);
 		setResizable(false);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(1);
 		setTitle("Tornar Administrador");
 
 		adcionarLabels();

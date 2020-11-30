@@ -19,5 +19,9 @@ public class ControllerTelaAutenticacao {
 		casoDeUso.fazerLogout(login);
 
 	}
+	
+	public boolean isAdmin() {
+        return casoDeUso.isAdmin();
+    }
 
 }

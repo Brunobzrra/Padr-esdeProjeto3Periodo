@@ -26,4 +26,8 @@ public class ControllerTelaCriarConta {
 	public Object[] recuperarMembro(long matricula) {
 		return casoDeUsoExtra.recuperarMembro(matricula);
 	}
+	
+	public boolean isVazia() {
+		return casoDeUsoUm.isVazia();
+	}
 }

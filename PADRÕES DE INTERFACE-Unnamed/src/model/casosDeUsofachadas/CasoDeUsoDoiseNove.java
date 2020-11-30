@@ -51,4 +51,7 @@ public class CasoDeUsoDoiseNove {
 		registrador.registrarOffline(membroAtual.getEmail());
 		LoggerProjeto.getInstance().getLogger().warning("Logout feito");
 	}
+	public boolean isAdmin() {
+        return registrador.isAdmin();
+    }
 }

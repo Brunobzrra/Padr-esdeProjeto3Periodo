@@ -15,10 +15,9 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import model.casosDeUsofachadas.CasoDeUsoUm;
 import view.controller.ControllerTelaCriarConta;
 
-public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
+public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField nomeCriar;
@@ -30,9 +29,11 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 	private JTextField nomeAtualizar;
 	private JTextField loginAtualizar;
 	private JPasswordField senhaAtualizar;
-	
+
 	private ControllerTelaCriarConta controller = new ControllerTelaCriarConta();
-	
+
+	private FabricaDeTelas fabrica = new FabricaDeTelasSwing();
+
 	public TelaCriarConta() {
 		setLayout(null);
 		setSize(700, 500);
@@ -49,7 +50,13 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 	}
 
 	private void botaCancelar() {
-		this.dispose();
+		if (controller.isVazia()) {
+			JOptionPane.showMessageDialog(null, "Você precisa se cadastrar");
+		} else {
+			this.dispose();
+			fabrica.fabricarTelaAutenticacao();
+		}
+
 	}
 
 	private void botaoCriarConta() {
@@ -60,6 +67,8 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 			matriculaCriar.setText("");
 			loginCriar.setText("");
 			senhaCriar.setText("");
+			this.dispose();
+			fabrica.fabricarTelaAutenticacao();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 			e.printStackTrace();
@@ -68,8 +77,9 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 
 	private void botaoAtualizar() {
 		try {
-			controller.atualizarMembro( Long.parseLong(matriculaADM.getText()),Long.parseLong(matriculaAtualizar.getText()),nomeAtualizar.getText(),
-					loginAtualizar.getText(), senhaAtualizar.getText());
+			controller.atualizarMembro(Long.parseLong(matriculaADM.getText()),
+					Long.parseLong(matriculaAtualizar.getText()), nomeAtualizar.getText(), loginAtualizar.getText(),
+					senhaAtualizar.getText());
 			nomeAtualizar.setText("");
 			matriculaADM.setText("");
 			matriculaAtualizar.setText("");
@@ -124,7 +134,7 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 		senha.setBounds(165, 265, 300, 150);
 		senha.setForeground(Color.BLACK);
 		this.add(senha);
-		
+
 		JLabel atualizar = new JLabel("Atualizar Membro");
 		atualizar.setFont(new Font("Arial", Font.BOLD, 30));
 		atualizar.setBounds(440, -40, 300, 150);
@@ -136,13 +146,13 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 		coordenador.setBounds(440, 10, 300, 150);
 		coordenador.setForeground(Color.BLACK);
 		this.add(coordenador);
-		
+
 		JLabel matricula2 = new JLabel("Matricula:");
 		matricula2.setFont(new Font("Arial", Font.BOLD, 13));
 		matricula2.setBounds(570, 10, 300, 150);
 		matricula2.setForeground(Color.BLACK);
 		this.add(matricula2);
-		
+
 		JLabel nome2 = new JLabel("Nome:");
 		nome2.setFont(new Font("Arial", Font.BOLD, 13));
 		nome2.setBounds(440, 95, 300, 150);
@@ -197,7 +207,7 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 		matriculaADM.setBackground(new Color(240, 240, 240));
 		matriculaADM.setBounds(440, 95, 110, 40);
 		this.add(matriculaADM);
-		
+
 		matriculaAtualizar = new JTextField();
 		matriculaAtualizar.setToolTipText("ex: 123456...");
 		matriculaAtualizar.setForeground(Color.BLACK);
@@ -209,13 +219,13 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 
 			public void keyReleased(KeyEvent e) {
 				try {
-					Object[] dados= controller.recuperarMembro(Long.parseLong(matriculaAtualizar.getText()));
+					Object[] dados = controller.recuperarMembro(Long.parseLong(matriculaAtualizar.getText()));
 					nomeAtualizar.setText((String) dados[0]);
 					loginAtualizar.setText((String) dados[1]);
 					senhaAtualizar.setText((String) dados[2]);
 					recarregarTela();
 				} catch (Exception e2) {
-					
+
 				}
 			}
 
@@ -223,7 +233,7 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 			}
 		});
 		this.add(matriculaAtualizar);
-		
+
 		nomeAtualizar = new JTextField();
 		nomeAtualizar.setToolTipText("ex: fulano...");
 		nomeAtualizar.setForeground(Color.BLACK);
@@ -282,9 +292,11 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 		atualizar.setBounds(570, 410, 100, 40);
 		this.add(atualizar);
 	}
+
 	private void recarregarTela() {
 		this.repaint();
 	}
+
 	public static void main(String[] args) {
 		new TelaCriarConta();
 	}
@@ -292,14 +304,14 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta{
 	@Override
 	public void cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
 		controller.cadastrarMembro(nome, matricula, email, senha);
-		
+
 	}
 
 	@Override
 	public void atualizarMembro(long matricula, long matriculaNovo, String nomeNovo, String emailNovo, String senhaNova)
 			throws Exception {
 		controller.atualizarMembro(matricula, matriculaNovo, nomeNovo, emailNovo, senhaNova);
-		
+
 	}
 
 	@Override

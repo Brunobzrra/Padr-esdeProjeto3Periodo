@@ -19,6 +19,7 @@ import javax.swing.JTextField;
 
 import view.controller.ControllerCadastroEditais;
 
+
 public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastroEditais {
 	/**
 	 * 
