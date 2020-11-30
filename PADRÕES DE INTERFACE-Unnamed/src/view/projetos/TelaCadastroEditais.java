@@ -18,6 +18,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import view.controller.ControllerCadastroEditais;
+import view.projetos.abstract_factory.InterfaceTelaCadastroEditais;
+import view.projetos.builder.DiretorDeMontagemDeRelatorio;
+import view.projetos.builder.MontadorRelatorioProjetoHTML;
+import view.projetos.builder.MontadorRelatorioSwing;
 
 
 public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastroEditais {

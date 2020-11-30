@@ -40,6 +40,11 @@ public class CasoDeUsoExtra {
 		Object[] dados = { edital.getNome()};
 		return dados;
 	}
+	public Object[] recuperarPtojeto(String nome) {
+		Projeto projeto = daoProjeto.recuperarPorIndentificador(nome); 
+		Object[] dados = { projeto.getAporteCusteioReais(),projeto.getAporteCapitalReais()};
+		return dados;
+	}
 	//Servem para recuperar objetos persistindos que pertecem a um membro logado
 	public ProjetoComponente recuperarProjetoComponente(String nome)throws Exception {
 		ProjetoComponente componente= daoProjeto.recuperarPorIndentificador(nome);
@@ -52,7 +57,7 @@ public class CasoDeUsoExtra {
 		}
 		componente=daoEdital.recuperarPorIndentificador(nome);
 		if(componente==null) {
-			throw new Exception("Componente nã encontrado");
+			throw new Exception("Componente não encontrado");
 		}
 		return componente;
 	}

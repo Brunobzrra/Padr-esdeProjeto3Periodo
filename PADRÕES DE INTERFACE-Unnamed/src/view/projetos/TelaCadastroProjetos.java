@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -15,6 +17,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import view.controller.ControllerTelaDeCadastroProjetos;
+import view.projetos.abstract_factory.InterfaceTelaCadastroProjetos;
+import view.projetos.builder.DiretorDeMontagemDeRelatorio;
+import view.projetos.builder.MontadorRelatorioProjetoHTML;
+import view.projetos.builder.MontadorRelatorioSwing;
 
 
 public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastroProjetos {
@@ -103,7 +109,9 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		}
 		return null;
 	}
-
+	private void recarregarTela() {
+		this.repaint();
+	}
 	private void adcionarLabels() {
 		JLabel cadastrar = new JLabel("Cadastrar Projeto");
 		cadastrar.setBounds(40, 20, 300, 40);
@@ -324,6 +332,24 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		nomeProjetoAtualizar = new JTextField();
 		nomeProjetoAtualizar.setToolTipText("ex: Projeto Novo...");
 		nomeProjetoAtualizar.setBounds(350, 100, 100, 25);
+		nomeProjetoAtualizar.addKeyListener(new KeyListener() {
+			
+			public void keyTyped(KeyEvent e) {
+				
+			}
+			
+			
+			public void keyReleased(KeyEvent e) {
+				Object[] dados=controller.recuperarProjeto(nomeProjetoAtualizar.getText());
+				aporteCusteioReaisNovo.setText((String) dados[0].toString());
+				aporteCapitalReaisNovo.setText((String) dados[1].toString());
+				recarregarTela();
+			}
+			
+			
+			public void keyPressed(KeyEvent e) {				
+			}
+		});
 		this.add(nomeProjetoAtualizar);
 
 		aporteCusteioReaisNovo = new JTextField();
@@ -355,21 +381,6 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		matriculaCoordenador.setToolTipText("ex: 123...");
 		matriculaCoordenador.setBounds(650, 240, 150, 25);
 		this.add(matriculaCoordenador);
-
-		nomeDoProjetoAdcionar = new JTextField();
-		nomeDoProjetoAdcionar.setToolTipText("ex: Nome Projeto...");
-		nomeDoProjetoAdcionar.setBounds(50, 460, 200, 25);
-		this.add(nomeDoProjetoAdcionar);
-
-		matriculaDoMembroQueQuerEstrarNoProjetoAdcionar = new JTextField();
-		matriculaDoMembroQueQuerEstrarNoProjetoAdcionar.setToolTipText("ex: 123...");
-		matriculaDoMembroQueQuerEstrarNoProjetoAdcionar.setBounds(50, 540, 200, 25);
-		this.add(matriculaDoMembroQueQuerEstrarNoProjetoAdcionar);
-
-		matriculaDoCordenadorAdcionar = new JTextField();
-		matriculaDoCordenadorAdcionar.setToolTipText("ex: 123...");
-		matriculaDoCordenadorAdcionar.setBounds(50, 620, 200, 25);
-		this.add(matriculaDoCordenadorAdcionar);
 
 		nomeDoProjetoAdcionar = new JTextField();
 		nomeDoProjetoAdcionar.setToolTipText("ex: Nome Projeto...");
@@ -423,6 +434,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 							Float.parseFloat(aporteCusteioMensalReaisCriar.getText()),
 							Short.parseShort(qtdMesesCusteadosCriar.getText()),
 							Short.parseShort(qtdMesesPagosCriar.getText()));
+					JOptionPane.showMessageDialog(null, "Projeto cadastrado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -440,6 +452,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 				try {
 					atualizarProjeto(nomeProjetoAtualizar.getText(), Float.parseFloat(aporteCusteioReaisNovo.getText()),
 							Float.parseFloat(aporteCapitalReaisNovo.getText()));
+					JOptionPane.showMessageDialog(null, "Projeto atualizado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -456,6 +469,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 			public void actionPerformed(ActionEvent e) {
 				try {
 					removerProjeto(nomeProjetoRemover.getText());
+					JOptionPane.showMessageDialog(null, "Projeto removido!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -473,6 +487,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 				try {
 					removerParticipacao(Long.parseLong(matriculaCoordenador.getText()),
 							Long.parseLong(MatriculaRemover.getText()), nomeDoProjetoAdcionar.getText());
+					JOptionPane.showMessageDialog(null, "Participação removida!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -494,6 +509,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 							Float.parseFloat(aporteCusteioMensalReaisAdcionar.getText()),
 							Short.parseShort(qtdMesesCusteadosMensalReaisAdcionar.getText()),
 							Short.parseShort(qtdMesesPagosAdcionar.getText()));
+					JOptionPane.showMessageDialog(null, "Adcionado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}

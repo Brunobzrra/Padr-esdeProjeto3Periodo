@@ -1,8 +1,8 @@
 package Main;
 
 import model.casosDeUsofachadas.CasoDeUsoUm;
-import view.autenticacao.FabricaDeTelas;
-import view.autenticacao.FabricaDeTelasSwing;
+import view.autenticacao.abstract_factory.FabricaDeTelas;
+import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
 
 public class IniciarSistema {
 	public static void iniciar() {

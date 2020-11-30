@@ -26,7 +26,7 @@ public class Membro extends ProjetoComponente implements Serializable {
 
 	private ContaEmail conta;
 
-	private boolean administrador;
+	private boolean administrador=false;
 	/**
 	 * colecao de participações
 	 */

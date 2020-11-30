@@ -11,10 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import view.autenticacao.FabricaDeTelas;
-import view.autenticacao.FabricaDeTelasSwing;
-import view.autenticacao.TelaConfiguracaoAdmin;
+import view.autenticacao.abstract_factory.FabricaDeTelas;
+import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
 import view.controller.ControllerTelaAutenticacao;
+import view.projetos.abstract_factory.FabricaDeTelasDeCadastro;
+import view.projetos.abstract_factory.FabricaDeTelasDeCadastroSwing;
 
 
 public class TelaPrincipal extends JFrame {
@@ -99,9 +100,9 @@ public class TelaPrincipal extends JFrame {
 			proxima2.setVisible(false);
 			proxima3.setVisible(false);
 			edital.setVisible(false);
-			justificar.setVisible(false);
 			botaoConfigAdmin.setVisible(false);
 		}
+		justificar.setVisible(false);
 		botaoJustificar.setVisible(false);
 		voltar.setVisible(true);
 		setSize(1000, 700);

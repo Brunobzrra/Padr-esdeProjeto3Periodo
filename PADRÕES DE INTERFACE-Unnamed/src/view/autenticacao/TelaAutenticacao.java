@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import view.autenticacao.abstract_factory.FabricaDeTelas;
+import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
+import view.autenticacao.abstract_factory.InterfaceTelaAutenticacao;
 import view.controller.ControllerTelaAutenticacao;
 import view.projetos.TelaPrincipal;
 
@@ -150,7 +153,7 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 		JButton criarConta = new JButton("Criar Conta ");
 		criarConta.setForeground(Color.WHITE);
 		criarConta.setBackground(new Color(119, 221, 119));
-		criarConta.setBounds(480, 170, 190, 30);
+		criarConta.setBounds(150, 170, 120, 30);
 		criarConta.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {

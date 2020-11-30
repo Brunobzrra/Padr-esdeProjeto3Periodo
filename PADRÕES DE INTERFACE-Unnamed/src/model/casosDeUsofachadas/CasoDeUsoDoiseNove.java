@@ -26,10 +26,11 @@ public class CasoDeUsoDoiseNove {
 		Membro antigo = membroAtual;
 		ContaBridge contaBridge = null;
 		LoggerProjeto.getInstance().getLogger().info("Selecionando tipo de autenticacao");
-		if (tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.POP3.toString())) {
-			contaBridge = new ContaAutenticacaoProvedorEmailPOP3();
-		} else if (tipoProvedor.equalsIgnoreCase(TipoProvedorAutenticacao.INTERNAMENTE.toString())) {
+		if (tipoProvedor.equalsIgnoreCase("INTERNAMENTE")) {
 			contaBridge = new ContaAutenticacaoProvedorInterno();
+		}
+		else{
+			contaBridge = new ContaAutenticacaoProvedorEmailPOP3();
 		}
 		membroAtual.getConta().setImplementacaoContaBridge(contaBridge);
 		LoggerProjeto.getInstance().getLogger().info("Autenticando a conta de acoro com o tipo");

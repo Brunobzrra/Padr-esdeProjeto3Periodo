@@ -16,4 +16,91 @@
       <participacoes/>
     </model.autenticacao.Membro>
   </entry>
+  <entry>
+    <long>2</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
+      <matricula>123456</matricula>
+      <nome>isac</nome>
+      <ativo>true</ativo>
+      <email>isac.pereira@gmail.com</email>
+      <senha>123456</senha>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+      </conta>
+      <administrador>false</administrador>
+      <participacoes>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.projetos.Projeto">
+            <ativo>true</ativo>
+            <tipo>PROJETO</tipo>
+            <itens>
+              <model.projetos.Participacao>
+                <ativo>true</ativo>
+                <projetoPai class="model.projetos.Projeto" reference="../../.."/>
+                <tipo>PARTICIPACAO</tipo>
+                <dataInicio>2020-11-30 17:07:40.439 UTC</dataInicio>
+                <aporteCusteioMensalReais>44.0</aporteCusteioMensalReais>
+                <qtdMesesCusteados>55</qtdMesesCusteados>
+                <qtdMesesPagos>55</qtdMesesPagos>
+                <coordenador>true</coordenador>
+                <pontos/>
+                <horarios/>
+                <membro>
+                  <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+                  <tipo>MEMBRO</tipo>
+                  <matricula>25147</matricula>
+                  <nome>antonio</nome>
+                  <ativo>true</ativo>
+                  <email>antonio@gmail.com</email>
+                  <senha>25147</senha>
+                  <conta class="model.autenticacao.ContaEmailLivre">
+                    <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+                  </conta>
+                  <administrador>false</administrador>
+                  <participacoes>
+                    <model.projetos.Participacao reference="../../.."/>
+                  </participacoes>
+                </membro>
+              </model.projetos.Participacao>
+              <model.projetos.Participacao reference="../../.."/>
+            </itens>
+            <nome>projeto novo</nome>
+            <aporteCusteioReais>55.0</aporteCusteioReais>
+            <aporteCapitalReais>99.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>66.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>66.0</gastoExecutadoCapitalReais>
+          </projetoPai>
+          <tipo>PARTICIPACAO</tipo>
+          <dataInicio>2020-12-12 02:00:00.0 UTC</dataInicio>
+          <aporteCusteioMensalReais>22.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>55</qtdMesesCusteados>
+          <qtdMesesPagos>55</qtdMesesPagos>
+          <coordenador>false</coordenador>
+          <pontos/>
+          <horarios/>
+          <membro reference="../../.."/>
+        </model.projetos.Participacao>
+      </participacoes>
+    </model.autenticacao.Membro>
+  </entry>
+  <entry>
+    <long>3</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
+      <matricula>25147</matricula>
+      <nome>antonio</nome>
+      <ativo>true</ativo>
+      <email>antonio@gmail.com</email>
+      <senha>25147</senha>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+      </conta>
+      <administrador>false</administrador>
+      <participacoes/>
+    </model.autenticacao.Membro>
+  </entry>
 </map>

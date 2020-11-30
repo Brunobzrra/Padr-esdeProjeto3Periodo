@@ -60,4 +60,7 @@ public class ControllerTelaDeCadastroProjetos {
 	public ArrayList<String> mostrarProjetosDoUsuarioLogado() throws Exception {
 		return casoDeUsoExtra.recuperarProjetos();
 	}
+	public Object[] recuperarProjeto(String nome) {
+		return casoDeUsoExtra.recuperarPtojeto(nome);
+	}
 }

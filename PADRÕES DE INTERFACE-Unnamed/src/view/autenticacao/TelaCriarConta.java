@@ -15,6 +15,9 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import view.autenticacao.abstract_factory.FabricaDeTelas;
+import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
+import view.autenticacao.abstract_factory.InterfaceTelaCriarConta;
 import view.controller.ControllerTelaCriarConta;
 
 public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
@@ -24,6 +27,8 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 	private JTextField matriculaCriar;
 	private JTextField loginCriar;
 	private JPasswordField senhaCriar;
+	
+	
 	private JTextField matriculaADM;
 	private JTextField matriculaAtualizar;
 	private JTextField nomeAtualizar;
@@ -67,6 +72,7 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 			matriculaCriar.setText("");
 			loginCriar.setText("");
 			senhaCriar.setText("");
+			JOptionPane.showMessageDialog(null, "Conta criada!");
 			this.dispose();
 			fabrica.fabricarTelaAutenticacao();
 		} catch (Exception e) {
@@ -85,6 +91,7 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 			matriculaAtualizar.setText("");
 			loginAtualizar.setText("");
 			senhaAtualizar.setText("");
+			JOptionPane.showMessageDialog(null, "Conta atualizado!");
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 			e.printStackTrace();
@@ -177,14 +184,14 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 		nomeCriar.setToolTipText("ex: fulano...");
 		nomeCriar.setForeground(Color.BLACK);
 		nomeCriar.setBackground(new Color(240, 240, 240));
-		nomeCriar.setBounds(200, 95, 200, 40);
+		nomeCriar.setBounds(200, 180, 200, 40);
 		this.add(nomeCriar);
 
-		matriculaCriar = new JPasswordField();
+		matriculaCriar = new JTextField();
 		matriculaCriar.setToolTipText("ex: 123456...");
 		matriculaCriar.setForeground(Color.BLACK);
 		matriculaCriar.setBackground(new Color(240, 240, 240));
-		matriculaCriar.setBounds(200, 180, 200, 40);
+		matriculaCriar.setBounds(200, 95, 200, 40);
 		this.add(matriculaCriar);
 
 		loginCriar = new JTextField();

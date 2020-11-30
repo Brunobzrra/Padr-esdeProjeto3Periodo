@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import view.autenticacao.abstract_factory.InterfaceTelaConfiguracaoAdmin;
 import view.controller.ControllerTelaConfiguracaoAdmin;
 
 public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfiguracaoAdmin{

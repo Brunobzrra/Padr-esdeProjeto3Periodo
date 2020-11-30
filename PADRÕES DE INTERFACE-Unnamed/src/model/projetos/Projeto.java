@@ -196,7 +196,7 @@ public class Projeto extends ProjetoComponente implements Serializable {
 	public boolean buscarComponente(ProjetoComponente comonente) throws Exception {
 		for (ProjetoComponente projetoComponente : itens) {
 			Participacao participacao=(Participacao) projetoComponente;
-			if(participacao.getMembro()==comonente) {
+			if(participacao.getMembro().getNome().equals(comonente.getNome())) {
 				return true;
 			}
 		}

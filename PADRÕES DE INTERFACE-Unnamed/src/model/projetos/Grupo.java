@@ -156,7 +156,7 @@ public class Grupo extends ProjetoComponente {
 	}
 	public boolean buscarComponente(ProjetoComponente comonente) throws Exception {
 		for (ProjetoComponente projetoComponente : itens) {
-			if(projetoComponente==comonente) {
+			if(projetoComponente.getNome().equals(comonente.getNome())) {
 				return true;
 			}
 		}

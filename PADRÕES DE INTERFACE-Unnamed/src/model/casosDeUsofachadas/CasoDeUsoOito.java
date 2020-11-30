@@ -13,7 +13,7 @@ public class CasoDeUsoOito {
 		texto.append(String.format(
 				"<html>\n<head>\n<title>Relatorio Do Item</title>\n</head>\n<body>\n<h1 style='text-align:center'>Relatorio</h1>\n"));
 		texto.append(String.format(
-				"<span>"+componente.toString()+"</span><br>\n"));
+				"<span>"+componente.toStringHTML()+"</span><br>\n"));
 
 		texto.append("</body>\n</html>");
 		System.out.println(texto);

@@ -10,6 +10,7 @@ public class ControllerTelaCriarConta {
 
 	public ControllerTelaCriarConta() {
 		casoDeUsoUm = new CasoDeUsoUm();
+		casoDeUsoExtra = new CasoDeUsoExtra();
 	}
 
 	public void cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
