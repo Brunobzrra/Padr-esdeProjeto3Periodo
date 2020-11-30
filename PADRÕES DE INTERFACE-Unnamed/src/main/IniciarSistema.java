@@ -1,4 +1,4 @@
-package Main;
+package main;
 
 import model.casosDeUsofachadas.CasoDeUsoUm;
 import view.autenticacao.abstract_factory.FabricaDeTelas;

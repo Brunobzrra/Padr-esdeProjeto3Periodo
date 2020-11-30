@@ -12,15 +12,22 @@ import persistencia.xml.DAOXMLMembroConta;
 
 public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 
-	private String provedorHost;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-	private String provedorPorta;
-	
+	private String provedorHost = "pop.gmail.com";
+
+	private String provedorPorta = "995";
+
 	/*
-	 *Autentica um membro via POP3, validando seu email caso existente, e consultando ele o
-	 *mesmo via BD posteriormente, caso ele passe pelos dois testes, é retornado 
-	 *@param email, senha*/
-
+	 * Autentica um membro via POP3, validando seu email caso existente, e
+	 * consultando ele o mesmo via BD posteriormente, caso ele passe pelos dois
+	 * testes, é retornado
+	 * 
+	 * @param email, senha
+	 */
 	public Membro autenticar(String email, String senha) {
 		if (check(email, senha, provedorHost, provedorPorta)) {
 			DAOXMLMembroConta dao = new DAOXMLMembroConta();
@@ -34,11 +41,14 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 		}
 		return null;
 	}
+
 	/*
-	 * Método que ira autenticar um membro via protocolo de visualizacao de email POP3, caso autenticado
-	 * retorna true, e isso significa que o email é realmente válido, e é possivel usa=lo no sistema.
-	 * @params login, senha, provedor, porta*/
-	
+	 * Método que ira autenticar um membro via protocolo de visualizacao de email
+	 * POP3, caso autenticado retorna true, e isso significa que o email é realmente
+	 * válido, e é possivel usa=lo no sistema.
+	 * 
+	 * @params login, senha, provedor, porta
+	 */
 	private static boolean check(String login, String senha, String provedor, String porta) {
 
 		Properties properties = new Properties();
@@ -66,6 +76,14 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 			return false;
 		}
 		return true;
+	}
+
+	public void setProvedorHost(String provedorHost) {
+		this.provedorHost = provedorHost;
+	}
+
+	public void setProvedorPorta(String provedorPorta) {
+		this.provedorPorta = provedorPorta;
 	}
 
 }

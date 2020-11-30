@@ -103,4 +103,21 @@
       <participacoes/>
     </model.autenticacao.Membro>
   </entry>
+  <entry>
+    <long>4</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
+      <matricula>123456789</matricula>
+      <nome>gabriel</nome>
+      <ativo>true</ativo>
+      <email>gabriel@gmail.com</email>
+      <senha>123456789</senha>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+      </conta>
+      <administrador>false</administrador>
+      <participacoes/>
+    </model.autenticacao.Membro>
+  </entry>
 </map>

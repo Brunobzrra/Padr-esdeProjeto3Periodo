@@ -2,10 +2,10 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-11-30T20:09:32</date>
-  <millis>1606774172383</millis>
+  <date>2020-11-30T21:22:00</date>
+  <millis>1606778520261</millis>
   <sequence>0</sequence>
-  <logger>LogProjeto</logger>
+  <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
@@ -13,10 +13,21 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-11-30T20:09:32</date>
-  <millis>1606774172384</millis>
+  <date>2020-11-30T21:22:00</date>
+  <millis>1606778520261</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-11-30T21:22:00</date>
+  <millis>1606778520270</millis>
   <sequence>1</sequence>
-  <logger>LogProjeto</logger>
+  <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
@@ -24,46 +35,69 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-11-30T20:09:32</date>
-  <millis>1606774172574</millis>
-  <sequence>2</sequence>
-  <logger>LogProjeto</logger>
-  <level>WARNING</level>
+  <date>2020-11-30T21:22:00</date>
+  <millis>1606778520270</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-11-30T20:09:50</date>
-  <millis>1606774190990</millis>
-  <sequence>3</sequence>
-  <logger>LogProjeto</logger>
+  <date>2020-11-30T21:22:00</date>
+  <millis>1606778520270</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
-  <method>criarProjeto</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Verificando o membro que ira coordenar</message>
+  <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-11-30T20:09:51</date>
-  <millis>1606774191014</millis>
-  <sequence>4</sequence>
-  <logger>LogProjeto</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
-  <method>criarProjeto</method>
+  <date>2020-11-30T21:22:03</date>
+  <millis>1606778523070</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
+  <message>Nao foi possivel realizar o login</message>
 </record>
 <record>
-  <date>2020-11-30T20:09:51</date>
-  <millis>1606774191085</millis>
-  <sequence>5</sequence>
-  <logger>LogProjeto</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
-  <method>criarProjeto</method>
+  <date>2020-11-30T21:22:03</date>
+  <millis>1606778523070</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Projeto criado</message>
+  <message>Nao foi possivel realizar o login</message>
 </record>
+<record>
+  <date>2020-11-30T21:22:03</date>
+  <millis>1606778523070</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Nao foi possivel realizar o login</message>
+</record>
+<record>
+  <date>2020-11-30T21:22:03</date>
+  <millis>1606778523070</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Nao foi possivel realizar o login</message>
+</record>
+</log>
