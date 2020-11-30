@@ -2,35 +2,26 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-11-30T17:01:15</date>
-  <millis>1606762875375</millis>
+  <date>2020-11-30T19:15:35.321523500Z</date>
+  <millis>1606763735321</millis>
+  <nanos>523500</nanos>
   <sequence>0</sequence>
   <logger>LogProjeto</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-11-30T17:01:15</date>
-  <millis>1606762875376</millis>
+  <date>2020-11-30T19:15:35.326509700Z</date>
+  <millis>1606763735326</millis>
+  <nanos>509700</nanos>
   <sequence>1</sequence>
   <logger>LogProjeto</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Autenticando a conta de acoro com o tipo</message>
-</record>
-<record>
-  <date>2020-11-30T17:01:15</date>
-  <millis>1606762875455</millis>
-  <sequence>2</sequence>
-  <logger>LogProjeto</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
 </record>

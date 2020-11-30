@@ -30,9 +30,11 @@ public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontage
 		FileWriter fw;
 		try {
 			fw = new FileWriter(new File("Relatorio.html"));
+			System.out.println(fw);
 			fw.write(texto);
 			fw.flush();
 			fw.close();
+			System.out.println("ok");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -64,8 +66,10 @@ public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontage
 
 		JEditorPane jEditorPane = new JEditorPane();
 		jEditorPane.setEditable(false);
-		URL url = MontadorRelatorioSwing.class.getResource(System.getProperty("user.dir") + "\\Relatorio.html");
-		System.out.println(System.getProperty("user.dir"));
+		URL url = MontadorRelatorioSwing.class.getResource("Relatorio.html");
+		System.out.println(url);
+		
+		
 		try {
 			jEditorPane.setPage(url);
 		} catch (IOException e) {
