@@ -44,6 +44,7 @@ public class TelaJustificativaPonto extends JFrame {
 		try {
 			controller.justificarPonto(LocalDateTime.now(), justificativa.getText(),
 					Long.parseLong(matricula.getText()));
+			JOptionPane.showMessageDialog(null, "Justificativa cadastrada!");
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage());

@@ -117,7 +117,7 @@ public class RegistradorPontoCentral implements Serializable {
 	 * @throws Exception
 	 */
 	public void justificarPontoNaoBatido(PontoTrabalhado ponto, String justificar, Membro membro) throws Exception {
-		if (RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
+		if (!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não estar online!");
 		}
 		Set<PontoTrabalhado> pontosInvalidos = new AvaliadorPontoSemEntradaeOuSaida(null).getPontosInvalidos(membro);

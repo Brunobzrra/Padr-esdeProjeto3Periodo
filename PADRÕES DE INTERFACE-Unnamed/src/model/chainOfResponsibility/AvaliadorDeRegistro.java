@@ -17,7 +17,7 @@ public abstract class AvaliadorDeRegistro {
 	 */
 	private HashSet<PontoTrabalhado> pontosInvalidos = new HashSet<PontoTrabalhado>();
 
-	public abstract HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro);
+	public abstract HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro)throws Exception;
 
 	public AvaliadorDeRegistro getProximo() {
 		return proximo;

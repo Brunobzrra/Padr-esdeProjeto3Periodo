@@ -17,7 +17,7 @@ public class AvaliadorPontosInvalidosComJustificativaNaoAceita extends Avaliador
 		setProximo(avaliador);
 	}
 
-	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
+	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro)throws Exception {
 		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			for (PontoTrabalhado ponto : participacoe.getPontos()) {
 				if (!ponto.isJustificativaAceita()) 

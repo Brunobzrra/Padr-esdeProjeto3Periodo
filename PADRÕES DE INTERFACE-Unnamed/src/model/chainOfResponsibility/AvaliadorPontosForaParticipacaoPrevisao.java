@@ -22,7 +22,7 @@ public class AvaliadorPontosForaParticipacaoPrevisao extends AvaliadorDeRegistro
 		setProximo(avaliador);
 	}
 
-	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
+	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) throws Exception{
 		for (Participacao participacao : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			for (PontoTrabalhado ponto : participacao.getPontos()) {
 				boolean invalido = true;

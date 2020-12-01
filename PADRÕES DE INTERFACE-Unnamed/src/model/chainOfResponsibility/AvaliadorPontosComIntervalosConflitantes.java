@@ -18,7 +18,7 @@ public class AvaliadorPontosComIntervalosConflitantes extends AvaliadorDeRegistr
 		setProximo(avaliador);
 	}
 
-	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro) {
+	public HashSet<PontoTrabalhado> getPontosInvalidos(Membro membro)throws Exception {
 		for (Participacao participacoe : PegadorDeEmailDoDaoMembro.recuperarParticipacao(membro)) {
 			ArrayList<PontoTrabalhado> aux = participacoe.getPontos();
 			for (PontoTrabalhado ponto1 : participacoe.getPontos()) {
