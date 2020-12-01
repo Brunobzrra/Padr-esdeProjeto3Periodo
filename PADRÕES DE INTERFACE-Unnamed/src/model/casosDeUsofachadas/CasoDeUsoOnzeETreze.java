@@ -183,17 +183,19 @@ public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoR
 	}
 
 	public StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto) throws RemoteException, Exception {
-		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Verificando as horas trabalhadas");		
+		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Verificando as horas trabalhadas");
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nomeDoProjeto);
 		StringBuffer texto = new StringBuffer("Horas Trabalhadas Validas\n");
-		LoggerProjeto.getInstance().getLogger().info("Buscando libros...");
+		LoggerProjeto.getInstance().getLogger().info("Buscando participacoes");
 		for (ProjetoComponente membroDoFor : projeto.getItens()) {
 			if (membroDoFor.getTipo() == TipoProjetoComponente.MEMBRO) {
 				if (((Membro) membroDoFor).getEmail().equalsIgnoreCase(login)) {
+					LoggerProjeto.getInstance().getLogger().info("Membro selecionado");
 					for (Participacao participacaoDoFor : PegadorDeEmailDoDaoMembro
 							.recuperarParticipacao((Membro) membroDoFor)) {
 						texto.append("O membro " + participacaoDoFor.getMembro().getNome() + " trabalhou\n");
 						for (PontoTrabalhado pontoDoFor : participacaoDoFor.getPontos()) {
+							LoggerProjeto.getInstance().getLogger().info("Validando horas");
 							texto.append(registrador.horasTrabalhadasValidas(pontoDoFor.getDataHoraEntrada(),
 									pontoDoFor.getDataHoraSaida(), (Membro) membroDoFor) + "\n");
 						}
@@ -202,6 +204,7 @@ public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoR
 
 			}
 		}
+		LoggerProjeto.getInstance().getLogger().warning("horas invalidas obtidas");
 		return texto;
 
 	}
