@@ -23,17 +23,15 @@ import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
 import view.controller.ControllerCadastroEditais;
+import view.controller.ControllerGerarRelatorio;
 import view.projetos.abstract_factory.InterfaceTelaCadastroEditais;
-import view.projetos.builder.DiretorDeMontagemDeRelatorio;
-import view.projetos.builder.MontadorRelatorioProjetoHTML;
-import view.projetos.builder.MontadorRelatorioSwing;
 
 public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastroEditais {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	private ControllerGerarRelatorio geradorRelatorio = new ControllerGerarRelatorio();
 	private ControllerCadastroEditais controller = new ControllerCadastroEditais();
 
 	private JTextField matriculaCriar;
@@ -308,15 +306,9 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String valor = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de relatorio",
-							"Gerar relatorio", JOptionPane.PLAIN_MESSAGE, null, new Object[] { "HTML", "JPAINEL" },
-							null);
-					DiretorDeMontagemDeRelatorio diretor = new DiretorDeMontagemDeRelatorio(
-							new MontadorRelatorioSwing());
-					if (valor.equals("HTML")) {
-						diretor.setMontadorDeRelatorio(new MontadorRelatorioProjetoHTML(""));
-					}
-					diretor.montarRelatorioCompleto(op.getSelectedItem().toString());
+					String valor = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de relatorio", "Gerar relatorio",
+							JOptionPane.PLAIN_MESSAGE, null, new Object[] { "HTML", "JPAINEL" }, null);
+					geradorRelatorio.gerarRelatorio(op.getSelectedItem().toString(), valor);
 					JOptionPane.showMessageDialog(null, "Relatorio criado!");
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, "Não foi possivel criar o realtorio!");

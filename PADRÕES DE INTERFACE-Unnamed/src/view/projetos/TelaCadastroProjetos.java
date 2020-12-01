@@ -19,15 +19,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
+import view.controller.ControllerGerarRelatorio;
 import view.controller.ControllerTelaDeCadastroProjetos;
 import view.projetos.abstract_factory.InterfaceTelaCadastroProjetos;
-import view.projetos.builder.DiretorDeMontagemDeRelatorio;
-import view.projetos.builder.MontadorRelatorioProjetoHTML;
-import view.projetos.builder.MontadorRelatorioSwing;
-
 
 public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastroProjetos {
-	
+	private ControllerGerarRelatorio geradorRelatorio = new ControllerGerarRelatorio();
 	private ControllerTelaDeCadastroProjetos controller = new ControllerTelaDeCadastroProjetos();
 
 	private JTextField nomeProjetoCriar;
@@ -112,9 +109,11 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		}
 		return null;
 	}
+
 	private void recarregarTela() {
 		this.repaint();
 	}
+
 	private void adcionarLabels() {
 		JLabel cadastrar = new JLabel("Cadastrar Projeto");
 		cadastrar.setBounds(40, 20, 300, 40);
@@ -336,21 +335,19 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 		nomeProjetoAtualizar.setToolTipText("ex: Projeto Novo...");
 		nomeProjetoAtualizar.setBounds(350, 100, 100, 25);
 		nomeProjetoAtualizar.addKeyListener(new KeyListener() {
-			
+
 			public void keyTyped(KeyEvent e) {
-				
+
 			}
-			
-			
+
 			public void keyReleased(KeyEvent e) {
-				Object[] dados=controller.recuperarProjeto(nomeProjetoAtualizar.getText());
+				Object[] dados = controller.recuperarProjeto(nomeProjetoAtualizar.getText());
 				aporteCusteioReaisNovo.setText((String) dados[0].toString());
 				aporteCapitalReaisNovo.setText((String) dados[1].toString());
 				recarregarTela();
 			}
-			
-			
-			public void keyPressed(KeyEvent e) {				
+
+			public void keyPressed(KeyEvent e) {
 			}
 		});
 		this.add(nomeProjetoAtualizar);
@@ -536,15 +533,9 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String valor = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de relatorio",
-							"Gerar relatorio", JOptionPane.PLAIN_MESSAGE, null, new Object[] { "HTML", "JPAINEL" },
-							null);
-					DiretorDeMontagemDeRelatorio diretor = new DiretorDeMontagemDeRelatorio(
-							new MontadorRelatorioSwing());
-					if (valor.equals("HTML")) {
-						diretor.setMontadorDeRelatorio(new MontadorRelatorioProjetoHTML(""));
-					}
-					diretor.montarRelatorioCompleto(op.getSelectedItem().toString());
+					String valor = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de relatorio", "Gerar relatorio",
+							JOptionPane.PLAIN_MESSAGE, null, new Object[] { "HTML", "JPAINEL" }, null);
+					geradorRelatorio.gerarRelatorio(op.getSelectedItem().toString(), valor);
 					JOptionPane.showMessageDialog(null, "Relatorio criado!");
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, "Não foi possivel criar o realtorio!");
