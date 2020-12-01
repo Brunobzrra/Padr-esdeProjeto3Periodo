@@ -11,17 +11,17 @@ import view.autenticacao.TelaCriarConta;
 
 public class FabricaDeTelasSwing implements FabricaDeTelas{
 	
-	public TelaAutenticacao fabricarTelaAutenticacao() {
+	public InterfaceTelaAutenticacao fabricarTelaAutenticacao() {
 	
 		return new TelaAutenticacao();
 	}
 
-	public TelaCriarConta fabricarTelaCriarConta() {
+	public InterfaceTelaCriarConta fabricarTelaCriarConta() {
 		
 		return new TelaCriarConta();
 	}
 
-	public TelaConfiguracaoAdmin fabricarTelaConfiguracaoAdmin() {
+	public InterfaceTelaConfiguracaoAdmin fabricarTelaConfiguracaoAdmin() {
 		
 		return new TelaConfiguracaoAdmin();
 	}

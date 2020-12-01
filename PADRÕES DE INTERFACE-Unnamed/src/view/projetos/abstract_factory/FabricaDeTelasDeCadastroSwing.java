@@ -12,19 +12,19 @@ import view.projetos.TelaCadastroProjetos;
 
 public class FabricaDeTelasDeCadastroSwing implements FabricaDeTelasDeCadastro{
 
-	public TelaCadastroProjetos fabricarTelaCadastroProjetos() {
+	public InterfaceTelaCadastroProjetos fabricarTelaCadastroProjetos() {
 		
 		return new TelaCadastroProjetos();
 	}
 
 	
-	public TelaCadastroGrupos fabricarTelaCadastroGrupos() {
+	public InterfaceTelaCadastroGrupos fabricarTelaCadastroGrupos() {
 		
 		return new TelaCadastroGrupos();
 	}
 
 	
-	public TelaCadastroEditais fabricarTelaCadastroEditais() {
+	public InterfaceTelaCadastroEditais fabricarTelaCadastroEditais() {
 		
 		return new TelaCadastroEditais();
 	}

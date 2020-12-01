@@ -24,4 +24,29 @@
       <itens/>
     </model.projetos.Edital>
   </entry>
+  <entry>
+    <long>2</long>
+    <model.projetos.Edital>
+      <ativo>true</ativo>
+      <tipo>EDITAL</tipo>
+      <nome>dadsds</nome>
+      <criador>
+        <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+        <tipo>MEMBRO</tipo>
+        <matricula>112</matricula>
+        <nome>joaozin</nome>
+        <ativo>true</ativo>
+        <email>bruno.bzrrasantos@gmail.com</email>
+        <senha>131313</senha>
+        <conta class="model.autenticacao.ContaEmailLivre">
+          <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+        </conta>
+        <administrador>true</administrador>
+        <participacoes/>
+      </criador>
+      <dataInicio>2011-11-11 02:00:00.0 UTC</dataInicio>
+      <dataTermino reference="../dataInicio"/>
+      <itens/>
+    </model.projetos.Edital>
+  </entry>
 </map>

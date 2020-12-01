@@ -16,6 +16,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.Membro;
 import model.projetos.Grupo;
+
 public class DAOXMLGrupo {
 
 	private HashMap<Long, Grupo> persistidos;
@@ -24,58 +25,63 @@ public class DAOXMLGrupo {
 
 	private final XStream xstream = new XStream(new DomDriver("UTF-8"));
 	private long id = 0;
-	
-	
+
 	/*
-	 * adiciona um novo grupo na colecao de persistidos, que é salvo posteriormente, adicionando assim
-	 * um membro ao XML, que é nosso BD.
-	 * @params grupo*/
-	
-	public boolean criar(Grupo grupo) throws Exception{
-		if(grupo.getNome().length()<5 || grupo.getLinkCNPq().length()<5) {
+	 * adiciona um novo grupo na colecao de persistidos, que é salvo posteriormente,
+	 * adicionando assim um membro ao XML, que é nosso BD.
+	 * 
+	 * @params grupo
+	 */
+
+	public boolean criar(Grupo grupo) throws Exception {
+		if (grupo.getNome().length() < 5 || grupo.getLinkCNPq().length() < 5) {
 			throw new Exception("Digite todos os parametros corretamente!");
 		}
 		String[] atributos = { "linkCNPq" };
 		Object[] valores = { grupo.getLinkCNPq() };
-		if (consultarAnd(atributos, valores).size()==0) {
+		if (consultarAnd(atributos, valores).size() == 0) {
 			this.persistidos = this.carregarXML();
-			id += 1;
+			id = persistidos.size() + 1;
 			this.persistidos.put(id, grupo);
 			this.salvarXML(persistidos);
 			return true;
 		}
 		return false;
 	}
+
 	/**
 	 * este metodo retorna o objeto por indentificador
+	 * 
 	 * @param nome
 	 * @return
 	 */
 	public Grupo recuperarPorIndentificador(String linkCNPq) {
-		this.persistidos=carregarXML();
+		this.persistidos = carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long long1 : chaves) {
-			if(persistidos.get(long1).getLinkCNPq().equals(linkCNPq)){
+			if (persistidos.get(long1).getLinkCNPq().equals(linkCNPq)) {
 				return persistidos.get(long1);
 			}
 		}
 		return null;
 	}
+
 	public Grupo recuperarPorNome(String nome) {
-		this.persistidos=carregarXML();
+		this.persistidos = carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long long1 : chaves) {
-			if(persistidos.get(long1).getNome().equals(nome)){
+			if (persistidos.get(long1).getNome().equals(nome)) {
 				return persistidos.get(long1);
 			}
 		}
 		return null;
 	}
 	/*
-	 * Metodo que ira procurar uma chave de um grupo especifico no HASHSET de persistidos, returna o indice
-	 * que o membro se encontra no HASHSET
-	 * @params procurado*/
-
+	 * Metodo que ira procurar uma chave de um grupo especifico no HASHSET de
+	 * persistidos, returna o indice que o membro se encontra no HASHSET
+	 * 
+	 * @params procurado
+	 */
 
 	private Long procurarChave(Grupo procurado) {
 		Long indice = null;
@@ -89,10 +95,13 @@ public class DAOXMLGrupo {
 		}
 		return indice;
 	}
+
 	/*
-	 * metodo usado para remover um grupo do HASHSET persistidos, que eh recuperado, modificado, e posterior
-	 * mente salvo no BD via salvarXML()
-	 * @params grupoRemover */
+	 * metodo usado para remover um grupo do HASHSET persistidos, que eh recuperado,
+	 * modificado, e posterior mente salvo no BD via salvarXML()
+	 * 
+	 * @params grupoRemover
+	 */
 	public void remover(Grupo grupoRemover) {
 		this.persistidos = this.carregarXML();
 		Long indice = procurarChave(grupoRemover);
@@ -101,11 +110,14 @@ public class DAOXMLGrupo {
 			this.salvarXML(persistidos);
 		}
 	}
+
 	/*
-	 * Metodo que substitui um grupo no HASHSET de persistidos, colocando outro grupo de interesse no lugar
-	 * com isso e salvando o hashset posteriormente, com isso, atualizando o valor do edital no BD*/
-	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) throws Exception{
-		if(grupoSubistituto.getNome().length()<5 || grupoSubistituto.getLinkCNPq().length()<5) {
+	 * Metodo que substitui um grupo no HASHSET de persistidos, colocando outro
+	 * grupo de interesse no lugar com isso e salvando o hashset posteriormente, com
+	 * isso, atualizando o valor do edital no BD
+	 */
+	public boolean atualizar(Grupo grupoSubstituivel, Grupo grupoSubistituto) throws Exception {
+		if (grupoSubistituto.getNome().length() < 5 || grupoSubistituto.getLinkCNPq().length() < 5) {
 			throw new Exception("Digite todos os parametros corretamente!");
 		}
 		this.persistidos = this.carregarXML();
@@ -118,8 +130,9 @@ public class DAOXMLGrupo {
 		this.salvarXML(persistidos);
 		return true;
 	}
-	public ArrayList<Grupo> recuperarGruposComMembro(Membro membro) throws Exception{
-		ArrayList<Grupo> grupos= new ArrayList<Grupo>();
+
+	public ArrayList<Grupo> recuperarGruposComMembro(Membro membro) throws Exception {
+		ArrayList<Grupo> grupos = new ArrayList<Grupo>();
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
@@ -130,13 +143,17 @@ public class DAOXMLGrupo {
 		return grupos;
 	}
 	/*
-	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de seus atributos. caso
-	 * exista um grupo com o mesmo ou os mesmos atributos escolhidos,eh retornado um set com todos os 
-	 * grupos correspondentes. sao ultilizados como paramentro de entrada um array de string onde o nome
-	 * dos atributos que se deseja consulta, exatamente como estao declarados na classe do grupo sao inseridos
-	 * e os seus respectivos valores sao adicionados nas repectivas posicoes em um array de object, que no cao
-	 * sao os valores desses atributos.
-	 * @params atributos, valores */
+	 * metodo usado para consultar um grupo no hashset de persistidos, por meio de
+	 * seus atributos. caso exista um grupo com o mesmo ou os mesmos atributos
+	 * escolhidos,eh retornado um set com todos os grupos correspondentes. sao
+	 * ultilizados como paramentro de entrada um array de string onde o nome dos
+	 * atributos que se deseja consulta, exatamente como estao declarados na classe
+	 * do grupo sao inseridos e os seus respectivos valores sao adicionados nas
+	 * repectivas posicoes em um array de object, que no cao sao os valores desses
+	 * atributos.
+	 * 
+	 * @params atributos, valores
+	 */
 
 	public Set<Grupo> consultarAnd(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
@@ -240,11 +257,15 @@ public class DAOXMLGrupo {
 		return auxiliar;
 	}
 	/*
-	 * metodo usado para cosultar se existe um determinado grupo no hashset de persistidos, que eh como o 
-	 * BD eh construido, isso eh feito por meio da disponibilizacao dos atribuos que vao ser consultados via 
-	 * array de string, e os seus respectivos valoress via um array de object, esse metodo retorna um set com
-	 * todos os grupo correspondentes a pelo menos um dos atributos consultados,
-	 * @params atributos, valores*/
+	 * metodo usado para cosultar se existe um determinado grupo no hashset de
+	 * persistidos, que eh como o BD eh construido, isso eh feito por meio da
+	 * disponibilizacao dos atribuos que vao ser consultados via array de string, e
+	 * os seus respectivos valoress via um array de object, esse metodo retorna um
+	 * set com todos os grupo correspondentes a pelo menos um dos atributos
+	 * consultados,
+	 * 
+	 * @params atributos, valores
+	 */
 
 	public Set<Grupo> consultarOr(String[] atributos, Object[] valores) {
 		this.persistidos = this.carregarXML();
@@ -346,7 +367,9 @@ public class DAOXMLGrupo {
 	}
 	/*
 	 * salva o hashmap de persistidos em XML
-	 * @params persistidos*/
+	 * 
+	 * @params persistidos
+	 */
 
 	private void salvarXML(HashMap<Long, Grupo> persistidos) {
 
@@ -361,8 +384,11 @@ public class DAOXMLGrupo {
 			e.printStackTrace();
 		}
 	}
+
 	/*
-	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh criado*/
+	 * Caso o XML já exista, apenas atualiza o mesmo, caso nao, um novo XML eh
+	 * criado
+	 */
 	private HashMap<Long, Grupo> carregarXML() {
 
 		if (arquivoColecao.exists()) {

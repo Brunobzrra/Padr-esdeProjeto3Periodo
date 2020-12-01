@@ -43,7 +43,7 @@ public class DAOXMLProjetoParticipacao {
 		Object[] valores = { projeto.getNome() };
 		if (consultarAnd(atributos, valores).size() == 0) {
 			this.persistidos = this.carregarXML();
-			id += 1;
+			id =persistidos.size() + 1;
 			this.persistidos.put(id, projeto);
 			this.salvarXML(persistidos);
 			return true;

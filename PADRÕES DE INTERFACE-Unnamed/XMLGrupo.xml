@@ -4,9 +4,9 @@
     <model.projetos.Grupo>
       <ativo>true</ativo>
       <tipo>GRUPO</tipo>
-      <nome>aaaaaa</nome>
-      <dataCriacao>2020-12-01 04:00:40.112 UTC</dataCriacao>
-      <linkCNPq>123456789</linkCNPq>
+      <nome>grupoo</nome>
+      <dataCriacao>2020-12-01 21:16:11.19 UTC</dataCriacao>
+      <linkCNPq>25147555</linkCNPq>
       <itens>
         <model.autenticacao.Membro>
           <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
@@ -34,6 +34,33 @@
       <dataCriacao>2020-10-14 04:07:08.480 UTC</dataCriacao>
       <linkCNPq>cnpq.com.br</linkCNPq>
       <itens/>
+    </model.projetos.Grupo>
+  </entry>
+  <entry>
+    <long>3</long>
+    <model.projetos.Grupo>
+      <ativo>true</ativo>
+      <tipo>GRUPO</tipo>
+      <nome>ddsadsa</nome>
+      <dataCriacao>2020-12-01 21:24:32.283 UTC</dataCriacao>
+      <linkCNPq>25147546544566</linkCNPq>
+      <itens>
+        <model.autenticacao.Membro>
+          <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+          <projetoPai class="model.projetos.Grupo" reference="../../.."/>
+          <tipo>MEMBRO</tipo>
+          <matricula>112</matricula>
+          <nome>joaozin</nome>
+          <ativo>true</ativo>
+          <email>bruno.bzrrasantos@gmail.com</email>
+          <senha>131313</senha>
+          <conta class="model.autenticacao.ContaEmailLivre">
+            <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+          </conta>
+          <administrador>true</administrador>
+          <participacoes/>
+        </model.autenticacao.Membro>
+      </itens>
     </model.projetos.Grupo>
   </entry>
 </map>

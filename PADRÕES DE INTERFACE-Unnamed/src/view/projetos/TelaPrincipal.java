@@ -112,21 +112,21 @@ public class TelaPrincipal extends JFrame {
 	}
 
 	private void criarGrupo() {
-		painelSecundario = fabricaDeTelas.fabricarTelaCadastroGrupos();
+		painelSecundario = (JPanel) fabricaDeTelas.fabricarTelaCadastroGrupos();
 		transitarTela();
 		add(painelSecundario);
 		repaint();
 	}
 
 	private void criarEdital() {
-		painelSecundario = fabricaDeTelas.fabricarTelaCadastroEditais();
+		painelSecundario = (JPanel) fabricaDeTelas.fabricarTelaCadastroEditais();
 		transitarTela();
 		add(painelSecundario);
 		repaint();
 	}
 
 	private void criarProjeto() {
-		painelSecundario = fabricaDeTelas.fabricarTelaCadastroProjetos();
+		painelSecundario = (JPanel) fabricaDeTelas.fabricarTelaCadastroProjetos();
 		add(painelSecundario);
 		transitarTela();
 		repaint();

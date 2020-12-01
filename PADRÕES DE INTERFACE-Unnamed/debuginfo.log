@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-01T15:23:42</date>
-  <millis>1606843422284</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836210</millis>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:42</date>
-  <millis>1606843422284</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836210</millis>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:42</date>
-  <millis>1606843422286</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836211</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:42</date>
-  <millis>1606843422286</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836211</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -46,8 +46,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:42</date>
-  <millis>1606843422286</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836211</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -57,8 +57,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:43</date>
-  <millis>1606843423059</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836383</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -68,8 +68,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:43</date>
-  <millis>1606843423059</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836383</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -79,8 +79,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:43</date>
-  <millis>1606843423059</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836383</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -90,8 +90,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:43</date>
-  <millis>1606843423059</millis>
+  <date>2020-12-01T19:23:56</date>
+  <millis>1606857836383</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -101,1389 +101,2709 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:53</date>
-  <millis>1606843433542</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854032</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando permissoes.</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:53</date>
-  <millis>1606843433542</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854032</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando permissoes.</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:53</date>
-  <millis>1606843433542</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854032</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando permissoes.</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:53</date>
-  <millis>1606843433542</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854032</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando permissoes.</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:53</date>
-  <millis>1606843433542</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854032</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando permissoes.</message>
 </record>
 <record>
-  <date>2020-12-01T15:23:53</date>
-  <millis>1606843433542</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854032</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando permissoes.</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
+  <date>2020-12-01T19:24:14</date>
+  <millis>1606857854088</millis>
   <sequence>4</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoQuatro</class>
+  <method>adcionarEdital</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Edital adicionado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445145</millis>
-  <sequence>4</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872282</millis>
   <sequence>5</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro recuperado eh admin</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:05</date>
-  <millis>1606843445491</millis>
-  <sequence>5</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
+  <date>2020-12-01T19:24:32</date>
+  <millis>1606857872322</millis>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoTres</class>
+  <method>adcionarGrupo</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Grupo criado com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
-  <sequence>6</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:26</date>
-  <millis>1606843466523</millis>
-  <sequence>6</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890623</millis>
   <sequence>7</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando o membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
-  <sequence>7</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473710</millis>
-  <sequence>7</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890633</millis>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Preenchendo dados e participacaoo do membro que ira coordenar</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
-  <sequence>8</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
-  <sequence>8</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:33</date>
-  <millis>1606843473769</millis>
-  <sequence>8</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
+  <date>2020-12-01T19:24:50</date>
+  <millis>1606857890669</millis>
   <sequence>9</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoCinco</class>
+  <method>criarProjeto</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Projeto criado</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
-  <sequence>9</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
-  <sequence>9</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
-  <sequence>9</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:44</date>
-  <millis>1606843484657</millis>
-  <sequence>9</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
+  <date>2020-12-01T19:24:55</date>
+  <millis>1606857895632</millis>
   <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogout</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Logout feito</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489781</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
+  <date>2020-12-01T19:24:57</date>
+  <millis>1606857897406</millis>
   <sequence>11</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
-  <sequence>11</sequence>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o email eh valido</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
-  <sequence>11</sequence>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o email eh valido</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
-  <sequence>11</sequence>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o email eh valido</message>
 </record>
 <record>
-  <date>2020-12-01T15:24:49</date>
-  <millis>1606843489832</millis>
-  <sequence>11</sequence>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918855</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918857</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918858</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918870</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918873</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
-  <method>gerarRelatorio</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-01T19:25:18</date>
+  <millis>1606857918907</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
 </record>
 </log>

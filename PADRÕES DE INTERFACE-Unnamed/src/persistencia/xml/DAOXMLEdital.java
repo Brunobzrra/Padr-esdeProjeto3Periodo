@@ -17,11 +17,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.Membro;
 import model.projetos.Edital;
-import model.projetos.Grupo;
-import model.projetos.Projeto;
-import model.projetos.ProjetoComponente;
-import model.projetos.TipoProjetoComponente;
-
 public class DAOXMLEdital {
 
 	private HashMap<Long, Edital> persistidos;
@@ -47,7 +42,7 @@ public class DAOXMLEdital {
 		edital.ativar();
 		if (consultarAnd(atributos, valores).size()==0) {
 			this.persistidos = this.carregarXML();
-			id += 1;
+			id =  persistidos.size() + 1;
 			this.persistidos.put(id, edital);
 			this.salvarXML(persistidos);
 			return true;

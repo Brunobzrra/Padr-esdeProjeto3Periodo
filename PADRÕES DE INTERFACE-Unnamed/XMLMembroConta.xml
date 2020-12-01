@@ -116,6 +116,21 @@
       <conta class="model.autenticacao.ContaEmailLivre">
         <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
       </conta>
+      <administrador>true</administrador>
+      <participacoes/>
+    </model.autenticacao.Membro>
+  </entry>
+  <entry>
+    <long>5</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
+      <matricula>4564565</matricula>
+      <nome>hmhgdfmdfmi</nome>
+      <ativo>true</ativo>
+      <email>fsdsfdsf@gmail.com</email>
+      <senha>1151156156156</senha>
+      <conta class="model.autenticacao.ContaEmailLivre"/>
       <administrador>false</administrador>
       <participacoes/>
     </model.autenticacao.Membro>
