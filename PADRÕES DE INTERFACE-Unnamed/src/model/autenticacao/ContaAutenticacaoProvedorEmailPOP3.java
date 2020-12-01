@@ -10,6 +10,13 @@ import javax.mail.Store;
 
 import persistencia.xml.DAOXMLMembroConta;
 
+/**
+ * Classe que tem como funcao autenticar o email cadastrado de um membro de
+ * acordo com as configuracoes fornecidas.
+ * 
+ * @author bruno
+ */
+
 public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 
 	/**
@@ -21,7 +28,7 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 
 	private String provedorPorta = "995";
 
-	/*
+	/**
 	 * Autentica um membro via POP3, validando seu email caso existente, e
 	 * consultando ele o mesmo via BD posteriormente, caso ele passe pelos dois
 	 * testes, é retornado
@@ -42,7 +49,7 @@ public class ContaAutenticacaoProvedorEmailPOP3 extends ContaBridge {
 		return null;
 	}
 
-	/*
+	/**
 	 * Método que ira autenticar um membro via protocolo de visualizacao de email
 	 * POP3, caso autenticado retorna true, e isso significa que o email é realmente
 	 * válido, e é possivel usa=lo no sistema.

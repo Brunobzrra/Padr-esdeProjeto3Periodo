@@ -1,7 +1,12 @@
 package ponto.model.projetos;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+
+/**
+ * Classe que representa um ponto trabalhado, aglutinando as suas informacoes
+ * 
+ * @author bruno
+ */
 
 public class PontoTrabalhado {
 	private LocalDateTime dataHoraEntrada;

@@ -3,6 +3,13 @@ package view.projetos.abstract_factory;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Interface uniformizadora do produto fornecido, que eh a Tela de cadastro de
+ * projetos
+ * 
+ * @author bruno
+ */
+
 public interface InterfaceTelaCadastroProjetos {
 
 	public abstract void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,

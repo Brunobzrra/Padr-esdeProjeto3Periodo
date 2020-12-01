@@ -5,11 +5,12 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Set;
 
-/*
- * Os parametros de entrada dos métodos usados receberem tipos primitivos identificadores, para ficar fácil de manuesear, e tambem retornar tipos
- * que já implementam serialazible. 
+/**
+ * Interface de objeto remota para a aplicacao do proxy. contendo todos os
+ * metodos que serao ultilizados do objeto remoto
  * 
- * */
+ * @author bruno
+ */
 public interface ServicoRegistradorPontoCentral extends Remote {
 
 	public abstract StringBuffer horasTrabalhadasValidas(String login, String nomeDoProjeto)

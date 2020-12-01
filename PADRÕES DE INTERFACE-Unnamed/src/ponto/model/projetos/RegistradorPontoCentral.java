@@ -24,15 +24,22 @@ import model.projetos.TipoProjetoComponente;
 import model.utilitarios.ConversorDeHoraEDia;
 
 /**
- * @author bruno Este metodo e responsavel por testar cadastrar um ponto na sua
- *         hora inicial ou se o ponto de entrada ja foi batido ele bate o ponto
- *         de saida
+ * Classe que registra um ponto para um determinado membro, seguindo a logica de
+ * negocio.
+ * 
+ * @author bruno
  * 
  */
 public class RegistradorPontoCentral implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Este metodo e responsavel por testar cadastrar um ponto na sua hora inicial
+	 * ou se o ponto de entrada ja foi batido ele bate o ponto de saida
+	 * 
+	 * @param projeto, membro
+	 */
 	public PontoTrabalhado registrarPonto(Projeto projeto, Membro membro) throws Exception {
 		if (!RegistradorSessaoLogin.getInstance().isOline(membro.getEmail())) {
 			throw new Exception("Este membro não esta online!");

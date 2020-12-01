@@ -2,6 +2,13 @@ package view.projetos.abstract_factory;
 
 import java.util.Date;
 
+/**
+ * Interface para uniformizacao do produto fornecido, que eh a tela de cadastro
+ * de editais
+ * 
+ * @author bruno
+ */
+
 public interface InterfaceTelaCadastroEditais {
 
 	public void adcionarEdital(String nomeEdital, Date dataInicio, Date dataTermino, long matricula) throws Exception;

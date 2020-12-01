@@ -4,6 +4,12 @@ import java.util.Set;
 
 import persistencia.xml.DAOXMLMembroConta;
 
+/**
+ * Classe que ira autenticar um membro de acordo com os dados inseridos 
+ * por meio do banco de dados interno.
+ * 
+ * @author bruno
+ * */
 public class ContaAutenticacaoProvedorInterno extends ContaBridge {
 /*
  * O metodo autentica um membro via BD interno, consultando o seu nome e senha e retornando um membro, caso

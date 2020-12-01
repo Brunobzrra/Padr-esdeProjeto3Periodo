@@ -4,8 +4,13 @@ import view.projetos.TelaCadastroEditais;
 import view.projetos.TelaCadastroGrupos;
 import view.projetos.TelaCadastroProjetos;
 
-public class FabricaDeTelasDeCadastroSwing implements FabricaDeTelasDeCadastro{
+/**
+ * Classe concreta para a fabricacao de uma tela de cadastro ultilizando-se da API swing
+ * 
+ * @author bruno
+ * */
 
+public class FabricaDeTelasDeCadastroSwing implements FabricaDeTelasDeCadastro{
 
 	public TelaCadastroProjetos fabricarTelaCadastroProjetos() {
 		

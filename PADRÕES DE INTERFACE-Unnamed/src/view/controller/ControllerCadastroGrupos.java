@@ -5,13 +5,21 @@ import java.util.ArrayList;
 import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoTres;
 
+/**
+ * Classe controladora que fornece metodos para a classe cliente (view)
+ * responsavel pelo cadastro de grupos, usando-se das fachadas de caso de uso
+ * para isso.
+ * 
+ * @author bruno
+ */
 public class ControllerCadastroGrupos {
 
 	private CasoDeUsoTres casoDeUsoTres;
 	private CasoDeUsoExtra casoDeUsoExtra;
+
 	public ControllerCadastroGrupos() {
 		casoDeUsoTres = new CasoDeUsoTres();
-		casoDeUsoExtra= new CasoDeUsoExtra();
+		casoDeUsoExtra = new CasoDeUsoExtra();
 	}
 
 	public void adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {
@@ -28,9 +36,11 @@ public class ControllerCadastroGrupos {
 		casoDeUsoTres.atualizarrGrupo(matricula, linkCNPq, nomeNovo, linkCNPqNovo);
 
 	}
+
 	public Object[] recuperarGrupo(String linkCNPq) {
 		return casoDeUsoExtra.recuperarGrupo(linkCNPq);
 	}
+
 	public ArrayList<String> mostrarGruposDoUsuarioLogado() throws Exception {
 		return casoDeUsoExtra.recuperarGrupos();
 	}

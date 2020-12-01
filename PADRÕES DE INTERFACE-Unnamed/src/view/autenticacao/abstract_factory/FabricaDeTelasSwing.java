@@ -4,21 +4,23 @@ import view.autenticacao.TelaAutenticacao;
 import view.autenticacao.TelaConfiguracaoAdmin;
 import view.autenticacao.TelaCriarConta;
 
-public class FabricaDeTelasSwing implements FabricaDeTelas{
+/**
+ * Fabrica de telas concreta para implementacao em swing usada
+ * @author bruno
+ * */
 
-	@Override
+public class FabricaDeTelasSwing implements FabricaDeTelas{
+	
 	public TelaAutenticacao fabricarTelaAutenticacao() {
 	
 		return new TelaAutenticacao();
 	}
 
-	@Override
 	public TelaCriarConta fabricarTelaCriarConta() {
 		
 		return new TelaCriarConta();
 	}
 
-	@Override
 	public TelaConfiguracaoAdmin fabricarTelaConfiguracaoAdmin() {
 		
 		return new TelaConfiguracaoAdmin();

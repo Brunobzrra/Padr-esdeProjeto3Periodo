@@ -3,6 +3,12 @@ package ponto.model.projetos;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * Classe representadora do horario previsto para uma determinada participacao.
+ * 
+ * @author bruno
+ */
+
 public class HorarioPrevisto implements Serializable {
 	/**
 	 * 

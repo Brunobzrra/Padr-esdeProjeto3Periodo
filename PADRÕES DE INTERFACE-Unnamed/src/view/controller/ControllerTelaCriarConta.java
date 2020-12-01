@@ -1,7 +1,16 @@
 package view.controller;
 
 import model.casosDeUsofachadas.CasoDeUsoExtra;
+
 import model.casosDeUsofachadas.CasoDeUsoUm;
+
+/**
+ * Classe controladora que fornece metodos para a classe cliente (view)
+ * responsavel pela criacao de novas contas, usando-se das fachadas de caso de
+ * uso para isso.
+ * 
+ * @author bruno
+ */
 
 public class ControllerTelaCriarConta {
 
@@ -27,7 +36,7 @@ public class ControllerTelaCriarConta {
 	public Object[] recuperarMembro(long matricula) {
 		return casoDeUsoExtra.recuperarMembro(matricula);
 	}
-	
+
 	public boolean isVazia() {
 		return casoDeUsoUm.isVazia();
 	}

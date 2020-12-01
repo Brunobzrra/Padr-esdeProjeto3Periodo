@@ -7,6 +7,11 @@ import java.rmi.registry.Registry;
 
 import model.casosDeUsofachadas.CasoDeUsoOnzeETreze;
 
+/**
+ * Aplicacao servidora do objeto na rede
+ * @author bruno
+ * */
+
 public class AplicacaoServidora {
 
 	public static void main(String[] args) {

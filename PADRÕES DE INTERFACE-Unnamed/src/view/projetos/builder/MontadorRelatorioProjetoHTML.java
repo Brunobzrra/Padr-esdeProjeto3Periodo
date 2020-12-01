@@ -8,9 +8,16 @@ import java.io.IOException;
 import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoOito;
 
+/**
+ * Montador concreto de um relatorio de projeto para um arquivo em HTML
+ * 
+ * @author bruno
+ */
+
 public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMontagemRelatorio {
-	private CasoDeUsoOito fachada= new CasoDeUsoOito();
+	private CasoDeUsoOito fachada = new CasoDeUsoOito();
 	private CasoDeUsoExtra fachadaExtra = new CasoDeUsoExtra();
+
 	public MontadorRelatorioProjetoHTML(String pathname) {
 		super(pathname);
 		// TODO Auto-generated constructor stub
@@ -32,8 +39,6 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 			e.printStackTrace();
 		}
 	}
-
-	
 
 	public void abrirArquivo(String componente) {
 

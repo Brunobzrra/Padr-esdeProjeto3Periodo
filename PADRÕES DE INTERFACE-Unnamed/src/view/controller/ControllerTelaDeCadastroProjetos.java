@@ -7,12 +7,20 @@ import model.casosDeUsofachadas.CasoDeUsoCinco;
 import model.casosDeUsofachadas.CasoDeUsoExtra;
 import model.casosDeUsofachadas.CasoDeUsoSeis;
 
+/**
+ * Classe controladora que fornece metodos para a classe cliente (view)
+ * responsavel pelo cadastro de novos projetos, usando-se das fachadas de caso
+ * de uso para isso.
+ * 
+ * @author bruno
+ */
+
 public class ControllerTelaDeCadastroProjetos {
 
 	private CasoDeUsoCinco casoDeUsoCinco;
 
 	private CasoDeUsoSeis casoDeUsoSeis;
-	
+
 	private CasoDeUsoExtra casoDeUsoExtra;
 
 	public ControllerTelaDeCadastroProjetos() {
@@ -20,14 +28,13 @@ public class ControllerTelaDeCadastroProjetos {
 		casoDeUsoCinco = new CasoDeUsoCinco();
 
 		casoDeUsoSeis = new CasoDeUsoSeis();
-		
-		casoDeUsoExtra= new CasoDeUsoExtra();
+
+		casoDeUsoExtra = new CasoDeUsoExtra();
 	}
 
 	public void criarProjeto(String nome, float aporteCusteioReais, float aporteCapitalReais,
 			float gastoExecutadoCusteioReais, float gastoExecutadoCapitalReais, long matricula,
-			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos)
-			throws Exception {
+			float aporteCusteioMensalReais, short qtdMesesCusteados, short qtdMesesPagos) throws Exception {
 
 		casoDeUsoCinco.criarProjeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
 				gastoExecutadoCapitalReais, matricula, aporteCusteioMensalReais, qtdMesesCusteados, qtdMesesPagos);
@@ -55,11 +62,13 @@ public class ControllerTelaDeCadastroProjetos {
 	public void removerParticipacao(long matriculaDoCordenador, long matriculaDoMembroQueQuerRemover,
 			String nomeDoProjeto) throws Exception {
 		casoDeUsoSeis.removerParticipacao(matriculaDoCordenador, matriculaDoMembroQueQuerRemover, nomeDoProjeto);
-		
+
 	}
+
 	public ArrayList<String> mostrarProjetosDoUsuarioLogado() throws Exception {
 		return casoDeUsoExtra.recuperarProjetos();
 	}
+
 	public Object[] recuperarProjeto(String nome) {
 		return casoDeUsoExtra.recuperarPtojeto(nome);
 	}
