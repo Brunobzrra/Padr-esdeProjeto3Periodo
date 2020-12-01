@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697479</millis>
+  <date>2020-12-01T15:23:42</date>
+  <millis>1606843422284</millis>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697479</millis>
+  <date>2020-12-01T15:23:42</date>
+  <millis>1606843422284</millis>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697481</millis>
+  <date>2020-12-01T15:23:42</date>
+  <millis>1606843422286</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697481</millis>
+  <date>2020-12-01T15:23:42</date>
+  <millis>1606843422286</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -46,8 +46,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697481</millis>
+  <date>2020-12-01T15:23:42</date>
+  <millis>1606843422286</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -57,8 +57,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697689</millis>
+  <date>2020-12-01T15:23:43</date>
+  <millis>1606843423059</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -68,8 +68,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697689</millis>
+  <date>2020-12-01T15:23:43</date>
+  <millis>1606843423059</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -79,8 +79,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697689</millis>
+  <date>2020-12-01T15:23:43</date>
+  <millis>1606843423059</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -90,8 +90,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T14:04:57</date>
-  <millis>1606838697689</millis>
+  <date>2020-12-01T15:23:43</date>
+  <millis>1606843423059</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -101,69 +101,1389 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-01T14:05:07</date>
-  <millis>1606838707107</millis>
+  <date>2020-12-01T15:23:53</date>
+  <millis>1606843433542</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoze</class>
-  <method>justificarPonto</method>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
   <thread>14</thread>
-  <message>Tentando justificar ponto nao batido</message>
+  <message>Relatorio gerado</message>
 </record>
 <record>
-  <date>2020-12-01T14:05:07</date>
-  <millis>1606838707107</millis>
+  <date>2020-12-01T15:23:53</date>
+  <millis>1606843433542</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoze</class>
-  <method>justificarPonto</method>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
   <thread>14</thread>
-  <message>Tentando justificar ponto nao batido</message>
+  <message>Relatorio gerado</message>
 </record>
 <record>
-  <date>2020-12-01T14:05:07</date>
-  <millis>1606838707107</millis>
+  <date>2020-12-01T15:23:53</date>
+  <millis>1606843433542</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoze</class>
-  <method>justificarPonto</method>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
   <thread>14</thread>
-  <message>Tentando justificar ponto nao batido</message>
+  <message>Relatorio gerado</message>
 </record>
 <record>
-  <date>2020-12-01T14:05:07</date>
-  <millis>1606838707107</millis>
+  <date>2020-12-01T15:23:53</date>
+  <millis>1606843433542</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoze</class>
-  <method>justificarPonto</method>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
   <thread>14</thread>
-  <message>Tentando justificar ponto nao batido</message>
+  <message>Relatorio gerado</message>
 </record>
 <record>
-  <date>2020-12-01T14:05:07</date>
-  <millis>1606838707107</millis>
+  <date>2020-12-01T15:23:53</date>
+  <millis>1606843433542</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoze</class>
-  <method>justificarPonto</method>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
   <thread>14</thread>
-  <message>Tentando justificar ponto nao batido</message>
+  <message>Relatorio gerado</message>
 </record>
 <record>
-  <date>2020-12-01T14:05:07</date>
-  <millis>1606838707107</millis>
+  <date>2020-12-01T15:23:53</date>
+  <millis>1606843433542</millis>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoze</class>
-  <method>justificarPonto</method>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
   <thread>14</thread>
-  <message>Tentando justificar ponto nao batido</message>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445145</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:05</date>
+  <millis>1606843445491</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:26</date>
+  <millis>1606843466523</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473710</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:33</date>
+  <millis>1606843473769</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:44</date>
+  <millis>1606843484657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489781</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-01T15:24:49</date>
+  <millis>1606843489832</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOito</class>
+  <method>gerarRelatorio</method>
+  <thread>14</thread>
+  <message>Relatorio gerado</message>
 </record>
 </log>
