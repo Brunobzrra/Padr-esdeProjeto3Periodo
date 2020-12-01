@@ -1,0 +1,15 @@
+main
+model.autenticacao
+model.casosDeUsofachadas
+model.chainOfResponsibility
+model.projetos
+model.utilitarios
+persistencia.xml
+ponto.model.projetos
+view
+view.autenticacao
+view.autenticacao.abstract_factory
+view.controller
+view.projetos
+view.projetos.abstract_factory
+view.projetos.builder
