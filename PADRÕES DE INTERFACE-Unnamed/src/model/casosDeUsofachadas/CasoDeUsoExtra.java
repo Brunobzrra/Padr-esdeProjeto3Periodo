@@ -51,7 +51,7 @@ public class CasoDeUsoExtra {
 		if(componente!=null) {
 			return componente;
 		}
-		componente=daoGrupo.recuperarPorIndentificador(nome);
+		componente=daoGrupo.recuperarPorNome(nome);
 		if(componente!=null) {
 			return componente;
 		}

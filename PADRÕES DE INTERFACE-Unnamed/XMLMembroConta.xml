@@ -29,7 +29,7 @@
       <conta class="model.autenticacao.ContaEmailLivre">
         <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
       </conta>
-      <administrador>false</administrador>
+      <administrador>true</administrador>
       <participacoes>
         <model.projetos.Participacao>
           <ativo>true</ativo>
@@ -99,7 +99,7 @@
       <conta class="model.autenticacao.ContaEmailLivre">
         <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
       </conta>
-      <administrador>false</administrador>
+      <administrador>true</administrador>
       <participacoes/>
     </model.autenticacao.Membro>
   </entry>

@@ -3,10 +3,27 @@
     <long>1</long>
     <model.projetos.Grupo>
       <ativo>true</ativo>
-      <nome>grupo </nome>
-      <dataCriacao>2020-10-14 04:07:58.507 UTC</dataCriacao>
-      <linkCNPq>br</linkCNPq>
-      <itens/>
+      <tipo>GRUPO</tipo>
+      <nome>aaaaaa</nome>
+      <dataCriacao>2020-12-01 04:00:40.112 UTC</dataCriacao>
+      <linkCNPq>123456789</linkCNPq>
+      <itens>
+        <model.autenticacao.Membro>
+          <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+          <projetoPai class="model.projetos.Grupo" reference="../../.."/>
+          <tipo>MEMBRO</tipo>
+          <matricula>112</matricula>
+          <nome>joaozin</nome>
+          <ativo>true</ativo>
+          <email>bruno.bzrrasantos@gmail.com</email>
+          <senha>131313</senha>
+          <conta class="model.autenticacao.ContaEmailLivre">
+            <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+          </conta>
+          <administrador>true</administrador>
+          <participacoes/>
+        </model.autenticacao.Membro>
+      </itens>
     </model.projetos.Grupo>
   </entry>
   <entry>

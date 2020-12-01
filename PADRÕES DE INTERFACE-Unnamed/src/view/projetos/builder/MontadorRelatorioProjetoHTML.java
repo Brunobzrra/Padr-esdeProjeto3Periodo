@@ -18,7 +18,7 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 
 	public void montarRelatorio(String componente) throws Exception {
 		montarArquivo(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
-		abrirArquivo();
+		abrirArquivo(componente);
 	}
 
 	public void montarArquivo(String texto) {
@@ -35,7 +35,7 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 
 	
 
-	public void abrirArquivo() {
+	public void abrirArquivo(String componente) {
 
 		String file = System.getProperty("user.dir") + "/Relatorio.html";
 		try {

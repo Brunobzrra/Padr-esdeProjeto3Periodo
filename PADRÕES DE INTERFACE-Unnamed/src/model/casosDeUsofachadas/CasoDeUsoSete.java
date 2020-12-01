@@ -12,24 +12,24 @@ public class CasoDeUsoSete {
 	private Membro administrador;
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
 
-	public CasoDeUsoSete(long matriculaDoAdministrador) throws Exception {
-		administrador = daoMembro.isAdmimPelaMatricula(matriculaDoAdministrador);
-	}
-
-	public void habilitarAdministrador(long matricula) throws Exception {
+	public void habilitarAdministrador(long matriculaAdministrador,long novoAdmin) throws Exception {
 		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Habilitando novo administrador");
+		administrador=daoMembro.recuperarPorIndentificador(matriculaAdministrador);
 		if (administrador != null) {
 			LoggerProjeto.getInstance().getLogger().info("O solicitante eh adm");
 			;
 			if (RegistradorSessaoLogin.getInstance().isOline(administrador.getEmail())) {
 				LoggerProjeto.getInstance().getLogger().info("O solicitante esta on");
 				;
-				Membro membro = daoMembro.recuperarPorIndentificador(matricula);
+				Membro membro = daoMembro.recuperarPorIndentificador(novoAdmin);
 				try {
 					LoggerProjeto.getInstance().getLogger().info("Verificando se ele nao eh adm");
 					;
 					if (!administrador.equals(membro)) {
 						Membro membroAntigo = membro;
+						if(membroAntigo.isAdministrador()) {
+							throw new Exception("Você não pode habilitar novamente este administrador!");
+						}
 						membro.setAdministrador(true);
 						daoMembro.atualizar(membroAntigo, membro);
 						LoggerProjeto.getInstance().getLogger().warning("Adicionado aos adms com sucesso");

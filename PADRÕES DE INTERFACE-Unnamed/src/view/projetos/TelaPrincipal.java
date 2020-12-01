@@ -73,6 +73,8 @@ public class TelaPrincipal extends JFrame {
 		painelSecundario = null;
 		projeto.setVisible(true);
 		proxima1.setVisible(true);
+		cancelar.setVisible(true);
+		logout.setVisible(true);
 		if (controler.isAdmin()) {
 			grupo.setVisible(true);
 			edital.setVisible(true);

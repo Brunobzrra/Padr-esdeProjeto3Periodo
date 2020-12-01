@@ -26,7 +26,7 @@ public class DiretorDeMontagemDeRelatorio {
         montadorDeRelatorio.montarArquivo(texto);
     }
 
-    public void abrirArquivo() {
-        montadorDeRelatorio.abrirArquivo();
+    public void abrirArquivo(String componente) {
+        montadorDeRelatorio.abrirArquivo(componente);
     }
 }

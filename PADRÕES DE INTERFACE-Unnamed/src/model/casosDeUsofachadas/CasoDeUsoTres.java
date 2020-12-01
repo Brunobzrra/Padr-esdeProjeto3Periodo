@@ -24,6 +24,7 @@ public class CasoDeUsoTres {
 		LoggerProjeto.getInstance().getLogger().info("Verificando se o membro recuperado eh admin");
 		if (membro != null) {
 			Grupo grupo = new Grupo(nome, linkCNPq);
+			grupo.adicionar(membro);
 			daoGrupo.criar(grupo);
 			LoggerProjeto.getInstance().getLogger().warning("Grupo criado com sucesso");
 			return;
@@ -55,8 +56,8 @@ public class CasoDeUsoTres {
 		LoggerProjeto.getInstance().getLogger().info("Verificando se o membro eh adm");
 		if (membro != null) {
 			Grupo grupoRecuperado = daoGrupo.recuperarPorIndentificador(linkCNPq);
-			Grupo grupoAntigo = grupoRecuperado;
-			grupoRecuperado.setLinkCNPq(nomeNovo);
+			Grupo grupoAntigo = daoGrupo.recuperarPorIndentificador(linkCNPq);
+			grupoRecuperado.setLinkCNPq(linkCNPqNovo);
 			grupoRecuperado.setNome(nomeNovo);
 			daoGrupo.atualizar(grupoAntigo, grupoRecuperado);
 			logger.warning("Grupo atualizado com sucesso");

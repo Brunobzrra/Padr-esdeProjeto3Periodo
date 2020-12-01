@@ -3,6 +3,8 @@ package model.projetos;
 import java.util.ArrayList;
 import java.util.Date;
 
+import model.autenticacao.Membro;
+
 public class Edital extends ProjetoComponente {
 
 	/**
@@ -11,7 +13,7 @@ public class Edital extends ProjetoComponente {
 	private static final long serialVersionUID = 1L;
 
 	private String nome;
-
+	private Membro criador;
 	private Date dataInicio;
 
 	private Date dataTermino;
@@ -20,8 +22,9 @@ public class Edital extends ProjetoComponente {
 	 */
 	private ArrayList<ProjetoComponente> itens = new ArrayList<ProjetoComponente>();
 
-	public Edital(String nome, Date dataInicio, Date dataTermino) {
+	public Edital(String nome, Date dataInicio, Date dataTermino,Membro membro) {
 		super();
+		this.criador=membro;
 		this.nome = nome;
 		this.dataInicio = dataInicio;
 		this.dataTermino = dataTermino;
@@ -134,11 +137,10 @@ public class Edital extends ProjetoComponente {
 	}
 
 	public boolean buscarComponente(ProjetoComponente comonente) throws Exception {
-		for (ProjetoComponente projetoComponente : itens) {
-			if (projetoComponente.buscarComponente(comonente)) {
-				return true;
-			}
+		if (criador.getNome().equals(comonente.getNome())) {
+			return true;
 		}
+
 		return false;
 	}
 

@@ -11,6 +11,7 @@ public class ControllerCadastroGrupos {
 	private CasoDeUsoExtra casoDeUsoExtra;
 	public ControllerCadastroGrupos() {
 		casoDeUsoTres = new CasoDeUsoTres();
+		casoDeUsoExtra= new CasoDeUsoExtra();
 	}
 
 	public void adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {

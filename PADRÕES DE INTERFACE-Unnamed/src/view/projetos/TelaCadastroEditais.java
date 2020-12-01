@@ -4,25 +4,29 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.text.MaskFormatter;
 
 import view.controller.ControllerCadastroEditais;
 import view.projetos.abstract_factory.InterfaceTelaCadastroEditais;
 import view.projetos.builder.DiretorDeMontagemDeRelatorio;
 import view.projetos.builder.MontadorRelatorioProjetoHTML;
 import view.projetos.builder.MontadorRelatorioSwing;
-
 
 public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastroEditais {
 	/**
@@ -85,7 +89,7 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 		dataInicio.setForeground(Color.DARK_GRAY);
 		this.add(dataInicio);
 
-		JLabel dataTermino = new JLabel("Data de Inicio:");
+		JLabel dataTermino = new JLabel("Data de Termino:");
 		dataTermino.setBounds(204, 240, 300, 40);
 		dataTermino.setFont(new Font("Arial", Font.BOLD, 14));
 		dataTermino.setForeground(Color.DARK_GRAY);
@@ -161,12 +165,18 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 		nomeEditalCriar.setBounds(50, 190, 200, 25);
 		this.add(nomeEditalCriar);
 
-		dataInicio = new JTextField();
+		try {
+			MaskFormatter macaraDeData = new MaskFormatter("##/##/####");
+			dataInicio = new JFormattedTextField(macaraDeData);
+			dataTermino = new JFormattedTextField(macaraDeData);
+			novaDataInicio = new JFormattedTextField(macaraDeData);
+			novaDataTermino = new JFormattedTextField(macaraDeData);
+
+		} catch (ParseException e) {
+		}
 		dataInicio.setToolTipText("ex: 00/00/0000...");
 		dataInicio.setBounds(52, 280, 100, 25);
 		this.add(dataInicio);
-
-		dataTermino = new JTextField();
 		dataTermino.setToolTipText("ex: 00/00/0000...");
 		dataTermino.setBounds(204, 280, 100, 25);
 		this.add(dataTermino);
@@ -186,27 +196,35 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 		matriculaAtualizar.setBounds(100, 480, 200, 25);
 		this.add(matriculaAtualizar);
 
-		novaDataInicio = new JTextField();
 		novaDataInicio.setToolTipText("ex: 123456...");
 		novaDataInicio.setBounds(100, 570, 200, 25);
-		novaDataInicio.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				Object[] dados = controller.recuperarEdital(novaDataInicio.getText());
-				novoNomeEdital.setText((String) dados[0]);
-				dataTermino.setText((String) dados[1]);
-				novoNomeEdital.repaint();
-				dataTermino.repaint();
-			}
-		});
 		this.add(novaDataInicio);
 
 		antigoNomeEdital = new JTextField();
 		antigoNomeEdital.setToolTipText("ex: Fulano...");
 		antigoNomeEdital.setBounds(350, 480, 200, 25);
+		antigoNomeEdital.addKeyListener(new KeyListener() {
+
+			public void keyTyped(KeyEvent e) {
+
+			}
+
+			public void keyReleased(KeyEvent e) {
+				Object[] dados = controller.recuperarEdital(antigoNomeEdital.getText());
+				novoNomeEdital.setText((String) dados[0]);
+				novaDataInicio.setText("01/12/2020");
+				novaDataTermino.setText("01/12/2021");
+				novoNomeEdital.repaint();
+				novaDataInicio.repaint();
+				novaDataTermino.repaint();
+			}
+
+			public void keyPressed(KeyEvent e) {
+
+			}
+		});
 		this.add(antigoNomeEdital);
 
-		novaDataTermino = new JTextField();
 		novaDataTermino.setToolTipText("ex: 00/00/0000...");
 		novaDataTermino.setBounds(350, 570, 200, 25);
 		this.add(novaDataTermino);
@@ -232,6 +250,8 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 
 					adcionarEdital(nomeEditalCriar.getText(), dateInicioFormatado, dateTerminoFormatado,
 							Long.parseLong(matriculaCriar.getText()));
+					adcionarJComobox();
+					JOptionPane.showMessageDialog(null, "Edital adcionado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -248,6 +268,8 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 			public void actionPerformed(ActionEvent e) {
 				try {
 					removerEdital(nomeEditalRemover.getText(), Long.parseLong(matriculaRemover.getText()));
+					JOptionPane.showMessageDialog(null, "Edital removido!");
+					adcionarJComobox();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -268,6 +290,8 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 					Date dateTerminoFormatado = (Date) formatter.parse(novaDataTermino.getText());
 					atualizarEdital(antigoNomeEdital.getText(), novoNomeEdital.getText(), dateInicioFormatado,
 							dateTerminoFormatado, Long.parseLong(matriculaAtualizar.getText()));
+					JOptionPane.showMessageDialog(null, "Edital atualizado!");
+					adcionarJComobox();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -308,9 +332,11 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 		Object[] editais = mostrarEditaisDoUsuarioLogado();
 		String[] nome = { "---Nenhum edital cadastrado---" };
 		if (editais.length == 0 || editais == null) {
+			op.removeAllItems();
 			op.addItem(nome[0].toString());
 		} else {
 			for (Object object : editais) {
+				op.removeAllItems();
 				op.addItem(object.toString());
 			}
 		}

@@ -36,13 +36,13 @@ public class DAOXMLEdital {
 	 * um edital ao XML, que é nosso BD.
 	 * @params edital*/
 	
-	public boolean criar(String nome, Date dataInicio, Date dataTermino)throws Exception {
+	public boolean criar(String nome, Date dataInicio, Date dataTermino,Membro membro)throws Exception {
 		if(nome.length()<5 || dataInicio==null || dataTermino==null) {
 			throw new Exception("Digite todos os parametros corretamente!");
 		}
 		String[] atributos = { "nome" };
 		Object[] valores = { nome };
-		Edital edital= new Edital(nome, dataInicio, dataTermino);
+		Edital edital= new Edital(nome, dataInicio, dataTermino,membro);
 		edital.setNome(nome);
 		edital.ativar();
 		if (consultarAnd(atributos, valores).size()==0) {

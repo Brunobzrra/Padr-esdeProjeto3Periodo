@@ -16,8 +16,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.autenticacao.Membro;
 import model.projetos.Grupo;
-import model.projetos.Grupo;
-import model.projetos.ProjetoComponente;
 public class DAOXMLGrupo {
 
 	private HashMap<Long, Grupo> persistidos;
@@ -54,9 +52,20 @@ public class DAOXMLGrupo {
 	 * @return
 	 */
 	public Grupo recuperarPorIndentificador(String linkCNPq) {
+		this.persistidos=carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long long1 : chaves) {
 			if(persistidos.get(long1).getLinkCNPq().equals(linkCNPq)){
+				return persistidos.get(long1);
+			}
+		}
+		return null;
+	}
+	public Grupo recuperarPorNome(String nome) {
+		this.persistidos=carregarXML();
+		Set<Long> chaves = persistidos.keySet();
+		for (Long long1 : chaves) {
+			if(persistidos.get(long1).getNome().equals(nome)){
 				return persistidos.get(long1);
 			}
 		}
@@ -102,7 +111,7 @@ public class DAOXMLGrupo {
 		this.persistidos = this.carregarXML();
 		Set<Long> chaves = persistidos.keySet();
 		for (Long chave : chaves) {
-			if (persistidos.get(chave).equals(grupoSubstituivel)) {
+			if (persistidos.get(chave).getLinkCNPq().equals(grupoSubstituivel.getLinkCNPq())) {
 				persistidos.replace(chave, grupoSubistituto);
 			}
 		}

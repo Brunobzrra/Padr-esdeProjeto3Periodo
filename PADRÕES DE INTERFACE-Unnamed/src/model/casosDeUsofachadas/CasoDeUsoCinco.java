@@ -42,7 +42,7 @@ public class CasoDeUsoCinco {
 		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Atualizando projeto");
 		LoggerProjeto.getInstance().getLogger().info("Tentando recuperar projeto do BD");
 		Projeto projeto = daoProjetoParticipacao.recuperarPorIndentificador(nome);
-		Projeto projetoAntigo = projeto;
+		Projeto projetoAntigo = daoProjetoParticipacao.recuperarPorIndentificador(nome);
 		for (ProjetoComponente participacaoDoFor : projeto.getItens()) {
 			Participacao participacao = (Participacao) participacaoDoFor;
 			if (participacao.isCoordenador()) {

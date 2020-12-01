@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -184,14 +186,22 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 		linkCNPqAntigo = new JTextField();
 		linkCNPqAntigo.setToolTipText("ex: 123456...");
 		linkCNPqAntigo.setBounds(200, 570, 200, 25);
-		linkCNPqAntigo.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
+		linkCNPqAntigo.addKeyListener(new KeyListener() {
+			
+			public void keyTyped(KeyEvent e) {
+				
+			}
+			
+			public void keyReleased(KeyEvent e) {
 				Object[] dados = controller.recuperarGrupo(linkCNPqAntigo.getText());
 				nomeGrupoNovo.setText((String) dados[0]);
 				linkCNPqNovo.setText((String) dados[1]);
 				nomeGrupoNovo.repaint();
-				linkCNPqNovo.repaint();
+				linkCNPqNovo.repaint();				
+			}
+			
+			public void keyPressed(KeyEvent e) {
+				
 			}
 		});
 		this.add(linkCNPqAntigo);
@@ -218,6 +228,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 				try {
 					adcionarGrupo(nomeGrupoCriar.getText(), linkCNPqCriar.getText(),
 							Long.parseLong(matriculaCriar.getText()));
+					JOptionPane.showMessageDialog(null, "Grupo criado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -233,6 +244,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 			public void actionPerformed(ActionEvent e) {
 				try {
 					removerGrupo(Long.parseLong(matriculaRemover.getText()), linkCNPqRemover.getText());
+					JOptionPane.showMessageDialog(null, "Grupo removido!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -249,6 +261,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 				try {
 					atualizarGrupo(Long.parseLong(matriculaAntigo.getText()), linkCNPqAntigo.getText(),
 							nomeGrupoNovo.getText(), linkCNPqNovo.getText());
+					JOptionPane.showMessageDialog(null, "Grupo atualizado!");
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -288,8 +301,10 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 		Object[] grupos = mostrarGruposDoUsuarioLogado();
 		String[] nome = { "---Nenhum Grupo cadastrado---" };
 		if (grupos == null || grupos.length == 0) {
+			op.removeAllItems();
 			op.addItem(nome[0].toString());
 		} else {
+			op.removeAllItems();
 			for (Object object : grupos) {
 				op.addItem(object.toString());
 			}

@@ -4,14 +4,10 @@ import model.casosDeUsofachadas.CasoDeUsoSete;
 
 public class ControllerTelaConfiguracaoAdmin {
 
-	private CasoDeUsoSete casoDeUsoSete;
+	private CasoDeUsoSete casoDeUsoSete= new CasoDeUsoSete();
 
-	public ControllerTelaConfiguracaoAdmin(long matriculaDoAdministrador) throws Exception {
-		casoDeUsoSete = new CasoDeUsoSete(matriculaDoAdministrador);
-	}
-
-	public void habilitarAdministrador(long matricula) throws Exception {
-		casoDeUsoSete.habilitarAdministrador(matricula);
+	public void habilitarAdministrador(long matriculaDoAdministrador,long matricula) throws Exception {
+		casoDeUsoSete.habilitarAdministrador(matriculaDoAdministrador,matricula);
 
 	}
 }

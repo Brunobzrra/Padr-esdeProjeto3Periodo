@@ -20,7 +20,7 @@ public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfig
 	private JTextField matriculaAdministrador;
 	private JTextField matriculaMembro;
 	
-	private ControllerTelaConfiguracaoAdmin controller;
+	private ControllerTelaConfiguracaoAdmin controller= new ControllerTelaConfiguracaoAdmin();
 	
 	public TelaConfiguracaoAdmin()  {
 
@@ -45,7 +45,8 @@ public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfig
 	private void botaoModificar() {
 		try {
 			
-			controller.habilitarAdministrador(Long.parseLong(matriculaMembro.getText()));
+			habilitarAdministrador(Long.parseLong(matriculaAdministrador.getText()),Long.parseLong(matriculaMembro.getText()));
+			JOptionPane.showMessageDialog(null, "Administrador habilitado!");
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage());
@@ -120,14 +121,11 @@ public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfig
 
 	}
 
+	public void habilitarAdministrador(long matriculaAdministrador,long matricula) throws Exception {
+		controller.habilitarAdministrador(matriculaAdministrador,matricula);
+		
+	}
 	public static void main(String[] args) {
 		new TelaConfiguracaoAdmin();
-	}
-
-	@Override
-	public void habilitarAdministrador(long matricula) throws Exception {
-		controller = new ControllerTelaConfiguracaoAdmin(Long.parseLong(matriculaAdministrador.getText()));
-		controller.habilitarAdministrador(matricula);
-		
 	}
 }

@@ -22,9 +22,10 @@ public class CasoDeUsoQuatro {
 		LoggerProjeto.getInstance().getLogger().info("Verificando permissoes.");
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
 		if (membro != null) {
-			if (!daoEdital.criar(nomeEdital, dataTermino, dataTermino))
+			if (!daoEdital.criar(nomeEdital, dataTermino, dataTermino,membro)) {
 				LoggerProjeto.getInstance().getLogger().severe("Edital existente");
-			throw new Exception("Este edital ja existe!");
+				throw new Exception("Este edital ja existe!");
+			}
 		}
 		LoggerProjeto.getInstance().getLogger().warning("Edital adicionado");
 	}
@@ -34,12 +35,12 @@ public class CasoDeUsoQuatro {
 		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Atualizando um edital existente");
 		LoggerProjeto.getInstance().getLogger().info("Verificando permissoes.");
 		Membro membro = daoMembro.isAdmimPelaMatricula(matricula);
-		Edital editalAntigo = daoEdital.recuperarPorIndentificador(nomeEdital);
-		Edital editalAtualizado = editalAntigo;
-		editalAtualizado.setNome(novoNome);
-		editalAtualizado.setDataInicio(dataInicio);
-		editalAtualizado.setDataTermino(dataTermino);
 		if (membro != null) {
+			Edital editalAntigo = daoEdital.recuperarPorIndentificador(nomeEdital);
+			Edital editalAtualizado = daoEdital.recuperarPorIndentificador(nomeEdital);
+			editalAtualizado.setNome(novoNome);
+			editalAtualizado.setDataInicio(dataInicio);
+			editalAtualizado.setDataTermino(dataTermino);
 			if (!daoEdital.atualizar(editalAntigo, editalAtualizado)) {
 				LoggerProjeto.getInstance().getLogger().severe("Edital inexistente.");
 				throw new Exception("Este edital não existe!");
