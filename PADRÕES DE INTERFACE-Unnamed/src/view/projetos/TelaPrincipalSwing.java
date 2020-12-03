@@ -13,12 +13,13 @@ import javax.swing.JPanel;
 
 import view.abstract_factory.FabricaDeTelasSwing;
 import view.abstract_factory.InterfaceFabricaDeTelas;
+import view.abstract_factory.InterfaceTelaPrincipal;
 import view.controller.ControllerTelaAutenticacao;
 
 
 
 
-public class TelaPrincipal extends JFrame {
+public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal{
 	private JButton cancelar;
 	private JPanel painelSecundario;
 	private JButton voltar;
@@ -36,7 +37,7 @@ public class TelaPrincipal extends JFrame {
 	private ControllerTelaAutenticacao controler = new ControllerTelaAutenticacao();
 	private InterfaceFabricaDeTelas fabricaDeTelas = FabricaDeTelasSwing.getFabrica();
 
-	public TelaPrincipal() {
+	public TelaPrincipalSwing() {
 		setLayout(null);
 		setSize(500, 400);
 		getContentPane().setBackground(new Color(213, 213, 213));
@@ -50,7 +51,7 @@ public class TelaPrincipal extends JFrame {
 		setVisible(true);
 	}
 
-	private void botaoFazerLogout() {
+	public void botaoFazerLogout() {
 		String email = (String) JOptionPane.showInputDialog("Coloque o email");
 		try {
 			controler.fazerLogout(email);
@@ -282,7 +283,7 @@ public class TelaPrincipal extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new TelaPrincipal();
+		new TelaPrincipalSwing();
 	}
 
 }

@@ -8,6 +8,7 @@ import view.projetos.TelaCadastroEditaisSwing;
 import view.projetos.TelaCadastroGruposSwing;
 import view.projetos.TelaCadastroProjetosSwing;
 import view.projetos.TelaJustificativaPontoSwing;
+import view.projetos.TelaPrincipalSwing;
 
 /**
  * Fabrica de telas concreta para implementacao em swing usada
@@ -62,6 +63,12 @@ public class FabricaDeTelasSwing implements InterfaceFabricaDeTelas{
 	public InterfaceTelaJustificarPonto fabricarTelaJustificarPonto() {
 
 		return new TelaJustificativaPontoSwing();
+	}
+
+
+	public InterfaceTelaPrincipal fabricarTelaPrincipal() {
+		
+		return new TelaPrincipalSwing();
 	}
 
 }

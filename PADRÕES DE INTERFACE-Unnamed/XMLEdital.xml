@@ -49,4 +49,29 @@
       <itens/>
     </model.projetos.Edital>
   </entry>
+  <entry>
+    <long>3</long>
+    <model.projetos.Edital>
+      <ativo>true</ativo>
+      <tipo>EDITAL</tipo>
+      <nome>EITABIXO</nome>
+      <criador>
+        <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+        <tipo>MEMBRO</tipo>
+        <matricula>25147</matricula>
+        <nome>antonio</nome>
+        <ativo>true</ativo>
+        <email>antonio@gmail.com</email>
+        <senha>25147</senha>
+        <conta class="model.autenticacao.ContaEmailLivre">
+          <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+        </conta>
+        <administrador>true</administrador>
+        <participacoes/>
+      </criador>
+      <dataInicio>2021-05-01 03:00:00.0 UTC</dataInicio>
+      <dataTermino reference="../dataInicio"/>
+      <itens/>
+    </model.projetos.Edital>
+  </entry>
 </map>

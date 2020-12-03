@@ -18,7 +18,7 @@ import view.abstract_factory.FabricaDeTelasSwing;
 import view.abstract_factory.InterfaceFabricaDeTelas;
 import view.abstract_factory.InterfaceTelaAutenticacao;
 import view.controller.ControllerTelaAutenticacao;
-import view.projetos.TelaPrincipal;
+import view.projetos.TelaPrincipalSwing;
 
 public class TelaAutenticacaoSwing extends JFrame implements InterfaceTelaAutenticacao {
 
@@ -53,7 +53,7 @@ public class TelaAutenticacaoSwing extends JFrame implements InterfaceTelaAutent
 		try {
 			controller.fazerLogin(login.getText(), senha.getText(), (String) op.getSelectedItem());
 			this.dispose();
-			new TelaPrincipal();
+			fabrica.fabricarTelaPrincipal();
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());
@@ -174,7 +174,7 @@ public class TelaAutenticacaoSwing extends JFrame implements InterfaceTelaAutent
 		new TelaAutenticacaoSwing();
 	}
 
-	@Override
+
 	public void fazerLogin(String login, String senha, String tipoProvedor) throws Exception {
 		controller.fazerLogin(login, senha, tipoProvedor);
 

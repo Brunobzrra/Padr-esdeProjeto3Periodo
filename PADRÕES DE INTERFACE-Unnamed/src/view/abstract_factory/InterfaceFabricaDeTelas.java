@@ -29,20 +29,22 @@ public interface InterfaceFabricaDeTelas {
 	/**
 	 * Metodo para a fabricacao de uma tela de cadastro de editais
 	 */
-
 	public InterfaceTelaCadastroEditais fabricarTelaCadastroEditais();
 	
 	/**
 	 * Metodo para a fabricacao de uma tela ponto
 	 */
-
 	public InterfaceTelaPonto fabricarTelaPonto();
 	
 	/**
 	 * Metodo para a fabricacao de uma tela de justificar ponto
 	 */
-
 	public InterfaceTelaJustificarPonto fabricarTelaJustificarPonto();
+	
+	/**
+	 * Metodo para a fabricacao de uma tela principal
+	 */
+	public InterfaceTelaPrincipal fabricarTelaPrincipal();
 	
 	
 }

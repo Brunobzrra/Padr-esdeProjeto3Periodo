@@ -41,7 +41,7 @@ public class TelaJustificativaPontoSwing extends JFrame implements InterfaceTela
 		this.dispose();
 	}
 
-	private void botaoJustificarPonto() {
+	public void botaoJustificarPonto() {
 		try {
 			controller.justificarPonto(LocalDateTime.now(), justificativa.getText(),
 					Long.parseLong(matricula.getText()));
