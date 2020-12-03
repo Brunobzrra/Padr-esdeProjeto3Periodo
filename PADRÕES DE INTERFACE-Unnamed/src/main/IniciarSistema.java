@@ -1,12 +1,12 @@
 package main;
 
 import model.casosDeUsofachadas.CasoDeUsoUm;
-import view.autenticacao.abstract_factory.FabricaDeTelas;
-import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
+import view.abstract_factory.FabricaDeTelasSwing;
+import view.abstract_factory.InterfaceFabricaDeTelas;
 
 public class IniciarSistema {
 	public static void iniciar() {
-		FabricaDeTelas fabrica = new FabricaDeTelasSwing();
+		InterfaceFabricaDeTelas fabrica = FabricaDeTelasSwing.getFabrica();
 		CasoDeUsoUm casoDeUso = new CasoDeUsoUm();
 		if(casoDeUso.isVazia()) {
 			fabrica.fabricarTelaCriarConta();

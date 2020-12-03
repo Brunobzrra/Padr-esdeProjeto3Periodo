@@ -13,13 +13,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import view.autenticacao.abstract_factory.FabricaDeTelas;
-import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
-import view.autenticacao.abstract_factory.InterfaceTelaAutenticacao;
+
+import view.abstract_factory.FabricaDeTelasSwing;
+import view.abstract_factory.InterfaceFabricaDeTelas;
+import view.abstract_factory.InterfaceTelaAutenticacao;
 import view.controller.ControllerTelaAutenticacao;
 import view.projetos.TelaPrincipal;
 
-public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticacao {
+public class TelaAutenticacaoSwing extends JFrame implements InterfaceTelaAutenticacao {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
@@ -27,8 +28,9 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 	private JComboBox<Object> op;
 
 	private ControllerTelaAutenticacao controller = new ControllerTelaAutenticacao();
+	private InterfaceFabricaDeTelas fabrica = FabricaDeTelasSwing.getFabrica();
 
-	public TelaAutenticacao() {
+	public TelaAutenticacaoSwing() {
 		setLayout(null);
 		setSize(700, 250);
 		getContentPane().setBackground(Color.DARK_GRAY);
@@ -164,12 +166,12 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 	}
 	public void botaoCriarConta() {
 		this.dispose();
-		FabricaDeTelas fabrica = new FabricaDeTelasSwing();
+	
 		fabrica.fabricarTelaCriarConta();
 	}
 
 	public static void main(String[] args) {
-		new TelaAutenticacao();
+		new TelaAutenticacaoSwing();
 	}
 
 	@Override

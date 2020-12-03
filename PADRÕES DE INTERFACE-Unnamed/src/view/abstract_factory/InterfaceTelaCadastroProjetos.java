@@ -1,4 +1,4 @@
-package view.projetos.abstract_factory;
+package view.abstract_factory;
 
 import java.util.ArrayList;
 import java.util.Date;

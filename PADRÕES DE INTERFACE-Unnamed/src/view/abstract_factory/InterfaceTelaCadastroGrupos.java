@@ -1,4 +1,4 @@
-package view.projetos.abstract_factory;
+package view.abstract_factory;
 
 /**
  * Interface uniformizadora do produto fornecido, que eh a tela de cadastro de

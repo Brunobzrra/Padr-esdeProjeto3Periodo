@@ -22,11 +22,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
+import view.abstract_factory.InterfaceTelaCadastroEditais;
 import view.controller.ControllerCadastroEditais;
 import view.controller.ControllerGerarRelatorio;
-import view.projetos.abstract_factory.InterfaceTelaCadastroEditais;
 
-public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastroEditais {
+public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCadastroEditais {
 	/**
 	 * 
 	 */
@@ -49,7 +49,7 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 	private JTextField novaDataTermino;
 	private JComboBox<Object> op = new JComboBox<Object>();
 
-	public TelaCadastroEditais() {
+	public TelaCadastroEditaisSwing() {
 
 		setBounds(150, 0, 850, 700);
 		setBackground(new Color(213, 213, 213));
@@ -368,7 +368,7 @@ public class TelaCadastroEditais extends JPanel implements InterfaceTelaCadastro
 
 	public static void main(String[] args) {
 		JFrame p = new JFrame();
-		p.add(new TelaCadastroEditais());
+		p.add(new TelaCadastroEditaisSwing());
 		p.setSize(1000, 700);
 		p.setVisible(true);
 	}

@@ -11,10 +11,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import view.autenticacao.abstract_factory.InterfaceTelaConfiguracaoAdmin;
+import view.abstract_factory.InterfaceTelaConfiguracaoAdmin;
 import view.controller.ControllerTelaConfiguracaoAdmin;
 
-public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfiguracaoAdmin{
+public class TelaConfiguracaoAdminSwing extends JFrame implements InterfaceTelaConfiguracaoAdmin{
 
 	private static final long serialVersionUID = 1L;
 	private JTextField matriculaAdministrador;
@@ -22,7 +22,7 @@ public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfig
 	
 	private ControllerTelaConfiguracaoAdmin controller= new ControllerTelaConfiguracaoAdmin();
 	
-	public TelaConfiguracaoAdmin()  {
+	public TelaConfiguracaoAdminSwing()  {
 
 		setLayout(null);
 		setSize(300, 320);
@@ -126,6 +126,6 @@ public class TelaConfiguracaoAdmin extends JFrame implements InterfaceTelaConfig
 		
 	}
 	public static void main(String[] args) {
-		new TelaConfiguracaoAdmin();
+		new TelaConfiguracaoAdminSwing();
 	}
 }

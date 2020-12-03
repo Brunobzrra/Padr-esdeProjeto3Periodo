@@ -15,11 +15,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import view.abstract_factory.InterfaceTelaCadastroGrupos;
 import view.controller.ControllerCadastroGrupos;
 import view.controller.ControllerGerarRelatorio;
-import view.projetos.abstract_factory.InterfaceTelaCadastroGrupos;
 
-public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroGrupos {
+public class TelaCadastroGruposSwing extends JPanel implements InterfaceTelaCadastroGrupos {
 	private ControllerGerarRelatorio geradorRelatorio = new ControllerGerarRelatorio();
 
 	private ControllerCadastroGrupos controller = new ControllerCadastroGrupos();
@@ -34,7 +34,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 	private JTextField linkCNPqNovo;
 	private JComboBox<Object> op = new JComboBox<Object>();
 
-	public TelaCadastroGrupos() {
+	public TelaCadastroGruposSwing() {
 		setBounds(150, 0, 850, 700);
 		setBackground(new Color(213, 213, 213));
 		setLayout(null);
@@ -310,7 +310,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 
 	public static void main(String[] args) {
 		JFrame p = new JFrame();
-		p.add(new TelaCadastroGrupos());
+		p.add(new TelaCadastroGruposSwing());
 		p.setSize(1000, 700);
 		p.setVisible(true);
 	}

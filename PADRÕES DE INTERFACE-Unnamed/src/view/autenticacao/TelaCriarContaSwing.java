@@ -15,12 +15,13 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import view.autenticacao.abstract_factory.FabricaDeTelas;
-import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
-import view.autenticacao.abstract_factory.InterfaceTelaCriarConta;
+
+import view.abstract_factory.FabricaDeTelasSwing;
+import view.abstract_factory.InterfaceFabricaDeTelas;
+import view.abstract_factory.InterfaceTelaCriarConta;
 import view.controller.ControllerTelaCriarConta;
 
-public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
+public class TelaCriarContaSwing extends JFrame implements InterfaceTelaCriarConta {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField nomeCriar;
@@ -37,9 +38,9 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 
 	private ControllerTelaCriarConta controller = new ControllerTelaCriarConta();
 
-	private FabricaDeTelas fabrica = new FabricaDeTelasSwing();
+	private InterfaceFabricaDeTelas fabrica = FabricaDeTelasSwing.getFabrica();
 
-	public TelaCriarConta() {
+	public TelaCriarContaSwing() {
 		setLayout(null);
 		setSize(700, 500);
 		getContentPane().setBackground(new Color(213, 213, 213));
@@ -304,9 +305,6 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 		this.repaint();
 	}
 
-	public static void main(String[] args) {
-		new TelaCriarConta();
-	}
 
 	@Override
 	public void cadastrarMembro(String nome, long matricula, String email, String senha) throws Exception {
@@ -324,5 +322,9 @@ public class TelaCriarConta extends JFrame implements InterfaceTelaCriarConta {
 	@Override
 	public Object[] recuperarMembro(long matricula) {
 		return controller.recuperarMembro(matricula);
+	}
+
+	public static void main(String[] args) {
+		new TelaCriarContaSwing();
 	}
 }

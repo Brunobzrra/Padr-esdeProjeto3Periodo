@@ -15,9 +15,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import view.abstract_factory.InterfaceTelaPonto;
 import view.controller.ControllerRegistradorEView;
 
-public class TelaPonto extends JFrame {
+public class TelaPonto extends JFrame implements InterfaceTelaPonto{
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;

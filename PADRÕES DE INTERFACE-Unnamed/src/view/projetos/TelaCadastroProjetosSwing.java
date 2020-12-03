@@ -19,11 +19,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
+import view.abstract_factory.InterfaceTelaCadastroProjetos;
 import view.controller.ControllerGerarRelatorio;
 import view.controller.ControllerTelaDeCadastroProjetos;
-import view.projetos.abstract_factory.InterfaceTelaCadastroProjetos;
 
-public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastroProjetos {
+public class TelaCadastroProjetosSwing extends JPanel implements InterfaceTelaCadastroProjetos {
 	private ControllerGerarRelatorio geradorRelatorio = new ControllerGerarRelatorio();
 	private ControllerTelaDeCadastroProjetos controller = new ControllerTelaDeCadastroProjetos();
 
@@ -56,7 +56,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 
 	private JComboBox<Object> op = new JComboBox<Object>();
 
-	public TelaCadastroProjetos() {
+	public TelaCadastroProjetosSwing() {
 		setBounds(150, 0, 850, 700);
 		setBackground(new Color(213, 213, 213));
 		setLayout(null);
@@ -565,7 +565,7 @@ public class TelaCadastroProjetos extends JPanel implements InterfaceTelaCadastr
 
 	public static void main(String[] args) {
 		JFrame p = new JFrame();
-		p.add(new TelaCadastroProjetos());
+		p.add(new TelaCadastroProjetosSwing());
 		p.setSize(1000, 700);
 		p.setVisible(true);
 	}

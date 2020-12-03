@@ -13,16 +13,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import view.abstract_factory.InterfaceTelaJustificarPonto;
 import view.controller.ControllerTelaJustificativaPonto;
 
-public class TelaJustificativaPonto extends JFrame {
+public class TelaJustificativaPontoSwing extends JFrame implements InterfaceTelaJustificarPonto{
 	private static final long serialVersionUID = 1L;
 	private JTextField matricula;
 	private JTextArea justificativa;
 
 	private ControllerTelaJustificativaPonto controller = new ControllerTelaJustificativaPonto();
 
-	public TelaJustificativaPonto() {
+	public TelaJustificativaPontoSwing() {
 		setLayout(null);
 		setSize(300, 360);
 		getContentPane().setBackground(Color.DARK_GRAY);
@@ -117,6 +118,6 @@ public class TelaJustificativaPonto extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new TelaJustificativaPonto();
+		new TelaJustificativaPontoSwing();
 	}
 }

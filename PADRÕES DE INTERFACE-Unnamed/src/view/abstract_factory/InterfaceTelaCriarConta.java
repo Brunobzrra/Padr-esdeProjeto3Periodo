@@ -1,4 +1,4 @@
-package view.autenticacao.abstract_factory;
+package view.abstract_factory;
 
 /**
  * Interface uniformizadora para o produto fornecido, que eh a tela de criar

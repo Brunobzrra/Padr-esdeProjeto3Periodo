@@ -11,11 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import view.autenticacao.abstract_factory.FabricaDeTelas;
-import view.autenticacao.abstract_factory.FabricaDeTelasSwing;
+import view.abstract_factory.FabricaDeTelasSwing;
+import view.abstract_factory.InterfaceFabricaDeTelas;
 import view.controller.ControllerTelaAutenticacao;
-import view.projetos.abstract_factory.FabricaDeTelasDeCadastro;
-import view.projetos.abstract_factory.FabricaDeTelasDeCadastroSwing;
+
+
 
 
 public class TelaPrincipal extends JFrame {
@@ -34,8 +34,7 @@ public class TelaPrincipal extends JFrame {
 	private JButton botaoJustificar;
 	private JButton logout;
 	private ControllerTelaAutenticacao controler = new ControllerTelaAutenticacao();
-	private FabricaDeTelasDeCadastro fabricaDeTelas = new FabricaDeTelasDeCadastroSwing();
-	private FabricaDeTelas fabricaDaViewAutenticacao = new FabricaDeTelasSwing();
+	private InterfaceFabricaDeTelas fabricaDeTelas = FabricaDeTelasSwing.getFabrica();
 
 	public TelaPrincipal() {
 		setLayout(null);
@@ -57,7 +56,7 @@ public class TelaPrincipal extends JFrame {
 			controler.fazerLogout(email);
 			this.dispose();
 	
-			fabricaDaViewAutenticacao.fabricarTelaAutenticacao();
+			fabricaDeTelas.fabricarTelaAutenticacao();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, "Email errado!");
 			e.printStackTrace();
@@ -260,7 +259,7 @@ public class TelaPrincipal extends JFrame {
 			botaoConfigAdmin.addActionListener(new ActionListener() {
 
 				public void actionPerformed(ActionEvent e) {
-					fabricaDaViewAutenticacao.fabricarTelaConfiguracaoAdmin();
+					fabricaDeTelas.fabricarTelaConfiguracaoAdmin();
 				}
 			});
 			botaoConfigAdmin.setBounds(180, 100, 130, 70);
@@ -272,7 +271,8 @@ public class TelaPrincipal extends JFrame {
 		botaoJustificar.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				new TelaJustificativaPonto();
+				fabricaDeTelas.fabricarTelaJustificarPonto();
+				
 				
 			}
 		});
