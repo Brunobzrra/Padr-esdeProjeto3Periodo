@@ -202,15 +202,5 @@ public class Projeto extends ProjetoComponente implements Serializable {
 		}
 		return false;
 	}
-	public String toStringHTML() {
-		String texto = String.format(
-				"<span>Projeto %s </span><br>\n<span>Aporte Custeio Reais %s </span><br>\n"
-				+ "<span>Aporte Capital Reais %s </span><br>\n<span>Gasto Executado Custeio Reais %s </span><br>"
-				+ "\n<span>gasto Executado Capital Reais %s </span><br>\n<span>Membros </span><br>\n",
-				nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais, gastoExecutadoCapitalReais);
-		for (ProjetoComponente projetoComponente : itens) {
-			texto += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-		}
-		return texto;
-	}
+
 }

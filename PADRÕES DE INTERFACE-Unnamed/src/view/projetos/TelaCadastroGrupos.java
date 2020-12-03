@@ -227,6 +227,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 					adcionarGrupo(nomeGrupoCriar.getText(), linkCNPqCriar.getText(),
 							Long.parseLong(matriculaCriar.getText()));
 					JOptionPane.showMessageDialog(null, "Grupo criado!");
+					adcionarJComobox();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -243,6 +244,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 				try {
 					removerGrupo(Long.parseLong(matriculaRemover.getText()), linkCNPqRemover.getText());
 					JOptionPane.showMessageDialog(null, "Grupo removido!");
+					adcionarJComobox();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -260,6 +262,7 @@ public class TelaCadastroGrupos extends JPanel implements InterfaceTelaCadastroG
 					atualizarGrupo(Long.parseLong(matriculaAntigo.getText()), linkCNPqAntigo.getText(),
 							nomeGrupoNovo.getText(), linkCNPqNovo.getText());
 					JOptionPane.showMessageDialog(null, "Grupo atualizado!");
+					adcionarJComobox();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}

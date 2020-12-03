@@ -97,7 +97,4 @@ public abstract class ProjetoComponente implements Serializable {
 	public void setTipo(TipoProjetoComponente tipo) {
 		this.tipo = tipo;
 	}
-	public String toStringHTML() {
-		return null;
-	}
 }

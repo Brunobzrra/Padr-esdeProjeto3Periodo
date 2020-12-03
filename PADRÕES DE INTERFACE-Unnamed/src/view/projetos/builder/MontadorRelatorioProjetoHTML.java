@@ -24,7 +24,7 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 	}
 
 	public void montarRelatorio(String componente) throws Exception {
-		montarArquivo(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
+//		montarArquivo(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
 		abrirArquivo(componente);
 	}
 
@@ -49,5 +49,17 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 			System.out.println(e.getMessage());
 		}
 
+	}
+
+	@Override
+	public void iniciarMontagem() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void finalizarMontagem() {
+		// TODO Auto-generated method stub
+		
 	}
 }

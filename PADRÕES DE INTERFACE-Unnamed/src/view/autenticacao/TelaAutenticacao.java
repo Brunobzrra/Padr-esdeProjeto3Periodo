@@ -68,12 +68,11 @@ public class TelaAutenticacao extends JFrame implements InterfaceTelaAutenticaca
 	}
 
 	private void adcionarCombo() {
-		Object[] projetos = { "INTERNAMENTE", "ISMTP" };
+		Object[] projetos = { "INTERNAMENTE", "POP3" };
 		op = new JComboBox<Object>(projetos);
 		op.setBounds(480, 86, 190, 25);
 		op.setBackground(new Color(25, 25, 25));
 		op.setForeground(Color.WHITE);
-		;
 		add(op);
 	}
 

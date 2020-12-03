@@ -7,7 +7,6 @@ import java.awt.LayoutManager;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URL;
 
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
@@ -23,13 +22,12 @@ import model.casosDeUsofachadas.CasoDeUsoOito;
  * 
  * @author bruno
  */
-
 public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontagemRelatorio {
 	private CasoDeUsoOito fachada = new CasoDeUsoOito();
 	private CasoDeUsoExtra fachadaExtra = new CasoDeUsoExtra();
 
 	public void montarRelatorio(String componente) throws Exception {
-		montarArquivo(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
+//		montarArquivo(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
 		abrirArquivo(componente);
 	}
 
@@ -60,7 +58,7 @@ public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontage
 		jEditorPane.setContentType("text/html");
 
 		try {
-			jEditorPane.setText(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
+//			jEditorPane.setText(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
 		} catch (Exception e) {
 			jEditorPane.setText("<html>Page not found.</html>");
 		}
@@ -71,6 +69,18 @@ public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontage
 		this.add(jScrollPane);
 		tela.getContentPane().add(this, BorderLayout.CENTER);
 		tela.setVisible(true);
+	}
+
+	@Override
+	public void iniciarMontagem() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void finalizarMontagem() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

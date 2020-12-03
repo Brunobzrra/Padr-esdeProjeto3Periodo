@@ -162,21 +162,4 @@ public class Grupo extends ProjetoComponente {
 		}
 		return false;
 	}
-	public String toStringHTML() {
-		String texto = String.format(
-				"<span>Grupo %s </span><br>\n<span>Data de Criação %s </span><br>\n<span>linkCNPq %s </span><br>\n<span>Membros </span><br>\n",
-				nome, dataCriacao.toString(), linkCNPq);
-		String membros = "";
-		String projetos = "";
-		for (ProjetoComponente projetoComponente : itens) {
-			if (projetoComponente.getTipo() == TipoProjetoComponente.MEMBRO) {
-				membros += String.format("<span>%s </span><br>\n",projetoComponente.getNome());
-			}else {
-				projetos += String.format("<span>%s </span><br>\n",projetoComponente.getNome());
-			}
-		}
-		texto+=membros+String.format(
-				"<span>Projetos </span><br>\n"+projetos);
-		return texto;
-	}
 }

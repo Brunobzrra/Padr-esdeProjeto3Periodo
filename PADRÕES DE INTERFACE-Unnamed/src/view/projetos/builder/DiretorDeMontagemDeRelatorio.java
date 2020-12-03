@@ -13,10 +13,6 @@ public class DiretorDeMontagemDeRelatorio {
 		this.montadorDeRelatorio = montadorDeRelatorio;
 	}
 
-	public InterfaceDeMontagemRelatorio getMontadorDeRelatorio() {
-		return montadorDeRelatorio;
-	}
-
 	public void setMontadorDeRelatorio(InterfaceDeMontagemRelatorio montadorDeRelatorio) {
 		this.montadorDeRelatorio = montadorDeRelatorio;
 	}
@@ -37,10 +33,10 @@ public class DiretorDeMontagemDeRelatorio {
 	 */
 
 	public void montarArquivo(String texto) {
-		montadorDeRelatorio.montarArquivo(texto);
+		//montadorDeRelatorio.montarArquivo(texto);
 	}
 
 	public void abrirArquivo(String componente) {
-		montadorDeRelatorio.abrirArquivo(componente);
+		//montadorDeRelatorio.abrirArquivo(componente);
 	}
 }

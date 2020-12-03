@@ -2,7 +2,6 @@ package model.casosDeUsofachadas;
 
 import java.util.Date;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import model.autenticacao.Membro;
 import model.projetos.Participacao;

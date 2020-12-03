@@ -167,21 +167,4 @@ public class Edital extends ProjetoComponente {
 		}
 		return aux;
 	}
-
-	public String toStringHTML() {
-		String texto = String.format(
-				"<span>Edital %s </span><br>\n<span>Data de Inicio %s </span><br>\n<span>Data Termino %s </span><br>\n<span>Grupos </span><br>\n",
-				nome, dataInicio.toString(), dataTermino.toString());
-		String grupos = "";
-		String projetos = "";
-		for (ProjetoComponente projetoComponente : itens) {
-			if (projetoComponente.getTipo() == TipoProjetoComponente.GRUPO) {
-				grupos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			} else {
-				projetos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			}
-		}
-		texto += grupos + String.format("<span>Projetos </span><br>\n" + projetos);
-		return texto;
-	}
 }

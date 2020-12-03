@@ -8,7 +8,6 @@ import model.autenticacao.ContaBridge;
 
 import model.autenticacao.Membro;
 import model.autenticacao.RegistradorSessaoLogin;
-import model.autenticacao.TipoProvedorAutenticacao;
 import model.utilitarios.LoggerProjeto;
 import persistencia.xml.DAOXMLMembroConta;
 
