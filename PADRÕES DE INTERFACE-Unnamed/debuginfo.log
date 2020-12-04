@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862701</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439902</millis>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862701</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439902</millis>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862702</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439903</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862702</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439903</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -46,8 +46,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862702</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439903</millis>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -57,8 +57,8 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862737</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439931</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -68,8 +68,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862737</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439931</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -79,8 +79,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862737</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439931</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -90,8 +90,8 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-04T17:07:42</date>
-  <millis>1607108862737</millis>
+  <date>2020-12-04T18:30:39</date>
+  <millis>1607117439931</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
@@ -99,70 +99,4 @@
   <method>fazerLogin</method>
   <thread>14</thread>
   <message>Conta autenticada com sucesso</message>
-</record>
-<record>
-  <date>2020-12-04T17:07:47</date>
-  <millis>1607108867259</millis>
-  <sequence>3</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-04T17:07:47</date>
-  <millis>1607108867259</millis>
-  <sequence>3</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-04T17:07:47</date>
-  <millis>1607108867259</millis>
-  <sequence>3</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-04T17:07:47</date>
-  <millis>1607108867259</millis>
-  <sequence>3</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-04T17:07:47</date>
-  <millis>1607108867259</millis>
-  <sequence>3</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
-</record>
-<record>
-  <date>2020-12-04T17:07:47</date>
-  <millis>1607108867259</millis>
-  <sequence>3</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>14</thread>
-  <message>Relatorio gerado</message>
 </record>

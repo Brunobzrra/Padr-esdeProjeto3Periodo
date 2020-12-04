@@ -1,24 +1,19 @@
 package view.projetos.builder;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.LayoutManager;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.awt.Color;
+import java.awt.Rectangle;
 
-import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
-import model.casosDeUsofachadas.CasoDeUsoExtra;
-import model.casosDeUsofachadas.CasoDeUsoOito;
 import model.projetos.Edital;
 import model.projetos.Grupo;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
+import model.projetos.TipoProjetoComponente;
 
 /**
  * Montador concreto para um relatorio de projeto usando da API Swing, sera
@@ -28,35 +23,81 @@ import model.projetos.ProjetoComponente;
  */
 public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontagemRelatorio {
 
+	private JFrame tela;
+
+	private JScrollPane painelDoRelatorio;
+
+	private JTextArea textArea;
+
+	private String texto;
+
 	@Override
 	public void iniciarMontagem() {
-		// TODO Auto-generated method stub
+
+		tela = new JFrame();
+		tela.setBackground(Color.BLACK);
+		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		tela.setBounds(150, 0, 850, 700);
+		tela.setVisible(true);
 		
+
+		painelDoRelatorio = new JScrollPane();
+		painelDoRelatorio.setBounds(new Rectangle());
+		tela.add(painelDoRelatorio);
+
 	}
 
 	@Override
 	public void montarCorpoRelatorio(Projeto projeto) {
-		// TODO Auto-generated method stub
-		
+		reiniciar();
+		if (projeto.getItens().size() == 0)
+			texto += "nenhum edital cadastrado";
+		else {
+			for (ProjetoComponente projetoComponente : projeto.getItens()) {
+				if(projetoComponente.getTipo() == TipoProjetoComponente.PROJETO) {
+				texto += "Nome: " + projetoComponente.getNome() + "\nAporteCusteiReais: "
+						+ ((Projeto) projetoComponente).getAporteCusteioReais() + "\nAporteCapitalReais: "
+						+ ((Projeto) projetoComponente).getAporteCapitalReais()+"\nAporteCusteioReais: "
+						+ ((Projeto) projetoComponente).getAporteCusteioReais()+"\nAporteCapitalReais: "
+						+ ((Projeto) projetoComponente).getAporteCapitalReais();
+				}
+			}
+		}
+		System.out.println(texto + "\nCUUUUUUUU");
+		textArea = new JTextArea(texto);
+		textArea.setEditable(false);
+		textArea.setLineWrap(true);
+		painelDoRelatorio.add(textArea);
+//		textArea.setText(texto);
+		textArea.repaint();
+		painelDoRelatorio.repaint();
+		tela.repaint();
+
 	}
 
 	@Override
 	public void montarCorpoRelatorio(Edital edital) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void montarCorpoRelatorio(Grupo grupo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void finalizarMontagem() {
 		// TODO Auto-generated method stub
-		
+
 	}
+
+	public void reiniciar() {
+		texto = "";
+	}
+
+}
 //	private CasoDeUsoOito fachada = new CasoDeUsoOito();
 //	private CasoDeUsoExtra fachadaExtra = new CasoDeUsoExtra();
 //
@@ -124,4 +165,3 @@ public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontage
 //		
 //	}
 //
-}
