@@ -1,11 +1,11 @@
 package view.projetos.builder;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Rectangle;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
+
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
@@ -14,6 +14,7 @@ import model.projetos.Grupo;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
+import model.utilitarios.LoggerProjeto;
 
 /**
  * Montador concreto para um relatorio de projeto usando da API Swing, sera
@@ -21,79 +22,119 @@ import model.projetos.TipoProjetoComponente;
  * 
  * @author bruno
  */
-public class MontadorRelatorioSwing extends JPanel implements InterfaceDeMontagemRelatorio {
+public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontagemRelatorio {
 
-	private JFrame tela;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private JScrollPane painelDoRelatorio;
 
 	private JTextArea textArea;
 
-	private String texto;
+	private String texto = "Montando...";
 
 	@Override
 	public void iniciarMontagem() {
-
-		tela = new JFrame();
-		tela.setBackground(Color.BLACK);
-		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		tela.setBounds(150, 0, 850, 700);
-		tela.setVisible(true);
-		
-
-		painelDoRelatorio = new JScrollPane();
+		setBackground(Color.BLACK);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setBounds(150, 0, 400, 250);
+		textArea = new JTextArea();
+		textArea.setEditable(false);
+		textArea.setLineWrap(true);
+		setLocationRelativeTo(null);
+		Font f = new Font("Arial", 1, 15);
+		textArea.setFont(f);
+		painelDoRelatorio = new JScrollPane(textArea);
 		painelDoRelatorio.setBounds(new Rectangle());
-		tela.add(painelDoRelatorio);
+		add(painelDoRelatorio);
 
 	}
 
 	@Override
 	public void montarCorpoRelatorio(Projeto projeto) {
 		reiniciar();
-		if (projeto.getItens().size() == 0)
-			texto += "nenhum edital cadastrado";
-		else {
+		texto += "Projeto: " + projeto.getNome() + "\n" + "Aporte Custeio Reais: " + projeto.getAporteCusteioReais()
+				+ "\n" + "Aporte Capital Reais: " + projeto.getAporteCapitalReais() + "\n"
+				+ "Gasto Executado Custeio Reais: " + projeto.getAporteCusteioReais() + "\n"
+				+ "gasto Executado Capital Reais: " + projeto.getAporteCapitalReais() + "\n" + "Membros: ";
+
+		if (projeto.getItens().size() == 1) {
+			texto += "Não tem membro cadastrado!" + "\n";
+		} else {
 			for (ProjetoComponente projetoComponente : projeto.getItens()) {
-				if(projetoComponente.getTipo() == TipoProjetoComponente.PROJETO) {
-				texto += "Nome: " + projetoComponente.getNome() + "\nAporteCusteiReais: "
-						+ ((Projeto) projetoComponente).getAporteCusteioReais() + "\nAporteCapitalReais: "
-						+ ((Projeto) projetoComponente).getAporteCapitalReais()+"\nAporteCusteioReais: "
-						+ ((Projeto) projetoComponente).getAporteCusteioReais()+"\nAporteCapitalReais: "
-						+ ((Projeto) projetoComponente).getAporteCapitalReais();
-				}
+				texto += projetoComponente.getNome() + "\n";
 			}
 		}
-		System.out.println(texto + "\nCUUUUUUUU");
-		textArea = new JTextArea(texto);
-		textArea.setEditable(false);
-		textArea.setLineWrap(true);
-		painelDoRelatorio.add(textArea);
-//		textArea.setText(texto);
-		textArea.repaint();
-		painelDoRelatorio.repaint();
-		tela.repaint();
-
 	}
 
-	@Override
 	public void montarCorpoRelatorio(Edital edital) {
-		// TODO Auto-generated method stub
+		reiniciar();
+		texto += "Edital: " + edital.getNome() + "\n" + "Data Inicio: " + edital.getDataInicio().toString() + "\n"
+				+ "Data Termino: " + edital.getDataTermino().toString() + "\n" + "Grupos: " + "\n";
 
+		String grupos = "";
+		String projetos = "";
+
+		for (ProjetoComponente projetoComponente : edital.getItens()) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.GRUPO) {
+				grupos += projetoComponente.getNome() + "\n";
+			} else {
+				projetos += projetoComponente.getNome() + "\n";
+			}
+		}
+
+		if (grupos.length() == 1) {
+			texto += grupos;
+		} else {
+			texto += "Não tem membro cadastrado!" + "\n";
+		}
+		if (projetos.length() == 1) {
+			texto += "Projetos: " + "\n" + projetos;
+		} else {
+			texto += "Projetos: " + "\n" + "Não tem projeto cadastrado!";
+		}
 	}
 
-	@Override
 	public void montarCorpoRelatorio(Grupo grupo) {
-		// TODO Auto-generated method stub
 
+		texto += "Grupo: " + grupo.getNome() + "\n" + "Data de Criação: " + grupo.getDataCriacao().toString() + "\n"
+				+ "linkCNPq: " + grupo.getLinkCNPq() + "\n" + "Membros:  " + "\n";
+		String membros = "";
+		String projetos = "";
+		for (ProjetoComponente projetoComponente : grupo.getItens()) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.MEMBRO) {
+				membros += projetoComponente.getNome() + "\n";
+			} else {
+				projetos += projetoComponente.getNome() + "\n";
+			}
+		}
+		if (membros.length() == 1) {
+			texto += membros;
+		} else {
+			texto += "Não tem membro cadastrado!" + "\n";
+		}
+		if (projetos.length() == 1) {
+			texto += projetos + "\n";
+		} else {
+			texto += "Não tem projeto cadastrado!" + "\n";
+		}
 	}
 
-	@Override
 	public void finalizarMontagem() {
-		// TODO Auto-generated method stub
+		texto += "Fim";
+		textArea.setText(texto);
+		setVisible(true);
 
+		try {
+			LoggerProjeto.getInstance().getLogger().warning("Relatorio gerado");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	public void reiniciar() {
+	private void reiniciar() {
 		texto = "";
 	}
 

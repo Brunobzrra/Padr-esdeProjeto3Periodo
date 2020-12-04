@@ -1,32 +1,31 @@
-package view.projetos.abstract_factory;
+package view.abstract_factory;
 
-import view.projetos.TelaCadastroEditais;
-import view.projetos.TelaCadastroGrupos;
-import view.projetos.TelaCadastroProjetos;
+import view.projetos.TelaCadastroEditaisSwing;
+import view.projetos.TelaCadastroGruposSwing;
+import view.projetos.TelaCadastroProjetosSwing;
 
 /**
- * Classe concreta para a fabricacao de uma tela de cadastro ultilizando-se da API swing
+ * Classe concreta para a fabricacao de uma tela de cadastro ultilizando-se da
+ * API swing
  * 
  * @author bruno
- * */
+ */
 
-public class FabricaDeTelasDeCadastroSwing implements FabricaDeTelasDeCadastro{
+public class FabricaDeTelasDeCadastroSwing implements FabricaDeTelasDeCadastro {
 
 	public InterfaceTelaCadastroProjetos fabricarTelaCadastroProjetos() {
-		
-		return new TelaCadastroProjetos();
+
+		return new TelaCadastroProjetosSwing();
 	}
 
-	
 	public InterfaceTelaCadastroGrupos fabricarTelaCadastroGrupos() {
-		
-		return new TelaCadastroGrupos();
+
+		return new TelaCadastroGruposSwing();
 	}
 
-	
 	public InterfaceTelaCadastroEditais fabricarTelaCadastroEditais() {
-		
-		return new TelaCadastroEditais();
+
+		return new TelaCadastroEditaisSwing();
 	}
 
 }

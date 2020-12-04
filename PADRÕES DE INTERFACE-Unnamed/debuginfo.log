@@ -2,101 +2,183 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439902</millis>
+  <date>2020-12-04T23:21:13.642883100Z</date>
+  <millis>1607124073642</millis>
+  <nanos>883100</nanos>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439902</millis>
+  <date>2020-12-04T23:21:13.642883100Z</date>
+  <millis>1607124073642</millis>
+  <nanos>883100</nanos>
   <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439903</millis>
+  <date>2020-12-04T23:21:13.657843400Z</date>
+  <millis>1607124073657</millis>
+  <nanos>843400</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439903</millis>
+  <date>2020-12-04T23:21:13.657843400Z</date>
+  <millis>1607124073657</millis>
+  <nanos>843400</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439903</millis>
+  <date>2020-12-04T23:21:13.657843400Z</date>
+  <millis>1607124073657</millis>
+  <nanos>843400</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439931</millis>
+  <date>2020-12-04T23:21:13.719412300Z</date>
+  <millis>1607124073719</millis>
+  <nanos>412300</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439931</millis>
+  <date>2020-12-04T23:21:13.719412300Z</date>
+  <millis>1607124073719</millis>
+  <nanos>412300</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439931</millis>
+  <date>2020-12-04T23:21:13.719412300Z</date>
+  <millis>1607124073719</millis>
+  <nanos>412300</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-04T18:30:39</date>
-  <millis>1607117439931</millis>
+  <date>2020-12-04T23:21:13.719412300Z</date>
+  <millis>1607124073719</millis>
+  <nanos>412300</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
   <method>fazerLogin</method>
-  <thread>14</thread>
+  <thread>16</thread>
   <message>Conta autenticada com sucesso</message>
 </record>
+<record>
+  <date>2020-12-04T23:21:22.995474900Z</date>
+  <millis>1607124082995</millis>
+  <nanos>474900</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>view.projetos.builder.MontadorRelatorioSwing</class>
+  <method>finalizarMontagem</method>
+  <thread>16</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-04T23:21:22.995474900Z</date>
+  <millis>1607124082995</millis>
+  <nanos>474900</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>view.projetos.builder.MontadorRelatorioSwing</class>
+  <method>finalizarMontagem</method>
+  <thread>16</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-04T23:21:22.995474900Z</date>
+  <millis>1607124082995</millis>
+  <nanos>474900</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>view.projetos.builder.MontadorRelatorioSwing</class>
+  <method>finalizarMontagem</method>
+  <thread>16</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-04T23:21:22.995474900Z</date>
+  <millis>1607124082995</millis>
+  <nanos>474900</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>view.projetos.builder.MontadorRelatorioSwing</class>
+  <method>finalizarMontagem</method>
+  <thread>16</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-04T23:21:22.995474900Z</date>
+  <millis>1607124082995</millis>
+  <nanos>474900</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>view.projetos.builder.MontadorRelatorioSwing</class>
+  <method>finalizarMontagem</method>
+  <thread>16</thread>
+  <message>Relatorio gerado</message>
+</record>
+<record>
+  <date>2020-12-04T23:21:22.995474900Z</date>
+  <millis>1607124082995</millis>
+  <nanos>474900</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>view.projetos.builder.MontadorRelatorioSwing</class>
+  <method>finalizarMontagem</method>
+  <thread>16</thread>
+  <message>Relatorio gerado</message>
+</record>
+</log>
