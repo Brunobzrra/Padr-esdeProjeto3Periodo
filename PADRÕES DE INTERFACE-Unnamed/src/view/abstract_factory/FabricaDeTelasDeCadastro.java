@@ -1,4 +1,4 @@
-package view.projetos.abstract_factory;
+package view.abstract_factory;
 
 /**
  * Interface de fabrica abstrata e uniformizadora para as fabricas concretas

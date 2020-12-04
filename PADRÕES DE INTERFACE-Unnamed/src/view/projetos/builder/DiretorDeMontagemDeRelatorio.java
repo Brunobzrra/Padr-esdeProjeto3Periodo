@@ -1,5 +1,11 @@
 package view.projetos.builder;
 
+import model.projetos.Edital;
+import model.projetos.Grupo;
+import model.projetos.Projeto;
+import model.projetos.ProjetoComponente;
+import model.projetos.TipoProjetoComponente;
+
 /**
  * Diretor de montagem dos relatorios que fazem uso da interface de Montagem
  * 
@@ -22,8 +28,16 @@ public class DiretorDeMontagemDeRelatorio {
 	 * 
 	 * @param componente
 	 */
-	public void montarRelatorioCompleto(String componente) throws Exception {
-		montadorDeRelatorio.montarRelatorio(componente);
+	public void montarRelatorioCompleto(ProjetoComponente componente) throws Exception {
+		montadorDeRelatorio.iniciarMontagem();
+		if(componente.getTipo()==TipoProjetoComponente.PROJETO) {
+			montadorDeRelatorio.montarCorpoRelatorio((Projeto) componente);
+		}else if(componente.getTipo()==TipoProjetoComponente.GRUPO) {
+			montadorDeRelatorio.montarCorpoRelatorio((Grupo) componente);
+		}else {
+			montadorDeRelatorio.montarCorpoRelatorio((Edital) componente);
+		}
+		montadorDeRelatorio.finalizarMontagem();
 	}
 
 	/**
@@ -31,12 +45,23 @@ public class DiretorDeMontagemDeRelatorio {
 	 * 
 	 * @param texto
 	 */
-
-	public void montarArquivo(String texto) {
-		//montadorDeRelatorio.montarArquivo(texto);
+	public void iniciarMontagem() {
+		
 	}
 
-	public void abrirArquivo(String componente) {
-		//montadorDeRelatorio.abrirArquivo(componente);
+	public void montarCorpoRelatorio(Projeto projeto) {
+		
+	}
+
+	public void montarCorpoRelatorio(Edital edital) {
+		
+	}
+
+	public void montarCorpoRelatorio(Grupo grupo) {
+		
+	}
+
+	public void finalizarMontagem() {
+		
 	}
 }

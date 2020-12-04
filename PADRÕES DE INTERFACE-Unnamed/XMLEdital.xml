@@ -74,4 +74,54 @@
       <itens/>
     </model.projetos.Edital>
   </entry>
+  <entry>
+    <long>4</long>
+    <model.projetos.Edital>
+      <ativo>true</ativo>
+      <tipo>EDITAL</tipo>
+      <nome>Legal</nome>
+      <criador>
+        <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+        <tipo>MEMBRO</tipo>
+        <matricula>12345</matricula>
+        <nome>Antonio</nome>
+        <ativo>true</ativo>
+        <email>antonio@gmail.com</email>
+        <senha>12345</senha>
+        <conta class="model.autenticacao.ContaEmailLivre">
+          <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+        </conta>
+        <administrador>true</administrador>
+        <participacoes/>
+      </criador>
+      <dataInicio>2012-12-12 02:00:00.0 UTC</dataInicio>
+      <dataTermino reference="../dataInicio"/>
+      <itens/>
+    </model.projetos.Edital>
+  </entry>
+  <entry>
+    <long>5</long>
+    <model.projetos.Edital>
+      <ativo>true</ativo>
+      <tipo>EDITAL</tipo>
+      <nome>Edital legalllllllllllllllllldois</nome>
+      <criador>
+        <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+        <tipo>MEMBRO</tipo>
+        <matricula>12345</matricula>
+        <nome>Antonio</nome>
+        <ativo>true</ativo>
+        <email>antonio@gmail.com</email>
+        <senha>12345</senha>
+        <conta class="model.autenticacao.ContaEmailLivre">
+          <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+        </conta>
+        <administrador>true</administrador>
+        <participacoes/>
+      </criador>
+      <dataInicio>1251-12-12 03:00:00.0 UTC</dataInicio>
+      <dataTermino reference="../dataInicio"/>
+      <itens/>
+    </model.projetos.Edital>
+  </entry>
 </map>

@@ -1,6 +1,6 @@
 package view.abstract_factory;
 
-import view.TelaPonto;
+import view.TelaPontoSwing;
 import view.autenticacao.TelaAutenticacaoSwing;
 import view.autenticacao.TelaConfiguracaoAdminSwing;
 import view.autenticacao.TelaCriarContaSwing;
@@ -56,7 +56,7 @@ public class FabricaDeTelasSwing implements InterfaceFabricaDeTelas{
 	}
 	public InterfaceTelaPonto fabricarTelaPonto() {
 		
-		return new TelaPonto();
+		return new TelaPontoSwing();
 	}
 
 	

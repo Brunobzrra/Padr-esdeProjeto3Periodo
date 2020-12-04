@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 import view.abstract_factory.InterfaceTelaPonto;
 import view.controller.ControllerRegistradorEView;
 
-public class TelaPonto extends JFrame implements InterfaceTelaPonto{
+public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
@@ -26,7 +26,7 @@ public class TelaPonto extends JFrame implements InterfaceTelaPonto{
 	private ControllerRegistradorEView controller;
 	private JComboBox<Object> op;
 
-	public TelaPonto() {
+	public TelaPontoSwing() {
 		try {
 			controller = new ControllerRegistradorEView();
 		} catch (Exception e) {
@@ -174,9 +174,5 @@ public class TelaPonto extends JFrame implements InterfaceTelaPonto{
 		detalhes.setBounds(580, 135, 90, 30);
 		this.add(detalhes);
 
-	}
-
-	public static void main(String[] args) {
-		new TelaPonto();
 	}
 }

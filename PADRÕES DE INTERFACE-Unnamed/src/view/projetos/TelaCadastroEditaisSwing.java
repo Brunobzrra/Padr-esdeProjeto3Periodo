@@ -327,8 +327,8 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 			op.removeAllItems();
 			op.addItem(nome[0].toString());
 		} else {
+			op.removeAllItems();
 			for (Object object : editais) {
-				op.removeAllItems();
 				op.addItem(object.toString());
 			}
 		}
@@ -365,12 +365,4 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 	public Object[] recuperarEdital(String nome) {
 		return controller.recuperarEdital(nome);
 	}
-
-	public static void main(String[] args) {
-		JFrame p = new JFrame();
-		p.add(new TelaCadastroEditaisSwing());
-		p.setSize(1000, 700);
-		p.setVisible(true);
-	}
-
 }

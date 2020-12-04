@@ -1,4 +1,5 @@
-package view.autenticacao.abstract_factory;
+package view.abstract_factory;
+
 
 /**
  * Fabrica usada para a aplicacao do padrao abstract nas telas de

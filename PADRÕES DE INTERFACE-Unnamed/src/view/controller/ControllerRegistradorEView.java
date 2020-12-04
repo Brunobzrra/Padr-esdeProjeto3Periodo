@@ -65,40 +65,4 @@ public class ControllerRegistradorEView {
 		return proxy.recuperarProjetos(email);
 	}
 
-	public static void main(String[] args) {
-		Membro joseClaudiu = new Membro(Long.parseLong("111"), "jose claudiu", "fananitadz@gmail.com", "121212");
-		ContaEmail conta = new ContaEmailLivre();
-		conta.setImplementacaoContaBridge(new ContaAutenticacaoProvedorInterno());
-		joseClaudiu.setConta(conta);
-		joseClaudiu.setAtivo(true);
-		joseClaudiu.setAdministrador(true);
-		Participacao participacao = new Participacao(new Date(System.currentTimeMillis()), Float.parseFloat("0"),
-				(short) 0, (short) 0, true);
-		Projeto projeto1 = new Projeto("Projeto novo", 1, 2, 2, 3);
-		Projeto projeto2 = new Projeto("projeto 2", 1, 2, 3, 5);
-		HorarioPrevisto horaprt = new HorarioPrevisto(DiaSemana.SAB, LocalDateTime.of(2020, 11, 29, 22, 20),
-				LocalDateTime.of(2020, 11, 28, 23, 30), (long) 30);
-		HorarioPrevisto horapr2 = new HorarioPrevisto(DiaSemana.DOM, LocalDateTime.of(2020, 11, 29, 20, 45),
-				LocalDateTime.of(2020, 11, 29, 21, 30), (long) 30);
-
-		participacao.adcionarHorarioPrevisto(horaprt);
-
-		DAOXMLProjetoParticipacao daoao = new DAOXMLProjetoParticipacao();
-		DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
-		try {
-			Participacao participacao2 = new Participacao(new Date(System.currentTimeMillis()), Float.parseFloat("0"),
-					(short) 0, (short) 0, true);
-			participacao2.adcionarHorarioPrevisto(horapr2);
-			joseClaudiu.adicionar(participacao);
-			projeto1.adicionar(participacao);
-			joseClaudiu.adicionar(participacao2);
-			projeto2.adicionar(participacao2);
-			daoMembro.criar(joseClaudiu);
-			daoao.criar(projeto1);
-			daoao.criar(projeto2);
-		} catch (Exception e1) {
-			e1.printStackTrace();
-		}
-
-	}
 }
