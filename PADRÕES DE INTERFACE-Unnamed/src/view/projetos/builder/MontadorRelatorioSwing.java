@@ -33,7 +33,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 
 	private JTextArea textArea;
 
-	private String texto = "Montando...";
+	private String texto = "";
 
 	@Override
 	public void iniciarMontagem() {
@@ -44,21 +44,21 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		textArea.setEditable(false);
 		textArea.setLineWrap(true);
 		setLocationRelativeTo(null);
+//		setResizable(false);
 		Font f = new Font("Arial", 1, 15);
 		textArea.setFont(f);
 		painelDoRelatorio = new JScrollPane(textArea);
 		painelDoRelatorio.setBounds(new Rectangle());
 		add(painelDoRelatorio);
-
+		reiniciar();
+		texto+="Relatorio\n";
 	}
 
-	@Override
 	public void montarCorpoRelatorio(Projeto projeto) {
-		reiniciar();
 		texto += "Projeto: " + projeto.getNome() + "\n" + "Aporte Custeio Reais: " + projeto.getAporteCusteioReais()
 				+ "\n" + "Aporte Capital Reais: " + projeto.getAporteCapitalReais() + "\n"
 				+ "Gasto Executado Custeio Reais: " + projeto.getAporteCusteioReais() + "\n"
-				+ "gasto Executado Capital Reais: " + projeto.getAporteCapitalReais() + "\n" + "Membros: ";
+				+ "gasto Executado Capital Reais: " + projeto.getAporteCapitalReais() + "\n" + "Membros: "+"\n";
 
 		if (projeto.getItens().size() == 1) {
 			texto += "Não tem membro cadastrado!" + "\n";
@@ -70,7 +70,6 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	}
 
 	public void montarCorpoRelatorio(Edital edital) {
-		reiniciar();
 		texto += "Edital: " + edital.getNome() + "\n" + "Data Inicio: " + edital.getDataInicio().toString() + "\n"
 				+ "Data Termino: " + edital.getDataTermino().toString() + "\n" + "Grupos: " + "\n";
 
@@ -115,6 +114,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		} else {
 			texto += "Não tem membro cadastrado!" + "\n";
 		}
+		texto += "Projetos\n";
 		if (projetos.length() == 1) {
 			texto += projetos + "\n";
 		} else {
@@ -123,7 +123,6 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	}
 
 	public void finalizarMontagem() {
-		texto += "Fim";
 		textArea.setText(texto);
 		setVisible(true);
 
@@ -139,70 +138,3 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	}
 
 }
-//	private CasoDeUsoOito fachada = new CasoDeUsoOito();
-//	private CasoDeUsoExtra fachadaExtra = new CasoDeUsoExtra();
-//
-//	public void montarRelatorio(String componente) throws Exception {
-////		montarArquivo(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
-//		abrirArquivo(componente);
-//	}
-//
-//	public void montarArquivo(String texto) {
-//		FileWriter fw;
-//		try {
-//			fw = new FileWriter(new File("Relatorio.html"));
-//			fw.write(texto);
-//			fw.flush();
-//			fw.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	public void abrirArquivo(String componente) {
-//		JFrame tela = new JFrame();
-//		tela.setSize(560, 450);
-//		tela.add(this);
-//
-//		tela.setDefaultCloseOperation(1);
-//		tela.setLocationRelativeTo(null);
-//		LayoutManager layout = new FlowLayout();
-//		this.setLayout(layout);
-//
-//		JEditorPane jEditorPane = new JEditorPane();
-//		jEditorPane.setEditable(false);
-//		jEditorPane.setContentType("text/html");
-//
-//		try {
-////			jEditorPane.setText(fachada.gerarRelatorio(fachadaExtra.recuperarProjetoComponente(componente)).toString());
-//		} catch (Exception e) {
-//			jEditorPane.setText("<html>Page not found.</html>");
-//		}
-//
-//		JScrollPane jScrollPane = new JScrollPane(jEditorPane);
-//		jScrollPane.setPreferredSize(new Dimension(540, 400));
-//
-//		this.add(jScrollPane);
-//		tela.getContentPane().add(this, BorderLayout.CENTER);
-//		tela.setVisible(true);
-//	}
-//
-//
-//	@Override
-//	public void finalizarMontagem() {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//
-//	@Override
-//	public void montarRelatorio(ProjetoComponente componente) throws Exception {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//
-//	@Override
-//	public void iniciarMontagem(ProjetoComponente componente) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//
