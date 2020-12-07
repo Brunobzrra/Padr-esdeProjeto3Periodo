@@ -2,9 +2,372 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193966</millis>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037499</millis>
   <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037499</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037499</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Verificando se o email eh valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037500</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037500</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037500</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037500</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>validarEmail</method>
+  <thread>14</thread>
+  <message>Email valido</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037501</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037501</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037501</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037501</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037501</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Verificando se o membro eh elegivel a admin</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037509</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037509</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037509</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037509</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037509</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037509</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>ja existe administrador</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037510</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Tentando cadastrar membro</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:37</date>
+  <millis>1607370037540</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
+  <method>cadastrarMembro</method>
+  <thread>14</thread>
+  <message>Cadastro feito com sucesso</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -13,9 +376,9 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193966</millis>
-  <sequence>0</sequence>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -24,9 +387,97 @@
   <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193966</millis>
-  <sequence>1</sequence>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054465</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -35,9 +486,9 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193966</millis>
-  <sequence>1</sequence>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -46,9 +497,9 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193966</millis>
-  <sequence>1</sequence>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -57,9 +508,97 @@
   <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193995</millis>
-  <sequence>2</sequence>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:54</date>
+  <millis>1607370054467</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -68,9 +607,9 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193995</millis>
-  <sequence>2</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -79,9 +618,9 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193995</millis>
-  <sequence>2</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -90,9 +629,9 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:53</date>
-  <millis>1607182193995</millis>
-  <sequence>2</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
   <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
@@ -101,267 +640,586 @@
   <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:58</date>
-  <millis>1607182198626</millis>
-  <sequence>3</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:58</date>
-  <millis>1607182198626</millis>
-  <sequence>3</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:58</date>
-  <millis>1607182198626</millis>
-  <sequence>3</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:58</date>
-  <millis>1607182198626</millis>
-  <sequence>3</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:58</date>
-  <millis>1607182198626</millis>
-  <sequence>3</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:29:58</date>
-  <millis>1607182198626</millis>
-  <sequence>3</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:40:55</date>
+  <millis>1607370055307</millis>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:25</date>
-  <millis>1607182225474</millis>
-  <sequence>4</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088120</millis>
+  <sequence>9</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Participacao adicionada para bruno</message>
 </record>
 <record>
-  <date>2020-12-05T13:30:33</date>
-  <millis>1607182233159</millis>
-  <sequence>5</sequence>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioSwing</class>
-  <method>finalizarMontagem</method>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
   <thread>14</thread>
-  <message>Relatorio gerado</message>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:28</date>
+  <millis>1607370088144</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao adicionada para bruno</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
+</record>
+<record>
+  <date>2020-12-07T17:41:49</date>
+  <millis>1607370109208</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
+  <method>adicionarParticipacao</method>
+  <thread>14</thread>
+  <message>Participacao nao adicionada</message>
 </record>
 </log>

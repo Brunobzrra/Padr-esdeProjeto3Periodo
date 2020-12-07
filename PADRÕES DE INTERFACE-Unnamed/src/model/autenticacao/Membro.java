@@ -111,7 +111,6 @@ public class Membro extends ProjetoComponente implements Serializable {
 			}
 			Participacao participa = (Participacao) item;
 			participa.setMembro(this);
-			;
 			participacoes.add(item);
 		}
 	}

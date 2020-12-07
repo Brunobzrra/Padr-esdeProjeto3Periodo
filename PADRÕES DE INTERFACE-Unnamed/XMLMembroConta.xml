@@ -13,7 +13,100 @@
         <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
       </conta>
       <administrador>true</administrador>
-      <participacoes/>
+      <participacoes>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.projetos.Projeto">
+            <ativo>true</ativo>
+            <tipo>PROJETO</tipo>
+            <itens>
+              <model.projetos.Participacao reference="../../.."/>
+            </itens>
+            <nome>pppppp</nome>
+            <aporteCusteioReais>45.0</aporteCusteioReais>
+            <aporteCapitalReais>645.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>456.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>456.0</gastoExecutadoCapitalReais>
+          </projetoPai>
+          <tipo>PARTICIPACAO</tipo>
+          <dataInicio>2020-12-07 19:39:16.1 UTC</dataInicio>
+          <aporteCusteioMensalReais>6.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>456</qtdMesesCusteados>
+          <qtdMesesPagos>456</qtdMesesPagos>
+          <coordenador>true</coordenador>
+          <pontos/>
+          <horarios/>
+          <membro reference="../../.."/>
+        </model.projetos.Participacao>
+      </participacoes>
+    </model.autenticacao.Membro>
+  </entry>
+  <entry>
+    <long>2</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
+      <matricula>123456</matricula>
+      <nome>bruno</nome>
+      <ativo>true</ativo>
+      <email>bruno@gmail.com</email>
+      <senha>147258</senha>
+      <conta class="model.autenticacao.ContaEmailLivre"/>
+      <administrador>false</administrador>
+      <participacoes>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.projetos.Projeto">
+            <ativo>true</ativo>
+            <tipo>PROJETO</tipo>
+            <itens>
+              <model.projetos.Participacao>
+                <ativo>true</ativo>
+                <projetoPai class="model.projetos.Projeto" reference="../../.."/>
+                <tipo>PARTICIPACAO</tipo>
+                <dataInicio>2020-12-07 19:33:59.899 UTC</dataInicio>
+                <aporteCusteioMensalReais>54.0</aporteCusteioMensalReais>
+                <qtdMesesCusteados>5</qtdMesesCusteados>
+                <qtdMesesPagos>45</qtdMesesPagos>
+                <coordenador>true</coordenador>
+                <pontos/>
+                <horarios/>
+                <membro>
+                  <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+                  <tipo>MEMBRO</tipo>
+                  <matricula>12345</matricula>
+                  <nome>Antonio</nome>
+                  <ativo>true</ativo>
+                  <email>antonio@gmail.com</email>
+                  <senha>12345</senha>
+                  <conta class="model.autenticacao.ContaEmailLivre">
+                    <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+                  </conta>
+                  <administrador>true</administrador>
+                  <participacoes>
+                    <model.projetos.Participacao reference="../../.."/>
+                  </participacoes>
+                </membro>
+              </model.projetos.Participacao>
+              <model.projetos.Participacao reference="../../.."/>
+            </itens>
+            <nome>projeto</nome>
+            <aporteCusteioReais>54.0</aporteCusteioReais>
+            <aporteCapitalReais>5.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>54.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>54.0</gastoExecutadoCapitalReais>
+          </projetoPai>
+          <tipo>PARTICIPACAO</tipo>
+          <dataInicio>2012-12-12 02:00:00.0 UTC</dataInicio>
+          <aporteCusteioMensalReais>45.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>46</qtdMesesCusteados>
+          <qtdMesesPagos>456</qtdMesesPagos>
+          <coordenador>false</coordenador>
+          <pontos/>
+          <horarios/>
+          <membro reference="../../.."/>
+        </model.projetos.Participacao>
+      </participacoes>
     </model.autenticacao.Membro>
   </entry>
 </map>

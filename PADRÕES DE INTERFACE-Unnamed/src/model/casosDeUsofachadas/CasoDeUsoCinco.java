@@ -28,8 +28,10 @@ public class CasoDeUsoCinco {
 		Projeto projeto = new Projeto(nome, aporteCusteioReais, aporteCapitalReais, gastoExecutadoCusteioReais,
 				gastoExecutadoCapitalReais);
 		LoggerProjeto.getInstance().getLogger().info("Preenchendo dados e participacaoo do membro que ira coordenar");
+		
 		cordenadorDoProjeto.adicionar(participacaoProjeto);
 		projeto.adicionar(participacaoProjeto);
+		daoMembro.atualizar(cordenadorDoProjeto, cordenadorDoProjeto);
 		if(!daoProjetoParticipacao.criar(projeto)) {
 			throw new Exception("Projeto já existe!");
 		}
