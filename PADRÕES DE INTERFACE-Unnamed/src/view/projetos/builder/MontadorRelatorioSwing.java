@@ -34,8 +34,9 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	private JTextArea textArea;
 
 	private String texto = "";
-
-	@Override
+	/**
+	 *Aqui é criado a base e o cabesario do relatorio
+	 */
 	public void iniciarMontagem() {
 		setBackground(Color.BLACK);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -44,7 +45,6 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		textArea.setEditable(false);
 		textArea.setLineWrap(true);
 		setLocationRelativeTo(null);
-//		setResizable(false);
 		Font f = new Font("Arial", 1, 15);
 		textArea.setFont(f);
 		painelDoRelatorio = new JScrollPane(textArea);
@@ -53,7 +53,9 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		reiniciar();
 		texto+="Relatorio\n";
 	}
-
+	/**
+	 * metodos que com o uso da sobrecarga constroe o corpo do relatorio
+	 */
 	public void montarCorpoRelatorio(Projeto projeto) {
 		texto += "Projeto: " + projeto.getNome() + "\n" + "Aporte Custeio Reais: " + projeto.getAporteCusteioReais()
 				+ "\n" + "Aporte Capital Reais: " + projeto.getAporteCapitalReais() + "\n"
@@ -121,7 +123,9 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 			texto += "Não tem projeto cadastrado!" + "\n";
 		}
 	}
-
+	/**
+	 * este metodo fecha e finaliza o relatorio
+	 */
 	public void finalizarMontagem() {
 		textArea.setText(texto);
 		setVisible(true);

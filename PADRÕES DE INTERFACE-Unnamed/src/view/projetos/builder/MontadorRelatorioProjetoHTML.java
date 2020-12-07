@@ -26,6 +26,9 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 		super(pathname);
 	}
 
+	/**
+	 * Aqui é criado a base e o cabesario do relatorio
+	 */
 	public void iniciarMontagem() {
 		try {
 			fw = new FileWriter(new File("Relatorio.html"));
@@ -36,6 +39,9 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 		}
 	}
 
+	/**
+	 * metodos que com o uso da sobrecarga constroe o corpo do relatorio
+	 */
 	public void montarCorpoRelatorio(Projeto projeto) {
 		texto += String.format("<span>Projeto %s </span><br>\n<span>Aporte Custeio Reais %s </span><br>\n"
 				+ "<span>Aporte Capital Reais %s </span><br>\n<span>Gasto Executado Custeio Reais %s </span><br>"
@@ -67,12 +73,12 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 
 		if (grupos.length() == 1) {
 			texto += grupos;
-		}else {
+		} else {
 			texto += "<span>Não tem membro cadastrado!</span><br>\n";
 		}
 		if (projetos.length() == 1) {
 			texto += String.format("<span>Projetos </span><br>\n" + projetos);
-		}else {
+		} else {
 			texto += "<span>Projetos </span><br>\n<span>Não tem projeto cadastrado!</span><br>\n";
 		}
 	}
@@ -92,16 +98,19 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 		}
 		if (membros.length() == 1) {
 			texto += membros;
-		}else {
+		} else {
 			texto += "<span>Não tem membro cadastrado!</span><br>\n";
 		}
 		if (projetos.length() == 1) {
 			texto += String.format("<span>Projetos </span><br>\n" + projetos);
-		}else {
+		} else {
 			texto += "<span>Projetos </span><br>\n<span>Não tem projeto cadastrado!</span><br>\n";
 		}
 	}
 
+	/**
+	 * este metodo fecha e finaliza o relatorio
+	 */
 	public void finalizarMontagem() {
 		try {
 			texto += "</body>\n</html>";
