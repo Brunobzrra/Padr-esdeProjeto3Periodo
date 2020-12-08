@@ -51,11 +51,13 @@ public class RegistradorPontoCentral implements Serializable {
 			}
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
 			if (participacao.getMembro().getEmail().equals(membro.getEmail())) {
-				if (participacao.getPontos() != null) {
+				if (!participacao.getPontos().isEmpty()) {
 					for (PontoTrabalhado p : participacao.getPontos()) {
 						if (p.getDataHoraSaida() == null) {
 							p.setDataHoraSaida(pontoBatidoagora);
 							return p;
+						} else {
+							throw new Exception("Ponto ja batido");
 						}
 					}
 				} else {

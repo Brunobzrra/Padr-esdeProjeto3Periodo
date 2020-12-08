@@ -235,8 +235,8 @@ public class TelaCadastroProjetosSwing extends JPanel implements InterfaceTelaCa
 		matriculaCoordenadorR.setForeground(Color.DARK_GRAY);
 		this.add(matriculaCoordenadorR);
 
-		JLabel adcionarP = new JLabel("<html>Adcionar Participação</html>");
-		adcionarP.setBounds(350, 350, 300, 60);
+		JLabel adcionarP = new JLabel("Adicionar Participação");
+		adcionarP.setBounds(40, 350, 350, 100);
 		adcionarP.setFont(new Font("Arial", Font.BOLD, 30));
 		adcionarP.setForeground(Color.DARK_GRAY);
 		this.add(adcionarP);

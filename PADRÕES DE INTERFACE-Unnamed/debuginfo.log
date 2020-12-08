@@ -2,1224 +2,3134 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037499</millis>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
   <sequence>0</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Verificando se o email eh valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037499</millis>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
   <sequence>0</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Verificando se o email eh valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037499</millis>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
   <sequence>0</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Verificando se o email eh valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037500</millis>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.084530100Z</date>
+  <millis>1607399930084</millis>
+  <nanos>530100</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Email valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037500</millis>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Email valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037500</millis>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Email valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037500</millis>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
   <sequence>1</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>validarEmail</method>
-  <thread>14</thread>
-  <message>Email valido</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037501</millis>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.110485600Z</date>
+  <millis>1607399930110</millis>
+  <nanos>485600</nanos>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Verificando se o membro eh elegivel a admin</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037501</millis>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Verificando se o membro eh elegivel a admin</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037501</millis>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Verificando se o membro eh elegivel a admin</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037501</millis>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Verificando se o membro eh elegivel a admin</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037501</millis>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
   <sequence>2</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Verificando se o membro eh elegivel a admin</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037509</millis>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.116441100Z</date>
+  <millis>1607399930116</millis>
+  <nanos>441100</nanos>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>ja existe administrador</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037509</millis>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>ja existe administrador</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037509</millis>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>ja existe administrador</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037509</millis>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>ja existe administrador</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037509</millis>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>ja existe administrador</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037509</millis>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
   <sequence>3</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>ja existe administrador</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.162319400Z</date>
+  <millis>1607399930162</millis>
+  <nanos>319400</nanos>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: Projeto novo</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037510</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
   <sequence>4</sequence>
   <logger>global</logger>
-  <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Tentando cadastrar membro</message>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.166307400Z</date>
+  <millis>1607399930166</millis>
+  <nanos>307400</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nome projeto encontrado: projeto 2</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:37</date>
-  <millis>1607370037540</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
   <sequence>5</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoUm</class>
-  <method>cadastrarMembro</method>
-  <thread>14</thread>
-  <message>Cadastro feito com sucesso</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:50.169299200Z</date>
+  <millis>1607399930169</millis>
+  <nanos>299200</nanos>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>recuperarProjetos</method>
+  <thread>26</thread>
+  <message>Nomes recuperados com sucesso</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054465</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
   <sequence>6</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Selecionando tipo de autenticacao</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.107106100Z</date>
+  <millis>1607399936107</millis>
+  <nanos>106100</nanos>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Recuperando projeto</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:54</date>
-  <millis>1607370054467</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
   <sequence>7</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Autenticando a conta de acoro com o tipo</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:58:56.109099300Z</date>
+  <millis>1607399936109</millis>
+  <nanos>99300</nanos>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Verificando se foi recuperado</message>
+</record>
+<record>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:40:55</date>
-  <millis>1607370055307</millis>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
   <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
-  <method>fazerLogin</method>
-  <thread>14</thread>
-  <message>Conta autenticada com sucesso</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088120</millis>
-  <sequence>9</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
   <level>INFO</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Verificando se o membro solicitante eh coordenador do projeto</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
 <record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
+  <date>2020-12-08T03:59:02.625692700Z</date>
+  <millis>1607399942625</millis>
+  <nanos>692700</nanos>
+  <sequence>8</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoOnzeETreze</class>
+  <method>registrarPonto</method>
+  <thread>26</thread>
+  <message>Autenticando a senha</message>
 </record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:28</date>
-  <millis>1607370088144</millis>
-  <sequence>10</sequence>
-  <logger>global</logger>
-  <level>WARNING</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao adicionada para bruno</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-<record>
-  <date>2020-12-07T17:41:49</date>
-  <millis>1607370109208</millis>
-  <sequence>11</sequence>
-  <logger>global</logger>
-  <level>SEVERE</level>
-  <class>model.casosDeUsofachadas.CasoDeUsoSeis</class>
-  <method>adicionarParticipacao</method>
-  <thread>14</thread>
-  <message>Participacao nao adicionada</message>
-</record>
-</log>

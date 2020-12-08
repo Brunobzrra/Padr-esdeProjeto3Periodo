@@ -175,4 +175,7 @@ public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
 		this.add(detalhes);
 
 	}
+	public static void main(String[] args) {
+		new TelaPontoSwing();
+	}
 }

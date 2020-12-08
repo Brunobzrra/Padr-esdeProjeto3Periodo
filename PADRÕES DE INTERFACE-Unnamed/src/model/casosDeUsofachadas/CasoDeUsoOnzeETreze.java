@@ -110,19 +110,16 @@ public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoR
 				LoggerProjeto.getInstance().getLogger().severe("Senha nao encontrada");
 				throw new Exception("Digite uma senha!");
 			}
-			LoggerProjeto.getInstance().getLogger().info("Recuperando membro");
 			Membro m = daMembro.recuperarPorEmail(login);
 			RegistradorSessaoLogin.getInstance().registrarOline(m);
 			Membro aux = m;
-			LoggerProjeto.getInstance().getLogger().info("Validando senha");
 			if (m.getSenha().equals(senha)) {
-				LoggerProjeto.getInstance().getLogger().info("Registrando ponto trabalhado");
 				PontoTrabalhado ponto = registrador.registrarPonto((Projeto) projeto, m);
 				if (ponto != null) {
-					LoggerProjeto.getInstance().getLogger().warning("Inserindo ponto");
 					daMembro.atualizar(aux, m);
 					daoProjetoParticipacao.atualizar(projetoAux, projeto);
 					System.out.println("ok");
+					LoggerProjeto.getInstance().getLogger().warning("ponto inserido");
 				} else {
 					LoggerProjeto.getInstance().getLogger().severe("O horario previsto nao foi responsavel");
 					throw new Exception("Não existe horario previsto para isso!");
