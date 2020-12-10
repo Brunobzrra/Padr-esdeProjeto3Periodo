@@ -5,10 +5,6 @@ import model.projetos.Grupo;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
-import persistencia.xml.DAOXMLEdital;
-import persistencia.xml.DAOXMLGrupo;
-import persistencia.xml.DAOXMLProjetoParticipacao;
-
 /**
  * Diretor de montagem dos relatorios que fazem uso da interface de Montagem
  * 
@@ -63,20 +59,5 @@ public class DiretorDeMontagemDeRelatorio {
 			montadorDeRelatorio.montarCorpoRelatorio(edital);
 		}
 		montadorDeRelatorio.finalizarMontagem();
-	}
-
-	public static void main(String[] args) {
-		try {
-			new DiretorDeMontagemDeRelatorio(new MontadorRelatorioProjetoHTML(""))
-					.montarRelatorioSuperficial(new DAOXMLGrupo().recuperarPorIndentificador("25147555"));
-			new DiretorDeMontagemDeRelatorio(new MontadorRelatorioProjetoHTML(""))
-			.montarRelatorioSuperficial(new DAOXMLEdital().recuperarPorIndentificador("ffdssd"));
-			new DiretorDeMontagemDeRelatorio(new MontadorRelatorioProjetoHTML(""))
-			.montarRelatorioSuperficial(new DAOXMLProjetoParticipacao().recuperarPorIndentificador("projeto"));
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }
