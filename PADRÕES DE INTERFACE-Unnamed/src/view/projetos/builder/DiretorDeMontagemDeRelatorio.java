@@ -5,6 +5,9 @@ import model.projetos.Grupo;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
+import persistencia.xml.DAOXMLEdital;
+import persistencia.xml.DAOXMLGrupo;
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 /**
  * Diretor de montagem dos relatorios que fazem uso da interface de Montagem
@@ -30,38 +33,50 @@ public class DiretorDeMontagemDeRelatorio {
 	 */
 	public void montarRelatorioCompleto(ProjetoComponente componente) throws Exception {
 		montadorDeRelatorio.iniciarMontagem();
-		if(componente.getTipo()==TipoProjetoComponente.PROJETO) {
-			montadorDeRelatorio.montarCorpoRelatorio((Projeto) componente);
-		}else if(componente.getTipo()==TipoProjetoComponente.GRUPO) {
-			montadorDeRelatorio.montarCorpoRelatorio((Grupo) componente);
-		}else if(componente.getTipo()==TipoProjetoComponente.EDITAL) {
-			montadorDeRelatorio.montarCorpoRelatorio((Edital) componente);
+		if (componente.getTipo() == TipoProjetoComponente.PROJETO) {
+			Projeto projeto=(Projeto) componente;
+			montadorDeRelatorio.montarCorpoRelatorio(projeto);
+			montadorDeRelatorio.montarMembrosFilhos(projeto.getItens());
+		} else if (componente.getTipo() == TipoProjetoComponente.GRUPO) {
+			Grupo grupo=(Grupo) componente;
+			montadorDeRelatorio.montarCorpoRelatorio(grupo);
+			montadorDeRelatorio.montarMembrosFilhos(grupo.getItens());
+			montadorDeRelatorio.montarProjetosFilhos(grupo.getItens());
+		} else if (componente.getTipo() == TipoProjetoComponente.EDITAL) {
+			Edital edital= (Edital) componente;
+			montadorDeRelatorio.montarCorpoRelatorio(edital);
+			montadorDeRelatorio.montarGruposFilhos(edital.getItens());
+			montadorDeRelatorio.montarProjetosFilhos(edital.getItens());
+		}
+		montadorDeRelatorio.finalizarMontagem();
+	}
+	public void montarRelatorioSuperficial(ProjetoComponente componente) throws Exception {
+		montadorDeRelatorio.iniciarMontagem();
+		if (componente.getTipo() == TipoProjetoComponente.PROJETO) {
+			Projeto projeto=(Projeto) componente;
+			montadorDeRelatorio.montarCorpoRelatorio(projeto);
+		} else if (componente.getTipo() == TipoProjetoComponente.GRUPO) {
+			Grupo grupo=(Grupo) componente;
+			montadorDeRelatorio.montarCorpoRelatorio(grupo);
+		} else if (componente.getTipo() == TipoProjetoComponente.EDITAL) {
+			Edital edital= (Edital) componente;
+			montadorDeRelatorio.montarCorpoRelatorio(edital);
 		}
 		montadorDeRelatorio.finalizarMontagem();
 	}
 
-//	/**
-//	 * Metodo ultilizado para montar um arquivo com texto.
-//	 * 
-//	 * @param texto
-//	 */
-//	public void iniciarMontagem() {
-//		
-//	}
-//
-//	public void montarCorpoRelatorio(Projeto projeto) {
-//		
-//	}
-//
-//	public void montarCorpoRelatorio(Edital edital) {
-//		
-//	}
-//
-//	public void montarCorpoRelatorio(Grupo grupo) {
-//		
-//	}
-//
-//	public void finalizarMontagem() {
-//		
-//	}
+	public static void main(String[] args) {
+		try {
+			new DiretorDeMontagemDeRelatorio(new MontadorRelatorioProjetoHTML(""))
+					.montarRelatorioSuperficial(new DAOXMLGrupo().recuperarPorIndentificador("25147555"));
+			new DiretorDeMontagemDeRelatorio(new MontadorRelatorioProjetoHTML(""))
+			.montarRelatorioSuperficial(new DAOXMLEdital().recuperarPorIndentificador("ffdssd"));
+			new DiretorDeMontagemDeRelatorio(new MontadorRelatorioProjetoHTML(""))
+			.montarRelatorioSuperficial(new DAOXMLProjetoParticipacao().recuperarPorIndentificador("projeto"));
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

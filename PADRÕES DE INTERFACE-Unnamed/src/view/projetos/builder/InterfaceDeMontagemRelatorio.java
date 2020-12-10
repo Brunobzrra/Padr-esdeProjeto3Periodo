@@ -1,8 +1,11 @@
 package view.projetos.builder;
 
+import java.util.ArrayList;
+
 import model.projetos.Edital;
 import model.projetos.Grupo;
 import model.projetos.Projeto;
+import model.projetos.ProjetoComponente;
 
 /**
  * Interface uniformizadora para a montagem de um relatorio
@@ -18,6 +21,14 @@ public interface InterfaceDeMontagemRelatorio {
 	public void montarCorpoRelatorio(Edital edital);
 
 	public void montarCorpoRelatorio(Grupo grupo);
+
+	public void montarProjetosFilhos(ArrayList<ProjetoComponente> componentes);
+
+	public void montarEditaisFilhos(ArrayList<ProjetoComponente> componentes);
+
+	public void montarMembrosFilhos(ArrayList<ProjetoComponente> componentes);
+
+	public void montarGruposFilhos(ArrayList<ProjetoComponente> componentes);
 
 	public void finalizarMontagem();
 }

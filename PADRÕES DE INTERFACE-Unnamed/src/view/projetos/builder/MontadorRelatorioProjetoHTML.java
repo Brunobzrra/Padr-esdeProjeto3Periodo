@@ -4,8 +4,7 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import javax.swing.JFrame;
+import java.util.ArrayList;
 
 import model.projetos.Edital;
 import model.projetos.Grupo;
@@ -13,6 +12,8 @@ import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
 import model.utilitarios.LoggerProjeto;
+
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 /**
  * Montador concreto de um relatorio de projeto para um arquivo em HTML
@@ -34,8 +35,9 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 	public void iniciarMontagem() {
 		try {
 			fw = new FileWriter(new File("Relatorio.html"));
-			texto += String.format(
-					"<html>\n<head>\n<title>Relatorio Do Item</title>\n</head>\n<body>\n<h1 style='text-align:center'>Relatorio</h1>\n");
+			texto += String.format("<html>\n<head>\n<title>Relatorio Do Item</title>\n"
+					+ " <style>\n  .negrito{\n font-weight: bold;\n font-size: 20;\n }"
+					+ "\n </style>\n</head>\n<body>\n<h1 style='text-align:center'>Relatorio</h1>\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -45,71 +47,77 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 	 * metodos que com o uso da sobrecarga constroe o corpo do relatorio
 	 */
 	public void montarCorpoRelatorio(Projeto projeto) {
-		texto += String.format("<span>Projeto %s </span><br>\n<span>Aporte Custeio Reais %s </span><br>\n"
-				+ "<span>Aporte Capital Reais %s </span><br>\n<span>Gasto Executado Custeio Reais %s </span><br>"
-				+ "\n<span>gasto Executado Capital Reais %s </span><br>\n<span>Membros </span><br>\n",
+		texto += String.format(
+				"<span class='negrito'>Projeto: </span><span>%s </span><br>\n<span class='negrito'>Aporte Custeio Reais: </span><span>%s </span><br>\n"
+						+ "<span class='negrito'>Aporte Capital Reais: </span><span>%s </span><br>\n<span class='negrito'>Gasto Executado Custeio Reais: </span><span>%s </span><br>"
+						+ "\n<span class='negrito'>Gasto Executado Capital Reais: </span><span>%s </span><br>\n",
 				projeto.getNome(), projeto.getAporteCusteioReais(), projeto.getAporteCapitalReais(),
 				projeto.getAporteCusteioReais(), projeto.getAporteCapitalReais());
-		if (projeto.getItens().size() == 1) {
-			texto += "<span>Não tem membro cadastrado!</span><br>\n";
-		} else {
-			for (ProjetoComponente projetoComponente : projeto.getItens()) {
-				texto += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			}
-		}
 	}
 
 	public void montarCorpoRelatorio(Edital edital) {
 		texto += String.format(
-				"<span>Edital %s </span><br>\n<span>Data de Inicio %s </span><br>\n<span>Data Termino %s </span><br>\n<span>Grupos </span><br>\n",
+				"<span class='negrito'>Edital: </span><span>%s </span><br>\n<span span class='negrito'>Data de Inicio: </span><span>%s </span><br>\n<span span class='negrito'>Data Termino: </span><span>Data de Criação %s </span><br>\n",
 				edital.getNome(), edital.getDataInicio().toString(), edital.getDataTermino().toString());
-		String grupos = "";
-		String projetos = "";
-		for (ProjetoComponente projetoComponente : edital.getItens()) {
-			if (projetoComponente.getTipo() == TipoProjetoComponente.GRUPO) {
-				grupos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			} else {
-				projetos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			}
-		}
-
-		if (grupos.length() == 1) {
-			texto += grupos;
-		} else {
-			texto += "<span>Não tem membro cadastrado!</span><br>\n";
-		}
-		if (projetos.length() == 1) {
-			texto += String.format("<span>Projetos </span><br>\n" + projetos);
-		} else {
-			texto += "<span>Projetos </span><br>\n<span>Não tem projeto cadastrado!</span><br>\n";
-		}
 	}
 
 	public void montarCorpoRelatorio(Grupo grupo) {
 		texto += String.format(
-				"<span>Grupo %s </span><br>\n<span>Data de Criação %s </span><br>\n<span>linkCNPq %s </span><br>\n<span>Membros </span><br>\n",
+				"<span class='negrito'>Grupo:</span><span> %s </span><br>\n<span class='negrito'>Data de Criação: </span><span>%s </span><br>\n<span class='negrito'>linkCNPq:</span><span> %s </span><br>\n",
 				grupo.getNome(), grupo.getDataCriacao().toString(), grupo.getLinkCNPq());
-		String membros = "";
-		String projetos = "";
-		for (ProjetoComponente projetoComponente : grupo.getItens()) {
-			if (projetoComponente.getTipo() == TipoProjetoComponente.MEMBRO) {
-				membros += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			} else {
-				projetos += String.format("<span>%s </span><br>\n", projetoComponente.getNome());
-			}
+	}
+	public void montarMembrosFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += String.format("<span class='negrito'>Membros:</span><br>\n");
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.PARTICIPACAO || projetoComponente.getTipo() == TipoProjetoComponente.MEMBRO) {
+				texto += String.format("<blockquote>\n<span>%s </span><br>\n", projetoComponente.getNome()+"\n</blockquote>\n");
+				contemDado=true;
+			} 
 		}
-		if (membros.length() == 1) {
-			texto += membros;
-		} else {
-			texto += "<span>Não tem membro cadastrado!</span><br>\n";
-		}
-		if (projetos.length() == 1) {
-			texto += String.format("<span>Projetos </span><br>\n" + projetos);
-		} else {
-			texto += "<span>Projetos </span><br>\n<span>Não tem projeto cadastrado!</span><br>\n";
+		if(!contemDado) {
+			texto += String.format("<blockquote>\n<span>Não tem membro cadastrado!</span><br>\n</blockquote>\n");
 		}
 	}
-
+	public void montarEditaisFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += String.format("<span class='negrito'>Editais:</span><br>\n");
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.EDITAL) {
+				texto += String.format("<blockquote>\n<span>%s </span><br>\n", projetoComponente.getNome()+"\n</blockquote>\n");
+				contemDado=true;
+			} 
+		}
+		if(!contemDado) {
+			texto += String.format("<blockquote>\n<span>Não tem edital cadastrado!</span><br>\n</blockquote>\n");
+		}
+	}
+	public void montarProjetosFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += String.format("<span class='negrito'>Projetos:</span><br>\n");
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.PROJETO) {
+				texto += String.format("<blockquote>\n<span>%s </span><br>\n", projetoComponente.getNome()+"\n</blockquote>\n");
+				contemDado=true;
+			} 
+		}
+		if(!contemDado) {
+			texto += String.format("<blockquote>\n<span>Não tem projeto cadastrado!</span><br>\n</blockquote>\n");
+		}
+	}
+	public void montarGruposFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += String.format("<span class='negrito'>Grupos:</span><br>\n");
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if (projetoComponente.getTipo() == TipoProjetoComponente.GRUPO) {
+				texto += String.format("<blockquote>\n<span>%s </span><br>\n", projetoComponente.getNome()+"\n</blockquote>\n");
+				contemDado=true;
+			} 
+		}
+		if(!contemDado) {
+			texto += String.format("<blockquote>\n<span>Não tem grupo cadastrado!</span><br>\n</blockquote>\n");
+		}
+	}
 	/**
 	 * este metodo fecha e finaliza o relatorio
 	 */
@@ -131,5 +139,4 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 	public File getRelatorio() {
 		return this;
 	}
-
 }

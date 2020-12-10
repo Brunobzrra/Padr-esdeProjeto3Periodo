@@ -3,6 +3,7 @@ package view.projetos.builder;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
@@ -52,77 +53,85 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		painelDoRelatorio.setBounds(new Rectangle());
 		add(painelDoRelatorio);
 		reiniciar();
-		texto += "Relatorio\n";
+		texto += "	Relatorio\n\n";
 	}
 
 	/**
 	 * metodos que com o uso da sobrecarga constroe o corpo do relatorio
 	 */
 	public void montarCorpoRelatorio(Projeto projeto) {
-		texto += "Projeto: " + projeto.getNome() + "\n" + "Aporte Custeio Reais: " + projeto.getAporteCusteioReais()
-				+ "\n" + "Aporte Capital Reais: " + projeto.getAporteCapitalReais() + "\n"
-				+ "Gasto Executado Custeio Reais: " + projeto.getAporteCusteioReais() + "\n"
-				+ "gasto Executado Capital Reais: " + projeto.getAporteCapitalReais() + "\n" + "Membros: " + "\n";
-
-		if (projeto.getItens().size() == 1) {
-			texto += "Não tem membro cadastrado!" + "\n";
-		} else {
-			for (ProjetoComponente projetoComponente : projeto.getItens()) {
-				texto += projetoComponente.getNome() + "\n";
-			}
-		}
+		texto += "Projeto: ".toUpperCase() + projeto.getNome() + "\n" + "Aporte Custeio Reais: ".toUpperCase() + projeto.getAporteCusteioReais()
+				+ "\n" + "Aporte Capital Reais: ".toUpperCase() + projeto.getAporteCapitalReais() + "\n"
+				+ "Gasto Executado Custeio Reais: ".toUpperCase() + projeto.getAporteCusteioReais() + "\n"
+				+ "gasto Executado Capital Reais: ".toUpperCase() + projeto.getAporteCapitalReais() + "\n";
 	}
 
 	public void montarCorpoRelatorio(Edital edital) {
-		texto += "Edital: " + edital.getNome() + "\n" + "Data Inicio: " + edital.getDataInicio().toString() + "\n"
-				+ "Data Termino: " + edital.getDataTermino().toString() + "\n" + "Grupos: " + "\n";
+		texto += "Edital: ".toUpperCase() + edital.getNome() + "\n" + "Data Inicio: ".toUpperCase() + edital.getDataInicio().toString() + "\n"
+				+ "Data Termino: ".toUpperCase() + edital.getDataTermino().toString() + "\n";
 
-		String grupos = "";
-		String projetos = "";
-
-		for (ProjetoComponente projetoComponente : edital.getItens()) {
-			if (projetoComponente.getTipo() == TipoProjetoComponente.GRUPO) {
-				grupos += projetoComponente.getNome() + "\n";
-			} else {
-				projetos += projetoComponente.getNome() + "\n";
-			}
-		}
-
-		if (grupos.length() == 1) {
-			texto += grupos;
-		} else {
-			texto += "Não tem membro cadastrado!" + "\n";
-		}
-		if (projetos.length() == 1) {
-			texto += "Projetos: " + "\n" + projetos;
-		} else {
-			texto += "Projetos: " + "\n" + "Não tem projeto cadastrado!";
-		}
 	}
 
 	public void montarCorpoRelatorio(Grupo grupo) {
 
-		texto += "Grupo: " + grupo.getNome() + "\n" + "Data de Criação: " + grupo.getDataCriacao().toString() + "\n"
-				+ "linkCNPq: " + grupo.getLinkCNPq() + "\n" + "Membros:  " + "\n";
-		String membros = "";
-		String projetos = "";
-		for (ProjetoComponente projetoComponente : grupo.getItens()) {
-			if (projetoComponente.getTipo() == TipoProjetoComponente.MEMBRO) {
-				membros += projetoComponente.getNome() + "\n";
-			} else {
-				projetos += projetoComponente.getNome() + "\n";
+		texto += "Grupo: ".toUpperCase() + grupo.getNome() + "\n" + "Data de Criação: ".toUpperCase() + grupo.getDataCriacao().toString() + "\n"
+				+ "linkCNPq: ".toUpperCase() + grupo.getLinkCNPq() + "\n";
+	
+	}
+	public void montarProjetosFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += "Projetos: ".toUpperCase() + "\n   ";
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if(projetoComponente.getTipo()==TipoProjetoComponente.PROJETO) {
+			texto += projetoComponente.getNome() + "\n";
+			contemDado=true;
 			}
 		}
-		if (membros.length() == 1) {
-			texto += membros;
-		} else {
+		if (!contemDado) {
+			texto += "Não tem projeto cadastrado!" + "\n";
+		}
+
+	}
+
+	public void montarEditaisFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += "Editais: ".toUpperCase() + "\n   ";
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if(projetoComponente.getTipo()==TipoProjetoComponente.EDITAL) {
+			texto += projetoComponente.getNome() + "\n";
+			contemDado=true;
+			}
+		}
+		if (!contemDado) {
+			texto += "Não tem edital cadastrado!" + "\n";
+		}
+	}
+
+	public void montarMembrosFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += "Membros: ".toUpperCase() + "\n   ";
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if(projetoComponente.getTipo()==TipoProjetoComponente.MEMBRO || projetoComponente.getTipo()==TipoProjetoComponente.PARTICIPACAO) {
+			texto += projetoComponente.getNome() + "\n";
+			contemDado=true;
+			}
+		}
+		if (!contemDado) {
 			texto += "Não tem membro cadastrado!" + "\n";
 		}
-		texto += "Projetos\n";
-		if (projetos.length() == 1) {
-			texto += projetos + "\n";
-		} else {
-			texto += "Não tem projeto cadastrado!" + "\n";
+	}
+
+	public void montarGruposFilhos(ArrayList<ProjetoComponente> componentes) {
+		texto += "Grupos: ".toUpperCase() + "\n   ";
+		boolean contemDado=false;
+		for (ProjetoComponente projetoComponente : componentes) {
+			if(projetoComponente.getTipo()==TipoProjetoComponente.EDITAL) {
+			texto += projetoComponente.getNome() + "\n";
+			contemDado=true;
+			}
+		}
+		if (!contemDado) {
+			texto += "Não tem grupo cadastrado!" + "\n";
 		}
 	}
 
@@ -146,5 +155,6 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	private void reiniciar() {
 		texto = "";
 	}
+
 
 }
