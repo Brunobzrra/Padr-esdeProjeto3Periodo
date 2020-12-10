@@ -34,8 +34,9 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	private JTextArea textArea;
 
 	private String texto = "";
+
 	/**
-	 *Aqui é criado a base e o cabesario do relatorio
+	 * Aqui é criado a base e o cabesario do relatorio
 	 */
 	public void iniciarMontagem() {
 		setBackground(Color.BLACK);
@@ -51,8 +52,9 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		painelDoRelatorio.setBounds(new Rectangle());
 		add(painelDoRelatorio);
 		reiniciar();
-		texto+="Relatorio\n";
+		texto += "Relatorio\n";
 	}
+
 	/**
 	 * metodos que com o uso da sobrecarga constroe o corpo do relatorio
 	 */
@@ -60,7 +62,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 		texto += "Projeto: " + projeto.getNome() + "\n" + "Aporte Custeio Reais: " + projeto.getAporteCusteioReais()
 				+ "\n" + "Aporte Capital Reais: " + projeto.getAporteCapitalReais() + "\n"
 				+ "Gasto Executado Custeio Reais: " + projeto.getAporteCusteioReais() + "\n"
-				+ "gasto Executado Capital Reais: " + projeto.getAporteCapitalReais() + "\n" + "Membros: "+"\n";
+				+ "gasto Executado Capital Reais: " + projeto.getAporteCapitalReais() + "\n" + "Membros: " + "\n";
 
 		if (projeto.getItens().size() == 1) {
 			texto += "Não tem membro cadastrado!" + "\n";
@@ -123,18 +125,22 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 			texto += "Não tem projeto cadastrado!" + "\n";
 		}
 	}
+
 	/**
 	 * este metodo fecha e finaliza o relatorio
 	 */
 	public void finalizarMontagem() {
 		textArea.setText(texto);
 		setVisible(true);
-
 		try {
 			LoggerProjeto.getInstance().getLogger().warning("Relatorio gerado");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public JFrame getRelatorio() {
+		return this;
 	}
 
 	private void reiniciar() {

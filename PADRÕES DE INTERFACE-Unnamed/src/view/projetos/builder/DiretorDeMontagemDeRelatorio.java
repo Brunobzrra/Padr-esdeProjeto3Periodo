@@ -34,34 +34,34 @@ public class DiretorDeMontagemDeRelatorio {
 			montadorDeRelatorio.montarCorpoRelatorio((Projeto) componente);
 		}else if(componente.getTipo()==TipoProjetoComponente.GRUPO) {
 			montadorDeRelatorio.montarCorpoRelatorio((Grupo) componente);
-		}else {
+		}else if(componente.getTipo()==TipoProjetoComponente.EDITAL) {
 			montadorDeRelatorio.montarCorpoRelatorio((Edital) componente);
 		}
 		montadorDeRelatorio.finalizarMontagem();
 	}
 
-	/**
-	 * Metodo ultilizado para montar um arquivo com texto.
-	 * 
-	 * @param texto
-	 */
-	public void iniciarMontagem() {
-		
-	}
-
-	public void montarCorpoRelatorio(Projeto projeto) {
-		
-	}
-
-	public void montarCorpoRelatorio(Edital edital) {
-		
-	}
-
-	public void montarCorpoRelatorio(Grupo grupo) {
-		
-	}
-
-	public void finalizarMontagem() {
-		
-	}
+//	/**
+//	 * Metodo ultilizado para montar um arquivo com texto.
+//	 * 
+//	 * @param texto
+//	 */
+//	public void iniciarMontagem() {
+//		
+//	}
+//
+//	public void montarCorpoRelatorio(Projeto projeto) {
+//		
+//	}
+//
+//	public void montarCorpoRelatorio(Edital edital) {
+//		
+//	}
+//
+//	public void montarCorpoRelatorio(Grupo grupo) {
+//		
+//	}
+//
+//	public void finalizarMontagem() {
+//		
+//	}
 }

@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import javax.swing.JFrame;
+
 import model.projetos.Edital;
 import model.projetos.Grupo;
 import model.projetos.Projeto;
@@ -124,6 +126,10 @@ public class MontadorRelatorioProjetoHTML extends File implements InterfaceDeMon
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+	}
+
+	public File getRelatorio() {
+		return this;
 	}
 
 }
