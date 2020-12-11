@@ -62,7 +62,6 @@ public class DAOXMLMembroConta {
 		}
 		return null;
 	}
-
 	public Membro isAdmimPelaMatricula(long matricula) {
 		this.persistidos = this.carregarXML();
 		Membro membro = recuperarPorIndentificador(matricula);

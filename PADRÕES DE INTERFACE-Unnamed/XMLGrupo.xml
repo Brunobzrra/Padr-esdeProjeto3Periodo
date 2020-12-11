@@ -4,8 +4,8 @@
     <model.projetos.Grupo>
       <ativo>true</ativo>
       <tipo>GRUPO</tipo>
-      <nome>Grupoo</nome>
-      <dataCriacao>2020-12-11 17:27:24.158 UTC</dataCriacao>
+      <nome>grupo</nome>
+      <dataCriacao>2020-12-11 19:59:42.949 UTC</dataCriacao>
       <linkCNPq>123456</linkCNPq>
       <itens>
         <model.autenticacao.Membro>
@@ -13,7 +13,7 @@
           <projetoPai class="model.projetos.Grupo" reference="../../.."/>
           <tipo>MEMBRO</tipo>
           <matricula>123456</matricula>
-          <nome>Antonio</nome>
+          <nome>antonio</nome>
           <ativo>true</ativo>
           <email>antonio@gmail.com</email>
           <senha>123456</senha>
@@ -21,7 +21,32 @@
             <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
           </conta>
           <administrador>true</administrador>
-          <participacoes/>
+          <participacoes>
+            <model.projetos.Participacao>
+              <ativo>true</ativo>
+              <projetoPai class="model.projetos.Projeto">
+                <ativo>true</ativo>
+                <tipo>PROJETO</tipo>
+                <itens>
+                  <model.projetos.Participacao reference="../../.."/>
+                </itens>
+                <nome>Projeto</nome>
+                <aporteCusteioReais>645.0</aporteCusteioReais>
+                <aporteCapitalReais>456.0</aporteCapitalReais>
+                <gastoExecutadoCusteioReais>456.0</gastoExecutadoCusteioReais>
+                <gastoExecutadoCapitalReais>456.0</gastoExecutadoCapitalReais>
+              </projetoPai>
+              <tipo>PARTICIPACAO</tipo>
+              <dataInicio>2020-12-11 19:59:25.75 UTC</dataInicio>
+              <aporteCusteioMensalReais>645.0</aporteCusteioMensalReais>
+              <qtdMesesCusteados>645</qtdMesesCusteados>
+              <qtdMesesPagos>45</qtdMesesPagos>
+              <coordenador>true</coordenador>
+              <pontos/>
+              <horarios/>
+              <membro reference="../../.."/>
+            </model.projetos.Participacao>
+          </participacoes>
         </model.autenticacao.Membro>
       </itens>
     </model.projetos.Grupo>

@@ -44,4 +44,24 @@ public class ControllerCadastroGrupos {
 	public ArrayList<String> mostrarGruposDoUsuarioLogado() throws Exception {
 		return casoDeUsoExtra.recuperarGrupos();
 	}
+
+	public ArrayList<String> mostrarProjetosDoUsuarioLogado() throws Exception {
+		return casoDeUsoExtra.recuperarProjetos();
+	}
+
+	public void adcionarMembro(long matricula, String nomeGrupo) throws Exception {
+		casoDeUsoTres.adcionarMembro(matricula, nomeGrupo);
+	}
+
+	public void removerMembro(long matricula, String nomeGrupo) throws Exception {
+		casoDeUsoTres.removerMembro(matricula, nomeGrupo);
+	}
+
+	public void adcionarProjeto(String nomeProjeto, String nomeGrupo) throws Exception {
+		casoDeUsoTres.adcionarProjeto(nomeProjeto, nomeGrupo);
+	}
+
+	public void removerProjeto(String nomeProjeto, String nomeGrupo) throws Exception {
+		casoDeUsoTres.removerProjeto(nomeProjeto, nomeGrupo);
+	}
 }

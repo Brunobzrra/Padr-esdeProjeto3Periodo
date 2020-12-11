@@ -5,17 +5,23 @@ import java.util.logging.Level;
 
 import model.autenticacao.Membro;
 import model.projetos.Edital;
+import model.projetos.Grupo;
+import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
 import model.projetos.TipoProjetoComponente;
 import model.utilitarios.LoggerProjeto;
 import persistencia.xml.DAOXMLEdital;
+import persistencia.xml.DAOXMLGrupo;
 import persistencia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 4
 public class CasoDeUsoQuatro {
 
 	private DAOXMLEdital daoEdital = new DAOXMLEdital();
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
+	private DAOXMLGrupo daoGrupo = new DAOXMLGrupo();
+	private DAOXMLProjetoParticipacao daoProjeto = new DAOXMLProjetoParticipacao();
 
 	public void adcionarEdital(String nomeEdital, Date dataInicio, Date dataTermino, long matricula) throws Exception {
 		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Adicionando novo edital");
@@ -66,4 +72,32 @@ public class CasoDeUsoQuatro {
 			daoEdital.remover(edital);
 		}
 	}
+	public void adcionarGrupo(String nomeGrupo,String nomeEdital) throws Exception {
+		Grupo grupo=daoGrupo.recuperarPorNome(nomeGrupo);
+		Edital edital= daoEdital.recuperarPorIndentificador(nomeEdital);
+		edital.adicionar(grupo);
+		daoGrupo.atualizar(grupo, grupo);
+		daoEdital.atualizar(edital, edital);
+	}
+	public void removerGrupo(String nomeGrupo,String nomeEdital) throws Exception {
+		Grupo grupo=daoGrupo.recuperarPorNome(nomeGrupo);
+		Edital edital= daoEdital.recuperarPorIndentificador(nomeEdital);
+		edital.remover(grupo);
+		daoGrupo.atualizar(grupo, grupo);
+		daoEdital.atualizar(edital, edital);
+	}
+	public void adcionarProjeto(String nomeProjeto,String nomeEdital) throws Exception {
+		Projeto projeto=daoProjeto.recuperarPorIndentificador(nomeProjeto);
+		Edital edital= daoEdital.recuperarPorIndentificador(nomeEdital);
+		edital.adicionar(projeto);
+		daoProjeto.atualizar(projeto, projeto);
+		daoEdital.atualizar(edital, edital);
+	}
+	public void removerProjeto(String nomeProjeto,String nomeEdital) throws Exception {
+		Projeto projeto=daoProjeto.recuperarPorIndentificador(nomeProjeto);
+		Edital edital= daoEdital.recuperarPorIndentificador(nomeEdital);
+		edital.remover(projeto);
+		daoProjeto.atualizar(projeto, projeto);
+		daoEdital.atualizar(edital, edital);
+	}	
 }

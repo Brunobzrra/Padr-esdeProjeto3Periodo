@@ -46,4 +46,28 @@ public class ControllerCadastroEditais {
 	public ArrayList<String> mostrarEditaisDoUsuarioLogado() throws Exception {
 		return casoDeUsoExtra.recuperarEditais();
 	}
+
+	public ArrayList<String> mostrarGruposDoUsuarioLogado() throws Exception {
+		return casoDeUsoExtra.recuperarGrupos();
+	}
+
+	public ArrayList<String> mostrarProjetosDoUsuarioLogado() throws Exception {
+		return casoDeUsoExtra.recuperarProjetos();
+	}
+
+	public void adcionarGrupo(String nomeGrupo, String nomeEdital) throws Exception {
+		casoDeUsoQuatro.adcionarGrupo(nomeGrupo, nomeEdital);
+	}
+
+	public void removerGrupo(String nomeGrupo, String nomeEdital) throws Exception {
+		casoDeUsoQuatro.removerGrupo(nomeGrupo, nomeEdital);
+	}
+
+	public void adcionarProjeto(String nomeProjeto, String nomeEdital) throws Exception {
+		casoDeUsoQuatro.adcionarProjeto(nomeProjeto, nomeEdital);
+	}
+
+	public void removerProjeto(String nomeProjeto, String nomeEdital) throws Exception {
+		casoDeUsoQuatro.removerProjeto(nomeProjeto, nomeEdital);
+	}
 }

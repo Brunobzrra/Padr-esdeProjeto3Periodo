@@ -5,9 +5,11 @@ import java.util.logging.Logger;
 
 import model.autenticacao.Membro;
 import model.projetos.Grupo;
+import model.projetos.Projeto;
 import model.utilitarios.LoggerProjeto;
 import persistencia.xml.DAOXMLGrupo;
 import persistencia.xml.DAOXMLMembroConta;
+import persistencia.xml.DAOXMLProjetoParticipacao;
 
 //caso de uso 3
 public class CasoDeUsoTres {
@@ -17,6 +19,8 @@ public class CasoDeUsoTres {
 	private DAOXMLGrupo daoGrupo = new DAOXMLGrupo();
 
 	private DAOXMLMembroConta daoMembro = new DAOXMLMembroConta();
+	
+	private DAOXMLProjetoParticipacao daoProjeto = new DAOXMLProjetoParticipacao();
 
 	public void adcionarGrupo(String nome, String linkCNPq, long matricula) throws Exception {
 		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Adicionando um novo grupo");
@@ -67,4 +71,35 @@ public class CasoDeUsoTres {
 		throw new Exception("Membros que não forem administradores não podem atualizar grupos");
 	}
 
+	public void adcionarMembro(long matricula, String nomeGrupo) throws Exception {
+		Membro membro=daoMembro.recuperarPorIndentificador(matricula);
+		Grupo grupo = daoGrupo.recuperarPorNome(nomeGrupo);
+		grupo.adicionar(membro);
+		daoMembro.atualizar(membro, membro);
+		daoGrupo.atualizar(grupo, grupo);
+	}
+
+	public void removerMembro(long matricula, String nomeGrupo) throws Exception {
+		Membro membro=daoMembro.recuperarPorIndentificador(matricula);
+		Grupo grupo = daoGrupo.recuperarPorNome(nomeGrupo);
+		grupo.remover(membro);
+		daoMembro.atualizar(membro, membro);
+		daoGrupo.atualizar(grupo, grupo);
+	}
+
+	public void adcionarProjeto(String nomeProjeto, String nomeGrupo) throws Exception {
+		Projeto projeto = daoProjeto.recuperarPorIndentificador(nomeProjeto);
+		Grupo grupo = daoGrupo.recuperarPorNome(nomeGrupo);
+		grupo.adicionar(projeto);
+		daoProjeto.atualizar(projeto, projeto);
+		daoGrupo.atualizar(grupo, grupo);
+	}
+
+	public void removerProjeto(String nomeProjeto, String nomeGrupo) throws Exception {
+		Projeto projeto = daoProjeto.recuperarPorIndentificador(nomeProjeto);
+		Grupo grupo = daoGrupo.recuperarPorNome(nomeGrupo);
+		grupo.remover(projeto);
+		daoProjeto.atualizar(projeto, projeto);
+		daoGrupo.atualizar(grupo, grupo);
+	}
 }

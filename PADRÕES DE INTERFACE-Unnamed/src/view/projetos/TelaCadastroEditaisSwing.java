@@ -15,7 +15,6 @@ import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -47,7 +46,11 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 	private JTextField novoNomeEdital;
 	private JTextField novaDataInicio;
 	private JTextField novaDataTermino;
+	
 	private JComboBox<Object> op = new JComboBox<Object>();
+	private JComboBox<Object> op2 = new JComboBox<Object>();
+	private JComboBox<Object> opGrupos = new JComboBox<Object>();
+	private JComboBox<Object> opProjetos = new JComboBox<Object>();
 
 	public TelaCadastroEditaisSwing() {
 
@@ -116,40 +119,46 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 		// String nomeEdital, String novoNome, Date dataInicio, Date dataTermino, long
 		// matricula
 		JLabel atualizar = new JLabel("Atualizar Edital");
-		atualizar.setBounds(300, 400, 300, 40);
+		atualizar.setBounds(200, 400, 300, 40);
 		atualizar.setFont(new Font("Arial", Font.BOLD, 30));
 		atualizar.setForeground(Color.DARK_GRAY);
 		this.add(atualizar);
 
 		JLabel matriculaAtualizar = new JLabel("Matricula:");
-		matriculaAtualizar.setBounds(100, 440, 300, 40);
+		matriculaAtualizar.setBounds(50, 440, 100, 40);
 		matriculaAtualizar.setFont(new Font("Arial", Font.BOLD, 14));
 		matriculaAtualizar.setForeground(Color.DARK_GRAY);
 		this.add(matriculaAtualizar);
 
-		JLabel dataInicioAtualizar = new JLabel("Nova Data de Inicio:");
-		dataInicioAtualizar.setBounds(100, 530, 300, 40);
+		JLabel dataInicioAtualizar = new JLabel("<html>Nova Data de Inicio:</html>");
+		dataInicioAtualizar.setBounds(50, 530, 100, 40);
 		dataInicioAtualizar.setFont(new Font("Arial", Font.BOLD, 14));
 		dataInicioAtualizar.setForeground(Color.DARK_GRAY);
 		this.add(dataInicioAtualizar);
 
 		JLabel nomeNovo = new JLabel("Nome:");
-		nomeNovo.setBounds(350, 440, 300, 40);
+		nomeNovo.setBounds(200, 440, 100, 40);
 		nomeNovo.setFont(new Font("Arial", Font.BOLD, 14));
 		nomeNovo.setForeground(Color.DARK_GRAY);
 		this.add(nomeNovo);
 
 		JLabel nomeAntigo = new JLabel("Novo nome:");
-		nomeAntigo.setBounds(600, 440, 300, 40);
+		nomeAntigo.setBounds(350, 440, 100, 40);
 		nomeAntigo.setFont(new Font("Arial", Font.BOLD, 14));
 		nomeAntigo.setForeground(Color.DARK_GRAY);
 		this.add(nomeAntigo);
 
-		JLabel dataDeterminoAtualizar = new JLabel("Nova Data de Termino:");
-		dataDeterminoAtualizar.setBounds(350, 530, 300, 40);
+		JLabel dataDeterminoAtualizar = new JLabel("<html>Nova Data de Termino:</html>");
+		dataDeterminoAtualizar.setBounds(200, 530, 100, 40);
 		dataDeterminoAtualizar.setFont(new Font("Arial", Font.BOLD, 14));
 		dataDeterminoAtualizar.setForeground(Color.DARK_GRAY);
 		this.add(dataDeterminoAtualizar);
+		
+		JLabel adcionarRemover = new JLabel("<html>Adcionar ou Remover\nGrupo ou Projeto</html>");
+		adcionarRemover.setBounds(600, 400, 250, 50);
+		adcionarRemover.setFont(new Font("Arial", Font.BOLD, 20));
+		adcionarRemover.setForeground(Color.DARK_GRAY);
+		this.add(adcionarRemover);
 	}
 
 	private void adcionarTextFields() {
@@ -191,16 +200,16 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 		// -----------------------------------------------------------
 		matriculaAtualizar = new JTextField();
 		matriculaAtualizar.setToolTipText("ex: 123456...");
-		matriculaAtualizar.setBounds(100, 480, 200, 25);
+		matriculaAtualizar.setBounds(50, 480, 100, 25);
 		this.add(matriculaAtualizar);
 
 		novaDataInicio.setToolTipText("ex: 123456...");
-		novaDataInicio.setBounds(100, 570, 200, 25);
+		novaDataInicio.setBounds(50, 570, 100, 25);
 		this.add(novaDataInicio);
 
 		antigoNomeEdital = new JTextField();
 		antigoNomeEdital.setToolTipText("ex: Fulano...");
-		antigoNomeEdital.setBounds(350, 480, 200, 25);
+		antigoNomeEdital.setBounds(200, 480, 100, 25);
 		antigoNomeEdital.addKeyListener(new KeyListener() {
 
 			public void keyTyped(KeyEvent e) {
@@ -224,12 +233,12 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 		this.add(antigoNomeEdital);
 
 		novaDataTermino.setToolTipText("ex: 00/00/0000...");
-		novaDataTermino.setBounds(350, 570, 200, 25);
+		novaDataTermino.setBounds(200, 570, 100, 25);
 		this.add(novaDataTermino);
 
 		novoNomeEdital = new JTextField();
 		novoNomeEdital.setToolTipText("ex: Fulano...");
-		novoNomeEdital.setBounds(600, 480, 200, 25);
+		novoNomeEdital.setBounds(350, 480, 200, 25);
 		this.add(novoNomeEdital);
 
 	}
@@ -295,7 +304,7 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 				}
 			}
 		});
-		atualizar.setBounds(600, 550, 100, 40);
+		atualizar.setBounds(350, 560, 100, 40);
 		this.add(atualizar);
 
 		JButton mostrarEditais = new JButton("<html>Criar Relatorio</html>");
@@ -316,24 +325,129 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 				}
 			}
 		});
-		mostrarEditais.setBounds(710, 550, 90, 40);
+		mostrarEditais.setBounds(460, 560, 90, 40);
 		this.add(mostrarEditais);
+		
+		JButton adcionarGrupo = new JButton("<html>Adcionar Grupo</html>");
+		adcionarGrupo.setForeground(Color.WHITE);
+		adcionarGrupo.setBackground(new Color(119, 221, 119));
+		adcionarGrupo.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+					controller.adcionarGrupo((String) opGrupos.getSelectedItem(), (String) op2.getSelectedItem());
+					JOptionPane.showMessageDialog(null, "Grupo adcionado!");
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, "Grupo não adcionado!");
+					e1.printStackTrace();
+				}
+			}
+		});
+		adcionarGrupo.setFont(new Font("Arial", Font.BOLD, 9));
+		adcionarGrupo.setBounds(600, 550, 90, 25);
+		this.add(adcionarGrupo);
+
+		JButton removerGrupo = new JButton("<html>Remover Grupo</html>");
+		removerGrupo.setForeground(Color.WHITE);
+		removerGrupo.setBackground(new Color(119, 221, 119));
+		removerGrupo.setFont(new Font("Arial", Font.BOLD, 9));
+		removerGrupo.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+					controller.removerGrupo((String) opGrupos.getSelectedItem(), (String) op2.getSelectedItem());
+					JOptionPane.showMessageDialog(null, "Grupo Removido!");
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, "Grupo não Removido!");
+					e1.printStackTrace();
+				}
+			}
+		});
+		removerGrupo.setBounds(600, 580, 90, 25);
+		this.add(removerGrupo);
+		JButton adcionarProjeto = new JButton("<html>Adcionar projeto</html>");
+		adcionarProjeto.setForeground(Color.WHITE);
+		adcionarProjeto.setBackground(new Color(119, 221, 119));
+		adcionarProjeto.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+					controller.adcionarProjeto((String) opProjetos.getSelectedItem(), (String) op2.getSelectedItem());
+					JOptionPane.showMessageDialog(null, "Projeto adcionado!");
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, "Projeto não adcionado!");
+					e1.printStackTrace();
+				}
+			}
+		});
+		adcionarProjeto.setFont(new Font("Arial", Font.BOLD, 9));
+		adcionarProjeto.setBounds(710, 550, 90, 25);
+		this.add(adcionarProjeto);
+
+		JButton removerProjeto = new JButton("<html>Remover projeto</html>");
+		removerProjeto.setForeground(Color.WHITE);
+		removerProjeto.setBackground(new Color(119, 221, 119));
+		removerProjeto.setFont(new Font("Arial", Font.BOLD, 9));
+		removerProjeto.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+					controller.removerProjeto((String) opProjetos.getSelectedItem(), (String) op2.getSelectedItem());
+					JOptionPane.showMessageDialog(null, "Projeto Removido!");
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, "Projeto não Removido!");
+					e1.printStackTrace();
+				}
+			}
+		});
+		removerProjeto.setBounds(710, 580, 90, 25);
+		this.add(removerProjeto);
 	}
 
 	private void adcionarJComobox() {
 		Object[] editais = mostrarEditaisDoUsuarioLogado();
-		String[] nome = { "---Nenhum edital cadastrado---" };
+		Object[] projetos = mostrarProjetosDoUsuarioLogado();
+		Object[] grupos = mostrarGruposDoUsuarioLogado();
+		String[] textoEdital = { "---Nenhum edital cadastrado---" };
+		String[] textoProjetos = { "---Nenhum projetos cadastrado---" };
+		String[] textoGrupos = { "---Nenhum grupos cadastrado---" };
 		if (editais.length == 0 || editais == null) {
 			op.removeAllItems();
-			op.addItem(nome[0].toString());
+			op.addItem(textoEdital[0].toString());
+			op2.removeAllItems();
+			op2.addItem(textoEdital[0].toString());
 		} else {
 			op.removeAllItems();
+			op2.removeAllItems();
 			for (Object object : editais) {
 				op.addItem(object.toString());
+				op2.addItem(object.toString());
 			}
 		}
-		op.setBounds(600, 520, 200, 20);
+		op.setBounds(350, 520, 200, 20);
 		add(op);
+		op2.setBounds(600, 480, 200, 20);
+		add(op2);
+		if (grupos.length == 0 || grupos == null) {
+			opGrupos.addItem(textoGrupos[0].toString());		
+		} else {
+			opGrupos.removeAllItems();
+			for (Object object : grupos) {
+				opGrupos.addItem(object.toString());
+			}
+		}
+		opGrupos.setBounds(600, 520, 100, 20);
+		add(opGrupos);
+		if (projetos.length == 0 || projetos == null) {
+			opProjetos.addItem(textoProjetos[0].toString());		
+		} else {
+			opProjetos.removeAllItems();
+			for (Object object : projetos) {
+				opProjetos.addItem(object.toString());
+			}
+		}
+		opProjetos.setBounds(700, 520, 100, 20);
+		add(opProjetos);
 	}
 
 	public void adcionarEdital(String nomeEdital, Date dataInicio, Date dataTermino, long matricula) throws Exception {
@@ -355,6 +469,24 @@ public class TelaCadastroEditaisSwing extends JPanel implements InterfaceTelaCad
 	public Object[] mostrarEditaisDoUsuarioLogado() {
 		try {
 			return controller.mostrarEditaisDoUsuarioLogado().toArray();
+		} catch (Exception e) {
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, e.getMessage());
+		}
+		return null;
+	}
+	public Object[] mostrarProjetosDoUsuarioLogado() {
+		try {
+			return controller.mostrarProjetosDoUsuarioLogado().toArray();
+		} catch (Exception e) {
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, e.getMessage());
+		}
+		return null;
+	}
+	public Object[] mostrarGruposDoUsuarioLogado() {
+		try {
+			return controller.mostrarGruposDoUsuarioLogado().toArray();
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage());

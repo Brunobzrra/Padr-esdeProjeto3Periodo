@@ -9,25 +9,18 @@
           <ativo>true</ativo>
           <projetoPai class="model.projetos.Projeto" reference="../../.."/>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-12-11 17:34:57.580 UTC</dataInicio>
-          <aporteCusteioMensalReais>456.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>454</qtdMesesCusteados>
-          <qtdMesesPagos>65</qtdMesesPagos>
+          <dataInicio>2020-12-11 19:59:25.75 UTC</dataInicio>
+          <aporteCusteioMensalReais>645.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>645</qtdMesesCusteados>
+          <qtdMesesPagos>45</qtdMesesPagos>
           <coordenador>true</coordenador>
           <pontos/>
-          <horarios>
-            <ponto.model.projetos.HorarioPrevisto>
-              <diaSemana>SEG</diaSemana>
-              <horaInicio>2020-12-12T12:12:00</horaInicio>
-              <horaTermino>2021-12-12T12:12:00</horaTermino>
-              <minutosTolerante>123456</minutosTolerante>
-            </ponto.model.projetos.HorarioPrevisto>
-          </horarios>
+          <horarios/>
           <membro>
             <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
             <tipo>MEMBRO</tipo>
             <matricula>123456</matricula>
-            <nome>Antonio</nome>
+            <nome>antonio</nome>
             <ativo>true</ativo>
             <email>antonio@gmail.com</email>
             <senha>123456</senha>
@@ -41,10 +34,10 @@
           </membro>
         </model.projetos.Participacao>
       </itens>
-      <nome>Projeto de Antonio</nome>
-      <aporteCusteioReais>546.0</aporteCusteioReais>
-      <aporteCapitalReais>65.0</aporteCapitalReais>
-      <gastoExecutadoCusteioReais>45.0</gastoExecutadoCusteioReais>
+      <nome>Projeto</nome>
+      <aporteCusteioReais>645.0</aporteCusteioReais>
+      <aporteCapitalReais>456.0</aporteCapitalReais>
+      <gastoExecutadoCusteioReais>456.0</gastoExecutadoCusteioReais>
       <gastoExecutadoCapitalReais>456.0</gastoExecutadoCapitalReais>
     </model.projetos.Projeto>
   </entry>

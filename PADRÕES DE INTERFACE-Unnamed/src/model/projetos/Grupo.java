@@ -31,7 +31,7 @@ public class Grupo extends ProjetoComponente {
 	public void adicionar(ProjetoComponente item) throws Exception {
 		if (item.getTipo() == TipoProjetoComponente.MEMBRO || item.getTipo() == TipoProjetoComponente.PROJETO) {
 			for (ProjetoComponente projetoComponente : itens) {
-				if (item.equals(projetoComponente)) {
+				if (item.getNome().equals(projetoComponente.getNome())) {
 					throw new Exception("Este item ja existe aqui!");
 				}
 			}
@@ -40,9 +40,15 @@ public class Grupo extends ProjetoComponente {
 		}
 	}
 
-	public void remover(ProjetoComponente integracao) {
-		itens.remove(integracao);
-		integracao.setProjetoPai(null);
+	public void remover(ProjetoComponente integracao) throws Exception {
+		for (int cont=0;cont<itens.size();cont++) {
+			if (itens.get(cont).getNome().equals(integracao.getNome())) {
+				itens.remove(cont);
+				integracao.setProjetoPai(null);
+				return;
+			}
+		}
+		throw new Exception("Este item foi encontrado!");
 	}
 
 	@Override
