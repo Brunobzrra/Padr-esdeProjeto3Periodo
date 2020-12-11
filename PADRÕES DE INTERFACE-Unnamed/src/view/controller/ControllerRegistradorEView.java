@@ -4,21 +4,9 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Set;
 
-import model.autenticacao.ContaAutenticacaoProvedorInterno;
-import model.autenticacao.ContaEmail;
-import model.autenticacao.ContaEmailLivre;
-import model.autenticacao.Membro;
-import model.projetos.Participacao;
-import model.projetos.Projeto;
-import persistencia.xml.DAOXMLMembroConta;
-import persistencia.xml.DAOXMLProjetoParticipacao;
-import ponto.model.projetos.DiaSemana;
-import ponto.model.projetos.HorarioPrevisto;
 import ponto.model.projetos.PontoTrabalhado;
 import ponto.model.projetos.ServicoRegistradorPontoCentral;
 
