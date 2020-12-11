@@ -148,6 +148,8 @@ public class MontadorRelatorioProjetoHTML implements InterfaceDeMontagemRelatori
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+	}
+	public FileWriter getFw() {
+		return fw;
 	}
 }

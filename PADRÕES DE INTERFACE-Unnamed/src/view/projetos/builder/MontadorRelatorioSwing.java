@@ -25,6 +25,7 @@ import model.utilitarios.LoggerProjeto;
  */
 public class MontadorRelatorioSwing implements InterfaceDeMontagemRelatorio {
 	private JFrame tela;
+
 	private JScrollPane painelDoRelatorio;
 
 	private JTextArea textArea;
@@ -150,5 +151,8 @@ public class MontadorRelatorioSwing implements InterfaceDeMontagemRelatorio {
 
 	public void mostrarRelatorioConstruido() {
 		tela.setVisible(true);
+	}
+	public JFrame getTela() {
+		return tela;
 	}
 }
