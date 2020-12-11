@@ -5,7 +5,7 @@
       <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
       <tipo>MEMBRO</tipo>
       <matricula>123456</matricula>
-      <nome>antonio</nome>
+      <nome>Antonio</nome>
       <ativo>true</ativo>
       <email>antonio@gmail.com</email>
       <senha>123456</senha>
@@ -22,18 +22,88 @@
             <itens>
               <model.projetos.Participacao reference="../../.."/>
             </itens>
-            <nome>Projeto</nome>
-            <aporteCusteioReais>45.0</aporteCusteioReais>
-            <aporteCapitalReais>45.0</aporteCapitalReais>
+            <nome>Projeto de Antonio</nome>
+            <aporteCusteioReais>546.0</aporteCusteioReais>
+            <aporteCapitalReais>65.0</aporteCapitalReais>
             <gastoExecutadoCusteioReais>45.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>45.0</gastoExecutadoCapitalReais>
+            <gastoExecutadoCapitalReais>456.0</gastoExecutadoCapitalReais>
           </projetoPai>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-12-11 15:36:41.668 UTC</dataInicio>
-          <aporteCusteioMensalReais>54.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>54</qtdMesesCusteados>
-          <qtdMesesPagos>54</qtdMesesPagos>
+          <dataInicio>2020-12-11 17:34:57.580 UTC</dataInicio>
+          <aporteCusteioMensalReais>456.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>454</qtdMesesCusteados>
+          <qtdMesesPagos>65</qtdMesesPagos>
           <coordenador>true</coordenador>
+          <pontos/>
+          <horarios/>
+          <membro reference="../../.."/>
+        </model.projetos.Participacao>
+      </participacoes>
+    </model.autenticacao.Membro>
+  </entry>
+  <entry>
+    <long>2</long>
+    <model.autenticacao.Membro>
+      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+      <tipo>MEMBRO</tipo>
+      <matricula>123456789</matricula>
+      <nome>isac pereira alves</nome>
+      <ativo>true</ativo>
+      <email>isac@gmail.com</email>
+      <senha>123456789</senha>
+      <conta class="model.autenticacao.ContaEmailLivre">
+        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+      </conta>
+      <administrador>true</administrador>
+      <participacoes>
+        <model.projetos.Participacao>
+          <ativo>true</ativo>
+          <projetoPai class="model.projetos.Projeto">
+            <ativo>true</ativo>
+            <tipo>PROJETO</tipo>
+            <itens>
+              <model.projetos.Participacao>
+                <ativo>true</ativo>
+                <projetoPai class="model.projetos.Projeto" reference="../../.."/>
+                <tipo>PARTICIPACAO</tipo>
+                <dataInicio>2020-12-11 17:21:49.67 UTC</dataInicio>
+                <aporteCusteioMensalReais>345.0</aporteCusteioMensalReais>
+                <qtdMesesCusteados>645</qtdMesesCusteados>
+                <qtdMesesPagos>123</qtdMesesPagos>
+                <coordenador>true</coordenador>
+                <pontos/>
+                <horarios/>
+                <membro>
+                  <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
+                  <tipo>MEMBRO</tipo>
+                  <matricula>123456</matricula>
+                  <nome>Antonio</nome>
+                  <ativo>true</ativo>
+                  <email>antonio@gmail.com</email>
+                  <senha>123456</senha>
+                  <conta class="model.autenticacao.ContaEmailLivre">
+                    <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
+                  </conta>
+                  <administrador>true</administrador>
+                  <participacoes>
+                    <model.projetos.Participacao reference="../../.."/>
+                  </participacoes>
+                </membro>
+              </model.projetos.Participacao>
+              <model.projetos.Participacao reference="../../.."/>
+            </itens>
+            <nome>Projeto</nome>
+            <aporteCusteioReais>66.0</aporteCusteioReais>
+            <aporteCapitalReais>45.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>46.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>58.0</gastoExecutadoCapitalReais>
+          </projetoPai>
+          <tipo>PARTICIPACAO</tipo>
+          <dataInicio>2022-12-12 02:00:00.0 UTC</dataInicio>
+          <aporteCusteioMensalReais>42.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>56</qtdMesesCusteados>
+          <qtdMesesPagos>45</qtdMesesPagos>
+          <coordenador>false</coordenador>
           <pontos/>
           <horarios/>
           <membro reference="../../.."/>

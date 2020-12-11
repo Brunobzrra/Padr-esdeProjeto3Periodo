@@ -4,137 +4,19 @@
     <model.projetos.Grupo>
       <ativo>true</ativo>
       <tipo>GRUPO</tipo>
-      <nome>grupoo</nome>
-      <dataCriacao>2020-12-01 21:16:11.19 UTC</dataCriacao>
-      <linkCNPq>25147555</linkCNPq>
-      <itens>
-        <model.autenticacao.Membro>
-          <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-          <projetoPai class="model.projetos.Grupo" reference="../../.."/>
-          <tipo>MEMBRO</tipo>
-          <matricula>112</matricula>
-          <nome>joaozin</nome>
-          <ativo>true</ativo>
-          <email>bruno.bzrrasantos@gmail.com</email>
-          <senha>131313</senha>
-          <conta class="model.autenticacao.ContaEmailLivre">
-            <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
-          </conta>
-          <administrador>true</administrador>
-          <participacoes/>
-        </model.autenticacao.Membro>
-      </itens>
-    </model.projetos.Grupo>
-  </entry>
-  <entry>
-    <long>2</long>
-    <model.projetos.Grupo>
-      <ativo>true</ativo>
-      <nome>grupo dos mofi</nome>
-      <dataCriacao>2020-10-14 04:07:08.480 UTC</dataCriacao>
-      <linkCNPq>cnpq.com.br</linkCNPq>
-      <itens/>
-    </model.projetos.Grupo>
-  </entry>
-  <entry>
-    <long>3</long>
-    <model.projetos.Grupo>
-      <ativo>true</ativo>
-      <tipo>GRUPO</tipo>
-      <nome>ddsadsa</nome>
-      <dataCriacao>2020-12-01 21:24:32.283 UTC</dataCriacao>
-      <linkCNPq>25147546544566</linkCNPq>
-      <itens>
-        <model.autenticacao.Membro>
-          <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-          <projetoPai class="model.projetos.Grupo" reference="../../.."/>
-          <tipo>MEMBRO</tipo>
-          <matricula>112</matricula>
-          <nome>joaozin</nome>
-          <ativo>true</ativo>
-          <email>bruno.bzrrasantos@gmail.com</email>
-          <senha>131313</senha>
-          <conta class="model.autenticacao.ContaEmailLivre">
-            <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
-          </conta>
-          <administrador>true</administrador>
-          <participacoes/>
-        </model.autenticacao.Membro>
-      </itens>
-    </model.projetos.Grupo>
-  </entry>
-  <entry>
-    <long>4</long>
-    <model.projetos.Grupo>
-      <ativo>true</ativo>
-      <tipo>GRUPO</tipo>
-      <nome>157DEXOXOTA</nome>
-      <dataCriacao>2020-12-03 20:57:37.183 UTC</dataCriacao>
-      <linkCNPq>157.com</linkCNPq>
-      <itens>
-        <model.autenticacao.Membro>
-          <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-          <projetoPai class="model.projetos.Grupo" reference="../../.."/>
-          <tipo>MEMBRO</tipo>
-          <matricula>25147</matricula>
-          <nome>antonio</nome>
-          <ativo>true</ativo>
-          <email>antonio@gmail.com</email>
-          <senha>25147</senha>
-          <conta class="model.autenticacao.ContaEmailLivre">
-            <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
-          </conta>
-          <administrador>true</administrador>
-          <participacoes/>
-        </model.autenticacao.Membro>
-      </itens>
-    </model.projetos.Grupo>
-  </entry>
-  <entry>
-    <long>5</long>
-    <model.projetos.Grupo>
-      <ativo>true</ativo>
-      <tipo>GRUPO</tipo>
-      <nome>grupo legal</nome>
-      <dataCriacao>2020-12-04 19:12:13.677 UTC</dataCriacao>
+      <nome>Grupoo</nome>
+      <dataCriacao>2020-12-11 17:27:24.158 UTC</dataCriacao>
       <linkCNPq>123456</linkCNPq>
       <itens>
         <model.autenticacao.Membro>
           <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
           <projetoPai class="model.projetos.Grupo" reference="../../.."/>
           <tipo>MEMBRO</tipo>
-          <matricula>12345</matricula>
+          <matricula>123456</matricula>
           <nome>Antonio</nome>
           <ativo>true</ativo>
           <email>antonio@gmail.com</email>
-          <senha>12345</senha>
-          <conta class="model.autenticacao.ContaEmailLivre">
-            <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
-          </conta>
-          <administrador>true</administrador>
-          <participacoes/>
-        </model.autenticacao.Membro>
-      </itens>
-    </model.projetos.Grupo>
-  </entry>
-  <entry>
-    <long>6</long>
-    <model.projetos.Grupo>
-      <ativo>true</ativo>
-      <tipo>GRUPO</tipo>
-      <nome>grupo legal dois</nome>
-      <dataCriacao>2020-12-04 19:16:17.645 UTC</dataCriacao>
-      <linkCNPq>12546</linkCNPq>
-      <itens>
-        <model.autenticacao.Membro>
-          <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-          <projetoPai class="model.projetos.Grupo" reference="../../.."/>
-          <tipo>MEMBRO</tipo>
-          <matricula>12345</matricula>
-          <nome>Antonio</nome>
-          <ativo>true</ativo>
-          <email>antonio@gmail.com</email>
-          <senha>12345</senha>
+          <senha>123456</senha>
           <conta class="model.autenticacao.ContaEmailLivre">
             <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
           </conta>

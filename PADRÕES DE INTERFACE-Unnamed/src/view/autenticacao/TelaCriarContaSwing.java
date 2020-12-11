@@ -149,7 +149,7 @@ public class TelaCriarContaSwing extends JFrame implements InterfaceTelaCriarCon
 		atualizar.setForeground(Color.DARK_GRAY);
 		this.add(atualizar);
 
-		JLabel coordenador = new JLabel("Coordenador:");
+		JLabel coordenador = new JLabel("Matricula antiga:");
 		coordenador.setFont(new Font("Arial", Font.BOLD, 13));
 		coordenador.setBounds(440, 10, 300, 150);
 		coordenador.setForeground(Color.BLACK);
@@ -214,14 +214,7 @@ public class TelaCriarContaSwing extends JFrame implements InterfaceTelaCriarCon
 		matriculaADM.setForeground(Color.BLACK);
 		matriculaADM.setBackground(new Color(240, 240, 240));
 		matriculaADM.setBounds(440, 95, 110, 40);
-		this.add(matriculaADM);
-
-		matriculaAtualizar = new JTextField();
-		matriculaAtualizar.setToolTipText("ex: 123456...");
-		matriculaAtualizar.setForeground(Color.BLACK);
-		matriculaAtualizar.setBackground(new Color(240, 240, 240));
-		matriculaAtualizar.setBounds(570, 95, 110, 40);
-		matriculaAtualizar.addKeyListener(new KeyListener() {
+		matriculaADM.addKeyListener(new KeyListener() {
 			public void keyTyped(KeyEvent e) {
 			}
 
@@ -240,6 +233,13 @@ public class TelaCriarContaSwing extends JFrame implements InterfaceTelaCriarCon
 			public void keyPressed(KeyEvent e) {
 			}
 		});
+		this.add(matriculaADM);
+
+		matriculaAtualizar = new JTextField();
+		matriculaAtualizar.setToolTipText("ex: 123456...");
+		matriculaAtualizar.setForeground(Color.BLACK);
+		matriculaAtualizar.setBackground(new Color(240, 240, 240));
+		matriculaAtualizar.setBounds(570, 95, 110, 40);
 		this.add(matriculaAtualizar);
 
 		nomeAtualizar = new JTextField();

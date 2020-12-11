@@ -39,6 +39,7 @@ public class CasoDeUsoSeis {
 				EnviarEmail.enviarEmail(membro.getSenha(), membro.getEmail(), membroNovo.getEmail(),
 						"Você foi adcionado no projeto " + projeto.getNome() + " pelo coordenador " + membro.getNome(),
 						"Você foi adcionado em um projeto");
+				return;
 			}
 		}
 		LoggerProjeto.getInstance().getLogger().severe("Participacao nao adicionada");

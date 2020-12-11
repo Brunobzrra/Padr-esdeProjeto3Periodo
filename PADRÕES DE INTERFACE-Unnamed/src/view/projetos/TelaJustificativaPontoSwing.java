@@ -48,7 +48,7 @@ public class TelaJustificativaPontoSwing extends JFrame implements InterfaceTela
 			JOptionPane.showMessageDialog(null, "Justificativa cadastrada!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, e.getMessage());
+			JOptionPane.showMessageDialog(null, "Justificativa não cadastrada!");
 		}
 	}
 

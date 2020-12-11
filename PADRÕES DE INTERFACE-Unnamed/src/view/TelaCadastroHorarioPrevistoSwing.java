@@ -21,7 +21,6 @@ import javax.swing.text.MaskFormatter;
 
 import model.utilitarios.ConversorDeHoraEDia;
 import ponto.model.projetos.DiaSemana;
-import view.abstract_factory.FabricaDeTelasSwing;
 
 import view.abstract_factory.InterfaceTelaCadastroHorarioPrevisto;
 import view.controller.ControllerCadastroHorarioPrevisto;
@@ -191,7 +190,6 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 		voltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				fecharTela();
-				FabricaDeTelasSwing.getFabrica().fabricarTelaPrincipal();
 			}
 		});
 		this.add(voltar);
