@@ -144,11 +144,6 @@ public class MontadorRelatorioSwing implements InterfaceDeMontagemRelatorio {
 			return null;
 		}
 	}
-
-	public JFrame getRelatorio() {
-		return tela;
-	}
-
 	private void reiniciar() {
 		texto = "";
 	}
