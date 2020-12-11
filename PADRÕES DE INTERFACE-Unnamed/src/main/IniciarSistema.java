@@ -16,7 +16,5 @@ public class IniciarSistema {
 	}
 	public static void main(String[] args) {
 		iniciar();
-
 	}
-
 }

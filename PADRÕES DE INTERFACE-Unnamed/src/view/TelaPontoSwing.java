@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 import view.abstract_factory.InterfaceTelaPonto;
 import view.controller.ControllerRegistradorEView;
 
-public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
+public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
@@ -36,7 +36,7 @@ public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
 			return;
 		}
 		setLayout(null);
-		setSize(700, 250);
+		setSize(700, 220);
 		getContentPane().setBackground(Color.DARK_GRAY);
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -61,9 +61,10 @@ public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
 
 	public void botaoVerDetalhes(String login, String nomeDoProjeto) {
 		try {
-			JOptionPane.showMessageDialog(this, controller.horasTrabalhadasValidas(login, nomeDoProjeto));
-			JOptionPane.showMessageDialog(this, controller.defcitHoras(login, nomeDoProjeto));
-			JOptionPane.showMessageDialog(this, controller.getPontosValidos(login, nomeDoProjeto));
+			String texto = controller.horasTrabalhadasValidas(login, nomeDoProjeto) + "\n"
+					+ controller.defcitHoras(login, nomeDoProjeto) + "\n"
+					+ controller.getPontosValidos(login, nomeDoProjeto);
+			JOptionPane.showMessageDialog(this, texto);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
@@ -156,8 +157,6 @@ public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
 			public void actionPerformed(ActionEvent arg0) {
 				botaoBaterPonto((String) op.getSelectedItem(), login.getText(), senha.getText());
 				senha.setText("");
-				;
-
 			}
 		});
 		baterPonto.setBounds(480, 135, 90, 30);
@@ -175,6 +174,7 @@ public class TelaPontoSwing extends JFrame implements InterfaceTelaPonto{
 		this.add(detalhes);
 
 	}
+
 	public static void main(String[] args) {
 		new TelaPontoSwing();
 	}

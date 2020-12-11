@@ -4,10 +4,10 @@
     <model.autenticacao.Membro>
       <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
       <tipo>MEMBRO</tipo>
-      <matricula>1212</matricula>
-      <nome>bruno</nome>
+      <matricula>123456</matricula>
+      <nome>antonio</nome>
       <ativo>true</ativo>
-      <email>fananitadz@gmail.com</email>
+      <email>antonio@gmail.com</email>
       <senha>123456</senha>
       <conta class="model.autenticacao.ContaEmailLivre">
         <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
@@ -22,186 +22,17 @@
             <itens>
               <model.projetos.Participacao reference="../../.."/>
             </itens>
-            <nome>projeto</nome>
-            <aporteCusteioReais>1000.0</aporteCusteioReais>
-            <aporteCapitalReais>1200.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>1000.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>500.0</gastoExecutadoCapitalReais>
-          </projetoPai>
-          <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-12-08 02:54:21.933 UTC</dataInicio>
-          <aporteCusteioMensalReais>100.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>10</qtdMesesCusteados>
-          <qtdMesesPagos>0</qtdMesesPagos>
-          <coordenador>true</coordenador>
-          <pontos/>
-          <horarios/>
-          <membro reference="../../.."/>
-        </model.projetos.Participacao>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.projetos.Projeto">
-            <ativo>true</ativo>
-            <tipo>PROJETO</tipo>
-            <itens>
-              <model.projetos.Participacao>
-                <ativo>true</ativo>
-                <projetoPai class="model.projetos.Projeto" reference="../../.."/>
-                <tipo>PARTICIPACAO</tipo>
-                <dataInicio>2020-12-08 21:58:43.287 UTC</dataInicio>
-                <aporteCusteioMensalReais>10.0</aporteCusteioMensalReais>
-                <qtdMesesCusteados>10</qtdMesesCusteados>
-                <qtdMesesPagos>0</qtdMesesPagos>
-                <coordenador>true</coordenador>
-                <pontos/>
-                <horarios/>
-                <membro>
-                  <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-                  <tipo>MEMBRO</tipo>
-                  <matricula>4321</matricula>
-                  <nome>bruno</nome>
-                  <ativo>true</ativo>
-                  <email>bruno@gmail.com</email>
-                  <senha>123456</senha>
-                  <conta class="model.autenticacao.ContaEmailLivre"/>
-                  <administrador>false</administrador>
-                  <participacoes>
-                    <model.projetos.Participacao reference="../../.."/>
-                  </participacoes>
-                </membro>
-              </model.projetos.Participacao>
-              <model.projetos.Participacao reference="../../.."/>
-            </itens>
             <nome>Projeto</nome>
-            <aporteCusteioReais>1010.0</aporteCusteioReais>
-            <aporteCapitalReais>1100.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>200.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>1000.0</gastoExecutadoCapitalReais>
+            <aporteCusteioReais>45.0</aporteCusteioReais>
+            <aporteCapitalReais>45.0</aporteCapitalReais>
+            <gastoExecutadoCusteioReais>45.0</gastoExecutadoCusteioReais>
+            <gastoExecutadoCapitalReais>45.0</gastoExecutadoCapitalReais>
           </projetoPai>
           <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-08-12 03:00:00.0 UTC</dataInicio>
-          <aporteCusteioMensalReais>20.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>10</qtdMesesCusteados>
-          <qtdMesesPagos>0</qtdMesesPagos>
-          <coordenador>false</coordenador>
-          <pontos/>
-          <horarios/>
-          <membro reference="../../.."/>
-        </model.projetos.Participacao>
-      </participacoes>
-    </model.autenticacao.Membro>
-  </entry>
-  <entry>
-    <long>2</long>
-    <model.autenticacao.Membro>
-      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-      <tipo>MEMBRO</tipo>
-      <matricula>111</matricula>
-      <nome>jose claudiu</nome>
-      <ativo>true</ativo>
-      <email>bruno@gmail.com</email>
-      <senha>121212</senha>
-      <conta class="model.autenticacao.ContaEmailLivre">
-        <conta class="model.autenticacao.ContaAutenticacaoProvedorInterno"/>
-      </conta>
-      <administrador>true</administrador>
-      <participacoes>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.projetos.Projeto">
-            <ativo>true</ativo>
-            <tipo>PROJETO</tipo>
-            <itens>
-              <model.projetos.Participacao reference="../../.."/>
-            </itens>
-            <nome>Projeto novo</nome>
-            <aporteCusteioReais>100.0</aporteCusteioReais>
-            <aporteCapitalReais>26.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>21.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>37.0</gastoExecutadoCapitalReais>
-          </projetoPai>
-          <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-12-08 03:31:00.391 UTC</dataInicio>
-          <aporteCusteioMensalReais>0.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>0</qtdMesesCusteados>
-          <qtdMesesPagos>0</qtdMesesPagos>
-          <coordenador>true</coordenador>
-          <pontos/>
-          <horarios>
-            <ponto.model.projetos.HorarioPrevisto>
-              <diaSemana>TER</diaSemana>
-              <horaInicio>2020-12-07T00:32:00</horaInicio>
-              <horaTermino>2020-12-07T17:30:00</horaTermino>
-              <minutosTolerante>30</minutosTolerante>
-            </ponto.model.projetos.HorarioPrevisto>
-            <ponto.model.projetos.HorarioPrevisto>
-              <diaSemana>TER</diaSemana>
-              <horaInicio>2020-12-07T00:35:00</horaInicio>
-              <horaTermino>2020-12-07T17:30:00</horaTermino>
-              <minutosTolerante>30</minutosTolerante>
-            </ponto.model.projetos.HorarioPrevisto>
-          </horarios>
-          <membro reference="../../.."/>
-        </model.projetos.Participacao>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.projetos.Projeto">
-            <ativo>true</ativo>
-            <tipo>PROJETO</tipo>
-            <itens>
-              <model.projetos.Participacao reference="../../.."/>
-            </itens>
-            <nome>projeto 2</nome>
-            <aporteCusteioReais>100.0</aporteCusteioReais>
-            <aporteCapitalReais>22.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>33.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>56.0</gastoExecutadoCapitalReais>
-          </projetoPai>
-          <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-12-08 03:31:01.140 UTC</dataInicio>
-          <aporteCusteioMensalReais>10.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>55</qtdMesesCusteados>
-          <qtdMesesPagos>51</qtdMesesPagos>
-          <coordenador>true</coordenador>
-          <pontos/>
-          <horarios/>
-          <membro reference="../../.."/>
-        </model.projetos.Participacao>
-      </participacoes>
-    </model.autenticacao.Membro>
-  </entry>
-  <entry>
-    <long>3</long>
-    <model.autenticacao.Membro>
-      <ativo defined-in="model.projetos.ProjetoComponente">true</ativo>
-      <tipo>MEMBRO</tipo>
-      <matricula>4321</matricula>
-      <nome>bruno</nome>
-      <ativo>true</ativo>
-      <email>bruno@gmail.com</email>
-      <senha>123456</senha>
-      <conta class="model.autenticacao.ContaEmailLivre"/>
-      <administrador>false</administrador>
-      <participacoes>
-        <model.projetos.Participacao>
-          <ativo>true</ativo>
-          <projetoPai class="model.projetos.Projeto">
-            <ativo>true</ativo>
-            <tipo>PROJETO</tipo>
-            <itens>
-              <model.projetos.Participacao reference="../../.."/>
-            </itens>
-            <nome>Projeto</nome>
-            <aporteCusteioReais>1000.0</aporteCusteioReais>
-            <aporteCapitalReais>1000.0</aporteCapitalReais>
-            <gastoExecutadoCusteioReais>200.0</gastoExecutadoCusteioReais>
-            <gastoExecutadoCapitalReais>1000.0</gastoExecutadoCapitalReais>
-          </projetoPai>
-          <tipo>PARTICIPACAO</tipo>
-          <dataInicio>2020-12-08 21:58:43.287 UTC</dataInicio>
-          <aporteCusteioMensalReais>10.0</aporteCusteioMensalReais>
-          <qtdMesesCusteados>10</qtdMesesCusteados>
-          <qtdMesesPagos>0</qtdMesesPagos>
+          <dataInicio>2020-12-11 15:36:41.668 UTC</dataInicio>
+          <aporteCusteioMensalReais>54.0</aporteCusteioMensalReais>
+          <qtdMesesCusteados>54</qtdMesesCusteados>
+          <qtdMesesPagos>54</qtdMesesPagos>
           <coordenador>true</coordenador>
           <pontos/>
           <horarios/>

@@ -23,13 +23,8 @@ import model.utilitarios.LoggerProjeto;
  * 
  * @author bruno
  */
-public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontagemRelatorio {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
+public class MontadorRelatorioSwing implements InterfaceDeMontagemRelatorio {
+	private JFrame tela;
 	private JScrollPane painelDoRelatorio;
 
 	private JTextArea textArea;
@@ -40,18 +35,19 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	 * Aqui é criado a base e o cabesario do relatorio
 	 */
 	public void iniciarMontagem() {
-		setBackground(Color.BLACK);
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setBounds(150, 0, 400, 250);
+		tela= new JFrame();
+		tela.setBackground(Color.BLACK);
+		tela.setDefaultCloseOperation(1);
+		tela.setBounds(150, 0, 400, 250);
 		textArea = new JTextArea();
 		textArea.setEditable(false);
 		textArea.setLineWrap(true);
-		setLocationRelativeTo(null);
+		tela.setLocationRelativeTo(null);
 		Font f = new Font("Arial", 1, 15);
 		textArea.setFont(f);
 		painelDoRelatorio = new JScrollPane(textArea);
 		painelDoRelatorio.setBounds(new Rectangle());
-		add(painelDoRelatorio);
+		tela.add(painelDoRelatorio);
 		reiniciar();
 		texto += "	Relatorio\n\n";
 	}
@@ -79,7 +75,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	
 	}
 	public void montarProjetosFilhos(ArrayList<ProjetoComponente> componentes) {
-		texto += "Projetos: ".toUpperCase() + "\n   ";
+		texto += "Projetos: ".toUpperCase() + "\n   -";
 		boolean contemDado=false;
 		for (ProjetoComponente projetoComponente : componentes) {
 			if(projetoComponente.getTipo()==TipoProjetoComponente.PROJETO) {
@@ -94,7 +90,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	}
 
 	public void montarEditaisFilhos(ArrayList<ProjetoComponente> componentes) {
-		texto += "Editais: ".toUpperCase() + "\n   ";
+		texto += "Editais: ".toUpperCase() + "\n   -";
 		boolean contemDado=false;
 		for (ProjetoComponente projetoComponente : componentes) {
 			if(projetoComponente.getTipo()==TipoProjetoComponente.EDITAL) {
@@ -108,7 +104,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	}
 
 	public void montarMembrosFilhos(ArrayList<ProjetoComponente> componentes) {
-		texto += "Membros: ".toUpperCase() + "\n   ";
+		texto += "Membros: ".toUpperCase() + "\n   -";
 		boolean contemDado=false;
 		for (ProjetoComponente projetoComponente : componentes) {
 			if(projetoComponente.getTipo()==TipoProjetoComponente.MEMBRO || projetoComponente.getTipo()==TipoProjetoComponente.PARTICIPACAO) {
@@ -122,7 +118,7 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	}
 
 	public void montarGruposFilhos(ArrayList<ProjetoComponente> componentes) {
-		texto += "Grupos: ".toUpperCase() + "\n   ";
+		texto += "Grupos: ".toUpperCase() + "\n   -";
 		boolean contemDado=false;
 		for (ProjetoComponente projetoComponente : componentes) {
 			if(projetoComponente.getTipo()==TipoProjetoComponente.EDITAL) {
@@ -138,23 +134,26 @@ public class MontadorRelatorioSwing extends JFrame implements InterfaceDeMontage
 	/**
 	 * este metodo fecha e finaliza o relatorio
 	 */
-	public void finalizarMontagem() {
+	public Object finalizarMontagem() {
 		textArea.setText(texto);
-		setVisible(true);
 		try {
 			LoggerProjeto.getInstance().getLogger().warning("Relatorio gerado");
+			return tela;
 		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
 	}
 
 	public JFrame getRelatorio() {
-		return this;
+		return tela;
 	}
 
 	private void reiniciar() {
 		texto = "";
 	}
 
-
+	public void mostrarRelatorioConstruido() {
+		tela.setVisible(true);
+	}
 }

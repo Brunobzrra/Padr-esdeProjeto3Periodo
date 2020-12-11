@@ -118,8 +118,8 @@ public class CasoDeUsoOnzeETreze extends UnicastRemoteObject implements ServicoR
 				if (ponto != null) {
 					daMembro.atualizar(aux, m);
 					daoProjetoParticipacao.atualizar(projetoAux, projeto);
-					System.out.println("ok");
 					LoggerProjeto.getInstance().getLogger().warning("ponto inserido");
+					return;
 				} else {
 					LoggerProjeto.getInstance().getLogger().severe("O horario previsto nao foi responsavel");
 					throw new Exception("Não existe horario previsto para isso!");

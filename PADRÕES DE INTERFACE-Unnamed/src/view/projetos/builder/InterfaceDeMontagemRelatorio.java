@@ -30,5 +30,7 @@ public interface InterfaceDeMontagemRelatorio {
 
 	public void montarGruposFilhos(ArrayList<ProjetoComponente> componentes);
 
-	public void finalizarMontagem();
+	public Object finalizarMontagem();
+	
+	public void mostrarRelatorioConstruido();
 }

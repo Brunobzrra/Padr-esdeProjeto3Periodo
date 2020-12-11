@@ -77,6 +77,7 @@ public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal
 		cancelar.setVisible(true);
 		logout.setVisible(true);
 		if (controler.isAdmin()) {
+			horario.setVisible(true);
 			grupo.setVisible(true);
 			edital.setVisible(true);
 			proxima2.setVisible(true);
@@ -98,6 +99,7 @@ public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal
 		cancelar.setVisible(false);
 		logout.setVisible(false);
 		if (controler.isAdmin()) {
+			horario.setVisible(false);
 			configAdmin.setVisible(false);
 			grupo.setVisible(false);
 			proxima2.setVisible(false);
@@ -218,18 +220,6 @@ public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal
 		logout.setBounds(25, 270, 100, 40);
 		this.add(logout);
 		
-		horario = new JButton("<html>Horario</html>");
-		horario.setForeground(Color.WHITE);
-		horario.setBackground(new Color(119, 221, 119));
-		horario.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				fabricaDeTelas.fabricarTelaCadastroHorarioPrevisto();
-			}
-		});
-		horario.setFont(new Font("Arial", Font.BOLD, 10));
-		horario.setBounds(25, 220, 100, 40);
-		this.add(horario);
 
 		proxima1 = new JButton("Proximo =>");
 		proxima1.setForeground(Color.WHITE);
@@ -243,6 +233,18 @@ public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal
 		proxima1.setBounds(380, 320, 100, 40);
 		this.add(proxima1);
 		if (controler.isAdmin()) {
+			horario = new JButton("<html>Horario</html>");
+			horario.setForeground(Color.WHITE);
+			horario.setBackground(new Color(119, 221, 119));
+			horario.addActionListener(new ActionListener() {
+				
+				public void actionPerformed(ActionEvent e) {
+					fabricaDeTelas.fabricarTelaCadastroHorarioPrevisto();
+				}
+			});
+			horario.setFont(new Font("Arial", Font.BOLD, 10));
+			horario.setBounds(25, 220, 100, 40);
+			this.add(horario);
 
 			proxima2 = new JButton("Proximo =>");
 			proxima2.setForeground(Color.WHITE);

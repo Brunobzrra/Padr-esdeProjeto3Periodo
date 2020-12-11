@@ -18,7 +18,7 @@ public class CasoDeUsoOito {
 	public void gerarRelatorio(String op, String valor) throws Exception {
 		DiretorDeMontagemDeRelatorio diretor = new DiretorDeMontagemDeRelatorio(new MontadorRelatorioSwing());
 		if (valor.equals("HTML")) {
-			diretor.setMontadorDeRelatorio(new MontadorRelatorioProjetoHTML(""));
+			diretor.setMontadorDeRelatorio(new MontadorRelatorioProjetoHTML());
 		}
 		LoggerProjeto.getInstance().getLogger().log(Level.FINE, "Gerando relatorio em texto");
 		diretor.montarRelatorioCompleto(new CasoDeUsoExtra().recuperarProjetoComponente(op));;

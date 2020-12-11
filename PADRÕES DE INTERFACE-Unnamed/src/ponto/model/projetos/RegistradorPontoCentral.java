@@ -20,8 +20,6 @@ import model.chainOfResponsibility.AvaliadorPontosInvalidosComJustificativaNaoAc
 import model.projetos.Participacao;
 import model.projetos.Projeto;
 import model.projetos.ProjetoComponente;
-import model.projetos.TipoProjetoComponente;
-import model.utilitarios.ConversorDeHoraEDia;
 
 /**
  * Classe que registra um ponto para um determinado membro, seguindo a logica de
@@ -46,14 +44,15 @@ public class RegistradorPontoCentral implements Serializable {
 		}
 		Participacao participacao = null;
 		for (ProjetoComponente participa : projeto.getItens()) {
-			if (participa.getTipo() == TipoProjetoComponente.PARTICIPACAO) {
-				participacao = (Participacao) participa;
-			}
+			participacao = (Participacao) participa;
 			LocalDateTime pontoBatidoagora = LocalDateTime.now();
 			if (participacao.getMembro().getEmail().equals(membro.getEmail())) {
 				if (!participacao.getPontos().isEmpty()) {
 					for (PontoTrabalhado p : participacao.getPontos()) {
-						if (p.getDataHoraSaida() == null) {
+						if (p.getDataHoraEntrada() == null) {
+							p.setDataHoraEntrada(pontoBatidoagora);
+							return p;
+						} else if (p.getDataHoraSaida() == null) {
 							p.setDataHoraSaida(pontoBatidoagora);
 							return p;
 						} else {

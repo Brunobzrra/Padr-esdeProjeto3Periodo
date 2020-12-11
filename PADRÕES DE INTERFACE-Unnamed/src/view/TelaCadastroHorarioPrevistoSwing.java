@@ -44,12 +44,13 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 
 	public TelaCadastroHorarioPrevistoSwing() {
 		setLayout(null);
-		setSize(450, 500);
+		setSize(430, 450);
 		getContentPane().setBackground(new Color(213, 213, 213));
 		setResizable(false);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(1);
 		setTitle("Horario Previsto");
+		getContentPane().setBackground(Color.DARK_GRAY);
 		adcionarLabels();
 		adcionarBotao();
 		adicionarJTextField();
@@ -72,7 +73,7 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 		dataPrevistaTermino = new JTextField();
 		dataPrevistaTermino = new JFormattedTextField(macaraDeData);
 		dataPrevistaTermino.setToolTipText("dd/MM/YYYY");
-		dataPrevistaTermino.setBounds(210, 150, 70, 20);
+		dataPrevistaTermino.setBounds(220, 150, 70, 20);
 		this.add(dataPrevistaTermino);
 
 		horaPrevistaInicio = new JTextField();
@@ -89,7 +90,7 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 		horaPrevistaTermino = new JTextField();
 		horaPrevistaTermino = new JFormattedTextField(macaraDeHora);
 		horaPrevistaTermino.setToolTipText("hh:MM");
-		horaPrevistaTermino.setBounds(300, 150, 79, 20);
+		horaPrevistaTermino.setBounds(310, 150, 79, 20);
 		this.add(horaPrevistaTermino);
 
 		matricularCoordenador = new JTextField();
@@ -108,7 +109,7 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 
 	private void adcionarJCombobox() {
 		Object[] projetos = mostrarProjetosDoUsuarioLogado();
-		String[] nome = { "-Nenhum Projeto cadastrado-" };
+		String[] nome = { "Nenhum Projeto cadastrado" };
 		if (projetos == null || projetos.length == 0) {
 			op.removeAllItems();
 			op.addItem(nome[0].toString());
@@ -119,13 +120,17 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 			}
 		}
 		op.setBounds(50, 255, 150, 20);
+		op.setBackground(new Color(25, 25, 25));
+		op.setForeground(Color.WHITE);
 		add(op);
 
 		Object[] dias = DiaSemana.values();
 		for (int i = 0; i < dias.length; i++) {
 			dia.addItem(dias[i].toString());
 		}
-		dia.setBounds(50, 300, 170, 20);
+		dia.setBounds(50, 300, 150, 20);
+		dia.setBackground(new Color(25, 25, 25));
+		dia.setForeground(Color.WHITE);
 		add(dia);
 
 	}
@@ -145,7 +150,9 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 
 	private void adcionarBotao() {
 		JButton cadastrar = new JButton("Cadastrar");
-		cadastrar.setBounds(50, 350, 150, 20);
+		cadastrar.setBounds(230, 350, 150, 30);
+		cadastrar.setForeground(Color.WHITE);
+		cadastrar.setBackground(new Color(119, 221, 119));
 		cadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -166,10 +173,11 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 							Long.parseLong(matriculaMembro.getText()), op.getSelectedItem().toString(),
 							ConversorDeHoraEDia.diaString(dia.getSelectedItem().toString()), dataHoraInicio,
 							dataHoraTermino, Long.parseLong(tolerancia.getText()));
-				} catch (Exception e2) {
-
 					JOptionPane.showMessageDialog(null,
-							dataHoraInicio.toString() + "    " + dataHoraTermino.toString());
+							"O horario foi cadastrado!");
+				} catch (Exception e2) {
+					JOptionPane.showMessageDialog(null,
+							e2.getMessage());
 				}
 
 			}
@@ -177,7 +185,9 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 		this.add(cadastrar);
 
 		JButton voltar = new JButton("Voltar");
-		voltar.setBounds(230, 350, 150, 20);
+		voltar.setBounds(50, 350, 150, 30);
+		voltar.setForeground(Color.WHITE);
+		voltar.setBackground(new Color(119, 221, 119));
 		voltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				fecharTela();
@@ -190,68 +200,68 @@ public class TelaCadastroHorarioPrevistoSwing extends JFrame implements Interfac
 	public void adcionarHorarioTrabalhado(long matriculaCoordenador, long matriculaMembro, String nomeDoProjeto,
 			DiaSemana dia, LocalDateTime dataInicio, LocalDateTime dataTermino, long toleranciaMinutos)
 			throws Exception {
-
+		controller.adcionarHorarioTrabalhado(matriculaCoordenador, matriculaMembro, nomeDoProjeto, dia, dataInicio, dataTermino, toleranciaMinutos);
 	}
 
 	private void adcionarLabels() {
 		JLabel novoHorarioPrevisto = new JLabel("Horario previsto");
 		novoHorarioPrevisto.setBounds(100, 30, 250, 30);
 		novoHorarioPrevisto.setFont(new Font("Arial", Font.BOLD, 30));
-		novoHorarioPrevisto.setForeground(Color.DARK_GRAY);
+		novoHorarioPrevisto.setForeground(new Color(192, 192, 192));
 		this.add(novoHorarioPrevisto);
 
 		JLabel dataPrevistaInicio = new JLabel("Data inicio");
 		dataPrevistaInicio.setBounds(50, 120, 350, 20);
 		dataPrevistaInicio.setFont(new Font("Arial", Font.BOLD, 12));
-		dataPrevistaInicio.setForeground(Color.DARK_GRAY);
+		dataPrevistaInicio.setForeground(new Color(192, 192, 192));
 		this.add(dataPrevistaInicio);
 
 		JLabel horaPrevistaInicio = new JLabel("Hora inicio");
 		horaPrevistaInicio.setBounds(130, 120, 350, 20);
 		horaPrevistaInicio.setFont(new Font("Arial", Font.BOLD, 12));
-		horaPrevistaInicio.setForeground(Color.DARK_GRAY);
+		horaPrevistaInicio.setForeground(new Color(192, 192, 192));
 		this.add(horaPrevistaInicio);
 
 		JLabel dataPrevistaTermino = new JLabel("Data termino");
-		dataPrevistaTermino.setBounds(210, 120, 350, 20);
+		dataPrevistaTermino.setBounds(220, 120, 350, 20);
 		dataPrevistaTermino.setFont(new Font("Arial", Font.BOLD, 12));
-		dataPrevistaTermino.setForeground(Color.DARK_GRAY);
+		dataPrevistaTermino.setForeground(new Color(192, 192, 192));
 		this.add(dataPrevistaTermino);
 
 		JLabel horaPrevistaTermino = new JLabel("Hora Termino");
-		horaPrevistaTermino.setBounds(300, 120, 350, 20);
+		horaPrevistaTermino.setBounds(310, 120, 350, 20);
 		horaPrevistaTermino.setFont(new Font("Arial", Font.BOLD, 12));
-		horaPrevistaTermino.setForeground(Color.DARK_GRAY);
+		horaPrevistaTermino.setForeground(new Color(192, 192, 192));
 		this.add(horaPrevistaTermino);
 
 		JLabel matriculaCoordenadorHorario = new JLabel("Matricula Coordenador");
 		matriculaCoordenadorHorario.setBounds(50, 180, 350, 20);
 		matriculaCoordenadorHorario.setFont(new Font("Arial", Font.BOLD, 12));
-		matriculaCoordenadorHorario.setForeground(Color.DARK_GRAY);
+		matriculaCoordenadorHorario.setForeground(new Color(192, 192, 192));
 		this.add(matriculaCoordenadorHorario);
 
 		JLabel matriculaMmembroAdicionarHorario = new JLabel("Matricula Membro");
 		matriculaMmembroAdicionarHorario.setBounds(220, 180, 350, 20);
 		matriculaMmembroAdicionarHorario.setFont(new Font("Arial", Font.BOLD, 12));
-		matriculaMmembroAdicionarHorario.setForeground(Color.DARK_GRAY);
+		matriculaMmembroAdicionarHorario.setForeground(new Color(192, 192, 192));
 		this.add(matriculaMmembroAdicionarHorario);
 
 		JLabel projeto = new JLabel("Selecione o projeto");
 		projeto.setBounds(50, 230, 170, 20);
 		projeto.setFont(new Font("Arial", Font.BOLD, 12));
-		projeto.setForeground(Color.DARK_GRAY);
+		projeto.setForeground(new Color(192, 192, 192));
 		this.add(projeto);
 
 		JLabel tolerancia = new JLabel("Tolerancia em minutos");
 		tolerancia.setBounds(220, 230, 170, 20);
 		tolerancia.setFont(new Font("Arial", Font.BOLD, 12));
-		tolerancia.setForeground(Color.DARK_GRAY);
+		tolerancia.setForeground(new Color(192, 192, 192));
 		this.add(tolerancia);
 
 		JLabel diaSemana = new JLabel("Dia semana");
 		diaSemana.setBounds(50, 280, 170, 20);
 		diaSemana.setFont(new Font("Arial", Font.BOLD, 12));
-		diaSemana.setForeground(Color.DARK_GRAY);
+		diaSemana.setForeground(new Color(192, 192, 192));
 		this.add(diaSemana);
 
 	}

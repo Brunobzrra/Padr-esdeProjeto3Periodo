@@ -14,7 +14,7 @@ import model.casosDeUsofachadas.CasoDeUsoOnzeETreze;
 
 public class AplicacaoServidora {
 
-	public static void main(String[] args) {
+	public void iniciar()throws Exception {
 		@SuppressWarnings("unused")
 		Registry registry = null;
 		/* inicia rmi */
@@ -32,8 +32,9 @@ public class AplicacaoServidora {
 				/* não conseguiu nem criar e nem há rodando, sai do programa */
 				System.err.println("Registro não pode ser inicializado");
 				System.exit(0);
+				throw new Exception();
 			}
-
+			throw new Exception();
 		}
 	}
 }
