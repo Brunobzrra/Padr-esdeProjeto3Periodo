@@ -62,4 +62,31 @@ public class ConversorDeHoraEDia {
 		return resultado;
 	}
 
+	public static DiaSemana diaString(String dia) {
+		DiaSemana diaEmPortugues;
+		switch (dia.toString()) {
+		case "SEG":
+			diaEmPortugues = DiaSemana.SEG;
+			break;
+		case "TER":
+			diaEmPortugues = DiaSemana.TER;
+			break;
+		case "QUA":
+			diaEmPortugues = DiaSemana.QUA;
+			break;
+		case "QUI":
+			diaEmPortugues = DiaSemana.QUI;
+			break;
+		case "SEX":
+			diaEmPortugues = DiaSemana.SEX;
+			break;
+		case "SAB":
+			diaEmPortugues = DiaSemana.SAB;
+			break;
+		default:
+			diaEmPortugues = DiaSemana.DOM;
+			break;
+		}
+		return diaEmPortugues;
+	}
 }
