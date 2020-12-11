@@ -8,8 +8,7 @@ import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.Arrays;
-import java.util.List;
+
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -23,7 +22,7 @@ import javax.swing.text.MaskFormatter;
 import model.utilitarios.ConversorDeHoraEDia;
 import ponto.model.projetos.DiaSemana;
 import view.abstract_factory.FabricaDeTelasSwing;
-import view.abstract_factory.InterfaceFabricaDeTelas;
+
 import view.abstract_factory.InterfaceTelaCadastroHorarioPrevisto;
 import view.controller.ControllerCadastroHorarioPrevisto;
 

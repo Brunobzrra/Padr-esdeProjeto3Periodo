@@ -34,6 +34,7 @@ public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal
 	private JButton botaoConfigAdmin;
 	private JButton botaoJustificar;
 	private JButton logout;
+	private JButton horario;
 	private ControllerTelaAutenticacao controler = new ControllerTelaAutenticacao();
 	private InterfaceFabricaDeTelas fabricaDeTelas = FabricaDeTelasSwing.getFabrica();
 
@@ -216,6 +217,19 @@ public class TelaPrincipalSwing extends JFrame implements InterfaceTelaPrincipal
 		logout.setFont(new Font("Arial", Font.BOLD, 10));
 		logout.setBounds(25, 270, 100, 40);
 		this.add(logout);
+		
+		horario = new JButton("<html>Horario</html>");
+		horario.setForeground(Color.WHITE);
+		horario.setBackground(new Color(119, 221, 119));
+		horario.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				fabricaDeTelas.fabricarTelaCadastroHorarioPrevisto();
+			}
+		});
+		horario.setFont(new Font("Arial", Font.BOLD, 10));
+		horario.setBounds(25, 220, 100, 40);
+		this.add(horario);
 
 		proxima1 = new JButton("Proximo =>");
 		proxima1.setForeground(Color.WHITE);

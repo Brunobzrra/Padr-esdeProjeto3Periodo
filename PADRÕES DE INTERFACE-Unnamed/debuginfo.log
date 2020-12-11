@@ -2,69 +2,102 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-10T03:05:02</date>
-  <millis>1607576702602</millis>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728580</millis>
   <sequence>0</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>1</thread>
-  <message>Relatorio gerado</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
 </record>
 <record>
-  <date>2020-12-10T03:05:02</date>
-  <millis>1607576702842</millis>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728580</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Selecionando tipo de autenticacao</message>
+</record>
+<record>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728581</millis>
   <sequence>1</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>1</thread>
-  <message>Relatorio gerado</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-10T03:05:02</date>
-  <millis>1607576702842</millis>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728581</millis>
   <sequence>1</sequence>
   <logger>global</logger>
-  <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>1</thread>
-  <message>Relatorio gerado</message>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
 </record>
 <record>
-  <date>2020-12-10T03:05:03</date>
-  <millis>1607576703002</millis>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728581</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Autenticando a conta de acoro com o tipo</message>
+</record>
+<record>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728649</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>1</thread>
-  <message>Relatorio gerado</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-10T03:05:03</date>
-  <millis>1607576703002</millis>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728649</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>1</thread>
-  <message>Relatorio gerado</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Conta autenticada com sucesso</message>
 </record>
 <record>
-  <date>2020-12-10T03:05:03</date>
-  <millis>1607576703002</millis>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728649</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>WARNING</level>
-  <class>view.projetos.builder.MontadorRelatorioProjetoHTML</class>
-  <method>finalizarMontagem</method>
-  <thread>1</thread>
-  <message>Relatorio gerado</message>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Conta autenticada com sucesso</message>
+</record>
+<record>
+  <date>2020-12-11T03:05:28</date>
+  <millis>1607666728649</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>model.casosDeUsofachadas.CasoDeUsoDoiseNove</class>
+  <method>fazerLogin</method>
+  <thread>14</thread>
+  <message>Conta autenticada com sucesso</message>
 </record>
 </log>
